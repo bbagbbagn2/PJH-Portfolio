@@ -1,8 +1,13 @@
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import MainPage from './MainPage';
+
 function App() {
   return (
-    <div>
-      Hello
-    </div>
+     <Router>
+       <Routes>
+         <Route exact path='/' element={<MainPage/>}/>
+       </Routes>
+     </Router>
   );
 }
 
