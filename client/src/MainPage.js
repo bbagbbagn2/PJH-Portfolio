@@ -1,12 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default function Main(){
     return(
         <MainPage>
-            <ProfilePage>
-                <ProfileMessage>Junior Web Front-End Developer<br/>박지훈</ProfileMessage>
-            </ProfilePage>
+            <ProfileContainer>
+                <MessageWrapper>
+                    <ProfileTitle>Junior Web Front-End Developer</ProfileTitle>
+                    <ProfileMessage>성장을 위해 고민하는 개발자 박지훈입니다</ProfileMessage>
+                </MessageWrapper>
+            </ProfileContainer>
+            <DetailContainer>
+                <DetailWrapper>
+                    <DetailMessage to ='#'>Profile</DetailMessage>
+                    <DetailMessage to ='#'>History</DetailMessage>
+                    <DetailMessage to ='#'>Activity</DetailMessage>
+                    <DetailMessage to ='#'>Contact</DetailMessage>
+                </DetailWrapper>
+            </DetailContainer>
         </MainPage>
     )
 }
@@ -19,7 +31,7 @@ const MainPage = styled.div`
     grid-template-columns: 1.6fr 1fr;
 `;
 
-const ProfilePage = styled.div`
+const ProfileContainer = styled.div`
     width: 100%;
     height: 100vh;
 
@@ -30,7 +42,35 @@ const ProfilePage = styled.div`
     background: black;
 `;
 
-const ProfileMessage = styled.p`
-    color: white;
-    font-size: 30px;
+const MessageWrapper = styled(ProfileContainer)`
+ 
 `;
+
+const ProfileTitle = styled.p`
+    color: white;
+    font-size: 50px;
+`;
+
+const ProfileMessage = styled(ProfileTitle)`
+    font-size: 21px;
+`;
+
+const DetailContainer = styled(ProfileContainer)`
+    background: white;
+`;
+
+const DetailWrapper = styled(DetailContainer)`
+`;
+
+const DetailMessage = styled(Link)`
+color: black;
+font-size: 30px;
+
+padding: 20px;
+
+transition-duration: 0.5s;
+&:hover{
+    color: black;
+}
+`;
+
