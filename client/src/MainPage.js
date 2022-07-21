@@ -42,8 +42,7 @@ const ProfileContainer = styled.div`
     background: black;
 `;
 
-const MessageWrapper = styled(ProfileContainer)`
- 
+const MessageWrapper = styled(ProfileContainer)` 
 `;
 
 const ProfileTitle = styled.p`
@@ -63,14 +62,13 @@ const DetailWrapper = styled(DetailContainer)`
 `;
 
 const DetailMessage = styled(Link)`
-color: black;
-font-size: 30px;
-
 padding: 20px;
 
+color: black;
+font-size: 30px;
 transition-duration: 0.5s;
 &:hover{
-    color: black;
+    color: silver;
 }
 `;
 
