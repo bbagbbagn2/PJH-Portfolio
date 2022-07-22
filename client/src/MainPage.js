@@ -13,7 +13,7 @@ export default function Main(){
             </ProfileContainer>
             <DetailContainer>
                 <DetailWrapper>
-                    <DetailMessage to ='#'>Profile</DetailMessage>
+                    <DetailMessage to ='/about'>About</DetailMessage>
                     <DetailMessage to ='#'>History</DetailMessage>
                     <DetailMessage to ='#'>Activity</DetailMessage>
                     <DetailMessage to ='#'>Contact</DetailMessage>
