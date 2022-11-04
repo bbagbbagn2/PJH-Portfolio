@@ -14,9 +14,11 @@ export default function Profile() {
         <ProfilePage>
             <LeftContainer>
                 <ProfileContainer>
-                <div>사진 및 간단한 소개</div>
+                <div>사진 및 연락처</div>
                 </ProfileContainer>
-                
+                <IntroduceContainer>
+                    <div>간단한 소개</div>
+                </IntroduceContainer>
             </LeftContainer>
             <RightContainer>
                 <div>대략적인 스킬 및 활동</div> 
@@ -72,18 +74,25 @@ const LeftContainer = styled.div`
     grid-template-rows: 40% 60%;
     place-items: center;
     place-content: center;
+
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 `
 
 const ProfileContainer = styled.div`
     width: 100%;
     
     display: grid;
-    grid-template-columns: 30% 70%;
     grid-template-rows: 100%;
     place-items: center;
     place-content: center;
 `
-
+const IntroduceContainer = styled.div`
+    width: 100%;
+    
+    display: grid;
+    place-items: center;
+    place-content: center;
+`
 const RightContainer = styled.div`
     display: grid;
     place-items: center;
