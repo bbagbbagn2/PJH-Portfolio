@@ -22,7 +22,7 @@ const Header = styled.div`
     height: 30px;
     
     display: grid;
-    grid-template-columns: 5% 1fr repeat(2,5%);
+    grid-template-columns: 8% 1fr repeat(3,8%);
     padding: 10px;
 
     background: black;
@@ -30,6 +30,13 @@ const Header = styled.div`
     color: white;
     z-index: 999;
 `
+const HeaderMessage = styled(Link)`
+    color: white;
+    transition-duration: 0.5s;
+    &:hover{
+        color: silver;
+    }
+`;
 
 const ProfilePage = styled.div`
 
@@ -45,10 +52,3 @@ const ProfilePage = styled.div`
     z-index: 999;
 `
 
-const HeaderMessage = styled(Link)`
-    color: white;
-    transition-duration: 0.5s;
-    &:hover{
-        color: silver;
-    }
-`;

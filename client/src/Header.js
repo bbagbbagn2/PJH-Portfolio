@@ -18,7 +18,7 @@ const Header = styled.div`
     height: 30px;
     
     display: grid;
-    grid-template-columns: 10% 1fr repeat(3,8%);
+    grid-template-columns: 10% 1fr 10% 10% 10%;
     place-items: center;
     place-content: center;
 
