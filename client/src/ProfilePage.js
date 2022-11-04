@@ -12,6 +12,15 @@ export default function Profile() {
         <HeaderMessage to='#'>Activity</HeaderMessage>
     </Header>
         <ProfilePage>
+            <LeftContainer>
+                <ProfileContainer>
+                <div>사진 및 간단한 소개</div>
+                </ProfileContainer>
+                
+            </LeftContainer>
+            <RightContainer>
+                <div>대략적인 스킬 및 활동</div> 
+            </RightContainer>
         </ProfilePage>
     </>)
 }
@@ -39,16 +48,47 @@ const HeaderMessage = styled(Link)`
 `;
 
 const ProfilePage = styled.div`
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 93.9vh;
 
     display: grid;
-    grid-template-columns: 10% 1fr repeat(3,8%);
+    grid-template-columns: 50% 50%; 
     place-items: center;
     place-content: center;
 
-    background: black;
-    color: white;
+    color: black;
     font-size: 16px;
 
     z-index: 999;
 `
+const LeftContainer = styled.div`
+    width: 50vw;
+    height: 93.9vh;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 60%;
+    place-items: center;
+    place-content: center;
+`
+
+const ProfileContainer = styled.div`
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+    place-items: center;
+    place-content: center;
+`
+
+const RightContainer = styled.div`
+    display: grid;
+    place-items: center;
+    place-content: center;
+`
+
+
 
