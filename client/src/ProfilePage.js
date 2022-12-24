@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import profile from './img/박지훈.jpg'
 
 export default function Profile() {
     return (<>
@@ -14,7 +15,9 @@ export default function Profile() {
         <ProfilePage>
             <LeftContainer>
                 <ProfileContainer>
-                <div>사진 및 연락처</div>
+                <div>사진 및 연락처
+                <Photo src = {profile} alt="profile"/>
+                </div>
                 </ProfileContainer>
                 <IntroduceContainer>
                     <div>간단한 소개</div>
@@ -86,6 +89,14 @@ const ProfileContainer = styled.div`
     place-items: center;
     place-content: center;
 `
+const Photo = styled.img`
+    width: 340px;
+    height: 640px;
+    display: grid;
+    place-items: center;
+    place-content: center;
+`
+
 const IntroduceContainer = styled.div`
     width: 100%;
     
