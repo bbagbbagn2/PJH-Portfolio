@@ -5,26 +5,35 @@ import profile from './img/박지훈.jpg'
 
 export default function Profile() {
     return (<>
-    <Header>
-        <HeaderMessage to = '/home'>Home</HeaderMessage>
-        <div/>
-        <HeaderMessage to ='#'>About</HeaderMessage>
-        <HeaderMessage to='#'>History</HeaderMessage>
-        <HeaderMessage to='#'>Activity</HeaderMessage>
-    </Header>
+        <Header>
+            <HeaderMessage to='/'>Home</HeaderMessage>
+            <div />
+            <HeaderMessage to='/about'>About</HeaderMessage>
+            <HeaderMessage to='#'>History</HeaderMessage>
+            <HeaderMessage to='#'>Activity</HeaderMessage>
+        </Header>
         <ProfilePage>
             <LeftContainer>
                 <ProfileContainer>
-                <div>사진 및 연락처
-                <Photo src = {profile} alt="profile"/>
-                </div>
+                        <Photo src={profile} alt="profile" />
+                    <NumberWrapper>
+                    <div>Email : pyoungh999@naver.com</div>
+                    <div onClick={()=>window.open('https://github.com/bbagbbagn2','_blank')}>Github</div>
+                    <div onClick={()=>window.open('https://concise-molybdenum-1ed.notion.site/c4ce189e86cf43e8858349a33ebb482d','_blank')}>Notion</div>
+                    <div>Phone : 010-9207-8758</div>
+                    </NumberWrapper>
                 </ProfileContainer>
                 <IntroduceContainer>
-                    <div>간단한 소개</div>
+                    <h2>Junior Front-End Developer 박지훈입니다</h2>
+                    <div>맡은 바는 끝까지 하는 끈기를 가지고 있습니다.</div>
+                    <div>결과보다는 원리를 더 알고자 하는 편입니다.</div>
+                    <div>리팩토링을 통해 더 효율적인 개발을 하고자 합니다.</div>
+                    <div>일정 관리 및 회의 내용을 기록하여 기간 내에 개발을 완료하도록 노력합니다.</div>
+                    <div>팀원들과의 소통을 잘 할 수 있습니다.</div>
                 </IntroduceContainer>
             </LeftContainer>
             <RightContainer>
-                <div>대략적인 스킬 및 활동</div> 
+                <div>대략적인 스킬 및 활동</div>
             </RightContainer>
         </ProfilePage>
     </>)
@@ -85,13 +94,18 @@ const ProfileContainer = styled.div`
     width: 100%;
     
     display: grid;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
     place-items: center;
     place-content: center;
 `
+const NumberWrapper = styled.div`
+    displat: grid;
+`
+
 const Photo = styled.img`
-    width: 340px;
-    height: 640px;
+    width: 250px;
+    height: 300px;
     display: grid;
     place-items: center;
     place-content: center;
