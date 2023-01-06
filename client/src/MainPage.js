@@ -7,15 +7,15 @@ export default function Main(){
         <MainPage>
             <ProfileContainer>
                 <MessageWrapper>
-                    <ProfileTitle>Junior Web Front-End Developer</ProfileTitle>
-                    <ProfileMessage>성장을 위해 고민하는 개발자 박지훈입니다</ProfileMessage>
+                    <ProfileTitle>Web Front-End Developer</ProfileTitle>
+                    <ProfileMessage>포기없는 개발자 박지훈입니다</ProfileMessage>
                 </MessageWrapper>
             </ProfileContainer>
             <DetailContainer>
                 <DetailWrapper>
                     <DetailMessage to ='/about'>About Me</DetailMessage>
                     <DetailMessage to ='#'>History</DetailMessage>
-                    <DetailMessage to ='#'>Activity</DetailMessage>
+                    <DetailMessage to ='/activity'>Activity</DetailMessage>
                     <DetailMessage to ='#'>Contact</DetailMessage>
                 </DetailWrapper>
             </DetailContainer>
@@ -51,7 +51,7 @@ const ProfileTitle = styled.p`
 `;
 
 const ProfileMessage = styled(ProfileTitle)`
-    font-size: 21px;
+    font-size: 26px;
 `;
 
 const DetailContainer = styled(ProfileContainer)`
@@ -68,7 +68,7 @@ color: black;
 font-size: 30px;
 transition-duration: 0.5s;
 &:hover{
-    color: silver;
+    color: orange;
 }
 `;
 
