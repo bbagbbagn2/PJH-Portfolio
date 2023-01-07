@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 export default function Main(){
     return(
+        
         <MainPage>
             <ProfileContainer>
                 <MessageWrapper>
@@ -13,10 +14,9 @@ export default function Main(){
             </ProfileContainer>
             <DetailContainer>
                 <DetailWrapper>
-                    <DetailMessage to ='/about'>About Me</DetailMessage>
-                    <DetailMessage to ='#'>History</DetailMessage>
-                    <DetailMessage to ='/activity'>Activity</DetailMessage>
-                    <DetailMessage to ='#'>Contact</DetailMessage>
+                    <DetailMessage to ='/about'>ABOUT ME</DetailMessage>
+                    <DetailMessage to ='/work'>WORK</DetailMessage>
+                    <DetailMessage to ='#'>CONTACT</DetailMessage>
                 </DetailWrapper>
             </DetailContainer>
         </MainPage>

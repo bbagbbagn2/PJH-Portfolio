@@ -2,16 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import profile from './img/박지훈.jpg';
-import github from './img/github.svg';
+import {ReactComponent as Github} from './img/github.svg';
+import {ReactComponent as Notion} from './img/notion.svg';
 
 export default function Profile() {
     return (<>
         <Header>
-            <HeaderMessage to='/'>Home</HeaderMessage>
-            <div />
-            <HeaderMessage to='/about'>About</HeaderMessage>
-            <HeaderMessage to='#'>History</HeaderMessage>
-            <HeaderMessage to='/Activity'>Activity</HeaderMessage>
+            <HeaderMessage to='/'>HOME</HeaderMessage>
+            <HeaderMessage to='/about'>ABOUT</HeaderMessage>
+            <HeaderMessage to='/work'>WORK</HeaderMessage>
+            <HeaderMessage to='#'>CONTACT</HeaderMessage>
+            <ChannelContainer>
+            <Github onClick={() => window.open('https://github.com/bbagbbagn2', '_blank')}/>
+            <Notion onClick={() => window.open('https://concise-molybdenum-1ed.notion.site/c4ce189e86cf43e8858349a33ebb482d', '_blank')}/>
+            </ChannelContainer>
         </Header>
         <ProfilePage>
             <LeftContainer>
@@ -22,13 +26,19 @@ export default function Profile() {
                         <h3>Email : pyoungh999@naver.com</h3>
                         <h3>Phone : 010-9207-8758</h3>
                         <Sub>Channel.</Sub>
-                        <h3 onClick={() => window.open('https://github.com/bbagbbagn2', '_blank')}>Github</h3>
-                        <h3 onClick={() => window.open('https://concise-molybdenum-1ed.notion.site/c4ce189e86cf43e8858349a33ebb482d', '_blank')}>Notion</h3>
+                        <ChannelContainer>
+                        <ChannelWrapper>
+                        
+                        </ChannelWrapper>
+                        <ChannelWrapper>
+                        
+                        </ChannelWrapper>
+                        </ChannelContainer>
                     </NumberWrapper>
                 </ProfileContainer>
             </LeftContainer>
             <RightContainer>
-                <IntroduceContainer>
+            <IntroduceContainer>
                     <h1>Front-End Developer 박지훈입니다</h1>
                     <h3>• 맡은 바는 끝까지 하는 끈기를 가지고 있습니다.</h3>
                     <h3>• 결과보다는 원리를 더 알고자 하는 편입니다.</h3>
@@ -40,17 +50,27 @@ export default function Profile() {
         </ProfilePage>
     </>)
 }
+const ChannelContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2,40px);
+`
+const ChannelWrapper = styled.div`
+    cursor: pointer;
+    padding: 10px;
+`
 const Header = styled.div`
     position: fixed;
+    left: 0;
+    top: 0;
     width: 100vw;
-    height: 30px;
+    height: 50px;
     
     display: grid;
-    grid-template-columns: 8% 1fr repeat(3,8%);
+    grid-template-columns: repeat(5,10%);
     place-items: center;
     place-content: center;
 
-    background: black;
+    background: #042940;
     font-size: 16px;
     color: white;
     z-index: 999;
@@ -68,10 +88,8 @@ const Sub = styled.h2`
 `;
 
 const ProfilePage = styled.div`
-    position: absolute;
-    top: 50px;
+    padding-top: 40px;
     width: 100%;
-    height: 93.9vh;
 
     display: grid;
     grid-template-columns: 50% 50%; 
@@ -85,7 +103,7 @@ const ProfilePage = styled.div`
 `
 const LeftContainer = styled.div`
     width: 50vw;
-    height: 93.9vh;
+    height: 100vh;
 
     display: grid;
     grid-template-columns: 100%;
