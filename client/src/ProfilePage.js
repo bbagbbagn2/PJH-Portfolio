@@ -23,8 +23,8 @@ export default function Profile() {
                     <Photo src={profile} alt="profile" />
                     <NumberWrapper>
                         <Sub>Contact.</Sub>
-                        <h3>Email : pyoungh999@naver.com</h3>
-                        <h3>Phone : 010-9207-8758</h3>
+                        <h3>Email. pyoungh999@naver.com</h3>
+                        <h3>Phone. 010-9207-8758</h3>
                         <Sub>Channel.</Sub>
                         <ChannelContainer>
                         <ChannelWrapper>
@@ -105,6 +105,7 @@ const LeftContainer = styled.div`
 
     display: grid;
     grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
     place-items: center;
     place-content: center;
 
