@@ -88,7 +88,7 @@ const Sub = styled.h2`
 `;
 
 const ProfilePage = styled.div`
-    padding-top: 40px;
+    padding-top: 50px;
     width: 100%;
 
     display: grid;
@@ -98,8 +98,6 @@ const ProfilePage = styled.div`
 
     color: black;
     font-size: 16px;
-
-    z-index: 999;
 `
 const LeftContainer = styled.div`
     width: 50vw;
