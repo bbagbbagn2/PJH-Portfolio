@@ -21,7 +21,7 @@ export default function Activity() {
                 </FFF>
                 <Description>
                     <A>
-                        <Des>사용자가 원하는 목적에 최적화할 수 있는 아이콘 무료 배포 웹사이트입니다.</Des>
+                        <Des>사용자의 목적에 가장 알맞는 아이콘을 무료 제작및 배포할 수 있는 반응형 웹사이트입니다.</Des>
                     </A>
                 </Description>
                 <Topic>
@@ -51,9 +51,6 @@ const Topic = styled.div`
     transition-duration: 0.5s;
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover{
-        matrix(1, 0, 0, 1, 0, 58);
-    }
 `;
 
 const Des = styled.p`
@@ -70,9 +67,6 @@ margin-block-start: 16px;
 margin-inline-end: 0px;
 margin-inline-start: 0px;
 transform: matrix(1, 0, 0, 1, 0, 48);
-&:hover{
-transform: matrix(1, 0, 0, 1, 0, 0);
-}
 
 `;
 const Description = styled.div`
@@ -84,9 +78,6 @@ const Description = styled.div`
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: matrix(1, 0, 0, 1, 0, -64);
-    &:hover{
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    }
 
 `;
 const A = styled.div`   
@@ -94,9 +85,6 @@ const A = styled.div`
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: matrix(1, 0, 0, 1, 0, 48);
-    &:hover{
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    }
 `;
 
 
@@ -170,7 +158,7 @@ const WorkPage = styled.div`
     height: 100vh; 
     position: relative;
     visibility: visible;
-    width: 809px;
+    width: 100%;
 
     line-height: 24px;
     tab-size: 4;
@@ -228,7 +216,4 @@ const FFF = styled.div`
     transition-duration: 0.5s;
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover{
-        transform: matrix(1, 0, 0, 1, 0, -67);
-    }
 `;
