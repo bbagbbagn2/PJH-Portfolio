@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import profile from './img/박지훈.jpg';
+import profile from './img/Profile.jpg';
 import {ReactComponent as Github} from './img/github.svg';
 import {ReactComponent as Notion} from './img/notion.svg';
 
 export default function Profile() {
+    function setScreenSize() {
+        let vh = window.innerHeight * 0.01;
+      
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      }
+      
+      setScreenSize();
     return (<>
         <Header>
             <HeaderMessage to='/'>HOME</HeaderMessage>
@@ -21,20 +28,6 @@ export default function Profile() {
             <LeftContainer>
                 <ProfileContainer>
                     <Photo src={profile} alt="profile" />
-                    <NumberWrapper>
-                        <Sub>Contact.</Sub>
-                        <h3>Email : pyoungh999@naver.com</h3>
-                        <h3>Phone : 010-9207-8758</h3>
-                        <Sub>Channel.</Sub>
-                        <ChannelContainer>
-                        <ChannelWrapper>
-                        
-                        </ChannelWrapper>
-                        <ChannelWrapper>
-                        
-                        </ChannelWrapper>
-                        </ChannelContainer>
-                    </NumberWrapper>
                 </ProfileContainer>
             </LeftContainer>
             <RightContainer>
@@ -88,8 +81,10 @@ const Sub = styled.h2`
 `;
 
 const ProfilePage = styled.div`
-    padding-top: 50px;
+    position: fixed;
+    top: 50px;
     width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
 
     display: grid;
     grid-template-columns: 50% 50%; 
@@ -98,22 +93,23 @@ const ProfilePage = styled.div`
 
     color: black;
     font-size: 16px;
+
+    overflow: hidden;
 `
 const LeftContainer = styled.div`
-    width: 50vw;
-    height: 100vh;
-
+    width: 100%;
     display: grid;
     grid-template-columns: 100%;
     place-items: center;
     place-content: center;
-
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding-bottom: 5%;
 `
 
 const ProfileContainer = styled.div`
+    position: absolute;
+    top: 0px;
     width: 100%;
-    
+    height: calc(var(--vh, 1vh) * 100);
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
@@ -125,7 +121,9 @@ const NumberWrapper = styled.div`
 `
 
 const Photo = styled.img`
-    width: 230px;
+    position: absolute;
+    width: 50%;
+    height: 100%;
     display: grid;
     place-items: center;
     place-content: center;

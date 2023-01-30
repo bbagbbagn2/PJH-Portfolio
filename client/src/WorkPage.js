@@ -12,6 +12,8 @@ export default function Activity() {
         </Header>
         <Page>
         <WorkPage>
+            <WorkContainer>
+                <WorkList>
             <Container href="#">
                 <Gradient/>
             <D>
@@ -29,6 +31,8 @@ export default function Activity() {
                 </Topic>
             </D>
             </Container>
+            </WorkList>
+            </WorkContainer>
         </WorkPage>
         </Page>
     </>
@@ -56,7 +60,7 @@ const Topic = styled.div`
 const Des = styled.p`
 box-sizing: border-box;
 margin-top: 1rem;
-max-width: 65ch;
+max-width: 100ch;
 
 transition-duration: 0.5s;
 transition-property: transform;
@@ -138,24 +142,25 @@ const HeaderMessage = styled(Link)`
 `;
 const Page= styled.div`
     box-sizing: border-box;
-    display: flex;
-    height:100%;
+    display: block;
+    height:100vh;
+    width: 100%;
+    position: relative;
     visibility: visible;
     
-    line-height: 24px;
+    
+    line-height: inherit;
     tab-size: 4;
     text-size-adjust: 100%;
 
     color: rgb(255, 254, 250);
-
-    backface-visibility: hidden;
+    background-color: rgb(15, 25, 34);
 
 `;
 const WorkPage = styled.div`
     box-sizing: border-box;
-    display: list-item;
-    flex-shrink: 0;
-    height: 100vh; 
+    padding-left: 0;
+    padding-right: 0;
     position: relative;
     visibility: visible;
     width: 100%;
@@ -164,46 +169,62 @@ const WorkPage = styled.div`
     tab-size: 4;
     text-align: left;
     text-size-adjust: 100%;
+    z-index: 0;
 
     color: rgb(255, 254, 250);
 
-    backface-visibility: hidden;
-    margin-block-end: 0;
-    margin-block-start: 0;
-    margin-inline-end: 0;
-    margin-inline-start: 0;
-    padding-inline-start: 0;
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    transform-style: preserve-3d;
+    user-select: none;
 `;
 
 const Container = styled.a`
     box-sizing: border-box;
-    text-decoration-line: none;
-    text-decoration-style: solid;
-    text-decoration-thickness: auto;
+
+    text-decoration: inherit;
 
     color: rgb(255, 254, 250);
     cusrsor: pointer;
 `;
+const WorkContainer = styled.ul`
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
 
+    backface-visibility: hidden;
+    list-style-type: none;
+    margin: 0!important;
+    padding: 0!important;
+    transform: translateX(0px);
+    transform-style: preserve-3d;
+`;
+
+const WorkList = styled.li`
+    box-sizing: border-box;
+    display: list-item;
+    flex-shrink: 0;
+    height: 100vh;
+    position: relative;
+    width:calc(100%);
+
+    backface-visibility: hidden;
+`;
 const Gradient = styled.div`
     box-sizing: boreder-box;
     height: 100%;
     position: absolute;
-    right: 0px;
+    right: 0;
     width: 100%;
 
-    background-image: linear-gradient(to top, rgb(15, 25, 34), rgba(15, 25, 34, 0));
+    background-image: linear-gradient(to top, #0f1922, #444a52, #7f8188, #bebec2, #ffffff);
 `;
 
 const D = styled.div`
     bottom: 0;
     box-sizing: border-box;
-    max-width: 92vw;
+    display: block;
+    max-width: none;
     padding-bottom: 24vh;
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
+    padding-left: 9rem;
+    padding-right: 9rem;
     padding-top: 24vh;
     position: absolute;
     width: 100%;
@@ -213,7 +234,8 @@ const D = styled.div`
 const FFF = styled.div`
     box-sizing: border-box;
 
-    transition-duration: 0.5s;
+    transition-duration: .5s;
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
 `;
