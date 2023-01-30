@@ -8,8 +8,8 @@ export default function Main(){
         <MainPage>
             <ProfileContainer>
                 <MessageWrapper>
-                    <ProfileTitle>Web Front-End Developer</ProfileTitle>
-                    <ProfileMessage>포기없는 개발자 박지훈입니다</ProfileMessage>
+                    <ProfileTitle>Front-End Developer </ProfileTitle>
+                    <ProfileMessage>끈기로 성장하는 박지훈입니다</ProfileMessage>
                 </MessageWrapper>
             </ProfileContainer>
             <DetailContainer>
@@ -45,9 +45,53 @@ const ProfileContainer = styled.div`
 const MessageWrapper = styled(ProfileContainer)` 
 `;
 
-const ProfileTitle = styled.p`
-    color: white;
-    font-size: 50px;
+const ProfileTitle = styled.h1`
+    font-size:60px;
+    font-weight:bold;
+    text-align:center;
+    color:#ffd800;
+    letter-spacing: 0;
+    transition:1s;
+    -webkit-transition:1s;
+    -ms-transition:1s;
+    position: relative;
+    padding: 15px;
+
+    display: grid;
+    place-items: center;
+    place-content: center;
+
+
+    &:before, &:after{
+        content:"";
+        position: absolute;
+        height: 7px;
+        width: 0px;
+        background:#ffd800;
+        transition:300ms;
+        -webkit-transition:1s;
+        -ms-transition:1s;
+        opacity:0.3;
+        left:50%;
+    }
+
+    &:before{
+        bottom: 0;
+    }
+
+    &:after{
+        top: 0;
+    }
+
+    &:hover{    
+        letter-spacing: 10px;
+    }
+
+    &:hover:before, &:hover:after{
+        width: 98%;
+        opacity: 1;
+        left: 0;
+    }
 `;
 
 const ProfileMessage = styled(ProfileTitle)`
@@ -55,20 +99,53 @@ const ProfileMessage = styled(ProfileTitle)`
 `;
 
 const DetailContainer = styled(ProfileContainer)`
-    background: white;
+    background: #ffd800;
 `;
 
 const DetailWrapper = styled(DetailContainer)`
 `;
 
 const DetailMessage = styled(Link)`
-padding: 20px;
-
+padding: 25px;
+opacity: .7;
 color: black;
-font-size: 30px;
-transition-duration: 0.5s;
-&:hover{
-    color: orange;
+font-size: 40px;
+transition-duration: 0.5s; 
+position: relative;
+
+display: grid;
+place-items: center;
+place-content: center;
+
+
+&:before, &:after{
+    content:"";
+    position: absolute;
+    height: 3px;
+    width: 0px;
+    background:black;
+    transition:0.2s;
+    -webkit-transition:1s;
+    -ms-transition:1s;
+    opacity:0.3;
+    left:0;
+
+    display: grid;
+place-items: center;
+place-content: center;
+
 }
+&:before{
+    bottom: 0;
+}
+&:hover{
+    opacity: 1;
+}
+&:hover:after{
+    width: 98%;
+    opacity: 1;
+    left: 0;
+}
+
 `;
 

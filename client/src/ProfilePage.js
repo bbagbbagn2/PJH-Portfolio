@@ -10,12 +10,13 @@ export default function Profile() {
         let vh = window.innerHeight * 0.01;
       
         document.documentElement.style.setProperty('--vh', `${vh}px`);
-      }
-      
-      setScreenSize();
+    }
+    setScreenSize();
+
+   
     return (<>
         <Header>
-            <HeaderMessage to='/'>HOME</HeaderMessage>
+            <HeaderMessage to='/' className="active">HOME</HeaderMessage>
             <HeaderMessage to='/about'>ABOUT</HeaderMessage>
             <HeaderMessage to='/work'>WORK</HeaderMessage>
             <HeaderMessage to='#'>CONTACT</HeaderMessage>
@@ -32,7 +33,7 @@ export default function Profile() {
             </LeftContainer>
             <RightContainer>
             <IntroduceContainer>
-                    <h1>Front-End Developer 박지훈입니다</h1>
+                    <h1>FrontEnd Developer</h1>
                     <h3>• 맡은 바는 끝까지 하는 끈기를 가지고 있습니다.</h3>
                     <h3>• 결과보다는 원리를 더 알고자 하는 편입니다.</h3>
                     <h3>• 리팩토링을 통해 더 효율적인 개발을 하고자 합니다.</h3>
@@ -43,14 +44,41 @@ export default function Profile() {
         </ProfilePage>
     </>)
 }
+const Typing = styled.h1`
+    font-size: 20px;
+    min-width: 11px;
+    white-space: nowrap;
+    margin: 0;
+    color: transparent;
+    transform: translate(-50%, -50%);
+    
+    &:before{
+        content: "FrontEnd Developer";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: black;
+        overflow: hidden;
+        border-right: 1px solid black;
+        animation: typing 5s steps(31) infinite;
+    }
+    
+    @keyframes typing{
+        0% {
+          width: 0%;
+        }
+        50% {
+          width: 100%;
+        }
+        100% {
+          width: 0%;
+        }
+`;
 const ChannelContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(2,40px);
 `
-const ChannelWrapper = styled.div`
-    cursor: pointer;
-    padding: 10px;
-`
+
 const Header = styled.div`
     position: fixed;
     left: 0;
@@ -63,21 +91,24 @@ const Header = styled.div`
     place-items: center;
     place-content: center;
 
-    background: #042940;
+    background: #1A1E23;
     font-size: 16px;
     color: white;
     z-index: 999;
 `;
 
 const HeaderMessage = styled(Link)`
-    color: white;
-    transition-duration: 0.5s;
+    transition: 0.5s ease;
+    opacity: .4;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: .2em;
+    font-size: 14px;
+
     &:hover{
-        color: orange;
+        opacity: .7;
     }
-`;
-const Sub = styled.h2`
-    color: Orange;
 `;
 
 const ProfilePage = styled.div`
@@ -115,9 +146,6 @@ const ProfileContainer = styled.div`
     grid-template-rows: 100%;
     place-items: center;
     place-content: center;
-`
-const NumberWrapper = styled.div`
-    displat: grid;
 `
 
 const Photo = styled.img`
