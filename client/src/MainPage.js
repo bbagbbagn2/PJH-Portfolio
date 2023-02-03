@@ -49,7 +49,7 @@ const ProfileTitle = styled.h1`
     font-size:60px;
     font-weight:bold;
     text-align:center;
-    color:#ffd800;
+    color:#98fb98;
     letter-spacing: 0;
     transition:1s;
     -webkit-transition:1s;
@@ -67,7 +67,7 @@ const ProfileTitle = styled.h1`
         position: absolute;
         height: 7px;
         width: 0px;
-        background:#ffd800;
+        background:#98fb98;
         transition:300ms;
         -webkit-transition:1s;
         -ms-transition:1s;
@@ -99,7 +99,7 @@ const ProfileMessage = styled(ProfileTitle)`
 `;
 
 const DetailContainer = styled(ProfileContainer)`
-    background: #ffd800;
+    background: #98fb98;
 `;
 
 const DetailWrapper = styled(DetailContainer)`

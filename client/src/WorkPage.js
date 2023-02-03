@@ -1,20 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Header from './Header.js';
 
 export default function Activity() {
     return (<>
-        <Header>
-            <HeaderMessage to='/'>HOME</HeaderMessage>
-            <HeaderMessage to='/about'>ABOUT</HeaderMessage>
-            <HeaderMessage to='/work'>WORK</HeaderMessage>
-            <HeaderMessage to='#'>CONTACT</HeaderMessage>
-        </Header>
+       <Header />
         <Page>
         <WorkPage>
             <WorkContainer>
                 <WorkList>
-            <Container href="#">
+            <Container href="/IconDB">
                 <Gradient/>
             <D>
                 <FFF>
@@ -23,7 +19,7 @@ export default function Activity() {
                 </FFF>
                 <Description>
                     <A>
-                        <Des>사용자의 목적에 가장 알맞는 아이콘을 무료 제작및 배포할 수 있는 반응형 웹사이트입니다.</Des>
+                        <Des>사용자의 목적에 가장 알맞는 아이콘을 무료 제작 및 배포할 수 있는 반응형 웹사이트입니다.</Des>
                     </A>
                 </Description>
                 <Topic>
@@ -115,31 +111,7 @@ const DevTitle = styled.h4`
     
 
 `;
-const Header = styled.div`
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 50px;
-    
-    display: grid;
-    grid-template-columns: repeat(4,10%);
-    place-items: center;
-    place-content: center;
 
-    background: #042940;
-    font-size: 16px;
-    color: white;
-    z-index: 999;
-`;
-
-const HeaderMessage = styled(Link)`
-    color: white;
-    transition-duration: 0.5s;
-    &:hover{
-        color: orange;
-    }
-`;
 const Page= styled.div`
     box-sizing: border-box;
     display: block;
@@ -214,7 +186,7 @@ const Gradient = styled.div`
     right: 0;
     width: 100%;
 
-    background-image: linear-gradient(to top, #0f1922, #444a52, #7f8188, #bebec2, #ffffff);
+    background-image: linear-gradient(to top, #004225, #3c6d4e, #709c7a, #a6ccab, #deffde);
 `;
 
 const D = styled.div`
