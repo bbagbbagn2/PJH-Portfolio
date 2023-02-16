@@ -23,12 +23,12 @@ export default function Profile() {
             </LeftContainer>
             <RightContainer>
             <IntroduceContainer>
-                    <Message fontSize="40px" fontWeight="1000">성장하는 Front-End Developer</Message>
-                    <Message fontSize="22px" fontWeight="600">• 맡은 바는 끝까지 하는 끈기를 가지고 있습니다.</Message>
-                    <Message fontSize="22px" fontWeight="600">• 결과보다는 원리를 더 알고자 하는 편입니다.</Message>
-                    <Message fontSize="22px" fontWeight="600">• 리팩토링을 통해 더 효율적인 개발을 하고자 합니다.</Message>
-                    <Message fontSize="22px" fontWeight="600">• 일정 관리 및 회의 내용을 기록하여 이용할 수 있습니다.</Message>
-                    <Message fontSize="22px" fontWeight="600">• 팀원들과의 소통을 잘 할 수 있습니다.</Message>
+                    <Front>끈기</Front>
+                    <Back>원리</Back>
+                    <Left>효율</Left>
+                    <Right>기록</Right>
+                    <Top>소통</Top>
+                    <Bottom>성장</Bottom>
                 </IntroduceContainer>
             </RightContainer>
         </ProfilePage>
@@ -84,14 +84,47 @@ const Photo = styled.img`
 `
 
 const IntroduceContainer = styled.div`
-    width: 100%;
+    animation: rotate 50000ms linear infinite;
     display: grid;
+    place-items: center;
     place-content: center;
+    margin: auto;
+    transform-style: preserve-3d;
+    width: 100px;
+
+    @keyframes rotate {
+        100% {
+          transform: rotateY(360deg) rotateX(720deg) rotateZ(1080deg);
+        }
+      }
 `
-const Message = styled.p`
-    font-size: ${(props)=>props.fontSize};
-    font-weight: ${(props)=>props.fontWeight};
+
+const Front = styled.div`
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   font-size: 40px;
+   transform: translateZ(200px);
+`
+const Back = styled(Front)`
+    transform: translateZ(-200px);
 `;
+
+const Left = styled(Front)`
+    transform: translateX(-200px) rotateY(90deg);
+`;
+const Right = styled(Front)`
+    transform: translateX(200px) rotateY(90deg);
+`;
+const Top = styled(Front)`
+    transform: translateY(-200px) rotateX(90deg);
+`;
+const Bottom = styled(Front)`
+    transform: translateY(200px) rotateX(90deg);
+`;
+
 const RightContainer = styled.div`
     display: grid;
     place-items: center;
