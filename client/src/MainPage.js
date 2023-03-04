@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Header from './Header.js';
 
 export default function Main(){
-    return(
-        
+    return(<>
+        <Header/>
         <MainPage>
             <ProfileContainer>
                 <MessageWrapper>
@@ -12,23 +12,13 @@ export default function Main(){
                     <ProfileMessage>끈기로 성장하는 박지훈입니다</ProfileMessage>
                 </MessageWrapper>
             </ProfileContainer>
-            <DetailContainer>
-                <DetailWrapper>
-                    <DetailMessage to ='/about'>ABOUT ME</DetailMessage>
-                    <DetailMessage to ='/work'>WORK</DetailMessage>
-                    <DetailMessage to ='#'>CONTACT</DetailMessage>
-                </DetailWrapper>
-            </DetailContainer>
         </MainPage>
-    )
+        </>)
 }
 
 const MainPage = styled.div`
     width: 100vw;
     height: 100vh;
-
-    display: grid;
-    grid-template-columns: 1.6fr 1fr;
 `;
 
 const ProfileContainer = styled.div`
@@ -39,7 +29,7 @@ const ProfileContainer = styled.div`
     place-items: center;
     place-content: center;
 
-    background: black;
+    background: #1A1E23;
 `;
 
 const MessageWrapper = styled(ProfileContainer)` 
@@ -97,55 +87,3 @@ const ProfileTitle = styled.h1`
 const ProfileMessage = styled(ProfileTitle)`
     font-size: 26px;
 `;
-
-const DetailContainer = styled(ProfileContainer)`
-    background: #98fb98;
-`;
-
-const DetailWrapper = styled(DetailContainer)`
-`;
-
-const DetailMessage = styled(Link)`
-padding: 25px;
-opacity: .7;
-color: black;
-font-size: 40px;
-transition-duration: 0.5s; 
-position: relative;
-
-display: grid;
-place-items: center;
-place-content: center;
-
-
-&:before, &:after{
-    content:"";
-    position: absolute;
-    height: 3px;
-    width: 0px;
-    background:black;
-    transition:0.2s;
-    -webkit-transition:1s;
-    -ms-transition:1s;
-    opacity:0.3;
-    left:0;
-
-    display: grid;
-place-items: center;
-place-content: center;
-
-}
-&:before{
-    bottom: 0;
-}
-&:hover{
-    opacity: 1;
-}
-&:hover:after{
-    width: 98%;
-    opacity: 1;
-    left: 0;
-}
-
-`;
-
