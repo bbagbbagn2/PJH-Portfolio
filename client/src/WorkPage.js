@@ -1,35 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header.js';
+import IconDB from './img/IconDB.png';
 
 export default function Activity() {
     return (<>
-       <Header />
+        <Header />
         <Page>
-        <WorkPage>
-            <WorkContainer>
-                <WorkList>
-            <Container href="/IconDB">
-                <Gradient/>
-            <D>
-                <FFF>
-                    <DevDate>June 2022</DevDate>
-                    <DevTitle>IconDB</DevTitle>
-                </FFF>
-                <Description>
-                    <A>
-                        <Des>사용자의 목적에 가장 알맞는 아이콘을 무료 제작 및 배포할 수 있는 반응형 웹사이트입니다.</Des>
-                    </A>
-                </Description>
-                <Topic>
-                    <Tags>Website</Tags>
-                </Topic>
-            </D>
-            </Container>
-            </WorkList>
-            </WorkContainer>
-        </WorkPage>
+            <WorkPage>
+                <WorkContainer>
+                    <WorkList>
+                        <Container href="/IconDB">
+                            <Photo src={IconDB} alt="IconDB" />
+                            <Gradient/>
+                            <D>
+
+                                <Dev>
+                                    <DevDate>June 2022</DevDate>
+                                    <DevTitle>IconDB</DevTitle>
+                                </Dev>
+                                <Description>
+                                    <A>
+                                        <Des>사용자의 목적에 가장 알맞는 아이콘을 무료 제작 및 배포할 수 있는 반응형 웹사이트입니다.</Des>
+                                    </A>
+                                </Description>
+                                <Topic>
+                                    <Tags>Website</Tags>
+                                </Topic>
+                            </D>
+                        </Container>
+                    </WorkList>
+                </WorkContainer>
+            </WorkPage>
         </Page>
     </>
     )
@@ -86,7 +88,24 @@ const A = styled.div`
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: matrix(1, 0, 0, 1, 0, 48);
 `;
-
+const Photo = styled.img`
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    right:0;
+    object-fit: cover;
+    object-position: center;
+    overflow-clip-margin: content-box;
+    transition-duration: 0.5s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+`
 
 const DevDate = styled.span`
     box-sizing: border-box;
@@ -108,11 +127,9 @@ const DevTitle = styled.h4`
     margin-block-start: 4px;
     margin-inline-end: 0;
     margin-inline-start: 0;
-    
-
 `;
 
-const Page= styled.div`
+const Page = styled.div`
     box-sizing: border-box;
     display: block;
     height:100vh;
@@ -127,25 +144,21 @@ const Page= styled.div`
 
     color: rgb(255, 254, 250);
     background-color: rgb(15, 25, 34);
-
 `;
 const WorkPage = styled.div`
     box-sizing: border-box;
+    position: relative;
+    width: 100%;
     padding-left: 0;
     padding-right: 0;
-    position: relative;
-    visibility: visible;
-    width: 100%;
 
-    line-height: 24px;
-    tab-size: 4;
+    overflow: hidden;
     text-align: left;
-    text-size-adjust: 100%;
-    z-index: 0;
 
     color: rgb(255, 254, 250);
-
     user-select: none;
+
+    z-index: 0;
 `;
 
 const Container = styled.a`
@@ -156,6 +169,7 @@ const Container = styled.a`
     color: rgb(255, 254, 250);
     cusrsor: pointer;
 `;
+
 const WorkContainer = styled.ul`
     box-sizing: border-box;
     display: flex;
@@ -163,6 +177,7 @@ const WorkContainer = styled.ul`
 
     backface-visibility: hidden;
     list-style-type: none;
+
     margin: 0!important;
     padding: 0!important;
     transform: translateX(0px);
@@ -171,22 +186,25 @@ const WorkContainer = styled.ul`
 
 const WorkList = styled.li`
     box-sizing: border-box;
-    display: list-item;
-    flex-shrink: 0;
-    height: 100vh;
     position: relative;
     width:calc(100%);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: list-item;
+    flex-shrink: 0;
 
     backface-visibility: hidden;
+    list-style: none;
 `;
 const Gradient = styled.div`
-    box-sizing: boreder-box;
+    box-sizing: border-box;
     height: 100%;
     position: absolute;
     right: 0;
     width: 100%;
 
-    background-image: linear-gradient(to top, #004225, #3c6d4e, #709c7a, #a6ccab, #deffde);
+    background-image: linear-gradient(to top, #0F1922,rgb(15, 25, 34, 0));
 `;
 
 const D = styled.div`
@@ -203,7 +221,7 @@ const D = styled.div`
     z-index: 10;
 `;
 
-const FFF = styled.div`
+const Dev = styled.div`
     box-sizing: border-box;
 
     transition-duration: .5s;
