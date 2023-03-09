@@ -10,8 +10,6 @@ export default function Profile() {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
     setScreenSize();
-
-
     return (<>
         <Header />
         <ProfilePage>
