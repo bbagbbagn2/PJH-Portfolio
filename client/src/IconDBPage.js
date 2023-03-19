@@ -2,7 +2,6 @@ import React from "react";
 import styled from 'styled-components';
 import Header from './Header.js';
 import IconDB from './img/IconDB.png';
-import { ReactComponent as Github } from './img/github.svg';
 import {BsGithub} from "react-icons/bs";
 export default function App() {
     return (<>

@@ -1,19 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header.js';
 
-export default function Main(){
-    return(<>
-        <Header/>
+export default function Main() {
+    return (<>
+        <Header />
         <MainPage>
             <ProfileContainer>
                 <MessageWrapper>
                     <ProfileTitle>Front-End Developer </ProfileTitle>
                     <ProfileMessage>끈기로 성장하는 박지훈입니다</ProfileMessage>
+                    <Link to="/work"><LinkButton>Show Project</LinkButton></Link>
                 </MessageWrapper>
+                
             </ProfileContainer>
         </MainPage>
-        </>)
+    </>)
 }
 
 const MainPage = styled.div`
@@ -39,7 +42,7 @@ const ProfileTitle = styled.h1`
     font-size:60px;
     font-weight:bold;
     text-align:center;
-    color:#98fb98;
+    color:#98FB98;
     letter-spacing: 0;
     transition:1s;
     -webkit-transition:1s;
@@ -57,7 +60,7 @@ const ProfileTitle = styled.h1`
         position: absolute;
         height: 7px;
         width: 0px;
-        background:#98fb98;
+        background:#98FB98;
         transition:300ms;
         -webkit-transition:1s;
         -ms-transition:1s;
@@ -86,4 +89,37 @@ const ProfileTitle = styled.h1`
 
 const ProfileMessage = styled(ProfileTitle)`
     font-size: 26px;
+    color: white;
+
+    &:before, &:after{
+        background: white;
+    }
+`;
+
+const LinkButton = styled.button`
+    margin-top: 140px;
+    background: #1A1E23;
+    padding: 30px 100px;
+    border: 2px solid #98FB98;
+    overflow: hidden;
+    position: relative;
+    font-size: 26px;
+    color: #98FB98;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    &:hover:before{
+        transform: translateX(100%);
+    }
+    &:before{
+        content: '';
+        background: #98FB98;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: .56s cubic-bezier(0.5, 0, 0.5, 1);
+    }
 `;
