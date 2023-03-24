@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import profile from './img/Profile.jpg';
 import Header from './Header.js';
+import Typewriter from 'typewriter-effect';
 
 export default function Profile() {
     function setScreenSize() {
@@ -21,7 +22,12 @@ export default function Profile() {
             <RightContainer>
                 <IntroduceContainer>
                     <About>ABOUT</About>
-                    <Title>Developer</Title>
+                    <Title><Typewriter options={{
+                        strings: ['Developer', 'Patience', 'Improving', 'Effort'],
+                        autoStart: true,
+                        loop: true,
+                    }}
+                    /></Title>
                     <Message>저는 끈기로 성장하는 개발자 박지훈입니다. 저는 디자인을 포함한 전체 프론트엔드 반응형 웹 프로젝트 개발 경험이 있습니다. 저는 주기적으로 커뮤니케이션을 하며 개발하는 것을 선호합니다.</Message>
                 </IntroduceContainer>
             </RightContainer>

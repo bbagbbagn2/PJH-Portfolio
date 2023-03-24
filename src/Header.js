@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import {ReactComponent as Github} from './img/github.svg';
-import {ReactComponent as Notion} from './img/notion.svg';
 
 export default function App(){
     return(<>
@@ -13,7 +12,6 @@ export default function App(){
             <HeaderMessage to='/contact'>CONTACT</HeaderMessage>
             <ChannelContainer>
             <Github onClick={() => window.open('https://github.com/bbagbbagn2', '_blank')}/>
-            <Notion onClick={() => window.open('https://concise-molybdenum-1ed.notion.site/c4ce189e86cf43e8858349a33ebb482d', '_blank')}/>
             </ChannelContainer>
         </Header>
     </>)
@@ -45,14 +43,19 @@ const HeaderMessage = styled(Link)`
     display: block;
     letter-spacing: .2em;
     font-size: 14px;
+    padding: 20px;
 
     &:hover{
-        color: #98fb98;
+        color: #98FB98;
         opacity: .7;
     }
 `;
 
 const ChannelContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2,40px);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    &:hover{
+        opacity: .7;
+    }
 `
