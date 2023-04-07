@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import Header from './Header.js';
 import IconDB from './img/IconDB.png';
-import {BsGithub} from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 export default function App() {
     return (<>
         <Header />
@@ -26,8 +26,9 @@ export default function App() {
                                 </Description>
                                 <Topic>
                                     <Tags>Website</Tags>
-                                    <Icon>
-                                        <BsGithub size="40"onClick={() => window.open('https://github.com/stack0801/Icon_DB', '_blank')} /></Icon>
+                                    <Icon >
+                                        <BsGithub size="40" onClick={() => window.open('https://github.com/stack0801/Icon_DB', '_blank')}/>
+                                    </Icon>
                                 </Topic>
                             </D>
                         </Container>
@@ -76,7 +77,7 @@ const Topic = styled.div`
     display: grid;
     align-items: end;
     margin: 1px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 97% 3%;
     padding-bottom: 12px;
 
     transition-duration: 0.5s;
