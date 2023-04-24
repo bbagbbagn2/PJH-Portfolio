@@ -1,7 +1,13 @@
-# Portfolio
-프론트엔드 개발자의 저를 나타낼 수 있는 포트폴리오 웹사이트입니다.
+<div align="center">
+  
+  ![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=300&section=header&text=Park's%20Portfolio&fontSize=90)
 
-<br>
+  <br><br>
+
+  ### 저 자신을 나타낼 수 있는 포트폴리오 웹사이트입니다.
+</div>
+
+<br><br>
 
 ## Link
 https://parkproject.netlify.app/
