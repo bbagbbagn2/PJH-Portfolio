@@ -3,43 +3,49 @@ import styled from 'styled-components';
 import Header from './Header.js';
 import IconDB from './img/IconDB.png';
 import { BsGithub } from "react-icons/bs";
-export default function App() {
-    return (<>
-        <Header />
-        <Page>
-            <WorkPage>
-                <WorkContainer>
-                    <WorkList>
-                        <Container>
-                            <Photo src={IconDB} alt="IconDB" />
-                            <Gradient />
-                            <D>
 
-                                <Dev>
-                                    <DevDate>June 2022</DevDate>
-                                    <DevTitle>IconDB</DevTitle>
-                                </Dev>
-                                <Description>
-                                    <A>
-                                        <Des>사용자의 목적에 가장 알맞는 아이콘을 무료 제작 및 배포할 수 있는 반응형 웹사이트입니다.</Des>
-                                    </A>
-                                </Description>
-                                <Topic>
-                                    <Tags>Website</Tags>
-                                    <Icon >
-                                        <BsGithub size="40" onClick={() => window.open('https://github.com/stack0801/Icon_DB', '_blank')}/>
-                                    </Icon>
-                                </Topic>
-                            </D>
-                        </Container>
-                    </WorkList>
-                </WorkContainer>
-            </WorkPage>
-        </Page>
-        <Detail>
-            <DetailPhoto src={IconDB} alt="IconDB" />
-        </Detail>
-    </>)
+export default function App() {
+    const handleGithubClick = () => {
+        window.open('https://github.com/stack0801/Icon_DB', '_blank')
+    };
+
+    return (
+        <>
+            <Header />
+            <Page>
+                <WorkPage>
+                    <WorkContainer>
+                        <WorkList>
+                            <Container>
+                                <Photo src={IconDB} alt="IconDB" />
+                                <Gradient />
+                                <D>
+                                    <Dev>
+                                        <DevDate>June 2022</DevDate>
+                                        <DevTitle>IconDB</DevTitle>
+                                    </Dev>
+                                    <Description>
+                                        <A>
+                                            <Des>사용자의 목적에 가장 알맞는 아이콘을 무료 제작 및 배포할 수 있는 반응형 웹사이트입니다.</Des>
+                                        </A>
+                                    </Description>
+                                    <Topic>
+                                        <Tags>Website</Tags>
+                                        <Icon >
+                                            <BsGithub size="40" onClick={handleGithubClick} />
+                                        </Icon>
+                                    </Topic>
+                                </D>
+                            </Container>
+                        </WorkList>
+                    </WorkContainer>
+                </WorkPage>
+            </Page>
+            <Detail>
+                <DetailPhoto src={IconDB} alt="IconDB" />
+            </Detail>
+        </>
+    );
 }
 const Detail = styled.div`
     height: 100%;

@@ -4,19 +4,22 @@ import styled from 'styled-components';
 import Header from './Header.js';
 
 export default function Main() {
-    return (<>
+    return (
+    <>
         <Header />
         <MainPage>
             <ProfileContainer>
                 <MessageWrapper>
                     <ProfileTitle>Front-End Developer </ProfileTitle>
                     <ProfileMessage>끈기로 성장하는 박지훈입니다</ProfileMessage>
-                    <Link to="/work"><LinkButton>Show Project</LinkButton></Link>
+                    <Link to="/work">
+                        <LinkButton>Show Project</LinkButton>
+                        </Link>
                 </MessageWrapper>
-                
             </ProfileContainer>
         </MainPage>
-    </>)
+    </>
+    );
 }
 
 const MainPage = styled.div`
@@ -27,11 +30,9 @@ const MainPage = styled.div`
 const ProfileContainer = styled.div`
     width: 100%;
     height: 100vh;
-
     display: grid;
     place-items: center;
     place-content: center;
-
     background: #1A1E23;
 `;
 
@@ -49,13 +50,12 @@ const ProfileTitle = styled.h1`
     -ms-transition:1s;
     position: relative;
     padding: 15px;
-
     display: grid;
     place-items: center;
     place-content: center;
 
-
-    &:before, &:after{
+    &:before,
+    &:after {
         content:"";
         position: absolute;
         height: 7px;
@@ -68,19 +68,20 @@ const ProfileTitle = styled.h1`
         left:50%;
     }
 
-    &:before{
+    &:before {
         bottom: 0;
     }
 
-    &:after{
+    &:after {
         top: 0;
     }
 
-    &:hover{    
+    &:hover {    
         letter-spacing: 10px;
     }
 
-    &:hover:before, &:hover:after{
+    &:hover:before,
+    &:hover:after {
         width: 98%;
         opacity: 1;
         left: 0;
@@ -91,7 +92,8 @@ const ProfileMessage = styled(ProfileTitle)`
     font-size: 26px;
     color: white;
 
-    &:before, &:after{
+    &:before,
+    &:after {
         background: white;
     }
 `;
@@ -108,10 +110,11 @@ const LinkButton = styled.button`
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    &:hover:before{
+
+    &:hover:before {
         transform: translateX(100%);
     }
-    &:before{
+    &:before {
         content: '';
         background: #98FB98;
         height: 100%;
