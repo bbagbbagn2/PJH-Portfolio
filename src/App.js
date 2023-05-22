@@ -1,6 +1,5 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import MainPage from './MainPage';
-import ProfilePage from './ProfilePage';
 import WorkPage from './WorkPage';
 import IconDBPage from './IconDBPage';
 import ContactPage from './ContactPage/Main';
@@ -10,7 +9,6 @@ function App() {
      <Router>
        <Routes>
          <Route path='/' element={<MainPage/>}/>
-         <Route path='/about' element={<ProfilePage/>}/>
          <Route path='/work' element={<WorkPage/>}/>
          <Route path='/icon-db' element={<IconDBPage/>}/>
          <Route path='/contact' element={<ContactPage/>}/>
