@@ -36,11 +36,17 @@ export default function App() {
     </Header>*/}
         <Container>
             <Wrapper>
-                <ItemsWrapper>
-                    <Items to="/" onClick={handleHome}>HOME</Items>
-                    <Items to="/" onClick={handleAbout}>ABOUT</Items>
-                    <Items to='/work'>WORK</Items>
-                </ItemsWrapper>
+                <ItemsContainer>
+                    <ItemsWrapper>
+                        <Items color='#98FB98' onClick={handleHome}>HOME</Items>
+                        </ItemsWrapper>
+                    <ItemsWrapper>
+                    <Items onClick={handleAbout}>ABOUT</Items>
+                    </ItemsWrapper>
+                    <ItemsWrapper>
+                    <Items>WORK</Items>
+                    </ItemsWrapper>
+                </ItemsContainer>
             </Wrapper>
         </Container>
     </>)
@@ -52,8 +58,7 @@ const Container = styled.div`
     height: 65px;
     display: grid;
     place-items: center;
-    background: #FFFFFF;
-    border-bottom: 2px solid #1A1E23; 
+    background: rgba(26, 30, 35, 0.5);
     z-index: 999;
 `;
 
@@ -65,7 +70,7 @@ const Wrapper = styled.div`
 
 const LogoWrapper = styled.div``;
 
-const ItemsWrapper = styled.div`
+const ItemsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3,1fr);
     place-items: center;
@@ -75,21 +80,22 @@ const ItemsWrapper = styled.div`
     }
 `;
 
-const Items = styled(Link)`
+const ItemsWrapper = styled.div`
     width: 190px;
     height: 100%;
     display: grid;
     place-items: center;
-    color: #1A1E23;
+`;
+
+const Items = styled.p`
     font-size: 14px;
-    font-weight: medium;
-    text-decoration: none;
-    letter-spacing: 1.909091px;
-    
+    cursor: pointer;
+    color: ${(props) => (props.color || "#939DAB")};
+
     &:hover{
-        color: #000000;
+        color: #FFFFFF;
     }
-    
+
 `;
 
 const MobileMenuWrapper = styled.div`
