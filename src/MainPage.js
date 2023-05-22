@@ -9,83 +9,45 @@ export default function Main() {
         <Header />
         <MainPage>
             <ProfileContainer>
-                <MessageWrapper>
-                    <ProfileTitle>Front-End Developer </ProfileTitle>
+                <ProfileWrapper>
+                    <TitleWrapper>
+                    <ProfileTitle color='#FFFFFF'>I</ProfileTitle>
+                    <ProfileTitle color='#98FB98'>'</ProfileTitle>
+                    <ProfileTitle color='#FFFFFF'>M</ProfileTitle>
+                    </TitleWrapper>
                     <ProfileMessage>끈기로 성장하는 박지훈입니다</ProfileMessage>
                     <Link to="/work">
                         <LinkButton>Show Project</LinkButton>
                         </Link>
-                </MessageWrapper>
+                </ProfileWrapper>
             </ProfileContainer>
-        </MainPage>
+    </MainPage>
     </>
     );
 }
 
 const MainPage = styled.div`
-    width: 100vw;
-    height: 100vh;
+    position: static;
+    width: 100%;
 `;
 
 const ProfileContainer = styled.div`
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 1088px;
     display: grid;
     place-items: center;
     place-content: center;
     background: #1A1E23;
 `;
 
-const MessageWrapper = styled(ProfileContainer)` 
+const ProfileWrapper = styled(ProfileContainer)` 
+    display: inline-block;
 `;
 
 const ProfileTitle = styled.h1`
-    font-size:60px;
-    font-weight:bold;
-    text-align:center;
-    color:#98FB98;
-    letter-spacing: 0;
-    transition:1s;
-    -webkit-transition:1s;
-    -ms-transition:1s;
-    position: relative;
-    padding: 15px;
-    display: grid;
-    place-items: center;
-    place-content: center;
-
-    &:before,
-    &:after {
-        content:"";
-        position: absolute;
-        height: 7px;
-        width: 0px;
-        background:#98FB98;
-        transition:300ms;
-        -webkit-transition:1s;
-        -ms-transition:1s;
-        opacity:0.3;
-        left:50%;
-    }
-
-    &:before {
-        bottom: 0;
-    }
-
-    &:after {
-        top: 0;
-    }
-
-    &:hover {    
-        letter-spacing: 10px;
-    }
-
-    &:hover:before,
-    &:hover:after {
-        width: 98%;
-        opacity: 1;
-        left: 0;
-    }
+    font-size:65px;
+    color:${(props) => props.color};
 `;
 
 const ProfileMessage = styled(ProfileTitle)`
@@ -96,6 +58,10 @@ const ProfileMessage = styled(ProfileTitle)`
     &:after {
         background: white;
     }
+`;
+
+const TitleWrapper = styled.div`
+    display: inline-block;
 `;
 
 const LinkButton = styled.button`
