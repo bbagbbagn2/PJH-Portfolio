@@ -13,10 +13,10 @@ export default function Main() {
                         <ProfileWrapper>
                             <TitleWrapper>
                                 <ProfileTitle>
-                                    I<ProfileTitleColor>'</ProfileTitleColor>M
+                                I<ProfileTitleColor>'</ProfileTitleColor>M A
                                 </ProfileTitle>
                                 <ProfileTitle>
-                                    A FRONT-END
+                                FRONT<ProfileTitleColor>-</ProfileTitleColor>END
                                 </ProfileTitle>
                                 <ProfileTitle>
                                     DEVELOPER<ProfileTitleColor>.</ProfileTitleColor>
@@ -33,9 +33,9 @@ export default function Main() {
                         <Part1TitleWrapper>
                             <Part1Title>
                                 <Part1TitleColor>01 </Part1TitleColor>
-                                사용 가능한 스킬을 소개합니다!
+                                Introducing the available skills!
                             </Part1Title>
-                            <IntroduceTitle>학습한 스킬을 확인하세요.</IntroduceTitle>
+                            <IntroduceTitle>스킬을 확인하세요.</IntroduceTitle>
                         </Part1TitleWrapper>
                         <Part1SkillContainer>
                             <SkillWrapper>
@@ -129,7 +129,7 @@ const IntroduceTitle = styled.h5`
 const Part1Container = styled.div`
     height: 1250px;
     display: grid;
-    grid-template-rows: repeat(10, min-content) 1fr;
+    grid-template-rows: repeat(2, min-content) 1fr;
 `;
 
 const Part1TitleWrapper = styled.div`

@@ -7,7 +7,7 @@ export default function App() {
     const [scrollPosition, setScrollPosition] = useState(0);
 
     const handleSkill = () => {
-        const targetHeight = 658;
+        const targetHeight = 988;
         window.scrollTo({
             top: targetHeight,
             behavior: 'smooth',
@@ -90,6 +90,7 @@ const ItemsWrapper = styled.div`
 const Items = styled.p`
     font-size: 14px;
     cursor: pointer;
+    transition: all 0.3s;
     color: ${(props) => (props.color || "#939DAB")};
 
     &:hover{
