@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import Header from './Header.js';
+import Header from './components/Header.js';
 import IconDB from './img/IconDB.png';
 import { BsGithub } from "react-icons/bs";
 

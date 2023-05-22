@@ -1,7 +1,5 @@
 import React,{ useState } from "react";
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import GithubIcon from './img/github.svg';
 
 export default function App() {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -68,8 +66,6 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr;
 `;
 
-const LogoWrapper = styled.div``;
-
 const ItemsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -97,14 +93,4 @@ const Items = styled.p`
         color: #FFFFFF;
     }
 
-`;
-
-const MobileMenuWrapper = styled.div`
-    display: none;
-
-    @media (max-width: 1024px) {
-        display: grid;
-        justify-content: end;
-        cursor: pointer;
-    }
 `;
