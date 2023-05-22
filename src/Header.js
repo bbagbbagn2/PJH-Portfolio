@@ -6,7 +6,7 @@ import GithubIcon from './img/github.svg';
 export default function App() {
     const [scrollPosition, setScrollPosition] = useState(0);
 
-    const handleAbout = () => {
+    const handleSkill = () => {
         const targetHeight = 658;
         window.scrollTo({
             top: targetHeight,
@@ -41,7 +41,7 @@ export default function App() {
                         <Items color='#98FB98' onClick={handleHome}>HOME</Items>
                         </ItemsWrapper>
                     <ItemsWrapper>
-                    <Items onClick={handleAbout}>ABOUT</Items>
+                    <Items onClick={handleSkill}>SKILL</Items>
                     </ItemsWrapper>
                     <ItemsWrapper>
                     <Items>WORK</Items>
