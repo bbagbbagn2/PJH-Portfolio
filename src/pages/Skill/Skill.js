@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 export default function Main() {
     return (
-        <Part1Container>
-            <Part1TitleWrapper>
-                <Part1Title>
+        <Container>
+            <TitleWrapper>
+                <Title>
                     <Part1TitleColor>01 </Part1TitleColor>
                     Introducing the available skills!
-                </Part1Title>
-                <IntroduceTitle>스킬을 확인하세요.</IntroduceTitle>
-            </Part1TitleWrapper>
+                </Title>
+                <IntroduceTitle>제 스킬을 소개합니다!</IntroduceTitle>
+            </TitleWrapper>
             <Part1SkillContainer>
                 <SkillWrapper>
                     <SkillTitle>HTML</SkillTitle>
@@ -23,7 +23,7 @@ export default function Main() {
                     <SkillPercent>80%</SkillPercent>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <SkillTitle>Javascript</SkillTitle>
+                    <SkillTitle>JavaScript</SkillTitle>
                     <SkiilRate width="35vw" />
                     <SkillPercent>70%</SkillPercent>
                 </SkillWrapper>
@@ -37,8 +37,13 @@ export default function Main() {
                     <SkiilRate width="40vw" />
                     <SkillPercent>75%</SkillPercent>
                 </SkillWrapper>
+                <SkillWrapper>
+                    <SkillTitle>Node.js</SkillTitle>
+                    <SkiilRate width="30vw" />
+                    <SkillPercent>65%</SkillPercent>
+                </SkillWrapper>
             </Part1SkillContainer>
-        </Part1Container>
+        </Container>
     );
 }
 
@@ -50,18 +55,18 @@ const IntroduceTitle = styled.h5`
     color: #FFFFFF;
 `;
 
-const Part1Container = styled.div`
+const Container = styled.div`
     height: 1250px;
     display: grid;
     grid-template-rows: repeat(2, min-content) 1fr;
 `;
 
-const Part1TitleWrapper = styled.div`
+const TitleWrapper = styled.div`
     display: inline-block;
     margin-bottom: 70px;
 `;
 
-const Part1Title = styled.h3`
+const Title = styled.h3`
     color: #FFFFFF;
     line-height: 1.3em;
     text-align: center;

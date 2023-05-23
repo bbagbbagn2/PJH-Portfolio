@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from './components/Header.js';
-import IconDB from './img/IconDB.png';
+import IconDB from './assets/images/IconDB.png';
 
 export default function Activity() {
     return (<>

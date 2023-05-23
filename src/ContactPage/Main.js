@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../components/Header';
-import "../Fonts/Font.css";
+import '../assets/font/Font.css';
 import { BsPhoneVibrate } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
+
 export default function Main() {
     function setScreenSize() {
         let vh = window.innerHeight * 0.01;
