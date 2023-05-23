@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Main() {
+export default function Skill() {
     return (
         <Container>
             <TitleWrapper>
                 <Title>
-                    <Part1TitleColor>01 </Part1TitleColor>
+                    <TitleColor>01 </TitleColor>
                     Introducing the available skills!
                 </Title>
                 <IntroduceTitle>제 스킬을 소개합니다!</IntroduceTitle>
@@ -56,9 +56,9 @@ const IntroduceTitle = styled.h5`
 `;
 
 const Container = styled.div`
-    height: 1250px;
+    height: 600px;
     display: grid;
-    grid-template-rows: repeat(2, min-content) 1fr;
+    grid-template-rows: min-content;
 `;
 
 const TitleWrapper = styled.div`
@@ -73,7 +73,7 @@ const Title = styled.h3`
     font-size: 42px;
 `;
 
-const Part1TitleColor = styled.span`
+const TitleColor = styled.span`
     font-size: 42px;
     color: #939DAB;
 `;

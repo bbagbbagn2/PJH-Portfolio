@@ -1,8 +1,17 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import styled from 'styled-components';
 
 export default function App() {
     const [scrollPosition, setScrollPosition] = useState(0);
+
+    const handleHome = () => {
+        const targetHeight = 0;
+        window.scrollTo({
+            top: targetHeight,
+            behavior: 'smooth',
+        });
+        setScrollPosition(targetHeight);
+    };
 
     const handleSkill = () => {
         const targetHeight = 988;
@@ -13,8 +22,8 @@ export default function App() {
         setScrollPosition(targetHeight);
     };
 
-    const handleHome = () => {
-        const targetHeight = 0;
+    const handleWork = () => {
+        const targetHeight = 1938;
         window.scrollTo({
             top: targetHeight,
             behavior: 'smooth',
@@ -37,12 +46,12 @@ export default function App() {
                 <ItemsContainer>
                     <ItemsWrapper>
                         <Items color='#98FB98' onClick={handleHome}>HOME</Items>
-                        </ItemsWrapper>
-                    <ItemsWrapper>
-                    <Items onClick={handleSkill}>SKILL</Items>
                     </ItemsWrapper>
                     <ItemsWrapper>
-                    <Items>WORK</Items>
+                        <Items onClick={handleSkill}>SKILL</Items>
+                    </ItemsWrapper>
+                    <ItemsWrapper>
+                        <Items onClick={handleWork}>WORK</Items>
                     </ItemsWrapper>
                 </ItemsContainer>
             </Wrapper>
