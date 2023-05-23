@@ -14,6 +14,19 @@ export default function Main() {
                     <Profile />
                     <Skill />
                     <Work />
+                    <ContactContainer>
+                    <ContactWrapper>
+                        <MyContactContainer>
+                            <MyContactWrapper>
+                                <ContactTitleWrapper>
+                                    <ContactTitle>Contact</ContactTitle>
+                                </ContactTitleWrapper>
+                                <ContactItemWrapper>
+                                </ContactItemWrapper>
+                            </MyContactWrapper>
+                        </MyContactContainer>
+                    </ContactWrapper>
+                </ContactContainer>
                 </Wrapper>
             </MainPage>
         </>
@@ -32,4 +45,30 @@ const MainPage = styled.div`
 const Wrapper = styled.div`
     padding: 0 6%;
     display: grid;
+`;
+
+const ContactContainer = styled.div`
+    height: 780px;
+    display: grid;
+    justify-items: center;
+`;
+
+const ContactWrapper = styled.div`
+    width: 50vw;
+    height: 500px;
+    background: #FFFFFF;
+    padding: 0 10%;
+`;
+
+const MyContactContainer = styled.div``;
+const MyContactWrapper   = styled.div``;
+const ContactTitleWrapper = styled.div``;
+
+const ContactTitle = styled.h5`
+    font-size: 24px;
+    color: #1A1E23;
+`;
+
+const ContactItemWrapper = styled.div`
+
 `;

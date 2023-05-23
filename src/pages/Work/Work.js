@@ -29,7 +29,7 @@ export default function Work() {
 
 const Container = styled.div`
     margin-top: 350px;
-    height: 1080px;
+    height: 880px;
     display: grid;
     grid-template-rows: min-content;
     align-items: start;
@@ -99,6 +99,6 @@ const ItemWrapper = styled.div`
     }
 
     &:hover ${WorkItems}{
-        transform: scale3d(1.2, 1.2, 1);
+        transform: scale3d(1.1, 1.1, 1);
     }
 `;
