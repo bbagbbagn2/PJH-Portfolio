@@ -29,7 +29,7 @@ export default function Work() {
 
 const Container = styled.div`
     margin-top: 350px;
-    height: 880px;
+    height: 1080px;
     display: grid;
     grid-template-rows: min-content;
     align-items: start;
@@ -64,6 +64,7 @@ const WorkWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+    box-shadow: 0px 1px 35px 7px rgba(234,234,234,0.25);
 `;
 
 
@@ -71,7 +72,7 @@ const WorkItems = styled.img`
     width: 320px;
     height: 320px;
     cursor: pointer;
-    transition: all 0.3s linear;
+    transition: 0.4s ease 0s;
     transform: scale3d(1, 1, 1);
 
     background: ${(props) => (props.background || "#FFFFFF")};
@@ -85,6 +86,7 @@ const ItemCaption = styled.div`
     width: 100%;
     height: 100%;
     display: table;
+    transition: 0.4s ease 0s;
 `;
 
 const ItemWrapper = styled.div`
@@ -95,7 +97,7 @@ const ItemWrapper = styled.div`
     cursor: pointer;
 
     &:hover ${ItemCaption}{
-        background: rgba(255,255,255,0.3);
+        background: rgba(0,0,0,0.3);
     }
 
     &:hover ${WorkItems}{

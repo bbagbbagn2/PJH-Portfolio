@@ -31,6 +31,15 @@ export default function App() {
         setScrollPosition(targetHeight);
     };
 
+    const handleContact = () => {
+        const targetHeight = 3050;
+        window.scrollTo({
+            top: targetHeight,
+            behavior: 'smooth',
+        });
+        setScrollPosition(targetHeight);
+    };
+
     return (<>
         {/*<Header>
             <HeaderMessage to='/' className="active">HOME</HeaderMessage>
@@ -52,6 +61,9 @@ export default function App() {
                     </ItemsWrapper>
                     <ItemsWrapper>
                         <Items onClick={handleWork}>WORK</Items>
+                    </ItemsWrapper>
+                    <ItemsWrapper>
+                        <Items onClick={handleContact}>CONTACT</Items>
                     </ItemsWrapper>
                 </ItemsContainer>
             </Wrapper>
@@ -77,7 +89,7 @@ const Wrapper = styled.div`
 
 const ItemsContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4, 1fr);
     place-items: center;
 
     @media (max-width: 1024px) {

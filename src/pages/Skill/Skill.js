@@ -56,7 +56,7 @@ const IntroduceTitle = styled.h5`
 `;
 
 const Container = styled.div`
-    height: 600px;
+    height: 700px;
     display: grid;
     grid-template-rows: min-content;
 `;
