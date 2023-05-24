@@ -66,6 +66,7 @@ const TitleColor = styled.span`
 const SkillContainer = styled.div`
     display: grid;
 `;
+
 const SkillWrapper = styled.div`
     margin: 0 12%;
     display: grid;

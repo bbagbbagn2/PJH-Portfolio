@@ -28,16 +28,19 @@ export default function App() {
         handleScroll(3050);
     };
 
-    return (<>
-        {/*<Header>
-            <HeaderMessage to='/' className="active">HOME</HeaderMessage>
-            <HeaderMessage to='/about'>ABOUT</HeaderMessage>
-            <HeaderMessage to='/work'>WORK</HeaderMessage>
-            <HeaderMessage to='/contact'>CONTACT</HeaderMessage>
-            <ChannelContainer onClick={() => window.open('https://github.com/bbagbbagn2', '_blank')}>
-                <GithubIcon fill="FFF" width="24" height="24" />
-            </ChannelContainer>
-    </Header>*/}
+    return (
+    <>
+        {/*
+            <Header>
+                <HeaderMessage to='/' className="active">HOME</HeaderMessage>
+                <HeaderMessage to='/about'>ABOUT</HeaderMessage>
+                <HeaderMessage to='/work'>WORK</HeaderMessage>
+                <HeaderMessage to='/contact'>CONTACT</HeaderMessage>
+                <ChannelContainer onClick={() => window.open('https://github.com/bbagbbagn2', '_blank')}>
+                    <GithubIcon fill="FFF" width="24" height="24" />
+                </ChannelContainer>
+            </Header>
+        */}
         <Container>
             <Wrapper>
                 <ItemsContainer>
@@ -56,7 +59,8 @@ export default function App() {
                 </ItemsContainer>
             </Wrapper>
         </Container>
-    </>)
+    </>
+    );
 }
 
 const Container = styled.div`
