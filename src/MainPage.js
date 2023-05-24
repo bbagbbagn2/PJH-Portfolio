@@ -4,10 +4,9 @@ import Header from './components/Header';
 import Profile from './pages/Profile/Profile';
 import Skill from './pages/Skill/Skill';
 import Work from './pages/Work/Work';
+import Contact from './pages/Contact/Contact';
 import { BsPhoneVibrate } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
-import { BsGithub } from "react-icons/bs";
-
 
 export default function Main() {
     return (
@@ -18,30 +17,7 @@ export default function Main() {
                     <Profile />
                     <Skill />
                     <Work />
-                    <ContactContainer>
-                        <ContactWrapper>
-                            <MyContactContainer>
-                                <MyContactWrapper>
-                                    <div>
-                                        <ContactTitle>Contact</ContactTitle>
-                                        <ContactMessage>Do you have any questions or suggestions? Contact us at any time and we will respond promptly.</ContactMessage>
-                                    </div>
-                                    <ContactItemWrapper>
-                                        <ContactList>
-                                            <BsPhoneVibrate size="100" color="#98FB98" />
-                                            <ItemTitle>PHONE</ItemTitle>
-                                            <ContactItem>010-9207-8758</ContactItem>
-                                        </ContactList>
-                                        <ContactList>
-                                            <AiOutlineMail size="100" color="#98FB98" />
-                                            <ItemTitle>EMAIL</ItemTitle>
-                                            <ContactItem>pyoungh137@gmail.com</ContactItem>
-                                        </ContactList>
-                                    </ContactItemWrapper>
-                                </MyContactWrapper>
-                            </MyContactContainer>
-                        </ContactWrapper>
-                    </ContactContainer>
+                    <Contact />
                 </Wrapper>
             </MainPage>
         </>
