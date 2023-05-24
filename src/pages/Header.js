@@ -4,40 +4,28 @@ import styled from 'styled-components';
 export default function App() {
     const [scrollPosition, setScrollPosition] = useState(0);
 
-    const handleHome = () => {
-        const targetHeight = 0;
+    const handleScroll = (targetHeight) => {
         window.scrollTo({
             top: targetHeight,
             behavior: 'smooth',
         });
         setScrollPosition(targetHeight);
+    };
+
+    const handleHome = () => {
+        handleScroll(0);
     };
 
     const handleSkill = () => {
-        const targetHeight = 988;
-        window.scrollTo({
-            top: targetHeight,
-            behavior: 'smooth',
-        });
-        setScrollPosition(targetHeight);
+        handleScroll(988);
     };
 
     const handleWork = () => {
-        const targetHeight = 1938;
-        window.scrollTo({
-            top: targetHeight,
-            behavior: 'smooth',
-        });
-        setScrollPosition(targetHeight);
+        handleScroll(1938);
     };
 
     const handleContact = () => {
-        const targetHeight = 3050;
-        window.scrollTo({
-            top: targetHeight,
-            behavior: 'smooth',
-        });
-        setScrollPosition(targetHeight);
+        handleScroll(3050);
     };
 
     return (<>
