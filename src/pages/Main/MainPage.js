@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from './pages/Header';
-import Profile from './pages/Profile/Profile';
-import Skill from './pages/Skill/Skill';
-import Work from './pages/Work/Work';
-import Contact from './pages/Contact/Contact';
+import Header from '../Header/Header';
+import Profile from '../Profile/Profile';
+import Skill from '../Skill/Skill';
+import Work from '../Work/Work';
+import Contact from '../Contact/Contact';
 
 export default function Main() {
     return (
