@@ -2,47 +2,32 @@ import React from 'react';
 import styled from 'styled-components';
 
 export default function Skill() {
+    const skills = [
+        { title: 'HTML', rate: '75%' },
+        { title: 'CSS', rate: '80%' },
+        { title: 'JavaScript', rate: '70%' },
+        { title: 'React', rate: '80%' },
+        { title: 'Git', rate: '75%' },
+        { title: 'Node.js', rate: '65%' },
+    ];
+
     return (
         <Container>
             <TitleWrapper>
                 <Title>
-                    <TitleColor>01 </TitleColor>
-                    Introducing the available skills!
+                    <TitleColor>01 </TitleColor>Introducing the available skills!
                 </Title>
                 <IntroduceTitle>제 스킬을 소개합니다!</IntroduceTitle>
             </TitleWrapper>
-            <Part1SkillContainer>
-                <SkillWrapper>
-                    <SkillTitle>HTML</SkillTitle>
-                    <SkiilRate width="40vw" />
-                    <SkillPercent>75%</SkillPercent>
-                </SkillWrapper>
-                <SkillWrapper>
-                    <SkillTitle>CSS</SkillTitle>
-                    <SkiilRate width="45vw" />
-                    <SkillPercent>80%</SkillPercent>
-                </SkillWrapper>
-                <SkillWrapper>
-                    <SkillTitle>JavaScript</SkillTitle>
-                    <SkiilRate width="35vw" />
-                    <SkillPercent>70%</SkillPercent>
-                </SkillWrapper>
-                <SkillWrapper>
-                    <SkillTitle>React</SkillTitle>
-                    <SkiilRate width="45vw" />
-                    <SkillPercent>80%</SkillPercent>
-                </SkillWrapper>
-                <SkillWrapper>
-                    <SkillTitle>git</SkillTitle>
-                    <SkiilRate width="40vw" />
-                    <SkillPercent>75%</SkillPercent>
-                </SkillWrapper>
-                <SkillWrapper>
-                    <SkillTitle>Node.js</SkillTitle>
-                    <SkiilRate width="30vw" />
-                    <SkillPercent>65%</SkillPercent>
-                </SkillWrapper>
-            </Part1SkillContainer>
+            <SkillContainer>
+                {skills.map((skill, index) => (
+                    <SkillWrapper key={ index }>
+                        <SkillTitle>{ skill.title }</SkillTitle>
+                        <SkiilRate width={ skill.rate } />
+                        <SkillPercent>{ skill.rate }</SkillPercent>
+                    </SkillWrapper>
+                ))};
+            </SkillContainer>
         </Container>
     );
 }
@@ -78,7 +63,7 @@ const TitleColor = styled.span`
     color: #939DAB;
 `;
 
-const Part1SkillContainer = styled.div`
+const SkillContainer = styled.div`
     display: grid;
 `;
 const SkillWrapper = styled.div`
