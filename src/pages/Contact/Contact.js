@@ -1,38 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BsPhoneVibrate } from "react-icons/bs";
-import { AiOutlineMail } from "react-icons/ai";
+import { BsPhoneVibrate } from 'react-icons/bs';
+import { AiOutlineMail } from 'react-icons/ai';
 
-export default function Main() {
+export default function Contact() {
     return (
-        <ContactContainer>
+        <MainContainer>
             <ContactWrapper>
-                <MyContactContainer>
                     <MyContactWrapper>
                         <div>
                             <ContactTitle>Contact</ContactTitle>
-                            <ContactMessage>Do you have any questions or suggestions? Contact us at any time and we will respond promptly.</ContactMessage>
+                            <ContactMessage>
+                                Do you have any questions or suggestions?
+                                Contact us at any time and we will respond promptly.
+                            </ContactMessage>
                         </div>
                         <ContactItemWrapper>
                             <ContactList>
-                                <BsPhoneVibrate size="100" color="#98FB98" />
-                                <ItemTitle>PHONE</ItemTitle>
+                                <BsPhoneVibrate size={100} color="#98FB98" />
+                                <h1>PHONE</h1>
                                 <ContactItem>010-9207-8758</ContactItem>
                             </ContactList>
                             <ContactList>
-                                <AiOutlineMail size="100" color="#98FB98" />
-                                <ItemTitle>EMAIL</ItemTitle>
+                                <AiOutlineMail size={100} color="#98FB98" />
+                                <h1>EMAIL</h1>
                                 <ContactItem>pyoungh137@gmail.com</ContactItem>
                             </ContactList>
                         </ContactItemWrapper>
                     </MyContactWrapper>
-                </MyContactContainer>
             </ContactWrapper>
-        </ContactContainer>
+        </MainContainer>
     );
 }
 
-const ContactContainer = styled.div`
+const MainContainer = styled.div`
     height: 880px;
     display: grid;
     justify-items: center;
@@ -46,9 +47,6 @@ const ContactWrapper = styled.div`
     box-shadow: 0px 1px 25px 4px rgba(234,234,234,0.3);
 `;
 
-const MyContactContainer = styled.div`
-    height: 100%;
-`;
 
 const MyContactWrapper = styled.div`
     height: 100%;
@@ -85,5 +83,3 @@ const ContactList = styled.div`
     display: grid;
     place-items: center;
 `;
-
-const ItemTitle = styled.h1``;

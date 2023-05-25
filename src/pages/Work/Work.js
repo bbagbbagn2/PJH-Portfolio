@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import IconDB_Logo from '../../assets/images/IconDB_Logo.svg';
 import DRINKABLE_Logo from '../../assets/images/DRINKABLE_Logo.svg';
 
 export default function Work() {
+    const [isModalOpen, setIsModalOpen] = useState();
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <Container>
             <TitleWrapper>
@@ -15,7 +20,7 @@ export default function Work() {
                 <WorkWrapper>
                     <ItemWrapper>
                         <WorkItems src={IconDB_Logo} />
-                        <ItemCaption />
+                        <ItemCaption onClick={openModal} />
                     </ItemWrapper>
                     <ItemWrapper>
                         <WorkItems background="#EDEAE3" src={DRINKABLE_Logo} />
@@ -65,13 +70,13 @@ const WorkWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     box-shadow: 0px 1px 35px 7px rgba(234,234,234,0.25);
+    cursor: pointer;
 `;
 
 
 const WorkItems = styled.img`
     width: 320px;
     height: 320px;
-    cursor: pointer;
     transition: 0.4s ease 0s;
     transform: scale3d(1, 1, 1);
 
