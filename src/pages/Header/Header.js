@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from 'styled-components';
 
 export default function App() {
-    const [scrollPosition, setScrollPosition] = useState(0);
-
     const handleScroll = (targetHeight) => {
         window.scrollTo({
             top: targetHeight,
             behavior: 'smooth',
         });
-        setScrollPosition(targetHeight);
     };
 
     const handleHome = () => {
@@ -30,31 +27,20 @@ export default function App() {
 
     return (
     <>
-        {/*
-            <Header>
-                <HeaderMessage to='/' className="active">HOME</HeaderMessage>
-                <HeaderMessage to='/about'>ABOUT</HeaderMessage>
-                <HeaderMessage to='/work'>WORK</HeaderMessage>
-                <HeaderMessage to='/contact'>CONTACT</HeaderMessage>
-                <ChannelContainer onClick={() => window.open('https://github.com/bbagbbagn2', '_blank')}>
-                    <GithubIcon fill="FFF" width="24" height="24" />
-                </ChannelContainer>
-            </Header>
-        */}
         <Container>
             <Wrapper>
                 <ItemsContainer>
                     <ItemsWrapper>
-                        <Items color='#98FB98' onClick={handleHome}>HOME</Items>
+                        <NavItems color='#98FB98' onClick={handleHome}>HOME</NavItems>
                     </ItemsWrapper>
                     <ItemsWrapper>
-                        <Items onClick={handleSkill}>SKILL</Items>
+                        <NavItems onClick={handleSkill}>SKILL</NavItems>
                     </ItemsWrapper>
                     <ItemsWrapper>
-                        <Items onClick={handleWork}>WORK</Items>
+                        <NavItems onClick={handleWork}>WORK</NavItems>
                     </ItemsWrapper>
                     <ItemsWrapper>
-                        <Items onClick={handleContact}>CONTACT</Items>
+                        <NavItems onClick={handleContact}>CONTACT</NavItems>
                     </ItemsWrapper>
                 </ItemsContainer>
             </Wrapper>
@@ -96,7 +82,7 @@ const ItemsWrapper = styled.div`
     place-items: center;
 `;
 
-const Items = styled.p`
+const NavItems = styled.p`
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s;
@@ -105,5 +91,4 @@ const Items = styled.p`
     &:hover{
         color: #FFFFFF;
     }
-
 `;
