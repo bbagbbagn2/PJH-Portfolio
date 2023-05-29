@@ -2,13 +2,20 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import IconDB_Logo from '../../assets/images/IconDB_Logo.svg';
 import DRINKABLE_Logo from '../../assets/images/DRINKABLE_Logo.svg';
+import { AiOutlineGithub } from "react-icons/ai";
+import { GrClose } from "react-icons/gr";   
 
 export default function Work() {
-    const [isModalOpen, setIsModalOpen] = useState();
+    const [selectedImage, setSelectedImage] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const openModal = () => setIsModalOpen(true);
+    const openModal = (imageUrl) => {
+        setSelectedImage(imageUrl);
+        setIsModalOpen(true);
+    }
     const closeModal = () => setIsModalOpen(false);
 
+    
     return (
         <Container>
             <TitleWrapper>
@@ -19,13 +26,34 @@ export default function Work() {
             <WorkContainer>
                 <WorkWrapper>
                     <ItemWrapper>
-                        <WorkItems src={IconDB_Logo} />
-                        <ItemCaption onClick={openModal} />
+                        <WorkItems onClick={() => openModal(IconDB_Logo)} src={IconDB_Logo} />
                     </ItemWrapper>
                     <ItemWrapper>
-                        <WorkItems background="#EDEAE3" src={DRINKABLE_Logo} />
-                        <ItemCaption />
+                        <WorkItems
+                        background="#EDEAE3"
+                        onClick={() => openModal(DRINKABLE_Logo)}
+                        src={DRINKABLE_Logo} 
+                        />
                     </ItemWrapper>
+                    {isModalOpen && (
+                        <ModalCotainer>
+                            <ModalWrapper>
+                                <ModalHeader>
+                                <AiOutlineGithub size='35' />
+                                <GrClose size='30' onClick={closeModal} />
+                                </ModalHeader>
+                                <Site>
+                                    <div>
+                                        {selectedImage && <img src={selectedImage} />}
+                                    </div>
+                                <div>
+                                    <p>Title : ICON_DB</p>
+                                    <p>SubTitle: A free icon download website.</p>
+                                </div>
+                                </Site>
+                            </ModalWrapper>
+                        </ModalCotainer>
+                    )}
                 </WorkWrapper>
             </WorkContainer>
         </Container>
@@ -78,20 +106,12 @@ const WorkItems = styled.img`
     width: 320px;
     height: 320px;
     transition: 0.4s ease 0s;
-    transform: scale3d(1, 1, 1);
 
     background: ${(props) => (props.background || "#FFFFFF")};
-`;
 
-const ItemCaption = styled.div`
-    position: absolute;
-    left: 0; right: 0;
-    top: 0; bottom: 0;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    display: table;
-    transition: 0.4s ease 0s;
+    &: hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
 `;
 
 const ItemWrapper = styled.div`
@@ -100,12 +120,34 @@ const ItemWrapper = styled.div`
     display: inline-block;
     border: none;
     cursor: pointer;
+`;
 
-    &:hover ${ItemCaption}{
-        background: rgba(0,0,0,0.3);
-    }
+const ModalCotainer = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    background: #FFFFFF;
+    z-index: 9999;
+`;
 
-    &:hover ${WorkItems}{
-        transform: scale3d(1.1, 1.1, 1);
-    }
+const ModalWrapper = styled.div`
+    padding: 5% 8%;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 7% 1fr;
+`;
+
+const ModalHeader = styled.div`
+    display: grid;
+    grid-template-columns: 5% 1fr;
+    justify-items: end;
+    align-items: center;
+`
+const Site = styled.div`
+    display: grid;
+    grid-template-columns: 60% 1fr;
 `;
