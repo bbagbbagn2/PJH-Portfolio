@@ -3,7 +3,13 @@ import styled from 'styled-components';
 import IconDB_Logo from '../../assets/images/IconDB_Logo.svg';
 import DRINKABLE_Logo from '../../assets/images/DRINKABLE_Logo.svg';
 import { AiOutlineGithub } from "react-icons/ai";
-import { GrClose } from "react-icons/gr";   
+import { GrClose } from "react-icons/gr";
+import { FaHtml5 } from "react-icons/fa";
+import { DiJavascript1 } from "react-icons/di";
+import { FaReact } from "react-icons/fa";
+import { SiStyledcomponents } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";   
 
 export default function Work() {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -47,8 +53,14 @@ export default function Work() {
                                         {selectedImage && <img src={selectedImage} />}
                                     </div>
                                 <div>
-                                    <p>Title : ICON_DB</p>
-                                    <p>SubTitle: A free icon download website.</p>
+                                    <h2>Title</h2>
+                                    <p>SubTitle</p>
+                                    <FaHtml5 size='50' fill='#E34F26' />
+                                    <DiJavascript1 size='50' fill='#F7DF1E' />
+                                    <FaReact size='50' fill='#61DAFB' />
+                                    <SiStyledcomponents size='50' fill='#DB7093' />
+                                    <SiMysql size='50' fill='#4479A1' />
+                                    <FaNodeJs size='50' fill='#339933' />
                                 </div>
                                 </Site>
                             </ModalWrapper>
