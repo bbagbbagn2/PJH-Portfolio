@@ -1,29 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import IconDB_Logo from '../../assets/images/IconDB_Logo.svg';
 import DRINKABLE_Logo from '../../assets/images/DRINKABLE_Logo.svg';
 import { AiOutlineGithub } from "react-icons/ai";
 import { GrClose } from "react-icons/gr";
-import { FaHtml5 } from "react-icons/fa";
+import { FaHtml5, FaReact, FaNodeJs } from "react-icons/fa";
 import { DiJavascript1 } from "react-icons/di";
-import { FaReact } from "react-icons/fa";
-import { SiStyledcomponents } from "react-icons/si";
-import { SiMysql } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";   
+import { SiStyledcomponents, SiMysql } from "react-icons/si";
 
 export default function Work() {
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedTitle, setSelectedTitle] = useState("");
+    const [selectedSubTitle, setSelectedSubTitle] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const openModal = (imageUrl, title) => {
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [isModalOpen]);
+
+    const openModal = (imageUrl, title, subTitle) => {
         setSelectedImage(imageUrl);
         setSelectedTitle(title);
+        setSelectedSubTitle(subTitle);
         setIsModalOpen(true);
-    }
-    const closeModal = () => setIsModalOpen(false);
+    };
 
-    
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+
+
     return (
         <Container>
             <TitleWrapper>
@@ -34,39 +45,68 @@ export default function Work() {
             <WorkContainer>
                 <WorkWrapper>
                     <ItemWrapper>
-                        <WorkItems onClick={() => openModal(IconDB_Logo, "ICON_DB")} src={IconDB_Logo} alt="ICON_DB" />
+                        <WorkItems
+                            onClick={() =>
+                                openModal({ IconDB_Logo },
+                                    "ICON_DB",
+                                    "A responsive website where you can download icons for free."
+                                )
+                            }
+                            src={IconDB_Logo}
+                            alt="ICON_DB"
+                        />
                     </ItemWrapper>
                     <ItemWrapper>
                         <WorkItems
-                        background="#EDEAE3"
-                        onClick={() => openModal(DRINKABLE_Logo, "DRINKABLE")}
-                        src={DRINKABLE_Logo} 
-                        alt="DRINKALBE"
+                            background="#EDEAE3"
+                            onClick={() =>
+                                openModal({ DRINKABLE_Logo },
+                                    "DRINKABLE",
+                                    "A comprehensive responsive website that categorizes numerous cocktails."
+                                )
+                            }
+                            src={DRINKABLE_Logo}
+                            alt="DRINKALBE"
                         />
                     </ItemWrapper>
                     {isModalOpen && (
                         <ModalCotainer>
                             <ModalWrapper>
                                 <ModalHeader>
-                                <AiOutlineGithub size='35' />
-                                <GrClose size='30' onClick={closeModal} />
+                                    <AiOutlineGithub size='35' />
+                                    <GrClose size='30' onClick={closeModal} />
                                 </ModalHeader>
                                 <Site>
                                     <ImageWrapper>
-                                        {selectedImage && <img src={selectedImage} />}
+                                        {selectedImage && <img src={selectedImage} alt={selectedTitle} />}
                                     </ImageWrapper>
-                                <div>
                                     <div>
-                                        {selectedTitle && <h2>{selectedTitle}</h2>}
+                                        <div>
+                                            {selectedTitle &&
+                                                <Title
+                                                    color='#000000'
+                                                    textAlign='left'
+                                                >
+                                                    {selectedTitle}
+                                                </Title>
+                                            }
+                                        </div>
+                                        <div>
+                                            {selectedSubTitle &&
+                                                <p>
+                                                    {selectedSubTitle}
+                                                </p>
+                                            }
+                                        </div>
+                                        <SkillWrapper>
+                                            <FaHtml5 size='50' fill='#E34F26' />
+                                            <DiJavascript1 size='50' fill='#F7DF1E' />
+                                            <FaReact size='50' fill='#61DAFB' />
+                                            <SiStyledcomponents size='50' fill='#DB7093' />
+                                            <SiMysql size='50' fill='#4479A1' />
+                                            <FaNodeJs size='50' fill='#339933' />
+                                        </SkillWrapper>
                                     </div>
-                                    <p>SubTitle</p>
-                                    <FaHtml5 size='50' fill='#E34F26' />
-                                    <DiJavascript1 size='50' fill='#F7DF1E' />
-                                    <FaReact size='50' fill='#61DAFB' />
-                                    <SiStyledcomponents size='50' fill='#DB7093' />
-                                    <SiMysql size='50' fill='#4479A1' />
-                                    <FaNodeJs size='50' fill='#339933' />
-                                </div>
                                 </Site>
                             </ModalWrapper>
                         </ModalCotainer>
@@ -94,8 +134,10 @@ const TitleWrapper = styled.div`
 const Title = styled.h3`
     color: #FFFFFF;
     line-height: 1.3em;
-    text-align: center;
     font-size: 42px;
+
+    text-align: ${(props) => props.textAlign || "center"};
+    color: ${(props) => props.color || "#FFFFFF"};
 `;
 
 const TitleColor = styled.span`
@@ -132,7 +174,6 @@ const WorkItems = styled.img`
 `;
 
 const ItemWrapper = styled.div`
-    overflow: hidden;
     position: relative;
     display: inline-block;
     border: none;
@@ -173,4 +214,10 @@ const ImageWrapper = styled.div`
     padding-top: 15%;
     display: grid;
     justify-content: center;
+`;
+
+const SkillWrapper = styled.div`
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
 `;
