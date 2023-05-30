@@ -13,10 +13,12 @@ import { FaNodeJs } from "react-icons/fa";
 
 export default function Work() {
     const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedTitle, setSelectedTitle] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const openModal = (imageUrl) => {
+    const openModal = (imageUrl, title) => {
         setSelectedImage(imageUrl);
+        setSelectedTitle(title);
         setIsModalOpen(true);
     }
     const closeModal = () => setIsModalOpen(false);
@@ -32,13 +34,14 @@ export default function Work() {
             <WorkContainer>
                 <WorkWrapper>
                     <ItemWrapper>
-                        <WorkItems onClick={() => openModal(IconDB_Logo)} src={IconDB_Logo} />
+                        <WorkItems onClick={() => openModal(IconDB_Logo, "ICON_DB")} src={IconDB_Logo} alt="ICON_DB" />
                     </ItemWrapper>
                     <ItemWrapper>
                         <WorkItems
                         background="#EDEAE3"
-                        onClick={() => openModal(DRINKABLE_Logo)}
+                        onClick={() => openModal(DRINKABLE_Logo, "DRINKABLE")}
                         src={DRINKABLE_Logo} 
+                        alt="DRINKALBE"
                         />
                     </ItemWrapper>
                     {isModalOpen && (
@@ -53,7 +56,9 @@ export default function Work() {
                                         {selectedImage && <img src={selectedImage} />}
                                     </ImageWrapper>
                                 <div>
-                                    <h2>Title</h2>
+                                    <div>
+                                        {selectedTitle && <h2>{selectedTitle}</h2>}
+                                    </div>
                                     <p>SubTitle</p>
                                     <FaHtml5 size='50' fill='#E34F26' />
                                     <DiJavascript1 size='50' fill='#F7DF1E' />
