@@ -49,9 +49,9 @@ export default function Work() {
                                 <GrClose size='30' onClick={closeModal} />
                                 </ModalHeader>
                                 <Site>
-                                    <div>
+                                    <ImageWrapper>
                                         {selectedImage && <img src={selectedImage} />}
-                                    </div>
+                                    </ImageWrapper>
                                 <div>
                                     <h2>Title</h2>
                                     <p>SubTitle</p>
@@ -162,4 +162,10 @@ const ModalHeader = styled.div`
 const Site = styled.div`
     display: grid;
     grid-template-columns: 60% 1fr;
+`;
+
+const ImageWrapper = styled.div`
+    padding-top: 15%;
+    display: grid;
+    justify-content: center;
 `;
