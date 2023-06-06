@@ -12,6 +12,7 @@ export default function Work() {
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedTitle, setSelectedTitle] = useState("");
     const [selectedSubTitle, setSelectedSubTitle] = useState("");
+    const [selectedUrl,setSelectedUrl] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
@@ -22,17 +23,21 @@ export default function Work() {
         }
     }, [isModalOpen]);
 
-    const openModal = (imageUrl, title, subTitle) => {
+    const openModal = (imageUrl, title, subTitle, url) => {
         setSelectedImage(imageUrl);
         setSelectedTitle(title);
         setSelectedSubTitle(subTitle);
+        setSelectedUrl(url)
         setIsModalOpen(true);
     };
 
-    const closeModal = () => {
-        setIsModalOpen(false);
+    const closeModal = () => { 
+        setIsModalOpen(false); 
     };
 
+    const handleClick = (url) => { 
+        window.location.href = url; 
+    }
 
 
     return (
@@ -47,9 +52,10 @@ export default function Work() {
                     <ItemWrapper>
                         <WorkItems
                             onClick={() =>
-                                openModal({ IconDB_Logo },
+                                openModal(IconDB_Logo,
                                     "ICON_DB",
-                                    "A responsive website where you can download icons for free."
+                                    "A responsive website where you can download icons for free.",
+                                    "https://github.com/stack0801/Icon_DB",
                                 )
                             }
                             src={IconDB_Logo}
@@ -60,9 +66,10 @@ export default function Work() {
                         <WorkItems
                             background="#EDEAE3"
                             onClick={() =>
-                                openModal({ DRINKABLE_Logo },
+                                openModal(DRINKABLE_Logo,
                                     "DRINKABLE",
-                                    "A comprehensive responsive website that categorizes numerous cocktails."
+                                    "A comprehensive responsive website that categorizes numerous cocktails.",
+                                    "https://github.com/bbagbbagn2/DRINKABLE",
                                 )
                             }
                             src={DRINKABLE_Logo}
@@ -73,7 +80,7 @@ export default function Work() {
                         <ModalCotainer>
                             <ModalWrapper>
                                 <ModalHeader>
-                                    <AiOutlineGithub size='35' />
+                                    <AiOutlineGithub size='35' onClick={() => handleClick(selectedUrl)} />
                                     <GrClose size='30' onClick={closeModal} />
                                 </ModalHeader>
                                 <Site>
