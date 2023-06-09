@@ -2,19 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { BsPhoneVibrate } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
+import PortfolioTitle from '../../components/Title';
+import "../../assets/font/Font.css";
 
 export default function Contact() {
     return (
         <MainContainer>
+            <PortfolioTitle titleNumber="03" titleText="CONTACT"/>
             <ContactWrapper>
                     <MyContactWrapper>
-                        <div>
-                            <ContactTitle>Contact</ContactTitle>
-                            <ContactMessage>
-                                Do you have any questions or suggestions?
-                                Contact us at any time and we will respond promptly.
-                            </ContactMessage>
-                        </div>
                         <ContactItemWrapper>
                             <ContactList>
                                 <BsPhoneVibrate size={100} color="#98FB98" />
@@ -34,32 +30,25 @@ export default function Contact() {
 }
 
 const MainContainer = styled.div`
-    height: 880px;
+    margin-bottom: 150px;
     display: grid;
     justify-items: center;
 `;
 
 const ContactWrapper = styled.div`
-    width: 40vw;
+    padding: 3rem;
+    width: 60%;
     height: 510px;
+    display: grid;
+    align-items: center; 
     background: #FFFFFF;
-    padding: 60px 10%;
+    border-radius: 1rem;
     box-shadow: 0px 1px 25px 4px rgba(234,234,234,0.3);
 `;
 
 
-const MyContactWrapper = styled.div`
-    height: 100%;
-    display: grid;
-    grid-template-rows: 45% 1fr;
-`;
+const MyContactWrapper = styled.div``;
 
-const ContactTitle = styled.h5`
-    margin-bottom: 0;
-    text-align: center;
-    font-size: 35px;
-    color: #1A1E23;
-`;
 
 const ContactItemWrapper = styled.div`
     display: grid;
@@ -69,7 +58,6 @@ const ContactItemWrapper = styled.div`
 const ContactMessage = styled.p`
     text-align: center;
     line-height: 1.9em;
-    font-size: 15px;
     color: #1A1E23;
 `;
 

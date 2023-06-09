@@ -5,6 +5,7 @@ import Profile from '../Profile/Profile';
 import Skill from '../Skill/Skill';
 import Work from '../Work/Work';
 import Contact from '../Contact/Contact';
+import Footer from '../Footer/Footer';
 
 export default function Main() {
     return (
@@ -18,6 +19,7 @@ export default function Main() {
                     <Contact />
                 </Wrapper>
             </MainPage>
+            <Footer />
         </>
     );
 }

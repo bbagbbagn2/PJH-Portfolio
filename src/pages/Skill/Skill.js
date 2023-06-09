@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PortfolioTitle from '../../components/Title';
 
 export default function Skill() {
     const skills = [
@@ -13,12 +14,7 @@ export default function Skill() {
 
     return (
         <Container>
-            <TitleWrapper>
-                <Title>
-                    <TitleColor>01 </TitleColor>Introducing the available skills!
-                </Title>
-                <IntroduceTitle>제 스킬을 소개합니다!</IntroduceTitle>
-            </TitleWrapper>
+                <PortfolioTitle titleNumber="01" titleText="SKILLS" />
             <SkillContainer>
                 {skills.map((skill, index) => (
                     <SkillWrapper key={ index }>
@@ -32,35 +28,10 @@ export default function Skill() {
     );
 }
 
-const IntroduceTitle = styled.h5`
-    margin: 0;
-    line-height: 1.8em;
-    text-align: center;
-    font-size: 24px;
-    color: #FFFFFF;
-`;
-
 const Container = styled.div`
     height: 700px;
     display: grid;
     grid-template-rows: min-content;
-`;
-
-const TitleWrapper = styled.div`
-    display: inline-block;
-    margin-bottom: 70px;
-`;
-
-const Title = styled.h3`
-    color: #FFFFFF;
-    line-height: 1.3em;
-    text-align: center;
-    font-size: 42px;
-`;
-
-const TitleColor = styled.span`
-    font-size: 42px;
-    color: #939DAB;
 `;
 
 const SkillContainer = styled.div`
