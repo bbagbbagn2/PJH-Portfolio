@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import HorizonLine from '../../components/HorizonLine';
 import { AiOutlineCheck } from "react-icons/ai";
 
 export default function Work() {
@@ -14,12 +13,12 @@ export default function Work() {
             </TitleWrapper>
             <WorkContainer>
                 <WorkWrapper>
-                    <h2>ICON_DB</h2>
-                    <p>2022.03 ~ 2022.06 팀 프로젝트(FE2, BE1)</p>
+                    <ProjectTitle>ICON_DB</ProjectTitle>
+                    <ProjectSubTitle>2022.03 ~ 2022.06 팀 프로젝트(FE2, BE1)</ProjectSubTitle>
                     <ProjectWrapper>
                         <div />
                         <ExplanationWrapper>
-                            <p>
+                            <Explanation>
                                 <span>
                                     필요한 아이콘을 무료로 다운로드 할 수 있는 웹 사이트입니다.
                                     뿐만 아니라, 웹 사이트 내에서 아이콘을 수정하여 사용자에게 최적의 아이콘을 제공하는 것을 목적으로 합니다.
@@ -32,7 +31,7 @@ export default function Work() {
                                     <br /><br />
                                     UI & UX를 고민하며 스스로 디자인 하였고, 다자인 과정에서 사용자 중심 인터페이스의 중요성을 알았습니다.
                                 </span>
-                            </p>
+                            </Explanation>
                             <HorizonLine />
                             <ListWrapper>
                                 <ListTitle>
@@ -99,15 +98,14 @@ export default function Work() {
                     <ProjectWrapper>
                         <div />
                         <ExplanationWrapper>
-                            <p>
+                            <Explanation>
                                 <span>
                                     포트폴리오 용도로 제작한 웹사이트입니다. 지금 보고 있는 바로 이 웹사이트에 해당합니다.
                                     <br /><br />
                                     첫 개인 프로젝트로, 순수 React로 개발을 완료하였습니다. 
                                     또한, Netlify를 이용하여 웹사이트의 배포도 경함해볼 수 있었습니다.
                                 </span>
-                            </p>
-                            <HorizonLine />
+                            </Explanation>
                             <ListWrapper>
                                 <ListTitle>
                                     <AiOutlineCheck />
@@ -195,6 +193,7 @@ const WorkContainer = styled.div`
 `;
 
 const WorkWrapper = styled.div`
+    padding: 3rem;
     width: 65%;
     height: 100%;
     display: grid;
@@ -204,14 +203,33 @@ const WorkWrapper = styled.div`
 `;
 
 const ProjectWrapper = styled.div`
-
-padding: 1% 3%;
     display: grid;
     grid-template-columns: 1fr 1fr;
 `;
 
+const ProjectTitle = styled.div`
+    padding-bottom: 0.5rem;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #222;
+`;
+
+const ProjectSubTitle = styled.div`
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #6C757D;
+    opacity: .8;
+`;
+
 const ExplanationWrapper = styled.div`
     display: grid;
+`;
+
+const Explanation = styled.div`
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #CCC;
 `;
 
 const ListWrapper = styled.div`
