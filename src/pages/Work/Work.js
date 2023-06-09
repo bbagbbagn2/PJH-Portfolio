@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import IconDB_Logo from '../../assets/images/IconDB_Logo.svg';
-import DRINKABLE_Logo from '../../assets/images/DRINKABLE_Logo.svg';
-import { AiOutlineGithub } from "react-icons/ai";
-import { GrClose } from "react-icons/gr";
-import { FaHtml5, FaReact, FaNodeJs } from "react-icons/fa";
-import { DiJavascript1 } from "react-icons/di";
-import { SiStyledcomponents, SiMysql } from "react-icons/si";
+import HorizonLine from '../../components/HorizonLine';
+import { AiOutlineCheck } from "react-icons/ai";
 
 export default function Work() {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -44,73 +39,39 @@ export default function Work() {
             </TitleWrapper>
             <WorkContainer>
                 <WorkWrapper>
-                    <ItemWrapper>
-                        <WorkItems
-                            onClick={() =>
-                                openModal({ IconDB_Logo },
-                                    "ICON_DB",
-                                    "A responsive website where you can download icons for free."
-                                )
-                            }
-                            src={IconDB_Logo}
-                            alt="ICON_DB"
-                        />
-                    </ItemWrapper>
-                    <ItemWrapper>
-                        <WorkItems
-                            background="#EDEAE3"
-                            onClick={() =>
-                                openModal({ DRINKABLE_Logo },
-                                    "DRINKABLE",
-                                    "A comprehensive responsive website that categorizes numerous cocktails."
-                                )
-                            }
-                            src={DRINKABLE_Logo}
-                            alt="DRINKALBE"
-                        />
-                    </ItemWrapper>
-                    {isModalOpen && (
-                        <ModalCotainer>
-                            <ModalWrapper>
-                                <ModalHeader>
-                                    <AiOutlineGithub size='35' />
-                                    <GrClose size='30' onClick={closeModal} />
-                                </ModalHeader>
-                                <Site>
-                                    <ImageWrapper>
-                                        {selectedImage && <img src={selectedImage} alt={selectedTitle} />}
-                                    </ImageWrapper>
-                                    <div>
-                                        <div>
-                                            {selectedTitle &&
-                                                <Title
-                                                    color='#000000'
-                                                    textAlign='left'
-                                                >
-                                                    {selectedTitle}
-                                                </Title>
-                                            }
-                                        </div>
-                                        <div>
-                                            {selectedSubTitle &&
-                                                <p>
-                                                    {selectedSubTitle}
-                                                </p>
-                                            }
-                                        </div>
-                                        <SkillWrapper>
-                                            <FaHtml5 size='50' fill='#E34F26' />
-                                            <DiJavascript1 size='50' fill='#F7DF1E' />
-                                            <FaReact size='50' fill='#61DAFB' />
-                                            <SiStyledcomponents size='50' fill='#DB7093' />
-                                            <SiMysql size='50' fill='#4479A1' />
-                                            <FaNodeJs size='50' fill='#339933' />
-                                        </SkillWrapper>
-                                    </div>
-                                </Site>
-                            </ModalWrapper>
-                        </ModalCotainer>
-                    )}
+                    <h2>ICON_DB</h2>
+                    <p>2022.03 ~ 2022.06 팀 프로젝트(FE2, BE1)</p>
+                    <p>
+                        필요한 아이콘을 무료로 다운로드 할 수 있는 웹 사이트입니다.
+                        뿐만 아니라, 웹 사이트 내에서 아이콘을 수정하여 사용자에게 최적의 아이콘을 제공하는 것을 목적으로 합니다.
+
+                        처음으로 Git을 활용하여 다른 사람들과의 협업을 했습니다.
+                        HTML, CSS, JavaScript와 함께 React, CSS in JS를 배우면서 웹 개발의 기본 지식을 쌓을 수 있었던 프로젝트입니다.
+
+                        백엔드 개발자와 협업하는 과정에 관해 많은 것을 배울 수 있었습니다.
+                        필요한 명세 및 지식을 Notion을 통해 함께 공유하며 학습 할 수 있었습니다.
+
+                        UI & UX를 고민하며 스스로 디자인 하였고, 다자인 과정에서 사용자 중심 인터페이스의 중요성을 알았습니다.
+                    </p>
+                    <HorizonLine />
+                        <div>
+                            <div>
+                                <div>
+                                    <AiOutlineCheck />
+                                    <p>주요 기능</p>
+                                </div>
+                                <div>
+                                    구글 로그인, 아이콘 다운로드 / 업로드, 사용자 팔로우, 해쉬태그, 아이콘 수정
+                                </div>
+                                <div>
+                                    <AiOutlineCheck />
+                                    <p>GitHub</p>
+                                </div>
+                                <div>
+                                    구글 로그인, 아이콘 다운로드 / 업로드, 사용자 팔로우, 해쉬태그, 아이콘 수정, 
+                                </div>
+                            </div>
+                        </div>
                 </WorkWrapper>
             </WorkContainer>
         </Container>
@@ -151,73 +112,10 @@ const WorkContainer = styled.div`
 `;
 
 const WorkWrapper = styled.div`
-    width: 640px;
-    height: 320px;
+    width: 60%;
+    height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     justify-items: center;
-    box-shadow: 0px 1px 35px 7px rgba(234,234,234,0.25);
-    cursor: pointer;
-`;
-
-
-const WorkItems = styled.img`
-    width: 320px;
-    height: 320px;
-    transition: 0.4s ease 0s;
-
-    background: ${(props) => (props.background || "#FFFFFF")};
-
-    &: hover {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    }
-`;
-
-const ItemWrapper = styled.div`
-    position: relative;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-`;
-
-const ModalCotainer = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    display: flex;
     background: #FFFFFF;
-    z-index: 9999;
-`;
-
-const ModalWrapper = styled.div`
-    padding: 5% 8%;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-rows: 7% 1fr;
-`;
-
-const ModalHeader = styled.div`
-    display: grid;
-    grid-template-columns: 5% 1fr;
-    justify-items: end;
-    align-items: center;
-`
-const Site = styled.div`
-    display: grid;
-    grid-template-columns: 60% 1fr;
-`;
-
-const ImageWrapper = styled.div`
-    padding-top: 15%;
-    display: grid;
-    justify-content: center;
-`;
-
-const SkillWrapper = styled.div`
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    box-shadow: 0px 1px 35px 7px rgba(234,234,234,0.25);
 `;

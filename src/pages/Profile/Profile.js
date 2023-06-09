@@ -18,7 +18,7 @@ export default function Profile() {
                 </TitleWrapper>
                 <div>
                     <IntroduceTitle>
-                        도전을 두려워하지 않는 개발자, 박지훈입니다.
+                        가능성을을 개발하는 개발자, 박지훈입니다.
                     </IntroduceTitle>
                 </div>
             </ProfileWrapper>
