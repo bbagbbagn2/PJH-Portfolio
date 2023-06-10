@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import "pure-react-carousel/dist/react-carousel.es.css";
 import PortfolioTitle from '../../components/Title';
 import '../../assets/font/Font.css';
 
@@ -13,7 +15,20 @@ export default function Work() {
                     <ProjectTitle>ICON_DB</ProjectTitle>
                     <ProjectSubTitle>2022.03 ~ 2022.06 팀 프로젝트(FE2, BE1)</ProjectSubTitle>
                     <ProjectWrapper>
-                        <div />
+                        <SliderContainer>
+                       <CarouselProvider
+                       naturalSlideWidth={100}
+                       naturalSlideHeight={125}
+                       totalSlides={3}>
+                        <Slider>
+                            <Slide index={0}><img src="../../assets/images/Main_PC.png" /></Slide>
+                            <Slide index={1}><img src="../../assets/images/IconDB_Logo.svg" /></Slide>
+                            <Slide index={2}><img src="../../assets/images/DRINKABLE_Logo.svg" /></Slide>
+                        </Slider>
+                        <ButtonBack>Back</ButtonBack>
+                        <ButtonNext>Next</ButtonNext>
+                       </CarouselProvider>
+                       </SliderContainer>
                         <ExplanationWrapper>
                             <Explanation>
                                 <b>필요한 아이콘을 무료로 다운로드 할 수 있는 웹 사이트</b>
@@ -141,7 +156,7 @@ export default function Work() {
                     </ProjectWrapper>
                 </WorkWrapper>
             </WorkContainer>
-        </Container>
+        </Container >
     );
 }
 
@@ -165,6 +180,55 @@ const WorkWrapper = styled.div`
     background: #FFFFFF;
     border-radius: 1rem;
     box-shadow: 0px 1px 35px 7px rgba(234,234,234,0.25);
+`;
+
+const SliderContainer = styled.div` 
+    background: linear-gradient(270deg, rgba(247,249,255,1) 0%, rgba(242,246,255,1) 100%);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 90%;
+    position: relative;
+    height: 100%;
+    max-height: 420px;
+    border-radius: 10px;
+`
+
+const SliderImageWrapper = styled.div`
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+`;
+
+const SliderItem = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  opacity: 0;
+  background: linear-gradient(270deg, rgba(247,249,255,1) 0%, rgba(242,246,255,1) 100%);
+  cursor: grab;
+  
+  &-content {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .4s;
+    
+    > * {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+`;
+
+const SliderImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .2s;
 `;
 
 const ProjectWrapper = styled.div`
