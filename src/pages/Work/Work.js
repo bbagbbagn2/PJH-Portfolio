@@ -3,6 +3,17 @@ import styled from 'styled-components';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import "pure-react-carousel/dist/react-carousel.es.css";
 import PortfolioTitle from '../../components/Title';
+import Main from '../../assets/images/Main_Mobile.png';
+import Posting from '../../assets/images/Posting.PNG';
+import Detail from '../../assets/images/Detail_PNG.png';
+import SignIn from '../../assets/images/SignIn_Mobile.png';
+import SignUp from '../../assets/images/SignUp_Mobile.png';
+import Profile from '../../assets/images/Profile_Mine.png';
+import About from '../../assets/images/Portfolio/About.PNG';
+import Skills from '../../assets/images/Portfolio/Skills.PNG';
+import Portfolio from '../../assets/images/Portfolio/Portfolio.PNG';
+import Contact from '../../assets/images/Portfolio/Contact.PNG';
+import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import '../../assets/font/Font.css';
 
 export default function Work() {
@@ -19,14 +30,21 @@ export default function Work() {
                        <CarouselProvider
                        naturalSlideWidth={100}
                        naturalSlideHeight={125}
-                       totalSlides={3}>
+                       totalSlides={6}>
+                        <SliderImageWrapper>
                         <Slider>
-                            <Slide index={0}><img src="../../assets/images/Main_PC.png" /></Slide>
-                            <Slide index={1}><img src="../../assets/images/IconDB_Logo.svg" /></Slide>
-                            <Slide index={2}><img src="../../assets/images/DRINKABLE_Logo.svg" /></Slide>
+                            <Slide index={0}><SliderImage src={Main} /></Slide>
+                            <Slide index={1}><SliderImage src={Posting} /></Slide>
+                            <Slide index={2}><SliderImage src={Detail} /></Slide>
+                            <Slide index={3}><SliderImage src={SignIn} /></Slide>
+                            <Slide index={4}><SliderImage src={SignUp} /></Slide>
+                            <Slide index={5}><SliderImage src={Profile} /></Slide>
                         </Slider>
-                        <ButtonBack>Back</ButtonBack>
-                        <ButtonNext>Next</ButtonNext>
+                        </SliderImageWrapper>
+                        <ButtonWrapper>
+                        <ButtonBack><BsArrowLeftCircle size="40" /></ButtonBack>
+                        <ButtonNext><BsArrowRightCircle size="40" /></ButtonNext>
+                        </ButtonWrapper>
                        </CarouselProvider>
                        </SliderContainer>
                         <ExplanationWrapper>
@@ -101,7 +119,25 @@ export default function Work() {
                     <ProjectTitle>포트폴리오 웹사이트</ProjectTitle>
                     <ProjectSubTitle>2023.02 개인 프로젝트</ProjectSubTitle>
                     <ProjectWrapper>
-                        <div />
+                    <SliderContainer>
+                       <CarouselProvider
+                       naturalSlideWidth={100}
+                       naturalSlideHeight={125}
+                       totalSlides={4}>
+                        <SliderImageWrapper>
+                        <Slider>
+                            <Slide index={0}><SliderImage src={About} /></Slide>
+                            <Slide index={1}><SliderImage src={Skills} /></Slide>
+                            <Slide index={2}><SliderImage src={Portfolio} /></Slide>
+                            <Slide index={3}><SliderImage src={Contact} /></Slide>
+                        </Slider>
+                        </SliderImageWrapper>
+                        <ButtonWrapper>
+                        <ButtonBack><BsArrowLeftCircle size="40" /></ButtonBack>
+                        <ButtonNext><BsArrowRightCircle size="40" /></ButtonNext>
+                        </ButtonWrapper>
+                       </CarouselProvider>
+                       </SliderContainer>
                         <ExplanationWrapper>
                             <Explanation>
                                 <b>포트폴리오 용도로 제작한 웹사이트</b>
@@ -183,12 +219,8 @@ const WorkWrapper = styled.div`
 `;
 
 const SliderContainer = styled.div` 
-    background: linear-gradient(270deg, rgba(247,249,255,1) 0%, rgba(242,246,255,1) 100%);
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    width: 90%;
+    width: 85%;
     position: relative;
-    height: 100%;
-    max-height: 420px;
     border-radius: 10px;
 `
 
@@ -196,32 +228,7 @@ const SliderImageWrapper = styled.div`
     height: 100%;
     width: 100%;
     overflow: hidden;
-`;
-
-const SliderItem = styled.div`
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  opacity: 0;
-  background: linear-gradient(270deg, rgba(247,249,255,1) 0%, rgba(242,246,255,1) 100%);
-  cursor: grab;
-  
-  &-content {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: .4s;
-    
-    > * {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-  }
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 `;
 
 const SliderImage = styled.img`
@@ -231,6 +238,11 @@ const SliderImage = styled.img`
   transition: .2s;
 `;
 
+const ButtonWrapper = styled.div`
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+`;
 const ProjectWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
