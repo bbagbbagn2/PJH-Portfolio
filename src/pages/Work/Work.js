@@ -243,6 +243,7 @@ const ButtonWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
 `;
+
 const ProjectWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
