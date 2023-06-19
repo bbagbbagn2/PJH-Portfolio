@@ -1,7 +1,12 @@
 import React from "react";
 import styled from 'styled-components';
 
-export default function PortfolioTitle({ titleNumber, titleText }) {
+interface PortfolioTitleProps {
+    titleNumber: number;
+    titleText: string;
+}
+
+export default function PortfolioTitle({ titleNumber, titleText }: PortfolioTitleProps): JSX.Element {
     return (
         <TitleWrapper>
             <Title>
@@ -19,7 +24,7 @@ const TitleWrapper = styled.div`
     align-items: start;
 `;
 
-const Title = styled.div`
+const Title = styled.div<{ textAlign?: string; color?: string; }>`
     color: #FFFFFF;
     line-height: 1.3em;
     font-family: Black Han Sans;

@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../Header/Header';
-import Profile from '../Profile/Profile';
-import Skill from '../Skill/Skill';
-import Work from '../Work/Work';
-import Contact from '../Contact/Contact';
+import Header from '../Header/Header.tsx';
+import Profile from '../Profile/Profile.tsx';
+import Skill from '../Skill/Skill.tsx';
+import Work from '../Work/Work.tsx';
+import Contact from '../Contact/Contact.tsx';
 import Footer from '../Footer/Footer';
 
-export default function Main() {
+export default function Main(): JSX.Element {
     return (
         <>
             <Header />

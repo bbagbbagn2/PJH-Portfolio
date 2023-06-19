@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Profile() {
+export default function Profile(): JSX.Element {
     return (
         <ProfileContainer>
             <ProfileWrapper>

@@ -1,9 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import PortfolioTitle from '../../components/Title';
+import PortfolioTitle from '../../components/Title.tsx';
 
-export default function Skill() {
-    const skills = [
+interface Skills {
+    title: string;
+    rate: string;
+}
+
+export default function App(): JSX.Element {
+    const skills: Skills[] = [
         { title: 'HTML', rate: '75%' },
         { title: 'CSS', rate: '80%' },
         { title: 'JavaScript', rate: '70%' },
@@ -52,7 +57,7 @@ const SkillTitle = styled.p`
     font-size: 14px;
 `;
 
-const SkiilRate = styled.div`
+const SkiilRate = styled.div<{ width?: string }>`
     height: 12px;
     background: #98FB98;
 

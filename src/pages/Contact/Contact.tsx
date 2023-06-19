@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { BsPhoneVibrate } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
-import PortfolioTitle from '../../components/Title';
+import PortfolioTitle from '../../components/Title.tsx';
 import "../../assets/font/Font.css";
 
-export default function Contact() {
+export default function Contact(): JSX.Element {
     return (
         <MainContainer>
             <PortfolioTitle titleNumber="03" titleText="CONTACT"/>

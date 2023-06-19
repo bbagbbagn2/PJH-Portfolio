@@ -1,8 +1,8 @@
 import React from "react";
 import styled from 'styled-components';
 
-export default function App() {
-    const handleScroll = (targetHeight) => {
+export default function App(): JSX.Element {
+    const handleScroll = (targetHeight: number) => {
         window.scrollTo({
             top: targetHeight,
             behavior: 'smooth',
@@ -82,7 +82,7 @@ const ItemsWrapper = styled.div`
     place-items: center;
 `;
 
-const NavItems = styled.p`
+const NavItems = styled.p<{ color?: string }>`
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import "pure-react-carousel/dist/react-carousel.es.css";
-import PortfolioTitle from '../../components/Title';
+import PortfolioTitle from '../../components/Title.tsx';
 import Main from '../../assets/images/IconDB/Main_Mobile.png';
 import Posting from '../../assets/images/IconDB/Posting.PNG';
 import Detail from '../../assets/images/IconDB/Detail_PNG.png';
@@ -16,7 +16,7 @@ import Contact from '../../assets/images/Portfolio/Contact.PNG';
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import '../../assets/font/Font.css';
 
-export default function Work() {
+export default function Work(): JSX.Element {
 
     return (
         <Container>
@@ -274,7 +274,7 @@ const Explanation = styled.div`
     border-bottom: 1px solid #CCC;
 `;
 
-const SpanColor = styled.span`
+const SpanColor = styled.span<{ color?: string }>`
     color: ${props => props.color};
 `;
 
