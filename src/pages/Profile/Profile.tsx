@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default function Profile(): JSX.Element {
     return (
-        <ProfilePageLayout>
+        <ProfilePageSection>
             <ProfilePageBox>
                 <TitleBox>
                     <h1>
@@ -24,11 +24,11 @@ export default function Profile(): JSX.Element {
                     </h5>
                 </div>
             </ProfilePageBox>
-        </ProfilePageLayout>
+        </ProfilePageSection>
     );
 }
 
-const ProfilePageLayout = styled.section`
+const ProfilePageSection = styled.section`
     width: 100%;
     height: 1088px;
     min-height: 1088px;

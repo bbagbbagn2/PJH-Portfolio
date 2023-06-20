@@ -18,32 +18,28 @@ export default function App(): JSX.Element {
     ];
 
     return (
-        <Container>
+        <SkillPageSection>
                 <PortfolioTitle titleNumber="01" titleText="SKILLS" />
-            <SkillContainer>
+            <div>
                 {skills.map((skill, index) => (
-                    <SkillWrapper key={ index }>
-                        <SkillTitle>{ skill.title }</SkillTitle>
-                        <SkiilRate width={ skill.rate } />
-                        <SkillPercent>{ skill.rate }</SkillPercent>
-                    </SkillWrapper>
+                    <SkillsRow key={ index }>
+                        <SkillRateParagraph>{ skill.title }</SkillRateParagraph>
+                        <SkiilRateBox width={ skill.rate } />
+                        <SkillRateParagraph>{ skill.rate }</SkillRateParagraph>
+                    </SkillsRow>
                 ))};
-            </SkillContainer>
-        </Container>
+            </div>
+        </SkillPageSection>
     );
 }
 
-const Container = styled.div`
+const SkillPageSection = styled.section`
     height: 700px;
     display: grid;
     grid-template-rows: min-content;
 `;
 
-const SkillContainer = styled.div`
-    display: grid;
-`;
-
-const SkillWrapper = styled.div`
+const SkillsRow = styled.div`
     margin: 0 12%;
     display: grid;
     grid-template-columns: 100px 1fr 133px;
@@ -51,19 +47,15 @@ const SkillWrapper = styled.div`
     justify-items: start;
 `;
 
-const SkillTitle = styled.p`
+const SkillRateParagraph = styled.p`
     color: #939DAB;
     line-height: 2.8em;
     font-size: 14px;
 `;
 
-const SkiilRate = styled.div<{ width?: string }>`
+const SkiilRateBox = styled.div<{ width?: string }>`
     height: 12px;
     background: #98FB98;
 
     width: ${(props) => props.width};
-`;
-
-const SkillPercent = styled(SkillTitle)`
-    text-align: left;
 `;
