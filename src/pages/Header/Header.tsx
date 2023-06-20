@@ -26,30 +26,28 @@ export default function App(): JSX.Element {
     };
 
     return (
-    <>
-        <Container>
-            <Wrapper>
-                <ItemsContainer>
-                    <ItemsWrapper>
-                        <NavItems color='#98FB98' onClick={handleHome}>HOME</NavItems>
-                    </ItemsWrapper>
-                    <ItemsWrapper>
-                        <NavItems onClick={handleSkill}>SKILL</NavItems>
-                    </ItemsWrapper>
-                    <ItemsWrapper>
-                        <NavItems onClick={handleWork}>WORK</NavItems>
-                    </ItemsWrapper>
-                    <ItemsWrapper>
-                        <NavItems onClick={handleContact}>CONTACT</NavItems>
-                    </ItemsWrapper>
-                </ItemsContainer>
-            </Wrapper>
-        </Container>
-    </>
+        <Header>
+            <HeaderLayout>
+                <HeaderNav>
+                    <NavItemBox>
+                        <NavItem color='#98FB98' onClick={handleHome}>HOME</NavItem>
+                    </NavItemBox>
+                    <NavItemBox>
+                        <NavItem onClick={handleSkill}>SKILL</NavItem>
+                    </NavItemBox>
+                    <NavItemBox>
+                        <NavItem onClick={handleWork}>WORK</NavItem>
+                    </NavItemBox>
+                    <NavItemBox>
+                        <NavItem onClick={handleContact}>CONTACT</NavItem>
+                    </NavItemBox>
+                </HeaderNav>
+            </HeaderLayout>
+        </Header>
     );
 }
 
-const Container = styled.div`
+const Header = styled.header`
     position: fixed;
     width: 100vw;
     height: 65px;
@@ -59,13 +57,11 @@ const Container = styled.div`
     z-index: 999;
 `;
 
-const Wrapper = styled.div`
+const HeaderLayout = styled.div`
     margin: 0 6.5%;
-    display: grid;
-    grid-template-columns: 1fr;
 `;
 
-const ItemsContainer = styled.div`
+const HeaderNav = styled.nav`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
@@ -75,14 +71,14 @@ const ItemsContainer = styled.div`
     }
 `;
 
-const ItemsWrapper = styled.div`
+const NavItemBox = styled.div`
     width: 190px;
     height: 100%;
     display: grid;
     place-items: center;
 `;
 
-const NavItems = styled.p<{ color?: string }>`
+const NavItem = styled.p<{ color?: string }>`
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s;
