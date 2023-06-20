@@ -8,23 +8,23 @@ interface PortfolioTitleProps {
 
 export default function PortfolioTitle({ titleNumber, titleText }: PortfolioTitleProps): JSX.Element {
     return (
-        <TitleWrapper>
-            <Title>
-                <TitleNumber>{titleNumber} </TitleNumber>
+        <TitleLayout>
+            <TitleBox>
+                <TitleSpan>{titleNumber} </TitleSpan>
                 {titleText}
-            </Title>
-        </TitleWrapper>
+            </TitleBox>
+        </TitleLayout>
     )
 }
 
-const TitleWrapper = styled.div`
+const TitleLayout = styled.div`
     display: inline-block;
     margin-bottom: 70px;
     display: grid;
     align-items: start;
 `;
 
-const Title = styled.div<{ textAlign?: string; color?: string; }>`
+const TitleBox = styled.div<{ textAlign?: string; color?: string; }>`
     color: #FFFFFF;
     line-height: 1.3em;
     font-family: Black Han Sans;
@@ -34,7 +34,7 @@ const Title = styled.div<{ textAlign?: string; color?: string; }>`
     color: ${props => props.color || "#FFFFFF"};
 `;
 
-const TitleNumber = styled.span`
+const TitleSpan = styled.span`
     font-family: Black Han Sans;
     font-size: 50px;
     color: #939DAB;

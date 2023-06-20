@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Footer() {
+export default function App() {
     return(
-        <Container>
-        </Container>
+        <Footer>
+        </Footer>
     )
 }
 
-const Container = styled.div`
+const Footer = styled.footer`
     padding-top: 3rem;
     height: 11rem;
     background: #FFFFFF;
