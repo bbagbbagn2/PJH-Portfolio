@@ -11,20 +11,20 @@ export default function Main(): JSX.Element {
     return (
         <>
             <Header />
-            <MainPage>
-                <Wrapper>
+            <MainPageLayout>
+                <MainPageRow>
                     <Profile />
                     <Skill />
                     <Work />
                     <Contact />
-                </Wrapper>
-            </MainPage>
+                </MainPageRow>
+            </MainPageLayout>
             <Footer />
         </>
     );
 }
 
-const MainPage = styled.div`
+const MainPageLayout = styled.div`
     width: 100%;
     height: 100%;
     display: grid;
@@ -33,7 +33,7 @@ const MainPage = styled.div`
     background: #1A1E23;
 `;
 
-const Wrapper = styled.div`
+const MainPageRow = styled.div`
     padding: 0 6%;
     display: grid;
 `;

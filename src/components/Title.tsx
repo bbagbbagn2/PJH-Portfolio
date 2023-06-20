@@ -30,8 +30,8 @@ const Title = styled.div<{ textAlign?: string; color?: string; }>`
     font-family: Black Han Sans;
     font-size: 42px;
 
-    text-align: ${(props) => props.textAlign || "center"};
-    color: ${(props) => props.color || "#FFFFFF"};
+    text-align: ${props => props.textAlign || "center"};
+    color: ${props => props.color || "#FFFFFF"};
 `;
 
 const TitleNumber = styled.span`
