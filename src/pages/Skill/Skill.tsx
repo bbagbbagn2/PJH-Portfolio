@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import PortfolioTitle from '../../components/Title.tsx';
+import * as S from './SkillCss.ts';
 
 interface Skills {
     title: string;
@@ -18,44 +18,17 @@ export default function App(): JSX.Element {
     ];
 
     return (
-        <SkillPageSection>
-                <PortfolioTitle titleNumber="01" titleText="SKILLS" />
+        <S.SkillPageSection>
+            <PortfolioTitle titleNumber="01" titleText="SKILLS" />
             <div>
                 {skills.map((skill, index) => (
-                    <SkillsRow key={ index }>
-                        <SkillRateParagraph>{ skill.title }</SkillRateParagraph>
-                        <SkiilRateBox width={ skill.rate } />
-                        <SkillRateParagraph>{ skill.rate }</SkillRateParagraph>
-                    </SkillsRow>
+                    <S.SkillsRow key={index}>
+                        <S.SkillRateParagraph>{skill.title}</S.SkillRateParagraph>
+                        <S.SkiilRateBox width={skill.rate} />
+                        <S.SkillRateParagraph>{skill.rate}</S.SkillRateParagraph>
+                    </S.SkillsRow>
                 ))};
             </div>
-        </SkillPageSection>
+        </S.SkillPageSection>
     );
 }
-
-const SkillPageSection = styled.section`
-    height: 700px;
-    display: grid;
-    grid-template-rows: min-content;
-`;
-
-const SkillsRow = styled.div`
-    margin: 0 12%;
-    display: grid;
-    grid-template-columns: 100px 1fr 133px;
-    align-items: center;
-    justify-items: start;
-`;
-
-const SkillRateParagraph = styled.p`
-    color: #939DAB;
-    line-height: 2.8em;
-    font-size: 14px;
-`;
-
-const SkiilRateBox = styled.div<{ width?: string }>`
-    height: 12px;
-    background: #98FB98;
-
-    width: ${(props) => props.width};
-`;
