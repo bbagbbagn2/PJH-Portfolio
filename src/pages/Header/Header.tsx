@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
+import * as S from "./HeaderCss.ts";
 
 export default function App(): JSX.Element {
     const handleScroll = (targetHeight: number) => {
@@ -26,65 +26,23 @@ export default function App(): JSX.Element {
     };
 
     return (
-        <Header>
-            <HeaderLayout>
-                <HeaderNav>
-                    <NavItemBox>
-                        <NavItem color='#98FB98' onClick={handleHome}>HOME</NavItem>
-                    </NavItemBox>
-                    <NavItemBox>
-                        <NavItem onClick={handleSkill}>SKILL</NavItem>
-                    </NavItemBox>
-                    <NavItemBox>
-                        <NavItem onClick={handleWork}>WORK</NavItem>
-                    </NavItemBox>
-                    <NavItemBox>
-                        <NavItem onClick={handleContact}>CONTACT</NavItem>
-                    </NavItemBox>
-                </HeaderNav>
-            </HeaderLayout>
-        </Header>
+        <S.Header>
+            <S.HeaderLayout>
+                <S.HeaderNav>
+                    <S.NavItemBox>
+                        <S.NavItem color='#98FB98' onClick={handleHome}>HOME</S.NavItem>
+                    </S.NavItemBox>
+                    <S.NavItemBox>
+                        <S.NavItem onClick={handleSkill}>SKILL</S.NavItem>
+                    </S.NavItemBox>
+                    <S.NavItemBox>
+                        <S.NavItem onClick={handleWork}>WORK</S.NavItem>
+                    </S.NavItemBox>
+                    <S.NavItemBox>
+                        <S.NavItem onClick={handleContact}>CONTACT</S.NavItem>
+                    </S.NavItemBox>
+                </S.HeaderNav>
+            </S.HeaderLayout>
+        </S.Header>
     );
 }
-
-const Header = styled.header`
-    position: fixed;
-    width: 100vw;
-    height: 65px;
-    display: grid;
-    place-items: center;
-    background: rgba(26, 30, 35, 0.5);
-    z-index: 999;
-`;
-
-const HeaderLayout = styled.div`
-    margin: 0 6.5%;
-`;
-
-const HeaderNav = styled.nav`
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    place-items: center;
-
-    @media (max-width: 1024px) {
-        display: none;
-    }
-`;
-
-const NavItemBox = styled.div`
-    width: 190px;
-    height: 100%;
-    display: grid;
-    place-items: center;
-`;
-
-const NavItem = styled.p<{ color?: string }>`
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s;
-    color: ${(props) => (props.color || "#939DAB")};
-
-    &:hover{
-        color: #FFFFFF;
-    }
-`;
