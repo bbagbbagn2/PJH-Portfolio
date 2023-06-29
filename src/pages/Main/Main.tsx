@@ -4,7 +4,7 @@ import Profile from '../Profile/Profile.tsx';
 import Skill from '../Skill/Skill.tsx';
 import Work from '../Work/Work.tsx';
 import Contact from '../Contact/Contact.tsx';
-import Footer from '../Footer/Footer';
+import Footer from '../Footer/Footer.tsx';
 import * as S from './MainCSS.ts';
 
 export default function Main(): JSX.Element {
