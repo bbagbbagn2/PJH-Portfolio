@@ -9,6 +9,11 @@
 
 <br><br>
 
+## Preview
+![JH-Portfolio](https://github.com/bbagbbagn2/Portfolio/assets/89950902/0acc5d95-e04a-4a40-884f-624967967d25)
+
+<br><br>
+
 ## Link
 https://parkproject.netlify.app/
 
