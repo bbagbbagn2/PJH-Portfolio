@@ -1,11 +1,16 @@
 <div align="center">
   
-  ![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=300&section=header&text=Park's%20Portfolio&fontSize=90)
+  ![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=300&section=header&text=JH%20Portfolio&fontSize=90)
 
   <br><br>
 
   ### 웹 포트폴리오 프로젝트입니다.
 </div>
+
+<br><br>
+
+## Preview
+![JH-Portfolio](https://github.com/bbagbbagn2/Portfolio/assets/89950902/0acc5d95-e04a-4a40-884f-624967967d25)
 
 <br><br>
 
@@ -18,7 +23,9 @@ https://parkproject.netlify.app/
 <div align="center">
   <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TypeScript-1976D2?style=flat-square&logo=TypeScript&logoColor=white"/>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/>
+  <br>
   <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=flat-square&logo=styledcomponents&logoColor=white"/>
   <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white"/>
 </div>
