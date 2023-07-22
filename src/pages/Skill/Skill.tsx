@@ -20,7 +20,7 @@ export default function App(): JSX.Element {
     return (
         <S.SkillPageSection>
             <PortfolioTitle titleNumber="01" titleText="SKILLS" />
-            <div>
+            <S.SkillsBox>
                 {skills.map((skill, index) => (
                     <S.SkillsRow key={index}>
                         <S.SkillRateParagraph>{skill.title}</S.SkillRateParagraph>
@@ -28,7 +28,7 @@ export default function App(): JSX.Element {
                         <S.SkillRateParagraph>{skill.rate}</S.SkillRateParagraph>
                     </S.SkillsRow>
                 ))};
-            </div>
+            </S.SkillsBox>
         </S.SkillPageSection>
     );
 }

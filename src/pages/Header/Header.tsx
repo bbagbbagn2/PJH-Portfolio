@@ -14,15 +14,15 @@ export default function App(): JSX.Element {
     };
 
     const handleSkill = () => {
-        handleScroll(988);
+        handleScroll(888);
     };
 
     const handleWork = () => {
-        handleScroll(1938);
+        handleScroll(1976);
     };
 
     const handleContact = () => {
-        handleScroll(4050);
+        handleScroll(5076);
     };
 
     return (

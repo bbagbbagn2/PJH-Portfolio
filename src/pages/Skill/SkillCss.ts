@@ -1,15 +1,21 @@
 import styled from 'styled-components'
 
 export const SkillPageSection = styled.section`
+margin-bottom: 388px;
 height: 700px;
 display: grid;
 grid-template-rows: min-content;
 `;
 
+export const SkillsBox = styled.div`
+display: grid;
+align-items: center;
+`;
+
 export const SkillsRow = styled.div`
 margin: 0 12%;
 display: grid;
-grid-template-columns: 100px 1fr 133px;
+grid-template-columns: 80px 1fr 40px;
 align-items: center;
 justify-items: start;
 `;

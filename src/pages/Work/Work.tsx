@@ -203,8 +203,8 @@ export default function Work(): JSX.Element {
 }
 
 const WorkPageSection = styled.div`
-    margin-top: 350px;
-    height: 2100px;
+    height: 100%;
+    margin-bottom: 300px;
 `;
 
 const WorkPageBox = styled.div`
@@ -228,6 +228,11 @@ const SliderBox = styled.div`
     width: 85%;
     position: relative;
     border-radius: 10px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 30px;
+
+    }
 `
 
 const SliderImageBox = styled.div`
@@ -253,6 +258,11 @@ const ButtonCol = styled.div`
 const ProjectCol = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 1024px) {
+        place-items: center;
+        grid-template-columns: 1fr;
+    }
 `;
 
 const ProjectTitleParagraph = styled.p`

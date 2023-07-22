@@ -9,7 +9,6 @@ justify-items: center;
 export const ContactPageBox = styled.div`
 padding: 3rem;
 width: 60%;
-height: 510px;
 display: grid;
 align-items: center; 
 background: #FFFFFF;
