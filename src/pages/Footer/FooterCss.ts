@@ -6,5 +6,4 @@ export const Footer = styled.footer`
     height: 80px;
     background: #FFFFFF;
     text-align: center;
-    opacity: 0.7;
 `;

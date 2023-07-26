@@ -18,8 +18,8 @@ export default function Main(): JSX.Element {
                     <Work />
                     <Contact />
                 </S.MainPageRow>
+                <Footer />
             </S.MainPageLayout>
-            <Footer />
         </>
     );
 }

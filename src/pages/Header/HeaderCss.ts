@@ -8,6 +8,10 @@ export const Header = styled.header`
     place-items: center;
     background: rgba(26, 30, 35, 0.5);
     z-index: 999;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 `;
 
 export const HeaderLayout = styled.div`
