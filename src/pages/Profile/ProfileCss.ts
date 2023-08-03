@@ -21,11 +21,6 @@ line-height: ${props => props.lineHeight};
 text-align: ${props => props.textAlign};
 `;
 
-export const ProfilePageSpan = styled.span`
-font-size: 65px;
-color: #98FB98;
-`;
-
 export const TitleBox = styled.div`
 display: inline-block;
 margin-bottom: 50px;

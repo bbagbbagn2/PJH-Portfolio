@@ -19,10 +19,10 @@ const AutoResizeText: React.FC<AutoResizeTextProps> = ({ text, minWidth }) => {
     const resizeFont = () => {
       if (containerRef.current) {
         const containerWidth = containerRef.current.offsetWidth;
-        const originalFontSize = 60; // 기본 폰트 크기
+        const originalFontSize = 16; // 기본 폰트 크기
 
         // 폰트 크기 계산
-        const newFontSize = Math.max(originalFontSize, (containerWidth / minWidth) * originalFontSize);
+        const newFontSize = Math.max(48, (containerWidth / minWidth) * originalFontSize);
         setFontSize(newFontSize);
       }
     };
