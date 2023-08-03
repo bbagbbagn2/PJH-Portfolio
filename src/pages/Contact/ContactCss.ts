@@ -19,6 +19,10 @@ box-shadow: 0px 1px 25px 4px rgba(234,234,234,0.3);
 export const ContactItemCol = styled.div`
 display: grid;
 grid-template-columns: 1fr 1fr;
+
+@media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+}
 `;
 
 export const ContactItemBox = styled.div`
