@@ -1,6 +1,6 @@
 <div align="center">
   
-  ![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=300&section=header&text=JH%20Portfolio&fontSize=90)
+  ![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=300&section=header&text=PJH%20Portfolio&fontSize=90)
 
   <br><br>
 
@@ -15,7 +15,7 @@
 <br><br>
 
 ## Link
-https://parkproject.netlify.app/
+https://pjh-portfolio.netlify.app/
 
 <br>
 
