@@ -4,12 +4,14 @@ import App from './App.tsx';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  * {
     margin: 0;
     padding: 0;
-    border: 0;
-    background: transpartrent;
-    outline: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-size: 14px;
   }
 
   a {
