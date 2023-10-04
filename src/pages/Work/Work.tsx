@@ -203,8 +203,10 @@ export default function Work(): JSX.Element {
 }
 
 const WorkPageSection = styled.div`
-    height: 100%;
     margin-bottom: 300px;
+    height: 100%;
+    display: grid;
+    place-items: center;
 `;
 
 const WorkPageBox = styled.div`

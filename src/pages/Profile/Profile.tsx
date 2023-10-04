@@ -4,6 +4,17 @@ import styled from 'styled-components';
 import { IoIosArrowDown } from "react-icons/io";
 
 export default function Profile(): JSX.Element {
+    const handleScroll = (targetHeight: number) => {
+        window.scrollTo({
+            top: targetHeight,
+            behavior: 'smooth',
+        });
+    };
+
+    const handleAbout = () => {
+        handleScroll(800);
+    };
+
     return (
         <ProfilePageSection>
             <ProfilePageBox>
@@ -15,8 +26,7 @@ export default function Profile(): JSX.Element {
                         가능성을을 개발하는 개발자 박지훈입니다.
                     </ProfilePageSub>
                 </TitleBox>
-                
-                <ToAboutLink href="#about" ><IoIosArrowDown size={24}/></ToAboutLink>
+                <ToAboutLink onClick={handleAbout} ><IoIosArrowDown size={24}/></ToAboutLink>
             </ProfilePageBox>
         </ProfilePageSection >
     );
@@ -66,6 +76,7 @@ const ToAboutLink = styled.a`
     color: #FFF;
     transform: translate(0, -50%);
     transition: all .5s;
+    cursor: pointer;
 
     &:hover {
         opacity: 0.7;

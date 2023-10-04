@@ -14,11 +14,11 @@ export default function App(): JSX.Element {
     };
 
     const handleSkill = () => {
-        handleScroll(888);
+        handleScroll(800);
     };
 
     const handleWork = () => {
-        handleScroll(1976);
+        handleScroll(2350);
     };
 
     const handleContact = () => {
@@ -30,7 +30,7 @@ export default function App(): JSX.Element {
             <S.HeaderLayout>
                 <S.HeaderNav>
                     <S.NavItemBox>
-                        <S.NavItem color='#98FB98' onClick={handleHome}>HOME</S.NavItem>
+                        <S.NavItem color='#FFF' onClick={handleHome}>HOME</S.NavItem>
                     </S.NavItemBox>
                     <S.NavItemBox>
                         <S.NavItem onClick={handleSkill}>SKILL</S.NavItem>
