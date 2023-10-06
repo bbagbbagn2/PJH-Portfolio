@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
-import PortfolioTitle from '../../components/Title.tsx';
+import PortfolioTitle from "../../components/Title.tsx";
 import { BsInfinity, BsGear } from "react-icons/bs";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 
@@ -10,47 +10,53 @@ export default function Profile(): JSX.Element {
         <FeaturePageSection>
             <PortfolioTitle titleText='FEATURES'></PortfolioTitle>
             <CardList>
-            <CardContainer>
+                <CardItem>
                 <CardBox>
                     <BsInfinity size="8rem" />
-                    <CardHeading>가능성을 개발하는 개발자</CardHeading>
-                </CardBox>
-            </CardContainer>
-            <CardContainer>
+                    <CardHeading>가능성</CardHeading>
+                    </CardBox>
+            </CardItem>
+            <CardItem>
                 <CardBox>
                     <BsGear size="8rem" />
-                    <CardHeading>리팩토링을 생활화하는 개발자</CardHeading>
+                    <CardHeading>리팩토링</CardHeading>
                 </CardBox>
-            </CardContainer>
-            <CardContainer>
+            </CardItem>
+            <CardItem>
                 <CardBox>
                     <IoChatbubbleEllipsesOutline size="8rem" />
-                    <CardHeading>의사소통에 적극적인 개발자</CardHeading>
+                    <CardHeading>의사소통</CardHeading>
                 </CardBox>
-            </CardContainer>
+            </CardItem>
             </CardList>
         </FeaturePageSection >
     );
 }
 
 const FeaturePageSection = styled.section`
-    padding: 0 8%;
+    margin: 0 auto;
     margin-bottom: 300px;
-    display: grid;
+    padding: 0 8%;
+    max-width: 1280px;
 `;
 
-const CardList = styled.div`
+const CardList = styled.ul`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 2rem;
 `;
-const CardContainer = styled.div`
-    padding: 20px;  
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.35);
+
+const CardItem = styled.li`
+    margin-bottom: 1.2rem;
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: calc((100% - 2em) / 3);
     border: 1px solid transparent;
     border-radius: 20px;
-    gap: 30px;
+    background-color: #1A1E23;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.35);
+    overflow: hidden;
     transition: all 0.3s ease;
 
     &:hover {
@@ -60,16 +66,16 @@ const CardContainer = styled.div`
 `;
 
 const CardBox = styled.div`
-    min-width: 380px;
+    padding: 2rem;
     height: 100%;
     display: grid;
     place-items: center;
-    gap: 30px;
+    justify-content: center;
     color: #FFF;
 `;
 
 const CardHeading = styled.h1`
-    margin-bottom: 20px;
+    padding: 2rem;
     color: #FFF;
     font-size: 1.7rem;
     font-weight: bold;

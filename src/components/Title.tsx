@@ -1,11 +1,11 @@
-import React from "react";
+import * as React from "react";
 import styled from 'styled-components';
 
 interface PortfolioTitleProps {
     titleText: string;
 }
 
-export default function PortfolioTitle({ titleText }: PortfolioTitleProps): JSX.Element {
+export default function PortfolioTitle({ titleText }: PortfolioTitleProps) {
     return (
         <TitleLayout>
             <TitleBox>
@@ -27,4 +27,5 @@ const TitleBox = styled.div`
     line-height: 1.3em;
     font-family: Black Han Sans;
     font-size: 42px;
+    text-align: center;
 `;

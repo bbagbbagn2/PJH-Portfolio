@@ -11,21 +11,28 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-size: 14px;
+    font-size: 20px;
   }
 
   a {
     text-decoration: none;
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4, h5 {
     margin: 0;
     padding: 0;
+    line-height: 1.15;
   }
-  
+
   button {
     border: none;
     background: #FFFFFF;
+  }
+
+  ul, ol, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
 `;
 

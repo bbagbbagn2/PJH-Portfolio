@@ -4,7 +4,7 @@ import { BsPhoneVibrate } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import PortfolioTitle from '../../components/Title.tsx';
 import "../../assets/font/Font.css";
-import * as S from './ContactCss.ts';
+import * as S from './ContactCss';
 
 export default function Contact(): JSX.Element {
     return (

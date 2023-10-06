@@ -40,7 +40,7 @@ export default function App(): JSX.Element {
 
     return (
         <SkillPageSection>
-            <PortfolioTitle titleText="SKILLS" />
+            <PortfolioTitle titleText="MY SKILLS" />
             <SkillList>
                 <SkillItem>
                     <SkillBox>

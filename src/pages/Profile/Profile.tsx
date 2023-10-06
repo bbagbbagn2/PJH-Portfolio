@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { IoIosArrowDown } from "react-icons/io";
@@ -23,7 +23,7 @@ export default function Profile(): JSX.Element {
                         PRONT-END DEVELOPER
                     </ProfilePageHeading>
                     <ProfilePageSub>
-                        가능성을을 개발하는 개발자 박지훈입니다.
+                        가능성을 개발하는 개발자 박지훈입니다.
                     </ProfilePageSub>
                 </TitleBox>
                 <ToAboutLink onClick={handleAbout} ><IoIosArrowDown size={24}/></ToAboutLink>
@@ -49,7 +49,9 @@ const ProfilePageHeading = styled.h1`
     border: none;
     color: #FFF;
     font-size: 5rem;
-    font-weight: 500;
+    font-family: Black Han Sans;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
 
     @media screen and (max-width: 780px) {
         font-size: 36px;
@@ -59,6 +61,7 @@ const ProfilePageHeading = styled.h1`
 const ProfilePageSub = styled.h3`
     color: #FFF;
     font-size: 1.5rem;
+    letter-spacing: 0.1rem;
 `;
 
 const TitleBox = styled.div`
