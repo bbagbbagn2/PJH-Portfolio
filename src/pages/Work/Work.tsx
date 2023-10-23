@@ -24,12 +24,11 @@ export default function Work(): JSX.Element {
 
     return (
         <WorkPageSection>
-            <PortfolioTitle titleNumber="02" titleText="PORTFOLIO" />
+            <PortfolioTitle titleText="PORTFOLIO" />
             <PortfolioSection>
                 <PortfolioList>
                     <PortfolioItem>
-                        <DetailLink to="#">ICON_DB project summary</DetailLink>
-                        <ProjectLogoBox>
+                        <ProjectLogoBox to="/icondb">
                             <ICONDBLogo />
                         </ProjectLogoBox>
                         <ProjectInfoBox>
@@ -37,8 +36,7 @@ export default function Work(): JSX.Element {
                         </ProjectInfoBox>
                     </PortfolioItem>
                     <PortfolioItem>
-                        <DetailLink to="#">PJH project summary</DetailLink>
-                        <ProjectLogoBox>
+                        <ProjectLogoBox to="/drinkable">
                             <DRINKABLELogo />
                         </ProjectLogoBox>
                         <ProjectInfoBox>
@@ -46,8 +44,7 @@ export default function Work(): JSX.Element {
                         </ProjectInfoBox>
                     </PortfolioItem>
                     <PortfolioItem>
-                    <DetailLink to="#">PJH Portfolio project summary</DetailLink>
-                        <ProjectLogoBox>
+                        <ProjectLogoBox to="/pjh-portfolio">
                             <DRINKABLELogo />
                         </ProjectLogoBox>
                         <ProjectInfoBox>
@@ -144,10 +141,9 @@ export default function Work(): JSX.Element {
 }
 
 const WorkPageSection = styled.div`
-    margin: 0 auto;
-    margin-bottom: 300px;
     padding: 0 8%;
-    max-width: 1280px;
+    height: 100vh;
+    min-height: 100vh;
 `;
 
 const PortfolioSection = styled.section`
@@ -157,14 +153,12 @@ const PortfolioList = styled.ul`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 2rem;
 `;
 
 const PortfolioItem = styled.li`
+    min-width: 422px;
     margin-bottom: 1.2rem;
-    position: relative;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: calc((100% - 2em) / 3);
     border: 1px solid transparent;
     border-radius: 20px;
     background-color: #1A1E23;
@@ -178,18 +172,7 @@ const PortfolioItem = styled.li`
     }
 `;
 
-const DetailLink = styled(Link)`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80%;
-    text-indent: -9999px;
-    overflow: hidden;
-    z-index: 0;
-`;
-
-const ProjectLogoBox = styled.figure`
+const ProjectLogoBox = styled(Link)`
     margin: 0;
     height: 9em;
     display: flex;

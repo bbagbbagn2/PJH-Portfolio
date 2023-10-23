@@ -15,6 +15,10 @@ interface ToolsSkills {
     title: string;
 }
 
+interface SkillsParagraphProps {
+    index: number;
+  }
+
 export default function App(): JSX.Element {
     const LanguageSkills: LanguageSkills[] = [
         { title: 'HTML' },
@@ -47,7 +51,7 @@ export default function App(): JSX.Element {
                         <CardHeading>LANGUAGE</CardHeading>
                         {LanguageSkills.map((skill, index) => (
                             <SkillsRow key={index}>
-                                <SkillRateParagraph>{skill.title}</SkillRateParagraph>
+                                <LanguageParagraph index={index}>{skill.title}</LanguageParagraph>
                             </SkillsRow>
                         ))}
                     </SkillBox>
@@ -57,7 +61,7 @@ export default function App(): JSX.Element {
                         <CardHeading>FRAMEWORK</CardHeading>
                         {FramworkSkills.map((skill, index) => (
                             <SkillsRow key={index}>
-                                <SkillRateParagraph>{skill.title}</SkillRateParagraph>
+                                <FrameworkParagraph index={index}>{skill.title}</FrameworkParagraph>
                             </SkillsRow>
                         ))}
                     </SkillBox>
@@ -67,7 +71,7 @@ export default function App(): JSX.Element {
                         <CardHeading>TOOLS</CardHeading>
                         {ToolskSkills.map((skill, index) => (
                             <SkillsRow key={index}>
-                                <SkillRateParagraph>{skill.title}</SkillRateParagraph>
+                                <ToolParagraph index={index}>{skill.title}</ToolParagraph>
                             </SkillsRow>
                         ))}
                     </SkillBox>
@@ -80,18 +84,12 @@ export default function App(): JSX.Element {
 
 const SkillPageSection = styled.section`
     padding: 0 8%;
-    margin-bottom: 300px;
+    height: 100vh;
+    min-height: 100vh;
 `;
 
 const SkillsRow = styled.div`
 `;
-
-const SkillRateParagraph = styled.p`
-    color: #FFF;
-    line-height: 2.8em;
-    font-size: 20px;
-`;
-
 
 const SkillList = styled.ul`
     display: flex;
@@ -99,13 +97,14 @@ const SkillList = styled.ul`
     justify-content: space-between;
     gap: 2rem;
 `;
+
 const SkillItem = styled.li`
     padding: 20px;  
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.35);
     border: 1px solid transparent;
     border-radius: 20px;
     font-family: black Han Sans;
     letter-spacing: 0.2rem;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.35);
     gap: 30px;
     transition: all 0.3s ease;
 
@@ -129,4 +128,40 @@ const CardHeading = styled.h1`
     color: #FFF;
     font-size: 1.7rem;
     font-weight: bold;
+`;
+
+const getColorByLanguageIndex = (index: number) => {
+    const colors = ['#E34F26', '#1572B6','#F7DF1E', '#3178C6'];
+
+    return colors[index % colors.length];
+}
+
+const getColorByFrameworkIndex = (index: number) => {
+    const colors = ['#61DAFB', '#FFF','#339933', '#FFF'];
+    
+    return colors[index % colors.length];
+}
+
+const getColorByToolIndex = (index: number) => {
+    const colors = ['#4479A1', '#FFF','#FFF', '#5865F2'];
+
+    return colors[index % colors.length];
+}
+
+const SkillsParapragh = styled.p`
+    line-height: 2.8em;
+    font-size: 20px;
+`;
+
+const LanguageParagraph = styled(SkillsParapragh)<SkillsParagraphProps>`
+    color: ${props => getColorByLanguageIndex(props.index)};
+`;
+
+const FrameworkParagraph = styled(SkillsParapragh)<SkillsParagraphProps>`
+    color: ${props => getColorByFrameworkIndex(props.index)};
+`;
+
+const ToolParagraph = styled(SkillsParapragh)<SkillsParagraphProps>`
+
+    color: ${props => getColorByToolIndex(props.index)};
 `;

@@ -26,7 +26,7 @@ export default function Profile(): JSX.Element {
                         가능성을 개발하는 개발자 박지훈입니다.
                     </ProfilePageSub>
                 </TitleBox>
-                <ToAboutLink onClick={handleAbout} ><IoIosArrowDown size={24}/></ToAboutLink>
+                <ToAboutLink onClick={handleAbout}><IoIosArrowDown size={24}/></ToAboutLink>
             </ProfilePageBox>
         </ProfilePageSection >
     );
@@ -35,6 +35,7 @@ export default function Profile(): JSX.Element {
 const ProfilePageSection = styled.section`
     width: 100%;
     height: 100vh;
+    min-height: 100vh;
     display: grid;
     place-items: center;
     place-content: center;

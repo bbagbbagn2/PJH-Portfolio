@@ -1,9 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import PortfolioTitle from "../../components/Title.tsx";
 import { BsInfinity, BsGear } from "react-icons/bs";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+
+import PortfolioTitle from "../../components/Title.tsx";
 
 export default function Profile(): JSX.Element {
     return (
@@ -34,28 +35,26 @@ export default function Profile(): JSX.Element {
 }
 
 const FeaturePageSection = styled.section`
-    margin: 0 auto;
-    margin-bottom: 300px;
+    position: relative;
     padding: 0 8%;
-    max-width: 1280px;
+    height: 100vh;
+    min-height: 100vh;
 `;
 
 const CardList = styled.ul`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 2rem;
 `;
 
 const CardItem = styled.li`
-    margin-bottom: 1.2rem;
-    position: relative;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: calc((100% - 2em) / 3);
+    min-width: 420px;
+    padding: 20px;
     border: 1px solid transparent;
     border-radius: 20px;
-    background-color: #1A1E23;
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.35);
+    gap: 30px;
     overflow: hidden;
     transition: all 0.3s ease;
 
