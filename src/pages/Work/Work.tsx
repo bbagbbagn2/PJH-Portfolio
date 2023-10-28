@@ -24,7 +24,7 @@ export default function Work(): JSX.Element {
 
     return (
         <WorkPageSection>
-            <PortfolioTitle titleText="PORTFOLIO" />
+            <PortfolioTitle titleText="WORK" />
             <PortfolioSection>
                 <PortfolioList>
                     <PortfolioItem>
@@ -48,7 +48,7 @@ export default function Work(): JSX.Element {
                             <DRINKABLELogo />
                         </ProjectLogoBox>
                         <ProjectInfoBox>
-                            <ProjectInfoHeading>PJH Portfolio</ProjectInfoHeading>
+                            <ProjectInfoHeading>Personal Website</ProjectInfoHeading>
                         </ProjectInfoBox>
                         {/*<WorkPageBox>
                             <ProjectBox>
@@ -144,6 +144,8 @@ const WorkPageSection = styled.div`
     padding: 0 8%;
     height: 100vh;
     min-height: 100vh;
+    display: grid;
+    align-items: center;
 `;
 
 const PortfolioSection = styled.section`
@@ -153,11 +155,13 @@ const PortfolioList = styled.ul`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 2rem;
 `;
 
 const PortfolioItem = styled.li`
-    min-width: 422px;
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: calc((100% - 8rem) / 3);
     margin-bottom: 1.2rem;
     border: 1px solid transparent;
     border-radius: 20px;

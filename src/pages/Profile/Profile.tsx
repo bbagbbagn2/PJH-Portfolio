@@ -20,7 +20,7 @@ export default function Profile(): JSX.Element {
             <ProfilePageBox>
                 <TitleBox>
                     <ProfilePageHeading>
-                        PRONT-END DEVELOPER
+                        PRONT-END DEVELOPER.
                     </ProfilePageHeading>
                     <ProfilePageSub>
                         가능성을 개발하는 개발자 박지훈입니다.
