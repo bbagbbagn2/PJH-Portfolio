@@ -23,124 +23,188 @@ import '../../assets/font/Font.css';
 export default function Work(): JSX.Element {
 
     return (
-        <WorkPageSection>
-            <PortfolioTitle titleText="WORK" />
-            <PortfolioSection>
-                <PortfolioList>
-                    <PortfolioItem>
-                        <ProjectLogoBox to="/icondb">
-                            <ICONDBLogo />
-                        </ProjectLogoBox>
-                        <ProjectInfoBox>
-                            <ProjectInfoHeading>ICON_DB</ProjectInfoHeading>
-                        </ProjectInfoBox>
-                    </PortfolioItem>
-                    <PortfolioItem>
-                        <ProjectLogoBox to="/drinkable">
-                            <DRINKABLELogo />
-                        </ProjectLogoBox>
-                        <ProjectInfoBox>
-                            <ProjectInfoHeading>DRINKABLE</ProjectInfoHeading>
-                        </ProjectInfoBox>
-                    </PortfolioItem>
-                    <PortfolioItem>
-                        <ProjectLogoBox to="/pjh-portfolio">
-                            <DRINKABLELogo />
-                        </ProjectLogoBox>
-                        <ProjectInfoBox>
-                            <ProjectInfoHeading>Personal Website</ProjectInfoHeading>
-                        </ProjectInfoBox>
-                        {/*<WorkPageBox>
-                            <ProjectBox>
-                                <ProjectTitleParagraph>포트폴리오 웹사이트</ProjectTitleParagraph>
-                                <ProjectCol>
-                                    <SliderBox>
-                                        <CarouselProvider
-                                            naturalSlideWidth={100}
-                                            naturalSlideHeight={125}
-                                            totalSlides={4}>
-                                            <SliderImageBox>
-                                                <Slider>
-                                                    <Slide index={0}><SliderImage src={About} /></Slide>
-                                                    <Slide index={1}><SliderImage src={Skills} /></Slide>
-                                                    <Slide index={2}><SliderImage src={Portfolio} /></Slide>
-                                                    <Slide index={3}><SliderImage src={Contact} /></Slide>
-                                                </Slider>
-                                            </SliderImageBox>
-                                            <ButtonCol>
-                                                <ButtonBack><BsArrowLeftCircle size="40" /></ButtonBack>
-                                                <ButtonNext><BsArrowRightCircle size="40" /></ButtonNext>
-                                            </ButtonCol>
-                                        </CarouselProvider>
-                                    </SliderBox>
-                                    <DetailBox>
-                                        <ProjectInfoBox>
-                                            <b>포트폴리오 용도로 제작한 웹사이트</b>
-                                            <span>
-                                                입니다. 지금 보고 있는 바로 이 웹사이트에 해당합니다.
-                                                <br /><br />
-                                                첫 개인 프로젝트로, <ExplanationSpan color='#ED3770'>순수 React</ExplanationSpan>로 개발을 완료하였습니다.
-                                                후에 <ExplanationSpan color='#ED3770'>TypeScript</ExplanationSpan>로 프로젝트 <ExplanationSpan color='#ED3770'>리팩토링</ExplanationSpan>을 진행하였습니다.
-                                                <br /><br />
-                                                <ExplanationSpan color='#ED3770'>Styled-Components</ExplanationSpan>를 통해 진행한 프로젝트로,
-                                                네이밍 및 스타일 컴포넌트와 공통 컴포넌트 간의 혼란을 줄이는 것에 집중하였습니다.
-                                                이로 인해 <ExplanationSpan color='#ED3770'>네이밍</ExplanationSpan>에 대한 규칙을 알 수 있었고, <ExplanationSpan color='#ED3770'>S-Dot 방법</ExplanationSpan>을 이용해 스타일 컴포넌트와 공통 컴포넌트 간의 혼란을 줄일 수 있었습니다.
-                                                <br /><br />
-                                                또한, <ExplanationSpan color='#ED3770'>Netlify</ExplanationSpan>를 이용하여 웹사이트의 배포도 경함해볼 수 있었습니다.
-                                            </span>
-                                        </ProjectInfoBox>
-                                        <SummaryBox>
-                                            <ListTitleBox>
-                                                ✔<p>주요 기능</p>
-                                            </ListTitleBox>
-                                            <div>
-                                                간단한 자기소개, 기술 스택, 프로젝트, 연락처
-                                            </div>
-                                        </SummaryBox>
-                                        <SummaryBox>
-                                            <ListTitleBox>
-                                                ✔<p>GitHub</p>
-                                            </ListTitleBox>
-                                            <div>
-                                                <GithubLink href="https://github.com/bbagbbagn2/Portfolio">github.com/bbagbbagn2/JH Portfolio</GithubLink>
-                                            </div>
-                                        </SummaryBox>
-                                        <SummaryBox>
-                                            <ListTitleBox>
-                                                ✔<p>URL</p>
-                                            </ListTitleBox>
-                                            <div>
-                                                <GithubLink href="https://parkproject.netlify.app/">JH Portfolio</GithubLink>
-                                            </div>
-                                        </SummaryBox>
-                                        <SummaryBox>
-                                            <ListTitleBox>
-                                                ✔<p>Frontend</p>
-                                            </ListTitleBox>
-                                            <div>
-                                                <p>React, TypeScript, styled-components</p>
-                                            </div>
-                                        </SummaryBox>
-                                        <SummaryBox>
-                                            <ListTitleBox>
-                                                ✔<p>Deployment</p>
-                                            </ListTitleBox>
-                                            <div>
-                                                <p>Netlify</p>
-                                            </div>
-                                        </SummaryBox>
-                                    </DetailBox>
-                                </ProjectCol>
-                            </ProjectBox>
-    </WorkPageBox>*/}
-                    </PortfolioItem>
-                </PortfolioList>
-            </PortfolioSection>
-        </WorkPageSection>
+        <PageSection>
+            <InnerContentBox>
+                <Lanes>
+                    <Lane>
+                        <CavalierArticle>
+                            <CavalierBox>
+                                <Heading>
+                                    I Build & design stuff
+                                </Heading>
+                            </CavalierBox>
+                        </CavalierArticle>
+                    </Lane>
+                </Lanes>
+            </InnerContentBox>
+        </PageSection>
+    //     <WorkPageSection>
+    //         <PortfolioTitle titleText="WORK" />
+    //         <PortfolioSection>
+    //             <PortfolioList>
+    //                 <PortfolioItem>
+    //                     <ProjectLogoBox to="/icondb">
+    //                         <ICONDBLogo />
+    //                     </ProjectLogoBox>
+    //                     <ProjectInfoBox>
+    //                         <ProjectInfoHeading>ICON_DB</ProjectInfoHeading>
+    //                     </ProjectInfoBox>
+    //                 </PortfolioItem>
+    //                 <PortfolioItem>
+    //                     <ProjectLogoBox to="/drinkable">
+    //                         <DRINKABLELogo />
+    //                     </ProjectLogoBox>
+    //                     <ProjectInfoBox>
+    //                         <ProjectInfoHeading>DRINKABLE</ProjectInfoHeading>
+    //                     </ProjectInfoBox>
+    //                 </PortfolioItem>
+    //                 <PortfolioItem>
+    //                     <ProjectLogoBox to="/pjh-portfolio">
+    //                         <DRINKABLELogo />
+    //                     </ProjectLogoBox>
+    //                     <ProjectInfoBox>
+    //                         <ProjectInfoHeading>Personal Website</ProjectInfoHeading>
+    //                     </ProjectInfoBox>
+    //                     {/*<WorkPageBox>
+    //                         <ProjectBox>
+    //                             <ProjectTitleParagraph>포트폴리오 웹사이트</ProjectTitleParagraph>
+    //                             <ProjectCol>
+    //                                 <SliderBox>
+    //                                     <CarouselProvider
+    //                                         naturalSlideWidth={100}
+    //                                         naturalSlideHeight={125}
+    //                                         totalSlides={4}>
+    //                                         <SliderImageBox>
+    //                                             <Slider>
+    //                                                 <Slide index={0}><SliderImage src={About} /></Slide>
+    //                                                 <Slide index={1}><SliderImage src={Skills} /></Slide>
+    //                                                 <Slide index={2}><SliderImage src={Portfolio} /></Slide>
+    //                                                 <Slide index={3}><SliderImage src={Contact} /></Slide>
+    //                                             </Slider>
+    //                                         </SliderImageBox>
+    //                                         <ButtonCol>
+    //                                             <ButtonBack><BsArrowLeftCircle size="40" /></ButtonBack>
+    //                                             <ButtonNext><BsArrowRightCircle size="40" /></ButtonNext>
+    //                                         </ButtonCol>
+    //                                     </CarouselProvider>
+    //                                 </SliderBox>
+    //                                 <DetailBox>
+    //                                     <ProjectInfoBox>
+    //                                         <b>포트폴리오 용도로 제작한 웹사이트</b>
+    //                                         <span>
+    //                                             입니다. 지금 보고 있는 바로 이 웹사이트에 해당합니다.
+    //                                             <br /><br />
+    //                                             첫 개인 프로젝트로, <ExplanationSpan color='#ED3770'>순수 React</ExplanationSpan>로 개발을 완료하였습니다.
+    //                                             후에 <ExplanationSpan color='#ED3770'>TypeScript</ExplanationSpan>로 프로젝트 <ExplanationSpan color='#ED3770'>리팩토링</ExplanationSpan>을 진행하였습니다.
+    //                                             <br /><br />
+    //                                             <ExplanationSpan color='#ED3770'>Styled-Components</ExplanationSpan>를 통해 진행한 프로젝트로,
+    //                                             네이밍 및 스타일 컴포넌트와 공통 컴포넌트 간의 혼란을 줄이는 것에 집중하였습니다.
+    //                                             이로 인해 <ExplanationSpan color='#ED3770'>네이밍</ExplanationSpan>에 대한 규칙을 알 수 있었고, <ExplanationSpan color='#ED3770'>S-Dot 방법</ExplanationSpan>을 이용해 스타일 컴포넌트와 공통 컴포넌트 간의 혼란을 줄일 수 있었습니다.
+    //                                             <br /><br />
+    //                                             또한, <ExplanationSpan color='#ED3770'>Netlify</ExplanationSpan>를 이용하여 웹사이트의 배포도 경함해볼 수 있었습니다.
+    //                                         </span>
+    //                                     </ProjectInfoBox>
+    //                                     <SummaryBox>
+    //                                         <ListTitleBox>
+    //                                             ✔<p>주요 기능</p>
+    //                                         </ListTitleBox>
+    //                                         <div>
+    //                                             간단한 자기소개, 기술 스택, 프로젝트, 연락처
+    //                                         </div>
+    //                                     </SummaryBox>
+    //                                     <SummaryBox>
+    //                                         <ListTitleBox>
+    //                                             ✔<p>GitHub</p>
+    //                                         </ListTitleBox>
+    //                                         <div>
+    //                                             <GithubLink href="https://github.com/bbagbbagn2/Portfolio">github.com/bbagbbagn2/JH Portfolio</GithubLink>
+    //                                         </div>
+    //                                     </SummaryBox>
+    //                                     <SummaryBox>
+    //                                         <ListTitleBox>
+    //                                             ✔<p>URL</p>
+    //                                         </ListTitleBox>
+    //                                         <div>
+    //                                             <GithubLink href="https://parkproject.netlify.app/">JH Portfolio</GithubLink>
+    //                                         </div>
+    //                                     </SummaryBox>
+    //                                     <SummaryBox>
+    //                                         <ListTitleBox>
+    //                                             ✔<p>Frontend</p>
+    //                                         </ListTitleBox>
+    //                                         <div>
+    //                                             <p>React, TypeScript, styled-components</p>
+    //                                         </div>
+    //                                     </SummaryBox>
+    //                                     <SummaryBox>
+    //                                         <ListTitleBox>
+    //                                             ✔<p>Deployment</p>
+    //                                         </ListTitleBox>
+    //                                         <div>
+    //                                             <p>Netlify</p>
+    //                                         </div>
+    //                                     </SummaryBox>
+    //                                 </DetailBox>
+    //                             </ProjectCol>
+    //                         </ProjectBox>
+    // </WorkPageBox>*/}
+    //                 </PortfolioItem>
+    //             </PortfolioList>
+    //         </PortfolioSection>
+    //     </WorkPageSection>
     );
 }
+const PageSection = styled.section`
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    user-select: auto;
+`;
 
-const WorkPageSection = styled.div`
+const InnerContentBox = styled.div`
+    position: relative;
+    padding: 0 calc(6em - 2em);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+`;
+
+const Lanes = styled.div`
+    width: 100%;
+    min-height: 40em;
+    display: flex;
+`;
+
+const Lane = styled.div`
+    padding: 6.95em;
+    width: 100%;
+`;
+
+const CavalierArticle = styled.article`
+    position: relative;
+    margin-bottom: 4.5em;
+`;
+
+const CavalierBox = styled.div`
+    position: relative;
+`;
+
+const Heading = styled.h1`
+    max-width: 30vw;
+    font-size: 3em;
+    font-family: Black Han Sans;
+    line-height: 1.1;
+    color: #3C8FDD;
+
+`;
+
+const Paragraph = styled.p`
+    
+`;
+
+const WorkPageSection = styled.section`
     padding: 0 8%;
     height: 100vh;
     min-height: 100vh;

@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const MainPageLayout = styled.div`
-    background: #1A1E23;
-`;
-
-export const MainPageRow = styled.div`
+export const MainPageLayout = styled.main`
+    touch-action: none;
+    scroll-snap-type: y mandatory;
 `;

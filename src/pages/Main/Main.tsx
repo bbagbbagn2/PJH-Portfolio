@@ -14,15 +14,13 @@ export default function Main(): JSX.Element {
         <>
             <Header />
             <S.MainPageLayout>
-                <S.MainPageRow>
                     <Profile />
                     <Features />
                     <Skill />
                     <Work />
                     <Contact />
-                </S.MainPageRow>
-                <Footer />
             </S.MainPageLayout>
+            <Footer />
         </>
     );
 }

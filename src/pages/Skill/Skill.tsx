@@ -60,7 +60,7 @@ export default function App(): JSX.Element {
     ];
 
     return (
-        <SkillPageSection>
+        <PageSection>
             <SkillList>
                 <SkillItem>
                     <SkillBox>
@@ -93,16 +93,16 @@ export default function App(): JSX.Element {
                     </SkillBox>
                 </SkillItem>
             </SkillList>
-        </SkillPageSection>
+        </PageSection>
     );
 }
 
 
-const SkillPageSection = styled.section`
+const PageSection = styled.section`
     padding: 0 8%;
-    height: 100vh;
+    height: 100vh;  
     min-height: 100vh;
-    display: grid;
+    display: flex;
     align-items: center;
 `;
 
