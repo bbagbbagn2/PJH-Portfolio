@@ -30,8 +30,15 @@ export default function Work(): JSX.Element {
                         <CavalierArticle>
                             <CavalierBox>
                                 <Heading>
-                                    I Build & design stuff
+                                    I Build &
+                                    <br />
+                                    design stuff
                                 </Heading>
+                                <CavalierParagraph>
+                                     오픈소스 프로젝트,
+                                     <br />
+                                     웹 프로젝트
+                                </CavalierParagraph>
                             </CavalierBox>
                         </CavalierArticle>
                     </Lane>
@@ -156,35 +163,70 @@ export default function Work(): JSX.Element {
 }
 const PageSection = styled.section`
     position: relative;
-    height: 100vh;
-    min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     user-select: auto;
+
+    @media screen and (max-height: 1199px) {
+        @media screen and (min-width: 701px) {
+            min-height: 100vh;
+        }
+    }
+
+    @media screen and (min-width: 701px) {
+        @media screen and (max-height: 1199px) {
+            height: 100vh;
+        }
+    }
 `;
 
 const InnerContentBox = styled.div`
     position: relative;
-    padding: 0 calc(6em - 2em);
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @media screen and (min-width: 701px) {
+        padding: 0 10em;
+    }
+
+    @media screen and (min-width: 1501px) {
+        padding: 0 5em;
+        max-width: 1760px;
+    }
+
+    @media screen and (min-aspect-ratio: 1440 / 900) {
+        margin-top: 4.2rem;
+    }
 `;
 
 const Lanes = styled.div`
     width: 100%;
-    min-height: 40em;
     display: flex;
+    background-color: #FFF;
+
+    @media screen and (min-width: 1024px) and (min-height: 665px) and (max-height: 1500px) {
+        min-height: 40em;
+    }
+
 `;
 
 const Lane = styled.div`
     padding: 6.95em;
-    width: 100%;
+    padding-left: 6em;
+    border: 0.15em solid rgba(72, 49, 212, 0.3);
+
+    @media screen and (min-width: 581px) {
+        width: 50%;
+        border-width: 0 0.15em 0 0 ;
+    }
 `;
 
 const CavalierArticle = styled.article`
     position: relative;
     margin-bottom: 4.5em;
+    text-align: left;
 `;
 
 const CavalierBox = styled.div`
@@ -192,16 +234,33 @@ const CavalierBox = styled.div`
 `;
 
 const Heading = styled.h1`
-    max-width: 30vw;
-    font-size: 3em;
+    margin: 0;
+    font-size: 3.2em;
     font-family: Black Han Sans;
     line-height: 1.1;
     color: #3C8FDD;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transition: trnsform 0.5s, opacity 0.2s;
 
+    @media screen and (min-width: 701px) {
+        max-width: 30vw;
+        transition-delay: 200ms;
+    }
 `;
 
-const Paragraph = styled.p`
-    
+const CavalierParagraph = styled.p`
+    width: unset;
+    font-size: 1.6em;
+    line-height: 1.2;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transition: trnsform 0.5s, opacity 0.2s;
+
+    @media screen and (min-width: 701px) {
+        max-width: 701px;
+        transition-delay: 301ms;
+    }
 `;
 
 const WorkPageSection = styled.section`

@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-    position: fixed;
-    width: 100vw;
-    height: 65px;
-    display: grid;
-    place-items: center;
-    background: rgba(26, 30, 35, 0.5);
+    width: 100%;
+    height: 11.12em;
+    max-height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    font-size: 1rem;
     z-index: 999;
 
-    @media (max-width: 1024px) {
-        display: none;
+    @media screen and (min-width: 701px) {
+        position: fixed;
+        padding: 0 6em;
     }
 `;
 

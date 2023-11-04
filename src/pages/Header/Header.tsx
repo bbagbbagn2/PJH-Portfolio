@@ -27,22 +27,7 @@ export default function App(): JSX.Element {
 
     return (
         <S.Header>
-            <S.HeaderLayout>
-                <S.HeaderNav>
-                    <S.NavItemBox>
-                        <S.NavItem color='#FFF' onClick={handleHome}>HOME</S.NavItem>
-                    </S.NavItemBox>
-                    <S.NavItemBox>
-                        <S.NavItem onClick={handleSkill}>SKILL</S.NavItem>
-                    </S.NavItemBox>
-                    <S.NavItemBox>
-                        <S.NavItem onClick={handleWork}>WORK</S.NavItem>
-                    </S.NavItemBox>
-                    <S.NavItemBox>
-                        <S.NavItem onClick={handleContact}>CONTACT</S.NavItem>
-                    </S.NavItemBox>
-                </S.HeaderNav>
-            </S.HeaderLayout>
+            <S.NavItem color='#FFF' onClick={handleHome}>HOME</S.NavItem>
         </S.Header>
     );
 }

@@ -7,13 +7,20 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-
   html {
     position: relative;
     width: 100%;
     font-size: 0.9rem;
     line-height: 1.15;
     text-size-adjust: 100%;
+
+    @media (min-width: 701px) {
+      touch-action: none;
+    }
+
+    @media (min-width: 701px) and (max-width: 1600px) {
+      font-size: 1vw;
+    }
   }
 
   body {
@@ -21,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     width: 100%;
     height: 100%;
-    font: inherit;
+    background-color: #F9F9F9;
     font-weight: normal;
     line-height: inherit;
     -webkit-font-smoothing: inherit;
@@ -30,6 +37,11 @@ const GlobalStyle = createGlobalStyle`
   main {
     display: block;
     outline: none;
+
+    @media (min-width: 701px) {
+      touch-action: none;
+      scroll-snap-type: y mandatory;
+    }
   }
 
   a {

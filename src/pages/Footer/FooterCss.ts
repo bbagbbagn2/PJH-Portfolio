@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
-    display: grid;
-    place-items: center;
-    height: 80px;
-    background: #FFFFFF;
-    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 701px) and (max-width: 1199px) {
+        height: 100vh;
+    }
 `;

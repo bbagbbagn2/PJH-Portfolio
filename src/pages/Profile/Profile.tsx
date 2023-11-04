@@ -16,7 +16,7 @@ export default function Profile(): JSX.Element {
     };
 
     return (
-        <ProfilePageSection>
+        <ProfilePageSection aria-hidden={false}>
             <ProfileBox>
                 <CavalierArticle>
                     <CavalierBox>
@@ -30,6 +30,9 @@ export default function Profile(): JSX.Element {
                         </ProfilePageParagraph>
                     </CavalierBox>
                 </CavalierArticle>
+                <CavalierFigure>
+
+                </CavalierFigure>
             </ProfileBox>
             <ContentBox>
                 <ContentList>
@@ -48,18 +51,48 @@ const ProfilePageSection = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #3C8FDD 80%, #DBF227 20%);
     user-select: auto;
+
+    user-select: ${(props) => (props['aria-hidden'] ? 'auto' : 'none')};
+
+    @media (min-width: 581px) {
+        background: linear-gradient(90deg, #3C8FDD 67.5%, #DBF227 35.5%);
+    }
+
+    @media (min-width: 701px) {
+        overflow: ${(props) => (props['aria-hidden'] ? '' : 'unset')};
+    }
+
+    @media (max-width: 580px) {
+        padding-bottom: 0;
+    }
+
+    @media (max-width: 700px) {
+        font-size: 0.95em;
+    }
 `;
 
 const ProfileBox = styled.div`
-    margin-top: calc(11.12rem + 2em);
-    padding: 0 10rem;
     width: 100%;
-    max-width: 1500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (min-width: 581px) {
+        margin-top: calc(11.12rem + 2em);
+    }
+
+    @media (min-width: 701px) {
+        padding: 0 10rem;
+    }
+
+    @media (min-width: 701px) and (max-width: 1500px){
+        max-width: 1500px;
+    }
+
+    @media (min-width: 1501px) {
+        max-width: 1760px;
+    }
 `;
 
 const ContentBox = styled(ProfileBox)`
@@ -68,48 +101,82 @@ const ContentBox = styled(ProfileBox)`
 
 const CavalierArticle = styled.article`
     position: relative;
+
+    @media (min-width: 701px) {
+        margin-top: -3.5em;
+    }
 `;
 
 const CavalierBox = styled.div`
     position: relative;
 `;
 const ProfilePageHeading = styled.h1`
-    max-width: 30vw;
     color: #DBF227;
-    font-size: 4.4em;
     font-family: Black Han Sans;
+    font-size: 4em;
     font-weight: 300;
     line-height: 1.1;
     letter-spacing: 0.2rem;
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s, opacity 0.2s;
-    transition-delay: 200ms;
 
     @media screen and (max-width: 780px) {
         font-size: 36px;
     }
+
+    @media screen and (min-width: 581px) {
+        font-size: 4.4em;
+    }
+
+    @media screen and (min-width: 701px) {
+        max-width: 30vw;    
+        transition-delay: 200ms;
+    }
+    
 `;
 
 const ProfilePageParagraph = styled.p`
-    width: 32vw;
-    max-width: 701px;
     color: #FFF;
-    font-size: 1.3em;
     line-height: 1.6;
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s, opacity 0.2s;
-    transition-delay: 310ms;
+
+    @media screen and (min-width: 581px) {
+        font-size: 1.3em;
+    }
+
+    @media screen and (min-width: 701px) {
+        width: 32vw;
+        max-width: 701px;
+        font-size: 1.07em;
+        transition-delay: 310ms;
+    }
 `;
 
+const CavalierFigure = styled.figure`
+    margin: 0;
+    position: relative;
+    width: 23.2334em;
+    height: 24.67em;
+    border: 0.115rem solid #FFF;
+    z-index: 1;
+
+    @media screen and (min-width: 701px) {
+        margin-right: calc(6em + 4em);
+    }
+`;
 const ContentList = styled.ul`
-    width: 41%;
     display: flex;
     justify-content: space-between;
     color: #DBF227;
-    font-size: 0.965em;
     line-height: 1.5;
+
+    @media screen and (min-width: 701px) {
+        width: 41%;
+        font-size: 0.965em;
+    }
 `;
 
 const ContentItem = styled.li`

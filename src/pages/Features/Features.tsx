@@ -41,11 +41,22 @@ const Section = styled.section`
 `;
 
 const InnerContentBox = styled.div`
-    padding: 0 10em;
     width: 100%;
-    max-width: 1500px;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 701px) {
+        padding: 0 10rem;
+    }
+
+    @media (min-width: 701px) and (max-width: 1500px) {
+        max-width: 1500px;
+    }
+
+    @media (min-width: 1501px) {
+        max-width: 1760px;
+    }
+
 `;
 
 const CavalierArticle = styled.article`
