@@ -8,11 +8,11 @@ import PortfolioTitle from "../../components/Title.tsx";
 
 export default function Profile(): JSX.Element {
     return (
-        <Section>
+        <Section tabIndex={-1} aria-hidden="false">
             <InnerContentBox>
                 <CavalierArticle>
                     <CavalierBox>
-                        <CardHeading>Possibility</CardHeading>
+                        <CardHeading>Possibility;</CardHeading>
                         <Paragraph>저는 빠르게 변화하는 프론트엔드 기술 환경에 대한 유연성을 갖추고 있습니다.
                             개인 프로젝트 및 팀 프로젝트를 통해 적용 가능한 기술과 노력을 통해 기여할 가능성을 높이고 있는 것에 최선을 다 하고 있습니다.
                         </Paragraph>
@@ -20,7 +20,7 @@ export default function Profile(): JSX.Element {
                 </CavalierArticle>
                 <CavalierReverseArticle>
                     <CavalierBox>
-                        <CardHeading>Refactoring</CardHeading>
+                        <CardHeading>Refactoring;</CardHeading>
                         <Paragraph>코드의 가독성과 유지보수를 높이기 위한 리팩토링을 꾸준히 하고 있습니다.
                             조금씩이라도 코드를 효율적으로 수정하고, 리팩토링을 꾸준히 함으로써 제가 프로젝트에 임하는 자세와 저의 성실함을 나타날 것입니다.
                         </Paragraph>
@@ -33,11 +33,22 @@ export default function Profile(): JSX.Element {
 
 const Section = styled.section`
     position: relative;
-    height: 100vh;
-    min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     user-select: auto;
+
+    @media screen and (min-width: 701px) {
+        @media screen and (max-height: 1199px) {
+            height: 100vh;
+        }
+    }
+
+    @media screen and (max-height: 1199px) {
+        @media screen and (min-width: 701px) {
+            min-height: 100vh;
+        }
+    }
 `;
 
 const InnerContentBox = styled.div`
@@ -76,8 +87,6 @@ const CardHeading = styled.h1`
     max-width: 30vw;
     font-size: 4em;
     font-weight: 900;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
     color: #3C8FDD;
 `;
 

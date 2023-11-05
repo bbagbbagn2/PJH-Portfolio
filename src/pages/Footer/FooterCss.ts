@@ -64,8 +64,13 @@ export const HelloSpan = styled.span`
     text-transform: uppercase;
 `;
 
-export const MyList = styled.ul`
+export const ContactList = styled.ul`
     font-size: 1.15em;
+`;
+
+export const MyList = styled(ContactList)`
+    margin-top: 2.05em;
+    line-height: 2.5;
 `;
 
 export const MyLink = styled(Link)`

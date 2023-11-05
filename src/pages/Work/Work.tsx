@@ -30,17 +30,25 @@ export default function Work(): JSX.Element {
                         <CavalierArticle>
                             <CavalierBox>
                                 <Heading>
-                                    I Build &
+                                    디자인,
                                     <br />
-                                    design stuff
+                                    그리고 개발
                                 </Heading>
                                 <CavalierParagraph>
-                                     오픈소스 프로젝트,
+                                     오픈 소스,
                                      <br />
-                                     웹 프로젝트
+                                     팀 &
+                                     <br />
+                                     개인 프로젝트.
+                                     <br />
                                 </CavalierParagraph>
                             </CavalierBox>
                         </CavalierArticle>
+                        <ProjectLink to="">
+                            <LinkBox>
+                            프로젝트 보러가기
+                            </LinkBox>
+                        </ProjectLink>
                     </Lane>
                 </Lanes>
             </InnerContentBox>
@@ -236,8 +244,7 @@ const CavalierBox = styled.div`
 const Heading = styled.h1`
     margin: 0;
     font-size: 3.2em;
-    font-family: Black Han Sans;
-    line-height: 1.1;
+    font-weight: 900;
     color: #3C8FDD;
     transform: translate3d(0, 0, 0);
     opacity: 1;
@@ -252,7 +259,7 @@ const Heading = styled.h1`
 const CavalierParagraph = styled.p`
     width: unset;
     font-size: 1.6em;
-    line-height: 1.2;
+    color: #0B2B40;
     transform: translate3d(0, 0, 0);
     opacity: 1;
     transition: trnsform 0.5s, opacity 0.2s;
@@ -262,6 +269,31 @@ const CavalierParagraph = styled.p`
         transition-delay: 301ms;
     }
 `;
+
+const ProjectLink = styled(Link)`
+    position: relative;
+    min-width: 23.222em;
+    display: inline-flex;
+    background: transparent;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    overflow: hidden;
+    user-select: none;
+    white-space: nowrap;
+`;
+
+const LinkBox = styled.div`
+    position: relative;
+    padding: 1.25em 3em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    color: #3C8FDD;
+    z-index: 1;
+`
 
 const WorkPageSection = styled.section`
     padding: 0 8%;

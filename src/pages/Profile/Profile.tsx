@@ -1,22 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { IoIosArrowDown } from "react-icons/io";
-
 export default function Profile(): JSX.Element {
-    const handleScroll = (targetHeight: number) => {
-        window.scrollTo({
-            top: targetHeight,
-            behavior: 'smooth',
-        });
-    };
-
-    const handleAbout = () => {
-        handleScroll(800);
-    };
 
     return (
-        <ProfilePageSection aria-hidden={false}>
+        <ProfilePageSection tabIndex={-1} aria-hidden={false}>
             <ProfileBox>
                 <CavalierArticle>
                     <CavalierBox>
@@ -26,7 +14,9 @@ export default function Profile(): JSX.Element {
                             Developer.
                         </ProfilePageHeading>
                         <ProfilePageParagraph>
-                            기본기를 중요하게 생각하고, 리팩토링을 생활화하는 개발자, 박지훈입니다.
+                            기본기를 중요하게 생각하고 리팩토링을 생활화하는 개발자,
+                            <br />
+                            박지훈입니다.
                         </ProfilePageParagraph>
                     </CavalierBox>
                 </CavalierArticle>
@@ -37,7 +27,7 @@ export default function Profile(): JSX.Element {
             <ContentBox>
                 <ContentList>
                     <ContentItem>React 및 Typescript를 사용하여 프로젝트를 개발한 경험이 있습니다.</ContentItem>
-                    <ContentItem>의사소통의 중요성을 인지하여 성공적인 개발을 위해 노력합니다.</ContentItem>
+                    <ContentItem>의사소통의 중요성을 인지하고 있으며 성공적인 개발을 위해 노력합니다.</ContentItem>
                 </ContentList>
             </ContentBox>
         </ProfilePageSection >
@@ -56,7 +46,7 @@ const ProfilePageSection = styled.section`
     user-select: ${(props) => (props['aria-hidden'] ? 'auto' : 'none')};
 
     @media (min-width: 581px) {
-        background: linear-gradient(90deg, #3C8FDD 67.5%, #DBF227 35.5%);
+        background: linear-gradient(90deg, #3C8FDD 67%, #DBF227 33%);
     }
 
     @media (min-width: 701px) {
@@ -112,11 +102,7 @@ const CavalierBox = styled.div`
 `;
 const ProfilePageHeading = styled.h1`
     color: #DBF227;
-    font-family: Black Han Sans;
     font-size: 4em;
-    font-weight: 300;
-    line-height: 1.1;
-    letter-spacing: 0.2rem;
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s, opacity 0.2s;

@@ -13,7 +13,7 @@ export default function Main(): JSX.Element {
     return (
         <>
             <Header />
-            <S.MainPageLayout>
+            <S.MainPageLayout tabIndex={-1}>
                     <Profile />
                     <Features />
                     <Skill />

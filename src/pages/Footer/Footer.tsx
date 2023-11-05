@@ -8,7 +8,16 @@ export default function App(): JSX.Element {
                 <S.FooterMainBox>
                     <S.ContactBox>
                         <S.HelloSpan>say hello</S.HelloSpan>
-                        <S.MyList>
+                        <S.ContactList>
+                            <li>
+                                <S.MyLink to="#">pyoungh137@gmail.com</S.MyLink>
+                            </li>
+                            <li>
+                                <S.MyLink to="#">010.9207.8758</S.MyLink>
+                            </li>
+                        </S.ContactList>
+                    </S.ContactBox>
+                    <S.MyList>
                             <li>
                                 <S.MyLink to="#">My Portfolio</S.MyLink>
                             </li>
@@ -16,10 +25,9 @@ export default function App(): JSX.Element {
                                 <S.MyLink to="#">My Resume</S.MyLink>
                             </li>
                         </S.MyList>
-                    </S.ContactBox>
                 </S.FooterMainBox>
                 <S.FooterBottomBox>
-                    <span>Copyright JH Portfolio 2023</span>
+                    <span>© JH Portfolio 2023</span>
                     <S.SocialContactList>
                         <S.SocialContactItem>
                             <S.MyLink to="">GitHub</S.MyLink>

@@ -4,16 +4,22 @@ import App from './App.tsx';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+
+  #app {
+    position: relative;
+  }
+
   *, *::before, *::after {
     box-sizing: border-box;
   }
-  
+
   html {
     position: relative;
     width: 100%;
-    font-size: 0.9rem;
+    font-family: "Noto Sans KR", "Open Sans", sans-serif;
     line-height: 1.15;
     text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 
     @media (min-width: 701px) {
       touch-action: none;
@@ -24,15 +30,32 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  html {
+    font-size: 0.9rem;
+
+    @media (min-width: 1601px) {
+      font-size: 1.013rem;
+    }
+  }
+
+  html {
+    line-height: 1.15;
+  }
+
   body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #F9F9F9;
+    font: inherit;
     font-weight: normal;
     line-height: inherit;
     -webkit-font-smoothing: inherit;
+  }
+
+  body {
+    color: #0B2B40;
+    background-color: #F9F9F9;
   }
 
   main {
@@ -69,7 +92,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('app'));
 
 root.render(
   <React.StrictMode>
