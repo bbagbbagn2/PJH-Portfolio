@@ -4,9 +4,10 @@ import App from './App.tsx';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  * {
+  *, *::before, *::after {
     box-sizing: border-box;
   }
+  
   html {
     position: relative;
     width: 100%;
@@ -45,7 +46,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
+    background-color: transparent;
     text-decoration: none;
+    transition-property: opacity, color, background-color, transform, border;
   }
 
   h1, h2, h3, h4, h5 {
