@@ -30,16 +30,16 @@ export default function Work(): JSX.Element {
                         <CavalierArticle>
                             <CavalierBox>
                                 <Heading>
-                                    디자인,
+                                    개발,
                                     <br />
-                                    그리고 개발
+                                    그리고 디자인
                                 </Heading>
                                 <CavalierParagraph>
                                      오픈 소스,
                                      <br />
-                                     팀 &
+                                     개인 &
                                      <br />
-                                     개인 프로젝트.
+                                     팀 프로젝트.
                                      <br />
                                 </CavalierParagraph>
                             </CavalierBox>
@@ -212,7 +212,7 @@ const InnerContentBox = styled.div`
 const Lanes = styled.div`
     width: 100%;
     display: flex;
-    background-color: #FFF;
+    background-color: #F9F9F9;
 
     @media screen and (min-width: 1024px) and (min-height: 665px) and (max-height: 1500px) {
         min-height: 40em;
@@ -223,7 +223,7 @@ const Lanes = styled.div`
 const Lane = styled.div`
     padding: 6.95em;
     padding-left: 6em;
-    border: 0.15em solid rgba(72, 49, 212, 0.3);
+    border: 0.15em solid rgba(60, 143, 221, 0.3);
 
     @media screen and (min-width: 581px) {
         width: 50%;
@@ -245,7 +245,7 @@ const Heading = styled.h1`
     margin: 0;
     font-size: 3.2em;
     font-weight: 900;
-    color: #3C8FDD;
+    color: #3c8fdd;
     transform: translate3d(0, 0, 0);
     opacity: 1;
     transition: trnsform 0.5s, opacity 0.2s;

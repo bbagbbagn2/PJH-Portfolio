@@ -1,11 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { BsInfinity, BsGear } from "react-icons/bs";
-import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
-
-import PortfolioTitle from "../../components/Title.tsx";
-
 export default function Profile(): JSX.Element {
     return (
         <Section tabIndex={-1} aria-hidden="false">
@@ -38,14 +33,14 @@ const Section = styled.section`
     justify-content: center;
     user-select: auto;
 
-    @media screen and (min-width: 701px) {
-        @media screen and (max-height: 1199px) {
+    @media (min-width: 701px) {
+        @media (max-height: 1199px) {
             height: 100vh;
         }
     }
 
-    @media screen and (max-height: 1199px) {
-        @media screen and (min-width: 701px) {
+    @media (max-height: 1199px) {
+        @media (min-width: 701px) {
             min-height: 100vh;
         }
     }

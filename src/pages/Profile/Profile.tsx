@@ -41,9 +41,19 @@ const ProfilePageSection = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: #3C8FDD;
     user-select: auto;
 
     user-select: ${(props) => (props['aria-hidden'] ? 'auto' : 'none')};
+
+    @media (max-width: 580px) {
+        margin-bottom: 10rem;
+        padding-bottom: 0;
+    }
+
+    @media (max-width: 700px) {
+        font-size: 0.95em;
+    }
 
     @media (min-width: 581px) {
         background: linear-gradient(90deg, #3C8FDD 67%, #DBF227 33%);
@@ -56,10 +66,6 @@ const ProfilePageSection = styled.section`
     @media (max-width: 580px) {
         padding-bottom: 0;
     }
-
-    @media (max-width: 700px) {
-        font-size: 0.95em;
-    }
 `;
 
 const ProfileBox = styled.div`
@@ -67,6 +73,11 @@ const ProfileBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 580px) {
+        margin-top: calc(11.12rem + 6em);
+        padding: 0 15vw;
+    }
 
     @media (min-width: 581px) {
         margin-top: calc(11.12rem + 2em);
@@ -87,10 +98,18 @@ const ProfileBox = styled.div`
 
 const ContentBox = styled(ProfileBox)`
     margin-top: auto;
+
+    
+    @media (max-width: 580px) {
+        margin-top: 7em;
+        margin-bottom: 4em;
+        padding: 0 15vw;
+    }
 `;
 
 const CavalierArticle = styled.article`
     position: relative;
+    text-align: left;
 
     @media (min-width: 701px) {
         margin-top: -3.5em;
@@ -100,6 +119,7 @@ const CavalierArticle = styled.article`
 const CavalierBox = styled.div`
     position: relative;
 `;
+
 const ProfilePageHeading = styled.h1`
     color: #DBF227;
     font-size: 4em;
@@ -107,17 +127,20 @@ const ProfilePageHeading = styled.h1`
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s, opacity 0.2s;
 
-    @media screen and (max-width: 780px) {
+    @media (max-width: 580px) {
+        font-size: 5em;
+    }
+    @media (max-width: 780px) {
         font-size: 36px;
     }
 
-    @media screen and (min-width: 581px) {
+    @media (min-width: 581px) {
         font-size: 4.4em;
     }
 
-    @media screen and (min-width: 701px) {
+    @media (min-width: 701px) {
         max-width: 30vw;    
-        transition-delay: 200ms;
+        transition-delay: 0.2s;
     }
     
 `;
@@ -129,6 +152,13 @@ const ProfilePageParagraph = styled.p`
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s, opacity 0.2s;
 
+    @media (max-width: 580px) {
+        font-size: 2em;
+    }
+
+    @media (max-width: 780px) {
+        max-width: 20em;
+    }
     @media screen and (min-width: 581px) {
         font-size: 1.3em;
     }
@@ -153,13 +183,19 @@ const CavalierFigure = styled.figure`
         margin-right: calc(6em + 4em);
     }
 `;
+
 const ContentList = styled.ul`
     display: flex;
     justify-content: space-between;
     color: #DBF227;
     line-height: 1.5;
 
-    @media screen and (min-width: 701px) {
+    
+    @media (max-width: 700px) {
+        font-size: 1.2em;
+    }
+
+    @media (min-width: 701px) {
         width: 41%;
         font-size: 0.965em;
     }
@@ -167,43 +203,4 @@ const ContentList = styled.ul`
 
 const ContentItem = styled.li`
     width: calc(50% - 1.731em);
-`;
-const ToAboutLink = styled.a`
-    position: absolute;
-    left: 50%;
-    bottom: 20%;
-    color: #103778;
-    transform: translate(0, -50%);
-    transition: all .5s;
-    cursor: pointer;
-
-    &:hover {
-        opacity: 0.7;
-    }
-
-    &::before {
-        position: absolute;
-        top: -11px;
-        left:  -10px;
-        z-index: -1;
-        content: "";
-        width: 44px;
-        height: 44px;
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
-        border-radius: 100%;
-        animation: pulse 3s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 0;
-            }
-            15%, 45% {
-                opacity: 1;
-            }
-            60% {
-                box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1);
-                opacity: 0;
-            }
-        }
 `;
