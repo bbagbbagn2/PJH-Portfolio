@@ -59,10 +59,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   main {
-    display: block;
     outline: none;
+    display: block;
 
-    @media (min-width: 701px) {
+    @media screen and (min-width: 701px) {
       touch-action: none;
       scroll-snap-type: y mandatory;
     }

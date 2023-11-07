@@ -50,6 +50,30 @@ export default function Work(): JSX.Element {
                             </LinkBox>
                         </ProjectLink>
                     </Lane>
+                    <RightLane>
+                        <CavalierArticle>
+                            <CavalierBox>
+                                <Heading>
+                                    나의
+                                    <br />
+                                    이력서
+                                </Heading>
+                                <CavalierParagraph>
+                                     자기소개,
+                                     <br />
+                                     스킬 &
+                                     <br />
+                                     프로젝트 소개.
+                                     <br />
+                                </CavalierParagraph>
+                            </CavalierBox>
+                        </CavalierArticle>
+                        <ProjectLink to="">
+                            <LinkBox>
+                            이력서 보러가기
+                            </LinkBox>
+                        </ProjectLink>
+                    </RightLane>
                 </Lanes>
             </InnerContentBox>
         </PageSection>
@@ -223,12 +247,16 @@ const Lanes = styled.div`
 const Lane = styled.div`
     padding: 6.95em;
     padding-left: 6em;
-    border: 0.15em solid rgba(72, 49, 212, 0.3);
+    border: 0.15em solid rgba(60, 143, 221, 0.3);
 
     @media screen and (min-width: 581px) {
         width: 50%;
         border-width: 0 0.15em 0 0 ;
     }
+`;
+
+const RightLane = styled(Lane)`
+    border: none;
 `;
 
 const CavalierArticle = styled.article`
@@ -281,6 +309,33 @@ const ProjectLink = styled(Link)`
     overflow: hidden;
     user-select: none;
     white-space: nowrap;
+
+    :hover {
+        div {
+            color: #FFF;
+            border-color: rgb(60, 143, 221);
+        }
+
+        div::before {
+            transform: translateX(0);
+            background: #3C8FDD;
+        }
+    }
+    div::before {
+        content: "";
+        position: absolute;
+        top: -0.1em;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 108%;
+        background: currentColor;
+        pointer-events: none;
+        transform: translateX(-100%);
+        transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        z-index: -1;
+    }
 `;
 
 const LinkBox = styled.div`
@@ -293,6 +348,8 @@ const LinkBox = styled.div`
     border: 1px solid currentColor;
     color: #3C8FDD;
     z-index: 1;
+
+    
 `
 
 const WorkPageSection = styled.section`

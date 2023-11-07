@@ -16,9 +16,7 @@ export default function Main(): JSX.Element {
             <S.MainPageLayout tabIndex={-1}>
                     <Profile />
                     <Features />
-                    <Skill />
                     <Work />
-                    <Contact />
             </S.MainPageLayout>
             <Footer />
         </>
