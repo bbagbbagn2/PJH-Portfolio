@@ -7,8 +7,3 @@
     font-family: "Playfair Display";
     src: url("./AnyConv.com__PlayfairDisplay-VariableFont_wght.woff") format("woff");
 }
-
-@font-face {
-    font-family: "Black Han Sans";
-    src: url("./BlackHanSans-Regular.woff") format("woff");
-}

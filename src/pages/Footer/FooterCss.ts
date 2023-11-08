@@ -10,8 +10,8 @@ export const Footer = styled.footer`
     color: #DBF227;
     font-size: 1.2em;
 
-    @media screen and (min-width: 701px) {
-        @media screen and (max-height: 1199px) {
+    @media (min-width: 701px) {
+        @media (max-height: 1199px) {
             height: 100vh;
         }
     }
@@ -24,15 +24,15 @@ export const InnerContentBox = styled.div`
     display: flex;
     flex-direction: column;
 
-    @media screen and (min-width: 701px) {
+    @media (min-width: 701px) {
         padding: 0 10rem;
     }
 
-    @media screen and (min-width: 701px) and (max-width: 1500px) {
+    @media (min-width: 701px) and (max-width: 1500px) {
         max-width: 1500px;
     }
 
-    @media screen and (min-width: 1501px) {
+    @media (min-width: 1501px) {
         max-width: 1760px;
     }
 `;
@@ -42,7 +42,7 @@ export const FooterMainBox = styled.div`
     width: 100%;
     display: flex;
 
-    @media screen and (min-width: 700px) {
+    @media (min-width: 700px) {
         transition: transform 0.5s, opacity 0.2s;
         transition-delay: 300ms;
     }
@@ -53,7 +53,7 @@ export const ContactBox = styled.div`
     font-size: 1em;
     line-height: 2.5;
 
-    @media screen and (min-width: 461px) {
+    @media (min-width: 461px) {
         margin-right: 18vw;
     }
 `;
@@ -76,7 +76,7 @@ export const MyList = styled(ContactList)`
 export const MyLink = styled(Link)`
     color: currentColor;
 
-    @media screen and (hover: hover) and (any-pointer: fine) {
+    @media (hover: hover) and (any-pointer: fine) {
         position: relative;
 
         :after {
@@ -111,7 +111,7 @@ export const FooterBottomBox = styled.div`
     font-size: 1.15em;
     transform: translate3d(0, 0, 0);
 
-    @media screen and (min-width: 700px) {
+    @media (min-width: 700px) {
         transition: transform 0.5s, opacity 0.2s;
         transition-delay: 500ms;
     }

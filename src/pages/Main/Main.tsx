@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 import Header from '../Header/Header.tsx';
 import Profile from '../Profile/Profile.tsx';
@@ -7,17 +7,16 @@ import Skill from '../Skill/Skill.tsx';
 import Work from '../Work/Work.tsx';
 import Contact from '../Contact/Contact.tsx';
 import Footer from '../Footer/Footer.tsx';
-import * as S from './MainCSS.ts';
 
-export default function Main(): JSX.Element {
+export default function Main() {
     return (
         <>
             <Header />
-            <S.MainPageLayout tabIndex={-1}>
-                    <Profile />
-                    <Features />
-                    <Work />
-            </S.MainPageLayout>
+            <main tabIndex={-1}>
+                <Profile />
+                <Features />
+                <Work />
+            </main>
             <Footer />
         </>
     );

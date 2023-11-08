@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Work(): JSX.Element {
+export default function Icondb() {
     return (
         <Layout>
             <Container>

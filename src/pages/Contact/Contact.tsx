@@ -3,15 +3,11 @@ import React from 'react';
 import { BsPhoneVibrate } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 
-import PortfolioTitle from '../../components/Title.tsx';
-import "../../assets/font/Font.css";
-
 import * as S from './ContactCss.ts';
 
-export default function Contact(): JSX.Element {
+export default function Contact() {
     return (
         <S.ContactPageSection>
-            <PortfolioTitle titleText="CONTACT" />
             <S.ContactList>
                 <S.ContactItem>
                     <S.ContactItemBox>

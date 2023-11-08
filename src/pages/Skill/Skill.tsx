@@ -1,7 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
-
-import PortfolioTitle from '../../components/Title.tsx';
+import styled from 'styled-components';
 
 interface LanguageSkills {
     title: string;

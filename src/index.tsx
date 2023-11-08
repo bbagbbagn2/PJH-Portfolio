@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
+import { BrowserRouter } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -24,17 +25,21 @@ const GlobalStyle = createGlobalStyle`
     @media (min-width: 701px) {
       touch-action: none;
     }
-
-    @media (min-width: 701px) and (max-width: 1600px) {
-      font-size: 1vw;
-    }
   }
 
   html {
     font-size: 0.9rem;
 
+    @media (max-width: 700px) {
+      font-size: 0.562rem;
+    }
+    
     @media (min-width: 1601px) {
       font-size: 1.013rem;
+    }
+
+    @media (min-width: 701px) and (max-width: 1600px) {
+      font-size: 1vw;
     }
   }
 
@@ -55,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     color: #0B2B40;
-    background-color: #F9F9F9;
+    background-color: #FFF;
   }
 
   main {
@@ -92,11 +97,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const root = ReactDOM.createRoot(document.getElementById('app'));
-
-root.render(
+ReactDOM.createRoot(document.getElementById('app')!).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
     <GlobalStyle />
   </React.StrictMode>
 );

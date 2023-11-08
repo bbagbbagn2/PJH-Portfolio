@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './FooterCss.ts';
 
-export default function App(): JSX.Element {
+export default function Footer() {
     return (
         <S.Footer>
             <S.InnerContentBox>
@@ -30,7 +30,7 @@ export default function App(): JSX.Element {
                     <span>© JH Portfolio 2023</span>
                     <S.SocialContactList>
                         <S.SocialContactItem>
-                            <S.MyLink to="">GitHub</S.MyLink>
+                            <S.MyLink to="https://github.com/bbagbbagn2">GitHub</S.MyLink>
                         </S.SocialContactItem>
                     </S.SocialContactList>
                 </S.FooterBottomBox>

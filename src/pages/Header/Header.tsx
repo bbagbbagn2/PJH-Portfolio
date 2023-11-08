@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./HeaderCss.ts";
 
-export default function App(): JSX.Element {
+export default function Header() {
     const handleScroll = (targetHeight: number) => {
         window.scrollTo({
             top: targetHeight,
@@ -11,18 +11,6 @@ export default function App(): JSX.Element {
 
     const handleHome = () => {
         handleScroll(0);
-    };
-
-    const handleSkill = () => {
-        handleScroll(800);
-    };
-
-    const handleWork = () => {
-        handleScroll(2350);
-    };
-
-    const handleContact = () => {
-        handleScroll(5076);
     };
 
     return (
