@@ -16,6 +16,8 @@
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
@@ -45,6 +47,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.2.25",
+    "@types/react-slick": "^0.23.12",
     "@types/styled-components": "^5.1.26",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2",

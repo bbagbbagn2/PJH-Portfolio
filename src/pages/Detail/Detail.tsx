@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import Header from '../Header/Header.tsx';
+import Footer from '../Footer/Footer.tsx';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { ReactComponent as ICONDBLogo } from "../../assets/images/IconDB/logo3.svg";
@@ -20,6 +22,8 @@ import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 
 export default function Work() {
     return (
+        <>
+        <Header />
         <MainPage>
             <PageHeader>
                 <PageHeaderHeading>/project.</PageHeaderHeading>
@@ -141,6 +145,7 @@ export default function Work() {
                 </ProjectList>
             </WorkContainer>
         </MainPage>
+        </>
     );
 }
 
@@ -199,8 +204,8 @@ const ProjectItem = styled.li`
     transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 
     &:hover {
-        border-color: #FFF;
-        box-shadow: none;
+        transform: translateY(-8px);
+        box-shadow: 15px 8px 6px -6px rgba(235, 234, 242, 0.58);
     }
 
     @media (min-width: 940px) {
