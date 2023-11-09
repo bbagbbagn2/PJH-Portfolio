@@ -2,22 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-import "pure-react-carousel/dist/react-carousel.es.css";
-import { ReactComponent as ICONDBLogo } from "../../assets/images/IconDB/logo3.svg";
-import { ReactComponent as DRINKABLELogo } from "../../assets/images/DRINKABLE/logo.svg";
-import Main from '../../assets/images/IconDB/Main_Mobile.png';
-import Posting from '../../assets/images/IconDB/Posting.PNG';
-import Detail from '../../assets/images/IconDB/Detail_PNG.png';
-import SignIn from '../../assets/images/IconDB/SignIn_Mobile.png';
-import SignUp from '../../assets/images/IconDB/SignUp_Mobile.png';
-import Profile from '../../assets/images/IconDB/Profile_Mine.png';
-import About from '../../assets/images/Portfolio/About.PNG';
-import Skills from '../../assets/images/Portfolio/Skills.PNG';
-import Portfolio from '../../assets/images/Portfolio/Portfolio.PNG';
-import Contact from '../../assets/images/Portfolio/Contact.PNG';
-import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
-
 export default function Work() {
     return (
         <PageSection>
@@ -41,7 +25,7 @@ export default function Work() {
                                 </CavalierParagraph>
                             </CavalierBox>
                         </CavalierArticle>
-                        <ProjectLink to="/work">
+                        <ProjectLink to="/project">
                             <LinkBox>
                             프로젝트 보러가기
                             </LinkBox>

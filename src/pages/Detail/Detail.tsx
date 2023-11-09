@@ -2,25 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import { ReactComponent as IconDBLogo } from '../../assets/images/IconDB/logo3.svg';
+import { ReactComponent as DrinkableLogo } from '../../assets/images/DRINKABLE/logo.svg';
 import Header from '../Header/Header.tsx';
-import Footer from '../Footer/Footer.tsx';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-import "pure-react-carousel/dist/react-carousel.es.css";
-import { ReactComponent as ICONDBLogo } from "../../assets/images/IconDB/logo3.svg";
-import { ReactComponent as DRINKABLELogo } from "../../assets/images/DRINKABLE/logo.svg";
-import Main from '../../assets/images/IconDB/Main_Mobile.png';
-import Posting from '../../assets/images/IconDB/Posting.PNG';
-import Detail from '../../assets/images/IconDB/Detail_PNG.png';
-import SignIn from '../../assets/images/IconDB/SignIn_Mobile.png';
-import SignUp from '../../assets/images/IconDB/SignUp_Mobile.png';
-import Profile from '../../assets/images/IconDB/Profile_Mine.png';
-import About from '../../assets/images/Portfolio/About.PNG';
-import Skills from '../../assets/images/Portfolio/Skills.PNG';
-import Portfolio from '../../assets/images/Portfolio/Portfolio.PNG';
-import Contact from '../../assets/images/Portfolio/Contact.PNG';
-import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 
 export default function Work() {
+
     return (
         <>
         <Header />
@@ -32,18 +19,18 @@ export default function Work() {
             <WorkContainer>
                 <ProjectList>
                     <ProjectItem>
-                        <ProjectLogoBox to="/work/icondb">IconDb project summary.</ProjectLogoBox>
+                        <ProjectLogoBox to="/project/icondb">IconDb project summary.</ProjectLogoBox>
                         <ProjectLogoFigure>
-                            <span><ICONDBLogo /></span>
+                            <span><IconDBLogo /></span>
                         </ProjectLogoFigure>
                         <ProjectInfoBox>
-                            <ProjectInfoHeading>ICON_DB</ProjectInfoHeading>
+                            <ProjectInfoHeading>ICONDB</ProjectInfoHeading>
                         </ProjectInfoBox>
                     </ProjectItem>
                     <ProjectItem>
                     <ProjectLogoBox to="">DRINKABLE project summary.</ProjectLogoBox>
                         <ProjectLogoFigure>
-                            <span><DRINKABLELogo /></span>
+                            <span><DrinkableLogo /></span>
                         </ProjectLogoFigure>
                         <ProjectInfoBox>
                             <ProjectInfoHeading>DRINKABLE</ProjectInfoHeading>
