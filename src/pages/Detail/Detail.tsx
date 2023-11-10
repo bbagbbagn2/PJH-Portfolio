@@ -2,24 +2,62 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import PageHeader from '../../components/PageHeader';
+import projectsData from '../../data';
+import { hyphenateName } from '../../helpers'; 
+
 import { ReactComponent as IconDBLogo } from '../../assets/images/IconDB/logo3.svg';
 import { ReactComponent as DrinkableLogo } from '../../assets/images/DRINKABLE/logo.svg';
-import Header from '../Header/Header.tsx';
+
 
 export default function Work() {
-
+    const projects = projectsData.map((project) => ({
+        ...project,
+        summaryLinkLabel: project.internalPage
+            ? null
+            : project.name + ' live demo.',
+        siteURL: project.siteName ? 'https://' + project.siteName : '',
+        path: '/project/' + hyphenateName(project.name),
+    }));
     return (
-        <>
-        <Header />
-        <MainPage>
-            <PageHeader>
-                <PageHeaderHeading>/project.</PageHeaderHeading>
-                <PageHeaderParagraph>팀 & 개인 프로젝트 리스트</PageHeaderParagraph>
-            </PageHeader>
+        <StyledProject
+            id="work"
+            title="">
+            <PageHeader
+                title="project"
+                desc="팀 & 개인 프로젝트 리스트." />
             <WorkContainer>
-                <ProjectList>
+                <ProjectList aria-label='Projects.'>
+                    {projects.map((project, key) => (
+                        <ProjectItem key={key}>
+                            <ProjectLogoBox
+                                aria-label={project.summaryLinkLabel || undefined}
+                                target={!project.internalPage ? '_blank' : undefined}
+                                rel={!project.internalPage ? 'noopener noreferrer' : undefined}
+                                to={project.internalPage ? project.path : project.siteURL}
+                            >
+                                {project.name} project summary.
+                            </ProjectLogoBox>
+
+                            <ProjectLogoFigure>
+                            </ProjectLogoFigure>
+
+                            <ProjectInfoBox>
+                                <ProjectInfoHeading>{project.name}</ProjectInfoHeading>
+                                {project.siteName && project.siteURL && (
+                                    <ProjectInfoLink
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={project.name + ' live demo.'}
+                                        to={project.siteURL}
+                                    >
+                                        {project.siteName}
+                                    </ProjectInfoLink>
+                                )}
+                            </ProjectInfoBox>
+                        </ProjectItem>
+                    ))}
                     <ProjectItem>
-                        <ProjectLogoBox to="/project/icondb">IconDb project summary.</ProjectLogoBox>
                         <ProjectLogoFigure>
                             <span><IconDBLogo /></span>
                         </ProjectLogoFigure>
@@ -28,7 +66,6 @@ export default function Work() {
                         </ProjectInfoBox>
                     </ProjectItem>
                     <ProjectItem>
-                    <ProjectLogoBox to="">DRINKABLE project summary.</ProjectLogoBox>
                         <ProjectLogoFigure>
                             <span><DrinkableLogo /></span>
                         </ProjectLogoFigure>
@@ -37,7 +74,6 @@ export default function Work() {
                         </ProjectInfoBox>
                     </ProjectItem>
                     <ProjectItem>
-                    <ProjectLogoBox to="">Personal Website project summary.</ProjectLogoBox>
                         <ProjectLogoFigure>
                             <span></span>
                         </ProjectLogoFigure>
@@ -46,100 +82,17 @@ export default function Work() {
                             <ProjectInfoLink to="https://pjh-portfolio.netlify.app/">Jihun's Portfolio</ProjectInfoLink>
                         </ProjectInfoBox>
                     </ProjectItem>
-                        {/*<WorkPageBox>
-                            <ProjectBox>
-                                <ProjectTitleParagraph>포트폴리오 웹사이트</ProjectTitleParagraph>
-                                <ProjectCol>
-                                    <SliderBox>
-                                        <CarouselProvider
-                                            naturalSlideWidth={100}
-                                            naturalSlideHeight={125}
-                                            totalSlides={4}>
-                                            <SliderImageBox>
-                                                <Slider>
-                                                    <Slide index={0}><SliderImage src={About} /></Slide>
-                                                    <Slide index={1}><SliderImage src={Skills} /></Slide>
-                                                    <Slide index={2}><SliderImage src={Portfolio} /></Slide>
-                                                    <Slide index={3}><SliderImage src={Contact} /></Slide>
-                                                </Slider>
-                                            </SliderImageBox>
-                                            <ButtonCol>
-                                                <ButtonBack><BsArrowLeftCircle size="40" /></ButtonBack>
-                                                <ButtonNext><BsArrowRightCircle size="40" /></ButtonNext>
-                                            </ButtonCol>
-                                        </CarouselProvider>
-                                    </SliderBox>
-                                    <DetailBox>
-                                        <ProjectInfoBox>
-                                            <b>포트폴리오 용도로 제작한 웹사이트</b>
-                                            <span>
-                                                입니다. 지금 보고 있는 바로 이 웹사이트에 해당합니다.
-                                                <br /><br />
-                                                첫 개인 프로젝트로, <ExplanationSpan color='#ED3770'>순수 React</ExplanationSpan>로 개발을 완료하였습니다.
-                                                후에 <ExplanationSpan color='#ED3770'>TypeScript</ExplanationSpan>로 프로젝트 <ExplanationSpan color='#ED3770'>리팩토링</ExplanationSpan>을 진행하였습니다.
-                                                <br /><br />
-                                                <ExplanationSpan color='#ED3770'>Styled-Components</ExplanationSpan>를 통해 진행한 프로젝트로,
-                                                네이밍 및 스타일 컴포넌트와 공통 컴포넌트 간의 혼란을 줄이는 것에 집중하였습니다.
-                                                이로 인해 <ExplanationSpan color='#ED3770'>네이밍</ExplanationSpan>에 대한 규칙을 알 수 있었고, <ExplanationSpan color='#ED3770'>S-Dot 방법</ExplanationSpan>을 이용해 스타일 컴포넌트와 공통 컴포넌트 간의 혼란을 줄일 수 있었습니다.
-                                                <br /><br />
-                                                또한, <ExplanationSpan color='#ED3770'>Netlify</ExplanationSpan>를 이용하여 웹사이트의 배포도 경함해볼 수 있었습니다.
-                                            </span>
-                                        </ProjectInfoBox>
-                                        <SummaryBox>
-                                            <ListTitleBox>
-                                                ✔<p>주요 기능</p>
-                                            </ListTitleBox>
-                                            <div>
-                                                간단한 자기소개, 기술 스택, 프로젝트, 연락처
-                                            </div>
-                                        </SummaryBox>
-                                        <SummaryBox>
-                                            <ListTitleBox>
-                                                ✔<p>GitHub</p>
-                                            </ListTitleBox>
-                                            <div>
-                                                <GithubLink href="https://github.com/bbagbbagn2/Portfolio">github.com/bbagbbagn2/JH Portfolio</GithubLink>
-                                            </div>
-                                        </SummaryBox>
-                                        <SummaryBox>
-                                            <ListTitleBox>
-                                                ✔<p>URL</p>
-                                            </ListTitleBox>
-                                            <div>
-                                                <GithubLink href="https://parkproject.netlify.app/">JH Portfolio</GithubLink>
-                                            </div>
-                                        </SummaryBox>
-                                        <SummaryBox>
-                                            <ListTitleBox>
-                                                ✔<p>Frontend</p>
-                                            </ListTitleBox>
-                                            <div>
-                                                <p>React, TypeScript, styled-components</p>
-                                            </div>
-                                        </SummaryBox>
-                                        <SummaryBox>
-                                            <ListTitleBox>
-                                                ✔<p>Deployment</p>
-                                            </ListTitleBox>
-                                            <div>
-                                                <p>Netlify</p>
-                                            </div>
-                                        </SummaryBox>
-                                    </DetailBox>
-                                </ProjectCol>
-                            </ProjectBox>
-    </WorkPageBox>*/}
                 </ProjectList>
             </WorkContainer>
-        </MainPage>
-        </>
+        </StyledProject >
     );
 }
-
-const MainPage = styled.main`
+const StyledProject = styled.main`
+    main {
+        max-width: 1280px;
+    }
     margin: 0 auto;
     padding: 0 3.5rem;
-    max-width: 1280px;
     
     @media (min-width: 651px) {
         font-size: 18px;
@@ -148,26 +101,6 @@ const MainPage = styled.main`
     @media (min-width: 1024px) {
         margin-top: calc(3.5rem * 1.2);
     }
-`;
-
-const PageHeader = styled.header`
-    position: relative;
-    margin-top: 1.1em;
-    margin-bottom: 3.5rem;
-    text-align: center;
-
-`;
-
-const PageHeaderHeading = styled.h1`
-    margin: 0.67em 0;
-    margin-bottom: 0;
-    font-size: 1.802em;
-    user-select: none;
-`;
-
-const PageHeaderParagraph = styled.p`
-    position: relative;
-    margin-bottom: 1.25em;
 `;
 
 const WorkContainer = styled.section``;
@@ -183,20 +116,28 @@ const ProjectItem = styled.li`
     flex-grow: 0;
     flex-shrink: 1;
     margin-bottom: 1.2rem;
-    border: 1px solid transparent;
     border-radius: 0.2rem;
-    background-color: #FFF;
     box-shadow: 0 8px 6px -6px rgba(235, 234, 242, 0.5);
+    background-color: #FFF;
     overflow: hidden;
     transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition-property: transform, box-shadow;
+
+    @media (max-width: 659px) {
+        width: 100%;
+    }
+
+    @media (min-width: 660px) and (max-width: 939px) {
+        flex-basis: calc((100% - 1em) / 2);
+    }
+
+    @media (min-width: 940px) {
+        flex-basis: calc((100% - 2em) / 3); 
+    }
 
     &:hover {
         transform: translateY(-8px);
         box-shadow: 15px 8px 6px -6px rgba(235, 234, 242, 0.58);
-    }
-
-    @media (min-width: 940px) {
-        flex-basis: calc((100% - 2em) / 3);
     }
 `;
 
@@ -222,108 +163,16 @@ const ProjectLogoFigure = styled.figure`
     background: rgba(245, 244, 252, 0.62);
     transition: filter 0.3s;
 `;
-const WorkPageBox = styled.div`
-    display: grid;
-    justify-items: center;
-`;
-
-const ProjectBox = styled.div`
-    margin-bottom: 32px;
-    display: grid;
-    justify-items: center;
-    border: 1px solid transparent;
-    border-radius: 20px;
-`;
-
-const SliderBox = styled.div` 
-    width: 85%;
-    position: relative;
-    border-radius: 10px;
-
-    @media (max-width: 1024px) {
-        margin-bottom: 30px;
-    }
-`
-
-const SliderImageBox = styled.div`
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-`;
-
-const SliderImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: .2s;
-`;
-
-const ButtonCol = styled.div`
-    margin-top: 5%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-`;
-
-const ProjectCol = styled.div`
-    display: grid;
-
-    @media (max-width: 1024px) {
-        place-items: center;
-        grid-template-columns: 1fr;
-    }
-`;
-
-const ProjectTitleParagraph = styled.p`
-    font-family: Black Han Sans;
-    font-size: 2.5rem;
-    color: #FFF;
-`;
-
-const ProjectSubTitleParagraph = styled.div`
-    margin-bottom: 2rem;
-    font-weight: 400;
-    font-size: 1rem;
-    color: #6C757D;
-    opacity: .8;
-`;
-
-const DetailBox = styled.div`
-    display: grid;
-`;
 
 const ProjectInfoBox = styled.div`
     padding: 2em;
 `;
 
 const ProjectInfoHeading = styled.h5`
-    font-size: 1.125em;
+    margin: 0;
 `;
 
-const ProjectInfoLink =styled(Link)`
+const ProjectInfoLink = styled(Link)`
     white-space: pre;
     color: #3c8fdd;
 `;
-
-const ExplanationSpan = styled.span<{ color?: string }>`
-    color: ${props => props.color};
-`;
-
-const SummaryBox = styled.div`
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    align-items: center;
-`;
-
-const ListTitleBox = styled.div`
-    display: grid;
-    grid-template-columns: 26px 1fr;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 900;
-`;
-
-const GithubLink = styled.a`
-    color: #258DDB;
-    word-break: break-all;
-`

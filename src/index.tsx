@@ -14,6 +14,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html[lang] {
+    line-height: 1.7;
+  }
+  
   html {
     position: relative;
     width: 100%;
