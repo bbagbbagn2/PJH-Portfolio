@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Header from '../Header/Header.tsx';
-import Profile from '../Profile/Profile.tsx';
-import Features from '../Features/Features.tsx';
-import Skill from '../Skill/Skill.tsx';
-import Carriageway from '../Carriageway/index.tsx';
-import Contact from '../Contact/Contact.tsx';
-import Footer from '../Footer/Footer.tsx';
+import Header from '../Header/Header';
+import Profile from '../Profile/Profile';
+import Features from '../Features/Features';
+import Skill from '../Skill/Skill';
+import Carriageway from '../Carriageway/index';
+import Contact from '../Contact/Contact';
+import Footer from '../Footer/index';
 
 export default function Main() {
     return (

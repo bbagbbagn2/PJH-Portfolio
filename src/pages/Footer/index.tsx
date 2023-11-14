@@ -1,9 +1,9 @@
 import React from 'react';
 import * as S from './styles';
 
-import Basic from '../../literal-squce-drip/ContactPortal/BasicContact.tsx';
-import Social from '../../literal-squce-drip/ContactPortal/SocilaContact.tsx';
-import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/index.tsx';
+import Basic from '../../literal-squce-drip/ContactPortal/BasicContact';
+import Social from '../../literal-squce-drip/ContactPortal/SocilaContact';
+import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/index';
 
 export default function Footer() {
     return (

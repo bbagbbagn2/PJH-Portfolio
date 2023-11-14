@@ -1,4 +1,4 @@
-import { icondbLogo, drinkableLogo } from "./logos";
+import { icondbLogo, drinkableLogo } from './logos';
 
 export default [
     {
@@ -18,5 +18,5 @@ export default [
         logo: drinkableLogo,
         siteName: 'pjh-portfolio.netlify.app',
         internalPage: false,
-    }
-]
+    },
+];

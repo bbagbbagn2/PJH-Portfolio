@@ -3,23 +3,14 @@ import styled, { css } from 'styled-components';
 
 export const Footer = styled.footer`
     margin-top: 7rem;
+    position: relative;
     height: unset;
     background: #0B2B40;    
     color: #DBF227;
-
-
-    ${({ shelfEnv }) => !shelfEnv &&
-    css`
-        @media (min-width: 701px) {
-            &[aria-hidden='true']:not(.scrolled) {
-                .footer-main,
-                .footer-bottom {
-                    opacity: 0;
-                    transform: translate3d(0, 40px, 0);
-                }
-            }           
-        }
-    `}
+    display: flex;
+    align-items: center;
+    user-select: auto;
+    z-index: 3;
 
     li a {
         color: currentColor;
