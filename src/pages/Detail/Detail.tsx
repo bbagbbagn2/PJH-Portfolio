@@ -10,13 +10,13 @@ import { ReactComponent as IconDBLogo } from '../../assets/images/IconDB/logo3.s
 import { ReactComponent as DrinkableLogo } from '../../assets/images/DRINKABLE/logo.svg';
 
 
-export default function Work() {
+export default function Detail() {
     const projects = projectsData.map((project) => ({
         ...project,
         summaryLinkLabel: project.internalPage
             ? null
             : project.name + ' live demo.',
-        siteURL: project.siteName ? 'https://' + project.siteName : '',
+        siteURL: project.siteName ? 'https://' + project.siteName : '#',
         path: '/project/' + hyphenateName(project.name),
     }));
     return (
@@ -88,9 +88,7 @@ export default function Work() {
     );
 }
 const StyledProject = styled.main`
-    main {
-        max-width: 1280px;
-    }
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 3.5rem;
     

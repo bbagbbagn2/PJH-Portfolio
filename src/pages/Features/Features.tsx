@@ -44,11 +44,15 @@ const Section = styled.section`
             min-height: 100vh;
         }
     }
+
+    li a {
+        color: currentColor;
+    }
 `;
 
 const InnerContentBox = styled.div`
-    width: 100%;
-    display: flex;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
     flex-direction: column;
 
     @media (min-width: 701px) {

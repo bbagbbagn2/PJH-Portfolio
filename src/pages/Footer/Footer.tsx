@@ -1,38 +1,21 @@
 import React from 'react';
-import * as S from './FooterCss.ts';
+import * as S from './styles';
+
+import Basic from '../../literal-squce-drip/ContactPortal/BasicContact.tsx';
+import Social from '../../literal-squce-drip/ContactPortal/SocilaContact.tsx';
+import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/index.tsx';
 
 export default function Footer() {
     return (
         <S.Footer>
             <S.InnerContentBox>
-                <S.FooterMainBox>
-                    <S.ContactBox>
-                        <S.HelloSpan>say hello</S.HelloSpan>
-                        <S.ContactList>
-                            <li>
-                                <S.MyLink to="#">pyoungh137@gmail.com</S.MyLink>
-                            </li>
-                            <li>
-                                <S.MyLink to="#">010.9207.8758</S.MyLink>
-                            </li>
-                        </S.ContactList>
-                    </S.ContactBox>
-                    <S.MyList>
-                            <li>
-                                <S.MyLink to="#">My Portfolio</S.MyLink>
-                            </li>
-                            <li>
-                                <S.MyLink to="#">My Resume</S.MyLink>
-                            </li>
-                        </S.MyList>
+                <S.FooterMainBox className='footer-main'>
+                    <Basic />
+                    <CrossSiteNav />
                 </S.FooterMainBox>
-                <S.FooterBottomBox>
-                    <span>© JH Portfolio 2023</span>
-                    <S.SocialContactList>
-                        <S.SocialContactItem>
-                            <S.MyLink to="https://github.com/bbagbbagn2">GitHub</S.MyLink>
-                        </S.SocialContactItem>
-                    </S.SocialContactList>
+                <S.FooterBottomBox className='footer-bottom'>
+                    <span>&copy; JH Portfolio 2023</span>
+                    <Social />
                 </S.FooterBottomBox>
             </S.InnerContentBox>
         </S.Footer>
