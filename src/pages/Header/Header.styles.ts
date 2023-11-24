@@ -89,6 +89,92 @@ export const MenuToggle = styled.button`
     
 `;
 
+export const ContentMenu = styled.nav`
+    padding: 3.473em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    z-index: 998;
+
+    @media (min-width: 701px) {
+        position: absolute;
+        top: 1.39em;
+        right: 3.41em;
+        width: 22.223em;
+        font-size: 1.1em;
+        transition: opacity 0.4s, box-shadow 0.4s;
+        
+        :not(.open) {
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        &.open.shadow {
+            box-shadow: 0 10px 53px 0 rgba(72, 49, 212, .05);
+        }
+
+        &.open {
+            ::before {
+                transform: scale(1);
+            }
+        }
+
+        &.shadow {
+            box-shadow: 0 10px 53px 0 rgba(163, 204, 170, 0.3);
+        }
+
+        ::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            transition: 0.3s;
+            transform-origin: top right;
+        }
+
+        ul {
+            margin: 1.2em 0;
+            font-size: 1.15em;
+            line-height: 2.5;
+            opacity: 1;
+            transform: translateY(0);
+            transition-duration: 0s, 0.3s;
+            transition-timing-function: ease, ease;
+            transition-property: opacity, transform;
+            transition-delay: 200ms;
+        }
+
+        a {
+            color: #3c8fdd;
+        }
+
+        div {
+            margin: 0;
+            margin-top: 0.8em;
+
+            span {
+                opacity: 1;
+                transform: translateY(0);
+                transition: opacity 0.2s 400ms;
+            }
+
+            ul {
+                margin: 0 0 2.78em;
+                opacity: 1;
+                transform: translateY(0);
+                transition: opacity, transform 0.3s;
+                transition-delay: 400ms;
+            }
+        }
+    }    
+`;
+
 export const HeaderNav = styled.nav`
     display: grid;
     grid-template-columns: repeat(4, 1fr);

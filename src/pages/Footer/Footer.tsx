@@ -1,10 +1,11 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-import * as S from './Footer.styles';
 import Basic from '../../literal-squce-drip/ContactPortal/BasicContact';
 import Social from '../../literal-squce-drip/ContactPortal/SocilaContact';
 import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/index';
+
+import * as S from './Footer.styles';
 
 type FooterProps = {
     isHomeFooter?: boolean;

@@ -31,7 +31,9 @@ const Section = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 1px solid #000;
     user-select: auto;
+    z-index: 3;
 
     @media (min-width: 701px) {
         @media (max-height: 1199px) {
@@ -51,8 +53,8 @@ const Section = styled.section`
 `;
 
 const InnerContentBox = styled.div`
-    padding-top: 8rem;
-    padding-bottom: 5rem;
+    width: 100%;
+    display: flex;
     flex-direction: column;
 
     @media (min-width: 701px) {

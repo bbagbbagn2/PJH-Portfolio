@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import Basic from '../../literal-squce-drip/ContactPortal/BasicContact';
+import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/index';
+
 import * as S from "./Header.styles.ts";
 
 export default function Header() {
@@ -29,6 +32,10 @@ export default function Header() {
             onClick={handelMenuClick}
             className={isMenuFocused ? 'x' : ''}
              />
+             <S.ContentMenu className={isMenuFocused ? 'open shadow' : ''}>
+                <CrossSiteNav />
+                <Basic />
+             </S.ContentMenu>
         </S.Header>
     );
 }
