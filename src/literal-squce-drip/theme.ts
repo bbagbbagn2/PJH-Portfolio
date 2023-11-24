@@ -4,7 +4,7 @@ export const colors = {
     blue: '#3c8fdd',
     white: '#fff',
     black: '#000',
-}
+} as const;
 
 export const theme = {
     colors,
@@ -12,6 +12,6 @@ export const theme = {
         padding: '6em',
         height: '11.12em',
     },
-}
+} as const;
 
 export default theme;

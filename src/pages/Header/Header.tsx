@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Basic from '../../literal-squce-drip/ContactPortal/BasicContact';
 import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/index';
@@ -12,16 +12,12 @@ export default function Header() {
         setIsMenuFocused((prev) => !prev);
     }
 
-    const handleScroll = (targetHeight: number) => {
+    const handleHome = () => {
         setIsMenuFocused(false);
         window.scrollTo({
-            top: targetHeight,
+            top: 0,
             behavior: 'smooth',
         });
-    };
-
-    const handleHome = () => {
-        handleScroll(0);
     };
 
     return (

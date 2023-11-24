@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default function Profile() {
 
     return (
-        <ProfilePageSection tabIndex={-1} aria-hidden={false}>
+        <ProfilePageSection tabIndex={-1}>
             <ProfileBox>
                 <CavalierArticle>
                     <CavalierBox>
@@ -41,10 +41,8 @@ const ProfilePageSection = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #3C8FDD;
     user-select: auto;
-
-    user-select: ${(props) => (props['aria-hidden'] ? 'auto' : 'none')};
+    z-index: 3;
 
     @media (max-width: 580px) {
         margin-bottom: 10rem;
@@ -57,10 +55,6 @@ const ProfilePageSection = styled.section`
 
     @media (min-width: 581px) {
         background: linear-gradient(90deg, #3C8FDD 67%, #DBF227 33%);
-    }
-
-    @media (min-width: 701px) {
-        overflow: ${(props) => (props['aria-hidden'] ? '' : 'unset')};
     }
 
     @media (max-width: 580px) {

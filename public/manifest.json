@@ -1,0 +1,13 @@
+{
+  "theme_color": "#3c8fdd",
+  "background_color": "3c8fd9",
+  "name": "JH-Portfolio",
+  "short_name": "JH-portfolio",
+  "icons": [
+    {
+      "src": "./favicon.ico"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone"
+}

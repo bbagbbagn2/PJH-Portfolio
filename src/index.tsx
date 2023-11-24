@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-
   #app {
     position: relative;
   }
@@ -13,24 +12,7 @@ const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
   }
-
-  html[lang] {
-    line-height: 1.7;
-  }
   
-  html {
-    position: relative;
-    width: 100%;
-    font-family: "Noto Sans KR", "Open Sans", sans-serif;
-    line-height: 1.15;
-    text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-
-    @media (min-width: 701px) {
-      touch-action: none;
-    }
-  }
-
   html {
     font-size: 0.9rem;
 
@@ -48,7 +30,17 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    position: relative;
+    width: 100%;
+    font-family: "Noto Sans KR", "Open Sans", sans-serif;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html {
     line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -64,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     color: #0B2B40;
-    background-color: #FFF;
+    background-color: #fff;
   }
 
   main {
@@ -99,6 +91,26 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     list-style-type: none;
   }
+
+  @media (min-width: 701px) {
+    html {
+      overflow: hidden;
+    }
+    html, body {
+      touch-action: none;
+    }
+  }
+
+  @media (min-width: 701px) and (max-width: 1600px) {
+    html {
+      font-size: 1vw;
+    }
+  }
+
+  ::selection {
+    background-color: rgba(111, 132, 230, .3);
+  }
+
 `;
 
 ReactDOM.createRoot(document.getElementById('app')!).render(

@@ -120,10 +120,6 @@ export const ContentMenu = styled.nav`
             }
         }
 
-        &.shadow {
-            box-shadow: 0 10px 53px 0 rgba(163, 204, 170, 0.3);
-        }
-
         ::before {
             content: '';
             position: absolute;
@@ -133,7 +129,7 @@ export const ContentMenu = styled.nav`
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #fff;
+            background-color: #f9f9f9;
             transition: 0.3s;
             transform-origin: top right;
         }
