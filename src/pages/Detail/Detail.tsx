@@ -4,11 +4,10 @@ import styled from 'styled-components';
 
 import PageHeader from '../../components/PageHeader';
 import projectsData from '../../data';
-import Footer from '../Footer/index';
+import Footer from '../Footer/Footer';
 import { hyphenateName } from '../../helpers';
-
-import { ReactComponent as IconDBLogo } from '../../assets/images/IconDB/logo3.svg';
-import { ReactComponent as DrinkableLogo } from '../../assets/images/DRINKABLE/logo.svg';
+import { ReactComponent as IconDBLogo } from '../../logos/icondb-logo.svg';
+import { ReactComponent as DrinkableLogo } from '../../logos/drinkable-logo.svg';
 
 
 export default function Detail() {
@@ -43,9 +42,8 @@ export default function Detail() {
                                 </ProjectLogoBox>
 
                                 <ProjectLogoFigure>
-                                    <span
-                                        dangerouslySetInnerHTML={{ __html: project.logo }}
-                                    />
+                                    {project.name === 'ICONDB' && <IconDBLogo />}
+                                    {project.name === 'DRINKABLE' && <DrinkableLogo />}
                                     <figcaption className='visuallyhidden'>{project.name} logo.</figcaption>
                                 </ProjectLogoFigure>
 
@@ -64,40 +62,16 @@ export default function Detail() {
                                 </ProjectInfoBox>
                             </ProjectItem>
                         ))}
-                        <ProjectItem>
-                            <ProjectLogoFigure>
-                                <span><IconDBLogo /></span>
-                            </ProjectLogoFigure>
-                            <ProjectInfoBox>
-                                <ProjectInfoHeading>ICONDB</ProjectInfoHeading>
-                            </ProjectInfoBox>
-                        </ProjectItem>
-                        <ProjectItem>
-                            <ProjectLogoFigure>
-                                <span><DrinkableLogo /></span>
-                            </ProjectLogoFigure>
-                            <ProjectInfoBox>
-                                <ProjectInfoHeading>DRINKABLE</ProjectInfoHeading>
-                            </ProjectInfoBox>
-                        </ProjectItem>
-                        <ProjectItem>
-                            <ProjectLogoFigure>
-                                <span></span>
-                            </ProjectLogoFigure>
-                            <ProjectInfoBox>
-                                <ProjectInfoHeading>Personal Website</ProjectInfoHeading>
-                                <ProjectInfoLink to="https://pjh-portfolio.netlify.app/">Jihun's Portfolio</ProjectInfoLink>
-                            </ProjectInfoBox>
-                        </ProjectItem>
                     </ProjectList>
                 </WorkContainer>
             </StyledProject >
-            <Footer data-section="footer" aria-hidden="false" />
+            <Footer isProjectFooter={true} />
         </>
     );
 }
 const StyledProject = styled.main`
     max-width: 1280px;
+    height: 100vh;
     margin: 0 auto;
     padding: 0 3.5rem;
     

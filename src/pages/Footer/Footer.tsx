@@ -1,13 +1,23 @@
 import React from 'react';
-import * as S from './styles';
+import { useLocation } from 'react-router-dom';
 
+import * as S from './Footer.styles';
 import Basic from '../../literal-squce-drip/ContactPortal/BasicContact';
 import Social from '../../literal-squce-drip/ContactPortal/SocilaContact';
 import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/index';
 
-export default function Footer() {
+type FooterProps = {
+    isHomeFooter?: boolean;
+    isProjectFooter?: boolean;
+}
+
+export default function Footer({  isHomeFooter, isProjectFooter }: FooterProps) {
+    const location = useLocation();
+    const isHome = isHomeFooter !== undefined ? isHomeFooter : location.pathname === '/';
+    const isProject = isProjectFooter !== undefined ? isProjectFooter : location.pathname === '/project';
+
     return (
-        <S.Footer>
+        <S.Footer className={isHome ? 'home' : isProject ? 'project' : ''}>
             <S.InnerContentBox>
                 <S.FooterMainBox className='footer-main'>
                     <Basic />

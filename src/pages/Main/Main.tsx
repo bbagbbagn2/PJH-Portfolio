@@ -6,7 +6,7 @@ import Features from '../Features/Features';
 import Skill from '../Skill/Skill';
 import Carriageway from '../Carriageway/index';
 import Contact from '../Contact/Contact';
-import Footer from '../Footer/index';
+import Footer from '../Footer/Footer';
 
 export default function Main() {
     return (
