@@ -3,15 +3,13 @@ import styled from 'styled-components';
 
 import NavItem from '../NavItem/index';
 
-const BasicContact: React.FC = () => {
+export default function SocialContact() {
     return (
         <StyledSocialContact>
                 <NavItem href="https://github.com/bbagbbagn2" external>GitHub</NavItem>
         </StyledSocialContact>
     );
-}
-
-export default BasicContact;
+};
 
 const StyledSocialContact = styled.ul`
     position: relative;

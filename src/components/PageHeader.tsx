@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import styled from "styled-components";
+import React, { FC } from 'react';
+import styled from 'styled-components';
 
 type PageHeaderProps = {
     title?: string;
@@ -52,5 +52,4 @@ const Heading = styled.h1`
     > span > span {
         opacity: .7;
     }
-
-`
+`;

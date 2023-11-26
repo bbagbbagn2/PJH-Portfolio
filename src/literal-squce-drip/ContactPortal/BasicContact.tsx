@@ -1,21 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import NavItem from '../NavItem/index'
-const BasicContact: React.FC = () => {
+import NavItem from '../NavItem/index';
+
+export default function BasicContact() {
     return (
         <StyledBasicContact>
-            <SayHello>say hello</SayHello>
+            <StyledSayHello>say hello</StyledSayHello>
             <ul>
                 <NavItem href="#">pyoungh137@gmail.com</NavItem>
                 <NavItem href="#">010.9207.8758</NavItem>
-
             </ul>
         </StyledBasicContact>
     );
-}
-
-export default BasicContact;
+};
 
 const StyledBasicContact = styled.div`
     position: relative;
@@ -35,7 +33,7 @@ const StyledBasicContact = styled.div`
     }
 `;
 
-const SayHello = styled.span`
+const StyledSayHello = styled.span`
     color: #cbc9e2;
     letter-spacing: 0.25em;
     text-transform: uppercase;
