@@ -33,6 +33,7 @@ export const Header = styled.header`
         padding: 0 6em;
     }
 `;
+
 export const MenuToggle = styled.button`
     position: relative;
     margin: 0;
@@ -169,19 +170,6 @@ export const ContentMenu = styled.nav`
             }
         }
     }    
-`;
-
-export const HeaderNav = styled.nav`
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    place-items: center;
-`;
-
-export const NavItemBox = styled.div`
-    width: 190px;
-    height: 100%;
-    display: grid;
-    place-items: center;
 `;
 
 export const NavItem = styled.p<{ color?: string }>`

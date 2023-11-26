@@ -93,9 +93,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media (min-width: 701px) {
-    html {
-      overflow: hidden;
-    }
     html, body {
       touch-action: none;
     }

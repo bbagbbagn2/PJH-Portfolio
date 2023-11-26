@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 import Basic from '../../literal-squce-drip/ContactPortal/BasicContact';
 import Social from '../../literal-squce-drip/ContactPortal/SocilaContact';
-import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/index';
+import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/CrossSiteNav';
 
 import * as S from './Footer.styles';
 
@@ -20,11 +20,11 @@ export default function Footer({  isHomeFooter, isProjectFooter }: FooterProps) 
     return (
         <S.Footer className={isHome ? 'home' : isProject ? 'project' : ''}>
             <S.InnerContentBox>
-                <S.FooterMainBox className='footer-main'>
+                <S.FooterMainBox>
                     <Basic />
-                    <CrossSiteNav />
+                    <CrossSiteNav classNameProject={isProject ? 'project' : ''}/>
                 </S.FooterMainBox>
-                <S.FooterBottomBox className='footer-bottom'>
+                <S.FooterBottomBox>
                     <span>&copy; JH Portfolio 2023</span>
                     <Social />
                 </S.FooterBottomBox>

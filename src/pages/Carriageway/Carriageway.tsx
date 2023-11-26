@@ -60,7 +60,6 @@ const Carriageway: React.FC = () => {
         </StyledCarriageway>
     );
 }
-
 export default Carriageway;
 
 const StyledCarriageway = styled.section`

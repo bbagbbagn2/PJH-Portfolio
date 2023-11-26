@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Basic from '../../literal-squce-drip/ContactPortal/BasicContact';
-import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/index';
+import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/CrossSiteNav';
 
 import * as S from "./Header.styles.ts";
 

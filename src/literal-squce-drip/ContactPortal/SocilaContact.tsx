@@ -6,7 +6,7 @@ import NavItem from '../NavItem/index';
 const BasicContact: React.FC = () => {
     return (
         <StyledSocialContact>
-                <NavItem href="https://github.com/bbagbbagn2" external>Github</NavItem>
+                <NavItem href="https://github.com/bbagbbagn2" external>GitHub</NavItem>
         </StyledSocialContact>
     );
 }

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 
-interface PageHeaderProps {
+type PageHeaderProps = {
     title?: string;
     desc?: string;
     noDot?: string;
