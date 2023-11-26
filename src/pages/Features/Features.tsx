@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-export default function Features(): JSX.Element {
+export default function Features() {
     return (
-        <Section tabIndex={-1} aria-hidden="false">
+        <Section tabIndex={-1}>
             <InnerContentBox>
                 <CavalierArticle>
                     <CavalierBox>

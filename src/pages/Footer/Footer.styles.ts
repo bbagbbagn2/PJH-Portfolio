@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
@@ -30,8 +29,6 @@ export const Footer = styled.footer`
     li a {
         color: currentColor;
     }
-
-    
 `;
 
 export const InnerContentBox = styled.div`
@@ -100,75 +97,3 @@ export const FooterBottomBox = styled.div`
             display: none;
     }
 `;
-export const StyledBasicContent = styled.div`
-    position: relative;
-    font-size: 1em;
-    line-height: 2.5;
-
-    @media (min-width: 461px) {
-        margin-right: 18vw;
-    }
-
-    ul {
-        font-size: 1.15em;
-    }
-
-    a {
-        color: currentColor;
-    }
-`;
-
-export const HelloSpan = styled.span`
-    color: #CBC9E2;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-`;
-
-export const ContactList = styled.ul`
-    font-size: 1.15em;
-`;
-
-export const MyList = styled(ContactList)`
-    margin-top: 2.05em;
-    line-height: 2.5;
-`;
-
-export const MyLink = styled(Link)`
-    color: currentColor;
-
-    @media (hover: hover) and (any-pointer: fine) {
-        position: relative;
-
-        :after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 20%;
-            min-width: 1em;
-            height: 100%;
-            background-color: currentColor;
-            opacity: 0;
-            transform: translateX(0);
-            transform-origin: left;
-            transition: .3s;
-            pointer-events: none;
-        }
-
-        :hover::after {
-            opacity: .2;
-            transform: translateX(0.5em);
-        }
-    }
-`;
-
-
-
-export const SocialContactList = styled.ul`
-    position: relative;
-`;
-
-export const SocialContactItem = styled.li`
-    margin-right: 2.5em;
-`;
-

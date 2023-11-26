@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Carriageway: React.FC = () => {
+export default function Carriageway() {
     return (
         <StyledCarriageway>
             <InnerContentBox>
@@ -25,7 +25,7 @@ const Carriageway: React.FC = () => {
                                 </CavalierParagraph>
                             </CavalierBox>
                         </CavalierArticle>
-                        <ProjectLink to="/project">
+                        <ProjectLink to='/project'>
                             <LinkBox>
                             프로젝트 보러가기
                             </LinkBox>
@@ -60,7 +60,6 @@ const Carriageway: React.FC = () => {
         </StyledCarriageway>
     );
 }
-export default Carriageway;
 
 const StyledCarriageway = styled.section`
     position: relative;

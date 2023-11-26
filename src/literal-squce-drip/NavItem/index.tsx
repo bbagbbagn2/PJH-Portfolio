@@ -1,35 +1,42 @@
 import React, { MouseEvent, ReactNode } from 'react';
 import styled from 'styled-components';
 
-interface NavItemProps {
-    href: string;
-    clickFn?: (event: MouseEvent) => void;
-    isShelfEnv?: boolean;
-    workURL?: string;
-    resumeURL?: string;
-    external?: boolean;
-    children?: ReactNode;
+type NavItemProps = {
+  href: string;
+  clickFn?: (event: MouseEvent) => void;
+  isShelfEnv?: boolean;
+  workURL?: string;
+  resumeURL?: string;
+  external?: boolean;
+  children?: ReactNode;
 }
-const NavItem: React.FC<NavItemProps> = (props) => {
-  const { href, clickFn, isShelfEnv, workURL, resumeURL} = props;
+
+const NavItem: React.FC<NavItemProps> = ({
+  href,
+  clickFn,
+  isShelfEnv,
+  workURL,
+  resumeURL,
+  external,
+  children
+}) => {
 
   const handleClick = (event: MouseEvent) => {
-    const {href} = props;
     if (href && href.charAt(0) === '#') {
-        event.preventDefault();
+      event.preventDefault();
     }
 
     if (clickFn) {
-        clickFn(event);
+      clickFn(event);
     }
 
     if (
-        isShelfEnv &&
-        window.location.pathname !== href &&
-        ![workURL, resumeURL].includes(href)
+      isShelfEnv &&
+      window.location.pathname !== href &&
+      ![workURL, resumeURL].includes(href)
     ) {
-        event.preventDefault();
-        window.location.href = href;
+      event.preventDefault();
+      window.location.href = href;
     }
   };
 
@@ -38,10 +45,9 @@ const NavItem: React.FC<NavItemProps> = (props) => {
       <NavItemLink
         href={href}
         onClick={handleClick}
-        target={props.external ? '_blank' : ''}
-        rel={props.external ? 'noreferrer noopener' : ''}
+        {...(external && { target: '_blank', rel: 'noreferrer noopener' })}
       >
-        {props.children}
+        {children}
       </NavItemLink>
     </li>
   );
