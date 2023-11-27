@@ -12,7 +12,7 @@ export default function Main() {
     return (
         <>
             <Header />
-            <main tabIndex={-1}>
+            <main>
                 <Profile />
                 <Features />
                 <Carriageway />

@@ -43,8 +43,6 @@ const StyledSection = styled.section`
         &[aria-hidden='false'] {
             z-index: 3;
             user-select: auto;
-
-            
         }
     `
 
