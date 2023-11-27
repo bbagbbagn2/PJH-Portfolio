@@ -5,6 +5,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+  #project {
+    font-size: 20px;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+  }
   #app {
     position: relative;
   }

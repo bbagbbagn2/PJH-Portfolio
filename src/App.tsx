@@ -2,7 +2,8 @@ import * as React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import MainPage from './pages/Main/Main';
 import DetailPage from './pages/Detail/Detail';
-import IcondbPage from './pages/project/IcondbPage';
+import Icondb from './pages/project/icondb';
+import Drinkable from './pages/project/drinkable'
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <Routes>
       <Route path='/' element={<MainPage />} />
       <Route path='/project' element={<DetailPage />} />
-      <Route path='/project/icondb' element={<IcondbPage />} />
+      <Route path='/project/icondb' element={<Icondb />} />
+      <Route path='/project/drinkable' element={<Drinkable />} />
     </Routes>
   );
 }

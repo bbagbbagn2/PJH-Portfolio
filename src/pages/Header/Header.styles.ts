@@ -11,6 +11,14 @@ export const Header = styled.header`
     font-size: 1rem;
     z-index: 1000;
 
+    & #site-header {
+        position: unset;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        height: unset;
+        font-size: .72em;
+    }
+
     :focus {
         outline-width: 0.2em;
         outline-style: dashed;
@@ -31,6 +39,11 @@ export const Header = styled.header`
     @media screen and (min-width: 701px) {
         position: fixed;
         padding: 0 6em;
+
+        & #site-header {
+            padding-left: 6em;
+            padding-right: 6em;
+        }
     }
 `;
 

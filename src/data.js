@@ -1,11 +1,11 @@
 export default [
     {
-        name: 'ICONDB',
+        name: 'Icondb',
         siteName: null,
         internalPage: true,
     },
     {
-        name: 'DRINKABLE',
+        name: 'Drinkable',
         siteName: null,
         internalPage: true,
     },

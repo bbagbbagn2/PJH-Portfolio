@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import PageHeader from '../../components/PageHeader';
 import projectsData from '../../data';
-import Footer from '../Footer/Footer';
+
 import { hyphenateName } from '../../helpers';
 import { ReactComponent as IconDBLogo } from '../../logos/icondb-logo.svg';
 import { ReactComponent as DrinkableLogo } from '../../logos/drinkable-logo.svg';
@@ -22,6 +24,7 @@ export default function Detail() {
 
     return (
         <>
+        <Header />
             <StyledProject
                 id="work"
                 title="">
@@ -42,8 +45,8 @@ export default function Detail() {
                                 </ProjectLogoBox>
 
                                 <ProjectLogoFigure>
-                                    {project.name === 'ICONDB' && <IconDBLogo />}
-                                    {project.name === 'DRINKABLE' && <DrinkableLogo />}
+                                    {project.name === 'Icondb' && <IconDBLogo />}
+                                    {project.name === 'Drinkable' && <DrinkableLogo />}
                                     <figcaption className='visuallyhidden'>{project.name} logo.</figcaption>
                                 </ProjectLogoFigure>
 
@@ -65,18 +68,17 @@ export default function Detail() {
                     </ProjectList>
                 </WorkContainer>
             </StyledProject >
-            <Footer isProjectFooter={true} />
+            <Footer isProjectFooter={true}/>
         </>
     );
 }
 const StyledProject = styled.main`
     max-width: 1280px;
-    height: 100vh;
     margin: 0 auto;
     padding: 0 3.5rem;
     
     @media (min-width: 651px) {
-        font-size: 18px;
+        font-size: .9em;
     }
     
     @media (min-width: 1024px) {
@@ -163,6 +165,7 @@ const ProjectInfoBox = styled.div`
 
 const ProjectInfoHeading = styled.h5`
     margin: 0;
+    font-size: 1.125em;
 `;
 
 const ProjectInfoLink = styled(Link)`

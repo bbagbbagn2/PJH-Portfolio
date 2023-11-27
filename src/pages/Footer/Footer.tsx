@@ -18,7 +18,7 @@ export default function Footer({  isHomeFooter, isProjectFooter }: FooterProps) 
     const isProject = isProjectFooter !== undefined ? isProjectFooter : location.pathname === '/project';
 
     return (
-        <S.Footer className={isHome ? 'home' : isProject ? 'project' : ''}>
+        <S.Footer id={isHome ? 'home' : isProject ? 'project' : ''}>
             <S.InnerContentBox>
                 <S.FooterMainBox>
                     <Basic />
