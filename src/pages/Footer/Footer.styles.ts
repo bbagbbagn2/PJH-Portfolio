@@ -10,7 +10,7 @@ export const Footer = styled.footer`
     user-select: auto;
     z-index: 3;
 
-    & #home {
+    & .home-footer {
         font-size: 1.2em;
 
         @media (min-width: 701px){
@@ -20,7 +20,7 @@ export const Footer = styled.footer`
         }      
     }
 
-    & #site-footer {
+    & .project-footer {
         margin-top: 7rem;
         height: unset;
         font-size: .84em;
