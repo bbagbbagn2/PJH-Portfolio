@@ -11,9 +11,9 @@ type HeaderProps = {
     isProjectHeader?: boolean;
 }
 
-export default function Header({  isHomeHeader, isProjectHeader }: HeaderProps) {
+export default function Header({ isHomeHeader, isProjectHeader }: HeaderProps) {
     const [isMenuFocused, setIsMenuFocused] = useState(false);
-    
+
     const handelMenuClick = () => {
         setIsMenuFocused((prev) => !prev);
     }
@@ -31,17 +31,17 @@ export default function Header({  isHomeHeader, isProjectHeader }: HeaderProps) 
     const isProject = isProjectHeader !== undefined ? isProjectHeader : location.pathname === '/project';
 
     return (
-        <S.Header id={isHome ? 'home' : isProject ? 'site-header' : ''}>
+        <S.Header id='site-header' className={isHome ? 'home-header' : isProject ? 'project-header' : ''}>
             <S.NavItem color='#FFF' onClick={handleHome}>HOME</S.NavItem>
             <S.MenuToggle
-            type="button"
-            onClick={handelMenuClick}
-            className={isMenuFocused ? 'x' : ''}
-             />
-             <S.ContentMenu className={isMenuFocused ? 'open shadow' : ''}>
+                type="button"
+                onClick={handelMenuClick}
+                className={isMenuFocused ? 'x' : ''}
+            />
+            <S.ContentMenu className={isMenuFocused ? 'open shadow' : ''}>
                 <CrossSiteNav />
                 <Basic />
-             </S.ContentMenu>
+            </S.ContentMenu>
         </S.Header>
     );
 }

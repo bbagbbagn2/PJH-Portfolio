@@ -14,4 +14,9 @@ export default [
         siteName: 'pjh-portfolio.netlify.app',
         internalPage: false,
     },
+    {
+        name: 'Block Smith',
+        siteName: null,
+        internalPage: false,
+    },
 ];

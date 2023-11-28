@@ -11,7 +11,7 @@ export const Header = styled.header`
     font-size: 1rem;
     z-index: 1000;
 
-    & #site-header {
+    & .project-header {
         position: unset;
         padding-top: 3rem;
         padding-bottom: 3rem;

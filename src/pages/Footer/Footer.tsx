@@ -12,17 +12,17 @@ type FooterProps = {
     isProjectFooter?: boolean;
 }
 
-export default function Footer({  isHomeFooter, isProjectFooter }: FooterProps) {
+export default function Footer({ isHomeFooter, isProjectFooter }: FooterProps) {
     const location = useLocation();
     const isHome = isHomeFooter !== undefined ? isHomeFooter : location.pathname === '/';
     const isProject = isProjectFooter !== undefined ? isProjectFooter : location.pathname === '/project';
 
     return (
-        <S.Footer id={isHome ? 'home' : isProject ? 'project' : ''}>
+        <S.Footer id="site=footer" className={isHome ? 'home-footer' : isProject ? 'project-footer' : ''}>
             <S.InnerContentBox>
                 <S.FooterMainBox>
                     <Basic />
-                    <CrossSiteNav classNameProject={isProject ? 'project' : ''}/>
+                    <CrossSiteNav classNameProject={isProject ? 'project' : ''} />
                 </S.FooterMainBox>
                 <S.FooterBottomBox>
                     <span>&copy; JH Portfolio 2023</span>
