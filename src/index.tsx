@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.7;
     scroll-behavior: smooth;
   }
+  
   #app {
     position: relative;
   }

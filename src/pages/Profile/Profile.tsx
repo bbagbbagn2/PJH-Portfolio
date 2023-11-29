@@ -8,14 +8,10 @@ export default function Profile() {
                 <CavalierArticle>
                     <CavalierBox>
                         <ProfilePageHeading>
-                            Frontend
-                            <br />
-                            Developer.
+                            Frontend<br />Developer.
                         </ProfilePageHeading>
                         <ProfilePageParagraph>
-                            기본기를 중요하게 생각하고 리팩토링을 생활화하는 개발자,
-                            <br />
-                            박지훈입니다.
+                            기본기를 중요하게 생각하고 리팩토링을 생활화하는 개발자,<br />박지훈입니다.
                         </ProfilePageParagraph>
                     </CavalierBox>
                 </CavalierArticle>

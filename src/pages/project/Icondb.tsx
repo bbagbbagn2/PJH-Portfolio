@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Header from '../Header/Header.tsx';
+import Layout from './layout.tsx';
 
 export default function Icondb() {
     const settings = {
@@ -25,11 +26,7 @@ export default function Icondb() {
     ]
     return (
         <>
-        <Header />
-        <MainLayout>
-            <PageHeader>
-                <Heading>Icondb</Heading>
-            </PageHeader>
+        <Layout>
             <ImageContainer>
                 <Slider {...settings}>
                     {images.map((index) => (
@@ -53,7 +50,7 @@ export default function Icondb() {
                 </PostParagraph>
                 <PostParagraph>React와 JavaScript를 활용한 첫 프로젝트였기 때문에 해당 기술에 대해 많은 공부를 하였고 많은 피드백을 얻었습니다.</PostParagraph>
             </PostContainer>
-        </MainLayout>
+        </Layout>
         </>
     );
 }

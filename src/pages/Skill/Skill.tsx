@@ -35,7 +35,7 @@ const getColorByToolIndex = (index: number) => {
     return colors[index % colors.length];
 }
 
-export default function App(): JSX.Element {
+export default function Skill() {
     const LanguageSkills: LanguageSkills[] = [
         { title: 'HTML' },
         { title: 'CSS' },

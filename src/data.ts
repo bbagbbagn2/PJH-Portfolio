@@ -17,6 +17,6 @@ export default [
     {
         name: 'Block Smith',
         siteName: null,
-        internalPage: false,
+        internalPage: true,
     },
 ];

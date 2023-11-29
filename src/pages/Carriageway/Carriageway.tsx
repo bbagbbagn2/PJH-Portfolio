@@ -11,48 +11,30 @@ export default function Carriageway() {
                         <CavalierArticle>
                             <CavalierBox>
                                 <Heading>
-                                    개발,
-                                    <br />
-                                    그리고 디자인
+                                    개발,<br />그리고 디자인
                                 </Heading>
                                 <CavalierParagraph>
-                                     오픈 소스,
-                                     <br />
-                                     개인 &
-                                     <br />
-                                     팀 프로젝트.
-                                     <br />
+                                    오픈 소스,<br />개인 &<br />팀 프로젝트.<br />
                                 </CavalierParagraph>
                             </CavalierBox>
                         </CavalierArticle>
                         <ProjectLink to='/project'>
-                            <LinkBox>
-                            프로젝트 보러가기
-                            </LinkBox>
+                            <LinkBox>프로젝트 보러가기</LinkBox>
                         </ProjectLink>
                     </Lane>
                     <RightLane>
                         <CavalierArticle>
                             <CavalierBox>
                                 <Heading>
-                                    나의
-                                    <br />
-                                    이력서
+                                    나의<br />이력서
                                 </Heading>
                                 <CavalierParagraph>
-                                     자기소개,
-                                     <br />
-                                     스킬 &
-                                     <br />
-                                     프로젝트 소개.
-                                     <br />
+                                    자기소개,<br />스킬 &<br />프로젝트 소개.<br />
                                 </CavalierParagraph>
                             </CavalierBox>
                         </CavalierArticle>
                         <ProjectLink to="">
-                            <LinkBox>
-                            이력서 보러가기
-                            </LinkBox>
+                            <LinkBox>이력서 보러가기</LinkBox>
                         </ProjectLink>
                     </RightLane>
                 </Lanes>
@@ -211,7 +193,6 @@ const ProjectLink = styled(Link)`
         z-index: -1;
     }
 `;
-
 
 const LinkBox = styled.div`
     position: relative;

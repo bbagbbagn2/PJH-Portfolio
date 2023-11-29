@@ -31,8 +31,14 @@ export default function Header({ isHomeHeader, isProjectHeader }: HeaderProps) {
     const isProject = isProjectHeader !== undefined ? isProjectHeader : location.pathname === '/project';
 
     return (
-        <S.Header id='site-header' className={isHome ? 'home-header' : isProject ? 'project-header' : ''}>
-            <S.NavItem color='#FFF' onClick={handleHome}>HOME</S.NavItem>
+        <S.Header
+            id='site-header'
+            className={isHome ? 'home-header' : isProject ? 'project-header' : ''}>
+            <S.NavItem
+                color='#FFF'
+                onClick={handleHome}>
+                HOME
+            </S.NavItem>
             <S.MenuToggle
                 type="button"
                 onClick={handelMenuClick}
