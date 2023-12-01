@@ -4,33 +4,34 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Header from '../Header/Header.tsx';
+import Layout from './layout.tsx';
+import Footer from '../Footer/Footer.tsx';
+
+import screen1 from "./work-images/drinkable/screen1.png";
+import screen2 from "./work-images/drinkable/screen2.png";
+import screen3 from "./work-images/drinkable/screen3.png";
+
+
 
 export default function Icondb() {
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
-        speed: 200,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         autoPlay: true,
-        autoPlaySpeed: 500,
-        slideToShow: 1,
-        arrows: false
+        autoplaySpeed: 3000
     };
 
     const images = [
-        { src: "", alt: "Drinkable: Screen 1." },
-        { src: "", alt: "Drinkable: Screen 2." },
-        { src: "", alt: "Drinkable: Screen 3." },
-        { src: "", alt: "Drinkable: Screen 4." }
+        { src: screen1, alt: "Drinkable: Screen 1." },
+        { src: screen2, alt: "Drinkable: Screen 2." },
+        { src: screen3, alt: "Drinkable: Screen 3." },
     ]
     return (
         <>
-        <Header />
-        <MainLayout>
-            <PageHeader>
-                <Heading>Drinkable</Heading>
-            </PageHeader>
-            <ImageContainer>
+        <Layout>
                 <Slider {...settings}>
                     {images.map((index) => (
                         <SliderBox>
@@ -38,11 +39,11 @@ export default function Icondb() {
                         </SliderBox>
                     ))}
                 </Slider>
-            </ImageContainer>
             <PostContainer>
                 <PostParagraph></PostParagraph>
             </PostContainer>
-        </MainLayout>
+        </Layout>
+        <Footer />
         </>
     );
 }

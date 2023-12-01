@@ -1,41 +1,44 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Layout from './layout.tsx';
+import Footer from '../Footer/Footer.tsx';
+import screen1 from "./work-images/icondb/screen1.png";
+import screen2 from "./work-images/icondb/screen2.png";
+import screen3 from "./work-images/icondb/screen3.png";
+import screen4 from "./work-images/icondb/screen4.png";
+
 
 export default function Icondb() {
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
-        speed: 200,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         autoPlay: true,
-        autoPlaySpeed: 500,
-        slideToShow: 1,
-        arrows: false
+        autoplaySpeed: 3000
     };
 
     const images = [
-        { src: "./work-images/icondb/screen1.png", alt: "Icondb: Screen 1." },
-        { src: "./work-images/icondb/screen2.png", alt: "Icondb: Screen 2." },
-        { src: "./work-images/icondb/screen3.png", alt: "Icondb: Screen 3." },
-        { src: "./work-images/icondb/screen4.png", alt: "Icondb: Screen 4." }
+        { src: screen1, alt: "Icondb: Screen 1." },
+        { src: screen2, alt: "Icondb: Screen 2." },
+        { src: screen3, alt: "Icondb: Screen 3." },
+        { src: screen4, alt: "Icondb: Screen 4." }
     ]
 
     return (
         <>
             <Layout>
-                <ImageContainer>
                     <Slider {...settings}>
-                        {images.map((index) => (
-                            <SliderBox>
-                                <SliderImage src={index.src} alt={index.alt} />
-                            </SliderBox>
+                        {images.map((image, index) => (
+                                <SliderImage key={index} src={image.src} alt={image.alt} />
                         ))}
                     </Slider>
-                </ImageContainer>
                 <PostContainer>
                     <PostParagraph>ICON_DB는 아이콘을 사용하려는 사람들을 위한 무료 배포 플랫폼입니다. 저희는 기존 웹사이트와의 차별점을 둬야 했습니다.</PostParagraph>
                     <PostParagraph>기존 웹사이트와의 차별점으로 저희는 svg 파일을 이용해 즉석으로 아이콘을 변경할 수 있는 기능을 구축하였습니다.</PostParagraph>
@@ -51,35 +54,10 @@ export default function Icondb() {
                     <PostParagraph>React와 JavaScript를 활용한 첫 프로젝트였기 때문에 해당 기술에 대해 많은 공부를 하였고 많은 피드백을 얻었습니다.</PostParagraph>
                 </PostContainer>
             </Layout>
+            <Footer />
         </>
     );
 }
-
-const MainLayout = styled.main`
-    margin: 0 auto;
-    padding: 0 3.5rem;
-    max-width: 1400px;
-
-    @media (min-width: 651px) {
-        font-size: 18px;
-    }
-    @media (min-width: 1024px) {
-        margin-top: calc(3.5rem * 1.2);
-    }
-`;
-
-const ImageContainer = styled.div`
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-`;
-
-const SliderBox = styled.div`
-    position: relative;
-    min-height: 40vw;
-    max-height: 42.5vw;
-    max-width: 1260px;
-`;
 
 const SliderImage = styled.img`
     width: auto;
@@ -115,6 +93,7 @@ const NextButton = styled(PreviousButton)`
 `;
 const PostContainer = styled.div`
     margin: 0 auto;
+    margin-top: 3em;
     position: relative;
     max-width: 940px;
 `;

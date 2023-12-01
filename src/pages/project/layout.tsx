@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Header from '../Header/Header.tsx';
@@ -7,13 +8,18 @@ type LayoutProps = {
     children: ReactNode
 }
 
-export default function layout({ children }: LayoutProps) {
+export default function Layout({ children }: LayoutProps) {
+    const location = useLocation();
+    const pathSegments = location.pathname.split('/');
+    const lastPathSegment = pathSegments[pathSegments.length - 1];
+    const capitalizedSegment = lastPathSegment.charAt(0).toUpperCase() + lastPathSegment.slice(1);
+
     return (
         <>
             <Header />
             <MainLayout>
                 <PageHeader>
-                    <Heading>Icondb</Heading>
+                    <Heading>{capitalizedSegment}</Heading>
                 </PageHeader>
                 {children}
             </MainLayout>

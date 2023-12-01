@@ -15,7 +15,7 @@ type FooterProps = {
 export default function Footer({ isHomeFooter, isProjectFooter }: FooterProps) {
     const location = useLocation();
     const isHome = isHomeFooter !== undefined ? isHomeFooter : location.pathname === '/';
-    const isProject = isProjectFooter !== undefined ? isProjectFooter : location.pathname === '/project';
+    const isProject = isProjectFooter !== undefined ? isProjectFooter : location.pathname.startsWith('/project');
 
     return (
         <S.Footer

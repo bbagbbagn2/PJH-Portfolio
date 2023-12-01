@@ -22,7 +22,7 @@
         var htmlElement = document.querySelector('html');
         
         // Check if the current URL contains '/project'
-        if (currentUrl.includes('/project')) {
+        if (currentUrl.includes('/project') || currentUrl.includes('/icondb')) {
           htmlElement.id = 'project';
         }
       });
