@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
+    /* Default Styles */
     &#site-header {
         position: unset;
+
+        @media (max-width: 580px) {
+            font-size: 1.2rem;
+        }
 
         @media (min-width: 651px) and (max-width: 1129px) {
             padding-left: 3.5rem;
@@ -10,15 +15,23 @@ export const Header = styled.header`
         }
     }
     
+    /* Home Header Styles */
     &.home-header {
+        /* Demensions */
         width: 100%;
         height: 11.12em;
         max-height: 12rem;
+
+        /* Styling */
+        background: transparent;
+        font-size: 1rem;
+        
+        /* Layout */
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background: transparent;
-        font-size: 1rem;
+
+        /* Z-index */
         z-index: 1000;
 
         @media (max-width: 700px) {
@@ -28,18 +41,38 @@ export const Header = styled.header`
         }
     }
 
+    /* Project Header Styles */
     &.project-header {
+        /*Positioning */
         padding-top: 3rem;
         padding-bottom: 3rem;
+        
+        /* Demensions */
         width: 100%;
         height: 11.12em;
         max-height: 12rem;
+
+        /* Styling */
+        background: transparent;
+        font-size: .72rem;
+
+        /* Layout */
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: .72rem;
-        background: transparent;
+        
+        /* Z-index */
         z-index: 1000;
+
+        @media (max-width: 700px) {
+            padding-left: 3em;
+            padding-right: 3em;
+            position: absolute;
+
+            #logo {
+                z-index: 999;
+            }
+        }
 
         @media (min-width: 701px) {
             position: fixed;
@@ -65,55 +98,38 @@ export const Header = styled.header`
         width: 72%;
     }
 
-    @media (max-width: 580px) {
-        &#site-header {
-            font-size: 1.2rem;
-        }
-    }
-    
-    @media (max-width: 700px) {
-
-        &.project-header {
-            padding-left: 3em;
-            padding-right: 3em;
-            position: absolute;
-
-            #logo {
-                z-index: 999;
-            }
-        }
-
-        &.mobile {
-
-        }
-    }
-
     @media (min-width: 701px) {
         position: fixed;
         padding: 0 6em;
-
-        .project-header {
-            padding-left: 6em;
-            padding-right: 6em;
-        }
     }
 
 
 `;
 
 export const MenuToggle = styled.button`
+    /* Positioning */
     position: relative;
     margin: 0;
     margin-top: 0.699em;
     padding: 0;
+    
+    /* Demensions */
     width: 2.78em;
     height: 2.09em;
-    display: inline-flex;
+
+    /* Styling */
     background: none;
     color: #3c8fdd;
     font-size: 100%;
     line-height: 1.15;
+
+    /* Layout */
+    display: inline-flex;
+
+    /* interaction */
     cursor: pointer;
+
+    /* Z-index */
     z-index: 999;
 
     &.x {
@@ -173,7 +189,7 @@ export const ContentMenu = styled.nav`
         position: fixed;
         inset: 0;
 
-        /* Demesions */
+        /* Demensions */
         width: 100vw;
         height: 100vh;
 

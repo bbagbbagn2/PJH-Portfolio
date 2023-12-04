@@ -25,6 +25,9 @@ export default function Profile() {
                     <ContentItem>의사소통의 중요성을 인지하고 있으며 성공적인 개발을 위해 노력합니다.</ContentItem>
                 </ContentList>
             </ContentBox>
+            <MobileAvatarBox>
+
+            </MobileAvatarBox>
         </ProfilePageSection >
     );
 }
@@ -198,3 +201,18 @@ const ContentList = styled.ul`
 const ContentItem = styled.li`
     width: calc(50% - 1.731em);
 `;
+
+const MobileAvatarBox = styled.div`
+    /* Mobile View Styles */
+    padding: 7rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dbf227;
+
+    /* Hide on Largier Screens */
+    @media (min-width: 581px) {
+        display: none;
+    }
+`
