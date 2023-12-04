@@ -8,7 +8,8 @@ type LayoutProps = {
     children: ReactNode
 }
 
-const formatPathSegment = (segment: string) => {
+/** 주소창에 "-"이 있을 시 띄어쓰기 및 다음 글자를 대문자로 나타내주는 함수 */
+function formatPathSegment(segment: string): string {
     return segment.replace(/-/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
 }
 

@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Layout from './layout.tsx';
+import Layout from './Layout.tsx';
 import Footer from '../Footer/Footer.tsx';
 
 import screen1 from "./work-images/drinkable/screen1.png";
