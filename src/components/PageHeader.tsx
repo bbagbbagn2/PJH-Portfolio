@@ -53,6 +53,9 @@ const Heading = styled.h1`
     user-select: none;
     font-size: 1.802em;
 
+    @media (max-width: 650px) {
+        display: none;
+    }
     > span > span {
         opacity: .7;
     }

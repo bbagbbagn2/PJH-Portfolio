@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
     font-size: 20px;
     line-height: 1.7;
     scroll-behavior: smooth;
+
+    @media (max-width: 650px) {
+      font-size: 17px;
+    }
   }
   
   #app {
