@@ -1,16 +1,8 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-    &.header {
-    }
-
     &#site-header {
         position: unset;
-
-        @media (max-width: 650px) {
-            padding-left: 8.5vw;
-            padding-right: 8.5vw;
-        }
 
         @media (min-width: 651px) and (max-width: 1129px) {
             padding-left: 3.5rem;
@@ -18,6 +10,24 @@ export const Header = styled.header`
         }
     }
     
+    &.home-header {
+        width: 100%;
+        height: 11.12em;
+        max-height: 12rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+        font-size: 1rem;
+        z-index: 1000;
+
+        @media (max-width: 700px) {
+            padding-left: 3em;
+            padding-right: 3em;
+            position: absolute;
+        }
+    }
+
     &.project-header {
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -55,14 +65,13 @@ export const Header = styled.header`
         width: 72%;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 580px) {
         &#site-header {
-            padding-top: 3rem;
-
-            #contact-menu {
-                font-size: 1.1em;
-            }
+            font-size: 1.2rem;
         }
+    }
+    
+    @media (max-width: 700px) {
 
         &.project-header {
             padding-left: 3em;
@@ -170,7 +179,7 @@ export const ContentMenu = styled.nav`
 
         /* Styling */
         background: #fff;
-        font-size: 2.2em;
+        font-size: 2.2rem;
 
         /* Transitions */
         transition: opacity .3s, visibility .3s;

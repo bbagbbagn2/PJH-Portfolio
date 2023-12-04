@@ -47,7 +47,7 @@ export default function Header({ isHomeHeader, isProjectHeader }: HeaderProps) {
     return (
         <S.Header
             id='site-header'
-            className={`${isHome ? 'home-header' : isProject ? 'project-header' : ''} header`}
+            className={isHome ? 'home-header' : isProject ? 'project-header' : ''}
         >
             <S.NavItem
                 id='logo'
