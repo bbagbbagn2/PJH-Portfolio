@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Header from '../Header/Header.tsx';
+import Footer from '../Footer/Footer.tsx';
 
 type LayoutProps = {
     children: ReactNode
@@ -28,6 +29,7 @@ export default function Layout({ children }: LayoutProps) {
                 </PageHeader>
                 {children}
             </MainLayout>
+            <Footer />
         </>
     );
 }

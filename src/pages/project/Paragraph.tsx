@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 type ParagraphProps = {
   paragraph: string [];
+  children?: React.ReactNode;
 }
-export default function Paragraph({ paragraph }: ParagraphProps) {
+export default function PostContainer({ paragraph }: ParagraphProps) {
     return (
       <Container>
         {paragraph.map((text, index) => (
