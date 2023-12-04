@@ -27,8 +27,10 @@ const StyledBasicContact = styled.div`
     a {
         color: currentColor;
     }
-
-    @media (min-width: 461px) {
+    @media (max-width: 590px) {
+        margin-right: 12vw;
+    }
+    @media (min-width: 591px) {
         margin-right: 18vw;
     }
 `;

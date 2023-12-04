@@ -14,6 +14,10 @@ export default function SocialContact() {
 const StyledSocialContact = styled.ul`
     position: relative;
 
+    @media (max-width: 460px) {
+        display: none;
+    }
+    
     li {
         display: inline-block;
 

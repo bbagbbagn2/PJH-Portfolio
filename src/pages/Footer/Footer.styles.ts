@@ -23,11 +23,21 @@ export const Footer = styled.footer`
     &.project-footer {
         margin-top: 7rem;
         height: unset;
-        font-size: .84em;
+        font-size: .84rem;
 
         > div {
             padding-top: 5rem;
             padding-bottom: 3rem;
+
+            @media (max-width: 650px) {
+                padding-top: 3rem;
+                padding-left: 8.9vw;
+                padding-right: 8.9vw;
+            }
+            @media (min-width: 651px) and (max-width: 1129px) {
+                padding-left: 3.5rem;   
+                padding-right: 3.5rem;
+            }
         }
     }
 
@@ -74,7 +84,7 @@ export const FooterMainBox = styled.div`
         transition-delay: 300ms;
     }
 
-    @media (max-width: 420px) {
+    @media (max-width: 540px) {
         flex-direction: column;
     }
 
@@ -99,6 +109,6 @@ export const FooterBottomBox = styled.div`
     }
 
     @media (max-width: 460px) {
-            display: none;
+        justify-content: left;
     }
 `;
