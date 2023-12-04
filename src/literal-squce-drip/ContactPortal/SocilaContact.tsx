@@ -5,7 +5,7 @@ import NavItem from '../NavItem/index';
 
 export default function SocialContact() {
     return (
-        <StyledSocialContact>
+        <StyledSocialContact className='social-contact'>
                 <NavItem href="https://github.com/bbagbbagn2" external>GitHub</NavItem>
         </StyledSocialContact>
     );
@@ -13,10 +13,6 @@ export default function SocialContact() {
 
 const StyledSocialContact = styled.ul`
     position: relative;
-
-    @media (max-width: 460px) {
-        display: none;
-    }
     
     li {
         display: inline-block;

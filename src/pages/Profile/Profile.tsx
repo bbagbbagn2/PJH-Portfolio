@@ -11,7 +11,7 @@ export default function Profile() {
                             Frontend<br />Developer.
                         </ProfilePageHeading>
                         <ProfilePageParagraph>
-                            기본기를 중요하게 생각하고 리팩토링을 생활화하는 개발자,<br />박지훈입니다.
+                            기본기를 중요하게 생각하고 리팩토링을 생활화하는 개발자, 박지훈입니다.
                         </ProfilePageParagraph>
                     </CavalierBox>
                 </CavalierArticle>
@@ -36,6 +36,7 @@ const ProfilePageSection = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: #3c8fdd;
     user-select: auto;
     z-index: 3;
 
@@ -64,7 +65,7 @@ const ProfileBox = styled.div`
     justify-content: space-between;
 
     @media (max-width: 580px) {
-        margin-top: calc(11.12rem + 6em);
+        margin-top: calc(11.12em + 6em);
         padding: 0 15vw;
     }
 
@@ -112,15 +113,13 @@ const CavalierBox = styled.div`
 const ProfilePageHeading = styled.h1`
     color: #DBF227;
     font-size: 4em;
+    line-height: 1.1;
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s, opacity 0.2s;
 
     @media (max-width: 580px) {
         font-size: 5em;
-    }
-    @media (max-width: 780px) {
-        font-size: 36px;
     }
 
     @media (min-width: 581px) {
@@ -145,14 +144,15 @@ const ProfilePageParagraph = styled.p`
         font-size: 2em;
     }
 
-    @media (max-width: 780px) {
-        max-width: 20em;
-    }
-    @media screen and (min-width: 581px) {
+    @media (min-width: 581px) {
         font-size: 1.3em;
     }
 
-    @media screen and (min-width: 701px) {
+    @media (max-width: 700px) {
+        max-width: 20em;
+    }
+
+    @media (min-width: 701px) {
         width: 32vw;
         max-width: 701px;
         font-size: 1.07em;
@@ -168,7 +168,12 @@ const CavalierFigure = styled.figure`
     border: 0.115rem solid #FFF;
     z-index: 1;
 
-    @media screen and (min-width: 701px) {
+    
+    @media (max-width: 581px) {
+        display: none;
+    }
+    
+    @media (min-width: 701px) {
         margin-right: calc(6em + 4em);
     }
 `;

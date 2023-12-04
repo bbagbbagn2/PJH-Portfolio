@@ -11,9 +11,9 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
 
     @media (max-width: 650px) {
-      font-size: 17px;
+        font-size: 17px;
+      }
     }
-  }
   
   #app {
     position: relative;
@@ -30,12 +30,12 @@ const GlobalStyle = createGlobalStyle`
       font-size: 0.562rem;
     }
     
-    @media (min-width: 1601px) {
-      font-size: 1.013rem;
-    }
-
     @media (min-width: 701px) and (max-width: 1600px) {
       font-size: 1vw;
+    }
+
+    @media (min-width: 1601px) {
+      font-size: 1.013rem;
     }
   }
 

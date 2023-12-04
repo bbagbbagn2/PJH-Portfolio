@@ -50,14 +50,18 @@ const StyledCarriageway = styled.section`
     justify-content: center;
     user-select: auto;
 
-    @media screen and (max-height: 1199px) {
-        @media screen and (min-width: 701px) {
+    @media (max-width: 580px) {
+        margin-bottom: 10rem;
+    }
+
+    @media (max-height: 1199px) {
+        @media (min-width: 701px) {
             min-height: 100vh;
         }
     }
 
-    @media screen and (min-width: 701px) {
-        @media screen and (max-height: 1199px) {
+    @media (min-width: 701px) {
+        @media (max-height: 1199px) {
             height: 100vh;
         }
     }
@@ -98,12 +102,21 @@ const Lanes = styled.div`
     width: 100%;
     display: flex;
     background-color: #F9F9F9;
+
+    @media (max-width: 580px) {
+        flex-direction: column;
+    }
 `;
 
 const Lane = styled.div`
     padding: 6.95em;
     padding-left: 6em;
-    border: 0.15em solid rgba(60, 143, 221, 0.3);
+    
+    :not(:last-of-type) {
+        border-style: solid;
+        border-width: 0 0 0.15rem 0;
+        border-color: rgba(60, 143, 221, 0.3);
+    }
 
     @media (min-width: 581px) {
         width: 50%;

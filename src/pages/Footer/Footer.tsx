@@ -19,7 +19,7 @@ export default function Footer({ isHomeFooter, isProjectFooter }: FooterProps) {
 
     return (
         <S.Footer
-            id="site=footer"
+            id="site-footer"
             className={isHome ? 'home-footer' : isProject ? 'project-footer' : ''}>
             <S.InnerContentBox>
                 <S.FooterMainBox>

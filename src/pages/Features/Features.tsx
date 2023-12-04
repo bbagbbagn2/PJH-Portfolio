@@ -34,6 +34,10 @@ const Section = styled.section`
     user-select: auto;
     z-index: 3;
 
+    @media (max-width: 580px) {
+        margin-bottom: 10rem;
+    }
+
     @media (min-width: 701px) {
         @media (max-height: 1199px) {
             height: 100vh;
@@ -56,6 +60,10 @@ const InnerContentBox = styled.div`
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 580px) {
+        padding: 0 15vw;
+    }
+
     @media (min-width: 701px) {
         padding: 0 10rem;
     }
@@ -73,6 +81,18 @@ const InnerContentBox = styled.div`
 const CavalierArticle = styled.article`
     position: relative;
     display: flex;
+
+    @media (max-width: 580px) {
+        :not(:last-of-type) {
+            margin-bottom: 6vh;
+        }
+    }
+
+    h1, p {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        transition: opacity 0.2s, transform 0.5s;
+    }
 `;
 
 const CavalierReverseArticle = styled(CavalierArticle)`
@@ -84,16 +104,22 @@ const CavalierBox = styled.div`
 `;
 
 const CardHeading = styled.h1`
-    max-width: 30vw;
     font-size: 4em;
     font-weight: 900;
+    line-height: 1.1;
     color: #3C8FDD;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 0.2s, transform 0.5s;
+
 `;
 
 const Paragraph = styled.p`
-    width: 32vw;
-    max-width: 701px;
     font-size: 1rem;
     line-height: 1.6;
     color: #0B2B40;
+    
+    @media (max-width: 580px) {
+        font-size: 1.3em;
+    }
 `

@@ -10,9 +10,8 @@ export const Footer = styled.footer`
     user-select: auto;
     z-index: 3;
 
-    &.home-footer {
-        font-size: 1.2em;
 
+    &.home-footer {
         @media (min-width: 701px){
             @media (max-height: 1199px) {
                 height: 100vh;
@@ -44,6 +43,17 @@ export const Footer = styled.footer`
     li a {
         color: currentColor;
     }
+
+    
+    @media (max-width: 460px) {
+        .social-contact {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 580px) {
+        font-size: 1.5rem;
+    }
 `;
 
 export const InnerContentBox = styled.div`
@@ -52,6 +62,11 @@ export const InnerContentBox = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 580px) {
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
 
     @media (min-width: 581px) and (max-width: 700px) {
         padding-left: 7rem;
@@ -76,8 +91,6 @@ export const FooterMainBox = styled.div`
     margin-bottom: 7.4em;
     width: 100%;
     display: flex;
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
 
     @media (min-width: 700px) {
         transition: transform 0.5s, opacity 0.2s;
@@ -103,12 +116,12 @@ export const FooterBottomBox = styled.div`
     border-top: 1px solid rgba(186, 221, 118, 0.7);
     font-size: 1.15em;
 
+    @media (max-width: 460px) {
+        justify-content: left;
+    }
+    
     @media (min-width: 700px) {
         transition: transform 0.5s, opacity 0.2s;
         transition-delay: 500ms;
-    }
-
-    @media (max-width: 460px) {
-        justify-content: left;
     }
 `;

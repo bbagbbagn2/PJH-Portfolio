@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Basic from '../../literal-squce-drip/ContactPortal/BasicContact';
+import Social from '../../literal-squce-drip/ContactPortal/SocilaContact'
 import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/CrossSiteNav';
 
 import * as S from './Header.styles';
@@ -13,6 +14,19 @@ type HeaderProps = {
 
 export default function Header({ isHomeHeader, isProjectHeader }: HeaderProps) {
     const [isMenuFocused, setIsMenuFocused] = useState(false);
+    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 700);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobileView(window.innerWidth <= 700)
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return() => {
+            window.removeEventListener('resize',handleResize);
+        }
+    }, []);
 
     const handelMenuClick = () => {
         setIsMenuFocused((prev) => !prev);
@@ -33,8 +47,10 @@ export default function Header({ isHomeHeader, isProjectHeader }: HeaderProps) {
     return (
         <S.Header
             id='site-header'
-            className={isHome ? 'home-header' : isProject ? 'project-header' : ''}>
+            className={`${isHome ? 'home-header' : isProject ? 'project-header' : ''} header`}
+        >
             <S.NavItem
+                id='logo'
                 color='#FFF'
                 onClick={handleHome}>
                 HOME
@@ -44,9 +60,10 @@ export default function Header({ isHomeHeader, isProjectHeader }: HeaderProps) {
                 onClick={handelMenuClick}
                 className={isMenuFocused ? 'x' : ''}
             />
-            <S.ContentMenu className={isMenuFocused ? 'open shadow' : ''}>
+            <S.ContentMenu id='contact-menu' className={isMenuFocused ? 'open shadow' : ''}>
                 <CrossSiteNav />
                 <Basic />
+                <Social />
             </S.ContentMenu>
         </S.Header>
     );
