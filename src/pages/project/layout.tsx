@@ -8,18 +8,22 @@ type LayoutProps = {
     children: ReactNode
 }
 
+const formatPathSegment = (segment: string) => {
+    return segment.replace(/-/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
 export default function Layout({ children }: LayoutProps) {
     const location = useLocation();
     const pathSegments = location.pathname.split('/');
     const lastPathSegment = pathSegments[pathSegments.length - 1];
-    const capitalizedSegment = lastPathSegment.charAt(0).toUpperCase() + lastPathSegment.slice(1);
+    const formattedSegment = formatPathSegment(lastPathSegment);
 
     return (
         <>
             <Header />
             <MainLayout>
                 <PageHeader>
-                    <Heading>{capitalizedSegment}</Heading>
+                    <Heading>{formattedSegment}</Heading>
                 </PageHeader>
                 {children}
             </MainLayout>
