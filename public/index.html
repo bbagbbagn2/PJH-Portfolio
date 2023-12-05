@@ -15,29 +15,36 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&family=Open+Sans&display=swap"
     rel="stylesheet">
-  
-    <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', function () {
-        var currentUrl = window.location.pathname;
-        var htmlElement = document.querySelector('html');
-        
-        // Check if the current URL contains '/project'
-        if (currentUrl.includes('/project') || currentUrl.includes('/icondb')) {
-          htmlElement.id = 'project';
-        }
-      });
-    </script>
-    
+
+  <script type="text/javascript">
+    function updateRootId() {
+      var currentUrl = window.location.pathname;
+      var htmlElement = document.querySelector('html');
+
+      // Check if the current URL contains '/project' or '/icondb'
+      if (currentUrl.includes('/project') || currentUrl.includes('/icondb')) {
+        htmlElement.id = 'project';
+      } else {
+        htmlElement.id = 'homepage'; // Reset the ID if the condition is not met
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', updateRootId);
+
+    // Listen for the popstate event to handle back/forward navigation
+    window.addEventListener('popstate', updateRootId);
+  </script>
+
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "name": "Olaolu Olawuyi",
-      "alternateName": "Olaolu",
+      "name": "park Jihun",
+      "alternateName": "Jihun",
       "url": "",
       "@type": "WebSite",
       "@id": "#website",
       "sameAs": [
-        "https://github.com/bbagbbagn2"
+        "http://localhost:3000/"
       ]
     }
   </script>
@@ -70,27 +77,30 @@
 </head>
 
 <body>
-  <noscript><striong>You need to enable JavaScript to run this app.</striong></noscript>
+  <noscript>
+    <striong>You need to enable JavaScript to run this app.</striong>
+  </noscript>
 
   <div id="app"></div>
-    <script type="text/javascript">
-     if (!Element.prototype.matches) {
-        Element.prototype.matches =
-          Element.prototype.msMatchesSelector ||
-          Element.prototype.webkitMatchesSelector
-      }
+  <script type="text/javascript">
+    if (!Element.prototype.matches) {
+      Element.prototype.matches =
+        Element.prototype.msMatchesSelector ||
+        Element.prototype.webkitMatchesSelector
+    }
 
-      if (!Element.prototype.closest) {
-        Element.prototype.closest = function(s) {
-          var el = this
+    if (!Element.prototype.closest) {
+      Element.prototype.closest = function (s) {
+        var el = this
 
-          do {
-            if (el.matches(s)) return el
-            el = el.parentElement || el.parentNode
-          } while (el !== null && el.nodeType === 1)
-          return null
-        }
+        do {
+          if (el.matches(s)) return el
+          el = el.parentElement || el.parentNode
+        } while (el !== null && el.nodeType === 1)
+        return null
       }
-    </script>
+    }
+  </script>
 </body>
+
 </html>

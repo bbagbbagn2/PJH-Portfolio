@@ -12,6 +12,7 @@ type HeaderProps = {
     isProjectHeader?: boolean;
 }
 
+
 export default function Header({ isHomeHeader, isProjectHeader }: HeaderProps) {
     const [isMenuFocused, setIsMenuFocused] = useState(false);
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 700);
@@ -41,13 +42,12 @@ export default function Header({ isHomeHeader, isProjectHeader }: HeaderProps) {
     };
 
     const location = useLocation();
-    const isHome = isHomeHeader !== undefined ? isHomeHeader : location.pathname === '/';
-    const isProject = isProjectHeader !== undefined ? isProjectHeader : location.pathname === '/project';
+    const isHome = location.pathname === '/';
 
     return (
         <S.Header
-            id='site-header'
-            className={isHome ? 'home-header' : isProject ? 'project-header' : ''}
+        id='site-header'
+        className={`${isHome ? 'home' : 'project'} ${isMenuFocused ? 'open' : 'close'}`}
         >
             <S.NavItem
                 id='logo'
@@ -58,13 +58,13 @@ export default function Header({ isHomeHeader, isProjectHeader }: HeaderProps) {
             <S.MenuToggle
                 type="button"
                 onClick={handelMenuClick}
-                className={isMenuFocused ? 'x' : ''}
+                className={`menu-toggle ${isMenuFocused ? 'x' : ''}`}
             />
-            <S.ContentMenu id='contact-menu' className={isMenuFocused ? 'open shadow' : ''}>
+            <S.ContactMenu id='contact-menu' className={isMenuFocused ? 'open shadow' : ''}>
                 <CrossSiteNav />
                 <Basic />
                 <Social />
-            </S.ContentMenu>
+            </S.ContactMenu>
         </S.Header>
     );
 }

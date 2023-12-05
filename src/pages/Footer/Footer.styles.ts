@@ -6,6 +6,7 @@ export const Footer = styled.footer`
     align-items: center;
     justify-content: center;
     background: #0B2B40;    
+    font-size: 1.2em;
     color: #DBF227;
     user-select: auto;
     z-index: 3;

@@ -38,6 +38,10 @@ const Section = styled.section`
         margin-bottom: 10rem;
     }
 
+    @media (min-width: 581px) and (max-width: 700px) {
+        padding: 15vh 0;
+    }
+
     @media (min-width: 701px) {
         @media (max-height: 1199px) {
             height: 100vh;
@@ -64,6 +68,10 @@ const InnerContentBox = styled.div`
         padding: 0 15vw;
     }
 
+    @media (min-width: 581px) and (max-width: 700px) {
+        padding: 0 7rem;
+    }
+
     @media (min-width: 701px) {
         padding: 0 10rem;
     }
@@ -82,7 +90,7 @@ const CavalierArticle = styled.article`
     position: relative;
     display: flex;
 
-    @media (max-width: 580px) {
+    @media (max-width: 700px) {
         :not(:last-of-type) {
             margin-bottom: 6vh;
         }
@@ -112,6 +120,10 @@ const CardHeading = styled.h1`
     transform: translate3d(0, 0, 0);
     transition: opacity 0.2s, transform 0.5s;
 
+    @media (min-width: 701px) {
+        max-width: 30vw;
+        transition-delay: 200ms;
+    }
 `;
 
 const Paragraph = styled.p`
@@ -121,5 +133,12 @@ const Paragraph = styled.p`
     
     @media (max-width: 580px) {
         font-size: 1.3em;
+    }
+
+    @media (min-width: 701px) {
+        width: 32vw;
+        max-width: 701px;
+        font-size: 1.07em;
+        transition-delay: 310ms;
     }
 `

@@ -13,7 +13,7 @@ const BasicContact: React.FC<CrossSiteNavProps> = ({ classNameProject }) => {
     }
 
     return (
-        <CrossSiteNav className={ classNameProject }>
+        <CrossSiteNav className={`${classNameProject} cross-site-nav`}>
             {renderHomeNavItem()}
             <NavItem href="/project">내 프로젝트</NavItem>
             <NavItem href="#">내 이력서</NavItem>

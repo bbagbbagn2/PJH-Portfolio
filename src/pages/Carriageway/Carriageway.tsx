@@ -11,14 +11,14 @@ export default function Carriageway() {
                         <CavalierArticle>
                             <CavalierBox>
                                 <Heading>
-                                    개발,<br />그리고 디자인
+                                    개발,<br />디자인
                                 </Heading>
                                 <CavalierParagraph>
                                     오픈 소스,<br />개인 &<br />팀 프로젝트.<br />
                                 </CavalierParagraph>
                             </CavalierBox>
                         </CavalierArticle>
-                        <ProjectLink to='/project'>
+                        <ProjectLink href='/project'>
                             <LinkBox>프로젝트 보러가기</LinkBox>
                         </ProjectLink>
                     </Lane>
@@ -33,7 +33,7 @@ export default function Carriageway() {
                                 </CavalierParagraph>
                             </CavalierBox>
                         </CavalierArticle>
-                        <ProjectLink to="">
+                        <ProjectLink href="">
                             <LinkBox>이력서 보러가기</LinkBox>
                         </ProjectLink>
                     </RightLane>
@@ -52,6 +52,10 @@ const StyledCarriageway = styled.section`
 
     @media (max-width: 580px) {
         margin-bottom: 10rem;
+    }
+
+    @media (min-width: 581px) and (max-width: 700px) {
+        padding-bottom: 15vh;
     }
 
     @media (max-height: 1199px) {
@@ -77,6 +81,10 @@ const InnerContentBox = styled.div`
         margin-top: 4.2rem;
     }
 
+    @media (max-width: 580px) {
+        padding: 0 6vw;
+    }
+
     @media (min-width: 1024px) and (min-height: 665px) and (max-height: 1500px) {
         > div {
             min-height: 40em;
@@ -85,11 +93,7 @@ const InnerContentBox = styled.div`
 
     @media (max-width: 1500px) {
         max-width: unset;
-        padding: 0 10em;
-    }
-
-    @media (max-width: 580px) {
-        padding: 0 6vw;
+        padding: 0 calc(6em - 2em);
     }
 
     @media (min-width: 1501px) {
@@ -120,7 +124,16 @@ const Lane = styled.div`
 
     @media (min-width: 581px) {
         width: 50%;
-        border-width: 0 0.15em 0 0 ;
+
+        :not(:last-of-type) {
+            border-bottom-width: 0;
+            border-right-width: 0.15rem;
+        }
+    }
+
+    @media (min-width: 581px) and (max-width: 700px) {
+        padding-left: 4.5em;
+        padding-right: 4.5em;
     }
 `;
 
@@ -167,7 +180,7 @@ const CavalierParagraph = styled.p`
     }
 `;
 
-const ProjectLink = styled(Link)`
+const ProjectLink = styled.a`
     position: relative;
     min-width: 23.222em;
     display: inline-flex;

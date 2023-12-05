@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Header from '../Header/Header';
@@ -40,7 +39,7 @@ export default function Detail() {
                                     aria-label={project.summaryLinkLabel || undefined}
                                     target={!project.internalPage ? '_blank' : undefined}
                                     rel={!project.internalPage ? 'noopener noreferrer' : undefined}
-                                    to={project.internalPage ? project.path : project.siteURL}
+                                    href={project.internalPage ? project.path : project.siteURL}
                                 >
                                     {project.name} project summary.
                                 </ProjectLogoBox>
@@ -59,7 +58,7 @@ export default function Detail() {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             aria-label={project.name + ' live demo.'}
-                                            to={project.siteURL}
+                                            href={project.siteURL}
                                         >
                                             {project.siteName}
                                         </ProjectInfoLink>
@@ -144,7 +143,7 @@ const ProjectItem = styled.li`
     }
 `;
 
-const ProjectLogoBox = styled(Link)`
+const ProjectLogoBox = styled.a`
     position: absolute;
     top: 0;
     left: 0;
@@ -176,7 +175,7 @@ const ProjectInfoHeading = styled.h5`
     font-size: 1.125em;
 `;
 
-const ProjectInfoLink = styled(Link)`
+const ProjectInfoLink = styled.a`
     white-space: pre;
     color: #3c8fdd;
 `;

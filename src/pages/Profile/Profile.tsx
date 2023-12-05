@@ -176,7 +176,7 @@ const CavalierFigure = styled.figure`
     z-index: 1;
 
     
-    @media (max-width: 581px) {
+    @media (max-width: 580px) {
         display: none;
     }
 

@@ -1,82 +1,114 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import theme from '../../literal-squce-drip/theme';
 
 export const Header = styled.header`
-    /* Default Styles */
-    &#site-header {
+    width: 100%;
+    max-height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    z-index: 1000;
 
+    font-size: ${props => (props.className?.includes('project') ? '0.72rem' : '1rem')};
+    height: ${props => (props.className?.includes('home') ? theme.header.height : 'unset')};
+
+    ${(props) =>
+        props.className?.includes('project') &&
+        css`
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        `
+    }
+
+    @media (max-width: 700px) {
+        padding-left: 3em;
+        padding-right: 3em;
+
+        ${(props) =>
+        props.className?.includes('close') &&
+        css`
+            position: absolute;
+        `}
+
+        ${(props) =>
+        props.className?.includes('open') &&
+        css`
+            position: fixed;
+            top: 0;
+            bottom: auto;
+
+            #logo, .menu-toggle {
+                color: ${theme.colors.blue} !important;
+            }
+        `}
+    }
+
+    @media (min-width: 701px) {
+        position: fixed;
+        padding-left: ${theme.header.padding};
+        padding-right: ${theme.header.padding};
+
+        .crosss-site-nav {
+            line-height: 2.5;
+            font-size: 1.15em;
+        }
+    }
+    
+    /* Home Header Styles */
+    &.home {
         @media (max-width: 580px) {
             font-size: 1.2rem;
+
+            > button {
+                color: #dbf227;
+            }
+        }
+
+        @media (max-width: 700px) {
+            padding-left: 3em;
+            padding-right: 3em;
+            position: absolute;
+
+            &.open {
+                padding-left: 3em;
+                padding-right: 3em;
+                top: 0;
+                bottom: auto;
+                position: fixed;
+            }
+        }
+    }
+
+    /* Project Header Styles */
+    &.project {
+        position: unset;
+
+        @media (max-width: 650px) {
+            padding-left: 8.5vw;
+            padding-right: 8.5vw;
+        }
+
+        @media (max-width: 700px) {
+            padding-top: 3rem;
+            
+            #contact-menu {
+                font-size: 1.1rem;
+            }
         }
 
         @media (min-width: 651px) and (max-width: 1129px) {
             padding-left: 3.5rem;
             padding-right: 3.5rem;
         }
-    }
-    
-    /* Home Header Styles */
-    &.home-header {
-        /* Demensions */
-        width: 100%;
-        height: 11.12em;
-        max-height: 12rem;
 
-        /* Styling */
-        background: transparent;
-        font-size: 1rem;
-        
-        /* Layout */
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        /* Z-index */
-        z-index: 1000;
-
-        @media (max-width: 700px) {
-            padding-left: 3em;
-            padding-right: 3em;
-            position: absolute;
-        }
-    }
-
-    /* Project Header Styles */
-    &.project-header {
-        /*Positioning */
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        
-        /* Demensions */
-        width: 100%;
-        height: 11.12em;
-        max-height: 12rem;
-
-        /* Styling */
-        background: transparent;
-        font-size: .72rem;
-
-        /* Layout */
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
-        /* Z-index */
-        z-index: 1000;
-
-        @media (max-width: 700px) {
-            padding-left: 3em;
-            padding-right: 3em;
-            position: absolute;
-
-            #logo {
-                z-index: 999;
-            }
+        &.open {
+            top: 0;
+            bottom: auto;
         }
 
-        @media (min-width: 701px) {
-            position: fixed;
-            padding-left: 6em;
-            padding-right: 6em;
+        #logo {
+            z-index: 999;
         }
     }
 
@@ -96,21 +128,12 @@ export const Header = styled.header`
         right: 0;
         width: 72%;
     }
-
-    @media (min-width: 701px) {
-        position: fixed;
-        padding: 0 6em;
-    }
-
-
 `;
 
 export const MenuToggle = styled.button`
     /* Positioning */
     position: relative;
-    margin: 0;
     margin-top: 0.699em;
-    padding: 0;
     
     /* Demensions */
     width: 2.78em;
@@ -118,9 +141,7 @@ export const MenuToggle = styled.button`
 
     /* Styling */
     background: none;
-    color: #3c8fdd;
-    font-size: 100%;
-    line-height: 1.15;
+    color: ${theme.colors.blue};
 
     /* Layout */
     display: inline-flex;
@@ -134,22 +155,18 @@ export const MenuToggle = styled.button`
     &.x {
         transform: scale(0.9);
 
-        ::before {
+        &::before {
             transform: rotate(45deg);
         }
 
-        ::after {
+        &::after {
             top: 0;
             width: 100%;
             transform: rotate(-45deg);
         }
     }
 
-    :focus {
-        outline-color: transparent;
-    }
-
-    ::before, ::after {
+    &::before, &::after {
         content: '';
         position: absolute;
         width: 100%;
@@ -159,28 +176,28 @@ export const MenuToggle = styled.button`
         background-color: currentColor;
     }
 
-    ::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        transition: 0.2s ease;
-        transform: rotate(0deg);
-        background-color: currentColor;
+    &::before {
+        top: 0;
     }
 
-    @media (max-width: 580px) {
-        color: #dbf227;
+    &::after {
+        top: 1.13em;
+        right: 0;
+        width: 72%;
     }
-    
 `;
 
-export const ContentMenu = styled.nav`
+export const ContactMenu = styled.nav`
     padding: 3.473em;
     display: flex;
     flex-direction: column;
     box-shadow: none;
+    user-select: none;
     z-index: 998;
+
+    a {
+        color: ${theme.colors.blue};
+    }
 
     @media (max-width: 350px) {
         padding: 2.347em;
@@ -221,10 +238,6 @@ export const ContentMenu = styled.nav`
             font-size: 1em;
             line-height: 2.5;
         }
-
-        a {
-            color: #3c8fdd;
-        }
     }
 
     @media (min-width: 701px) {
@@ -234,24 +247,8 @@ export const ContentMenu = styled.nav`
         width: 22.223em;
         font-size: 1.1em;
         transition: opacity 0.4s, box-shadow 0.4s;
-        
-        :not(.open) {
-            opacity: 0;
-            pointer-events: none;
-            visibility: hidden;
-        }
 
-        &.open.shadow {
-            box-shadow: 0 10px 53px 0 rgba(72, 49, 212, .05);
-        }
-
-        &.open {
-            ::before {
-                transform: scale(1);
-            }
-        }
-
-        ::before {
+        &::before {
             content: '';
             position: absolute;
             top: 0;
@@ -264,6 +261,51 @@ export const ContentMenu = styled.nav`
             transition: 0.3s;
             transform-origin: top right;
         }
+
+        &:not(.open) {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            &::before {
+                transform: scaleX(.3826) scaleY(.27);
+            }
+
+            .cross-site-nav {
+                opacity: 0;
+            }
+
+            .cross-site-nav {
+                transform: translateY(50px);
+            }
+        }
+
+        &.open {
+            &::before {
+                transform: scale(1);
+            }
+
+            .cross-site-nav {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        &.open.shadow {
+            box-shadow: 0 10px 53px 0 rgba(72, 49, 212, .05);
+        }
+
+        .cross-site-nav {
+            transition: opacity, transition 0.3s;
+        }
+        
+        .cross-site-nav {
+            margin: 1.2em, 0;
+            transition-delay: 200ms;
+        }
+
+
+
 
         ul {
             margin: 1.2em 0;
