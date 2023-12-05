@@ -39,7 +39,7 @@ export default function Icondb() {
         "성능과 효율성에 주의를 기울이면서 해당 기능을 구현하는 것은 시간이 걸렸습니다." + 
         "팀원과의 일정 조율 및 완성도에 관한 약간의 갈등이 있었지만, 충분한 대화를 통해 해결할 수 있었습니다. 결국, 저희는 안정적이고 완성도 있는 프로젝트를 개발할 수 있었습니다.",
 
-        "해당 프로젝트는 HTML, CSS, JavaScript, React, style-components, Node.js, express, MySQL, AWS 등과 같은 여러 기술을 사용하였습니다." +
+        "해당 프로젝트는 HTML, CSS, JavaScript, React, style-components, Node.js, express, MySQL, AWS과 같은 기술을 사용하였습니다." +
         "저는 디자인부터 기획 및 구현에 이르기까지 다양한 부분에서 작업할 수 있는 경험을 얻었습니다.",
 
         "React와 JavaScript를 활용한 첫 프로젝트였기 때문에 해당 기술에 대해 많은 공부를 하였고 많은 피드백을 얻었습니다.",
