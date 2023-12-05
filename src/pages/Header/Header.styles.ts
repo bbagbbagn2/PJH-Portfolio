@@ -2,17 +2,26 @@ import styled, { css } from 'styled-components';
 import theme from '../../literal-sauce-drip/theme';
 
 export const Header = styled.header`
+    /* Dimensions */
     width: 100%;
     max-height: 12rem;
+
+    /* Styling */
+    background: transparent;
+
+    /* Layout */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+
+    /* Z-index*/
     z-index: 1000;
 
+    /* Font size and height based on props */
     font-size: ${props => (props.className?.includes('project') ? '0.72rem' : '1rem')};
     height: ${props => (props.className?.includes('home') ? theme.header.height : 'unset')};
 
+    /* Additional styling for project class */
     ${(props) =>
         props.className?.includes('project') &&
         css`
@@ -135,7 +144,7 @@ export const MenuToggle = styled.button`
     position: relative;
     margin-top: 0.699em;
     
-    /* Demensions */
+    /* Dimensions */
     width: 2.78em;
     height: 2.09em;
 
@@ -208,7 +217,7 @@ export const ContactMenu = styled.nav`
         position: fixed;
         inset: 0;
 
-        /* Demensions */
+        /* Dimensions */
         width: 100vw;
         height: 100vh;
 
@@ -303,9 +312,6 @@ export const ContactMenu = styled.nav`
             margin: 1.2em, 0;
             transition-delay: 200ms;
         }
-
-
-
 
         ul {
             margin: 1.2em 0;

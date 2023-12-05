@@ -38,11 +38,10 @@ const GlobalStyle = createGlobalStyle`
     /* Positioning */
     position: relative;
 
-    /* Demensions */
+    /* Dimensions */
     width: 100%;
 
     /* Styling */
-    font-size: 0.9rem;
     font-family: "Noto Sans KR", "Open Sans", sans-serif;
     line-height: 1.15;
     text-size-adjust: 100%;

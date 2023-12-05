@@ -69,7 +69,7 @@ export default function Detail() {
                     </ProjectList>
                 </WorkContainer>
             </StyledProject >
-            <Footer isProjectFooter={true}/>
+            <Footer />
         </>
     );
 }

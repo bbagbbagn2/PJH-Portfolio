@@ -1,18 +1,28 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+import theme from '../../literal-sauce-drip/theme';
 
 export const Footer = styled.footer`
+    /* positioning */
     position: relative;
+
+    /* Typhography */
+    font-size: 1.2em;
+
+    /* Layout */
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #0B2B40;    
-    font-size: 1.2em;
-    color: #DBF227;
     user-select: auto;
+
+    /* Z-index */
     z-index: 3;
 
+    /* Styling */
+    background: ${theme.colors.default};    
+    color: ${theme.colors.lemon};
 
-    &.home-footer {
+    &.homeEnv {
         @media (min-width: 701px){
             @media (max-height: 1199px) {
                 height: 100vh;
@@ -20,7 +30,7 @@ export const Footer = styled.footer`
         }      
     }
 
-    &.project-footer {
+    &.projectEnv {
         margin-top: 7rem;
         height: unset;
         font-size: .84rem;
@@ -38,6 +48,20 @@ export const Footer = styled.footer`
                 padding-left: 3.5rem;   
                 padding-right: 3.5rem;
             }
+        }
+    }
+
+    .footer-main, .footer-bottom {
+        width: 100%;
+        display: flex;
+
+        ${(props) => (
+            !props.className?.includes('projectEnv') &&
+            css`
+                @media (min-width: 701px) {
+                    transition: transform 0.5s, opacity 0.2s;
+                }
+            `)
         }
     }
 
@@ -90,11 +114,8 @@ export const InnerContentBox = styled.div`
 
 export const FooterMainBox = styled.div`
     margin-bottom: 7.4em;
-    width: 100%;
-    display: flex;
 
     @media (min-width: 700px) {
-        transition: transform 0.5s, opacity 0.2s;
         transition-delay: 300ms;
     }
 
@@ -111,8 +132,6 @@ export const FooterMainBox = styled.div`
 
 export const FooterBottomBox = styled.div`
     padding-top: 3em;
-    width: 100%;
-    display: flex;
     justify-content: space-between;
     border-top: 1px solid rgba(186, 221, 118, 0.7);
     font-size: 1.15em;
@@ -120,9 +139,8 @@ export const FooterBottomBox = styled.div`
     @media (max-width: 460px) {
         justify-content: left;
     }
-    
+
     @media (min-width: 700px) {
-        transition: transform 0.5s, opacity 0.2s;
         transition-delay: 500ms;
     }
 `;

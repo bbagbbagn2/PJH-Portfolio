@@ -9,7 +9,7 @@ type CrossSiteNavProps = {
 
 const BasicContact: React.FC<CrossSiteNavProps> = ({ classNameProject }) => {
     const renderHomeNavItem = () => {
-        return classNameProject === 'project' ? <NavItem href='/'>HOME</NavItem> : null;
+        return classNameProject === 'project' ? <NavItem href='/'>Home</NavItem> : null;
     }
 
     return (

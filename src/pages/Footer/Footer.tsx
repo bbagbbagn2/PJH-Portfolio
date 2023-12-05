@@ -7,26 +7,20 @@ import CrossSiteNav from '../../literal-sauce-drip/CrossSiteNav/CrossSiteNav';
 
 import * as S from './Footer.styles';
 
-type FooterProps = {
-    isHomeFooter?: boolean;
-    isProjectFooter?: boolean;
-}
-
-export default function Footer({ isHomeFooter, isProjectFooter }: FooterProps) {
+export default function Footer() {
     const location = useLocation();
-    const isHome = isHomeFooter !== undefined ? isHomeFooter : location.pathname === '/';
-    const isProject = isProjectFooter !== undefined ? isProjectFooter : location.pathname.startsWith('/project');
+    const isHome = location.pathname === '/';
 
     return (
         <S.Footer
             id="site-footer"
-            className={isHome ? 'home-footer' : isProject ? 'project-footer' : ''}>
+            className={isHome ? 'homeEnv' : 'projectEnv'}>
             <S.InnerContentBox>
-                <S.FooterMainBox>
+                <S.FooterMainBox className='footer-main'>
                     <Basic />
-                    <CrossSiteNav classNameProject={isProject ? 'project' : ''} />
+                    <CrossSiteNav classNameProject={isHome ? '' : 'project'} />
                 </S.FooterMainBox>
-                <S.FooterBottomBox>
+                <S.FooterBottomBox className='footer-bottom'>
                     <span>&copy; JH Portfolio 2023</span>
                     <Social />
                 </S.FooterBottomBox>

@@ -7,13 +7,7 @@ import CrossSiteNav from '../../literal-sauce-drip/CrossSiteNav/CrossSiteNav';
 
 import * as S from './Header.styles';
 
-type HeaderProps = {
-    isHomeHeader?: boolean;
-    isProjectHeader?: boolean;
-}
-
-
-export default function Header({ isHomeHeader, isProjectHeader }: HeaderProps) {
+export default function Header() {
     const [isMenuFocused, setIsMenuFocused] = useState(false);
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 700);
 
