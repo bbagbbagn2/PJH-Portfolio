@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Header = styled.header`
     /* Default Styles */
     &#site-header {
-        position: unset;
 
         @media (max-width: 580px) {
             font-size: 1.2rem;
@@ -170,6 +169,9 @@ export const MenuToggle = styled.button`
         background-color: currentColor;
     }
 
+    @media (max-width: 580px) {
+        color: #dbf227;
+    }
     
 `;
 

@@ -48,16 +48,12 @@ const ProfilePageSection = styled.section`
         padding-bottom: 0;
     }
 
-    @media (max-width: 700px) {
-        font-size: 0.95em;
-    }
-
     @media (min-width: 581px) {
         background: linear-gradient(90deg, #3C8FDD 67%, #DBF227 33%);
     }
 
-    @media (max-width: 580px) {
-        padding-bottom: 0;
+    @media (max-width: 700px) {
+        font-size: 0.95em;
     }
 `;
 
@@ -73,7 +69,11 @@ const ProfileBox = styled.div`
     }
 
     @media (min-width: 581px) {
-        margin-top: calc(11.12rem + 2em);
+        margin-top: calc(11.12em + 2em);
+    }
+
+    @media (min-width: 581px) and (max-width: 700px){
+        padding: 0 7rem;
     }
 
     @media (min-width: 701px) {
@@ -92,12 +92,16 @@ const ProfileBox = styled.div`
 const ContentBox = styled(ProfileBox)`
     margin-top: auto;
 
-    
     @media (max-width: 580px) {
         margin-top: 7em;
         margin-bottom: 4em;
         padding: 0 15vw;
     }
+
+    @media (min-width: 581px) and (max-width: 700px) {
+        margin-top: 3.7em;
+    }
+    
 `;
 
 const CavalierArticle = styled.article`
@@ -175,7 +179,11 @@ const CavalierFigure = styled.figure`
     @media (max-width: 581px) {
         display: none;
     }
-    
+
+    @media (max-width: 700px) {
+        margin-right: 0;
+    }
+
     @media (min-width: 701px) {
         margin-right: calc(6em + 4em);
     }
@@ -187,6 +195,9 @@ const ContentList = styled.ul`
     color: #DBF227;
     line-height: 1.5;
 
+    @media (min-width: 581px) and (max-width: 700px){
+        width: 65%;
+    }
     
     @media (max-width: 700px) {
         font-size: 1.2em;
