@@ -33,14 +33,23 @@ export default function Profile() {
 }
 
 const ProfilePageSection = styled.section`
+    /* Positioning */
     position: relative;
     padding-bottom: 4.17rem;
+
+    /* Layout */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    /* Styling */
     background: #3c8fdd;
+
+    /* User handling */
     user-select: auto;
+
+    /* Z-index */
     z-index: 3;
 
     @media (max-width: 580px) {
@@ -174,7 +183,6 @@ const CavalierFigure = styled.figure`
     height: 24.67em;
     border: 0.115rem solid #FFF;
     z-index: 1;
-
     
     @media (max-width: 580px) {
         display: none;

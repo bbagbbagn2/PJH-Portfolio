@@ -114,14 +114,21 @@ const ProjectList = styled.ul`
 `;
 
 const ProjectItem = styled.li`
+    /* Positioning */
     position: relative;
     flex-grow: 0;
     flex-shrink: 1;
     margin-bottom: 1.2rem;
+
+    /* Styling */
     border-radius: 0.2rem;
     box-shadow: 0 8px 6px -6px rgba(235, 234, 242, 0.5);
     background-color: #FFF;
+
+    /* Overflow handling */
     overflow: hidden;
+
+    /* Transition effect */
     transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     transition-property: transform, box-shadow;
 
@@ -144,16 +151,27 @@ const ProjectItem = styled.li`
 `;
 
 const ProjectLogoBox = styled.a`
+    /* Positioning */
     position: absolute;
     top: 0;
     left: 0;
+
+    /* Dimensions */
     width: 100%;
     height: 80%;
-    overflow: hidden;
-    text-indent: -9999px;
-    z-index: 0;
-    transition: none;
+
+    /* Styling */
     background-color: transparent;
+    text-indent: -9999px;
+
+    /* Overflow handling */
+    overflow: hidden;
+    
+    /* Transition effect */
+    transition: none;
+
+    /* Z-index */
+    z-index: 0;
 `;
 
 const ProjectLogoFigure = styled.figure`
