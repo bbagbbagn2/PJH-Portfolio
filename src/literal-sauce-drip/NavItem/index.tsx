@@ -65,19 +65,30 @@ const NavItemLink = styled.a`
         }
 
         &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 20%;
-            min-width: 1em;
-            height: 100%;
-            background-color: currentColor;
-            opacity: 0;
-            transform: translateX(0);
-            transform-origin: left;
-            transition: 0.3s;
-            pointer-events: none;
+          /* Pseudo-element to create a visual effect */
+          content: '';
+
+          /* Positioning */
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          /* Dimensions */
+          width: 20%;
+          min-width: 1em;
+          height: 100%;
+
+          /* Styling */
+          background-color: currentColor;
+          opacity: 0;
+          transform: translateX(0);
+          transform-origin: left;
+
+          /* Transition effect */
+          transition: 0.3s;
+
+          /* Interaction */
+          pointer-events: none;
         }
     }
 `
