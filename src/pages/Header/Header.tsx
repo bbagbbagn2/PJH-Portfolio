@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import Basic from '../../literal-squce-drip/ContactPortal/BasicContact';
-import Social from '../../literal-squce-drip/ContactPortal/SocilaContact'
-import CrossSiteNav from '../../literal-squce-drip/CrossSiteNav/CrossSiteNav';
+import Basic from '../../literal-sauce-drip/ContactPortal/BasicContact';
+import Social from '../../literal-sauce-drip/ContactPortal/SocilaContact'
+import CrossSiteNav from '../../literal-sauce-drip/CrossSiteNav/CrossSiteNav';
 
 import * as S from './Header.styles';
 

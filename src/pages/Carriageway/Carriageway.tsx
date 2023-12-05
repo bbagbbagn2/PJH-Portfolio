@@ -98,6 +98,7 @@ const InnerContentBox = styled.div`
 
     @media (min-width: 1501px) {
         padding: 0 5em;
+        max-width: 1760px;
     }
 
 `;
@@ -174,7 +175,7 @@ const CavalierParagraph = styled.p`
     opacity: 1;
     transition: trnsform 0.5s, opacity 0.2s;
 
-    @media screen and (min-width: 701px) {
+    @media (min-width: 701px) {
         max-width: 701px;
         transition-delay: 301ms;
     }

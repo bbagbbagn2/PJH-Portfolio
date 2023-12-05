@@ -11,11 +11,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-
-    @media (min-width: 701px) and (max-width: 1600px) {
-      font-size: 1vw;
-    }
-
     @media (min-width: 1601px) {
       font-size: 1.013rem;
     }

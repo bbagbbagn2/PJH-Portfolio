@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import theme from '../../literal-squce-drip/theme';
+import theme from '../../literal-sauce-drip/theme';
 
 export const Header = styled.header`
     width: 100%;
