@@ -15,7 +15,12 @@ export default [
         internalPage: false,
     },
     {
-        name: 'Block Smith',
+        name: 'Block Smith Test',
+        siteName: null,
+        internalPage: true,
+    },
+    {
+        name: 'Tounou Test',
         siteName: null,
         internalPage: true,
     },

@@ -12,16 +12,16 @@ export default function Footer() {
     const isHome = location.pathname === '/';
 
     return (
-        <S.Footer
+        <S.Footer            
             id="site-footer"
             className={isHome ? 'homeEnv' : 'projectEnv'}>
-            <S.InnerContentBox>
+            <S.InnerContentBox className='inner-content'>
                 <S.FooterMainBox className='footer-main'>
                     <Basic />
                     <CrossSiteNav classNameProject={isHome ? '' : 'project'} />
                 </S.FooterMainBox>
                 <S.FooterBottomBox className='footer-bottom'>
-                    <span>&copy; JH Portfolio 2023</span>
+                    <span>&copy; JH Portfolio {new Date().getFullYear()}</span>
                     <Social />
                 </S.FooterBottomBox>
             </S.InnerContentBox>
