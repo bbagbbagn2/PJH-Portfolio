@@ -6,6 +6,7 @@ import DetailPage from './pages/Detail/Detail';
 import Icondb from './pages/project/icondb';
 import Drinkable from './pages/project/drinkable';
 import Blocksmith from './pages/project/blocksmith';
+import Tounou from './pages/project/tounou';
 
 export default function App() {
   return (
@@ -14,7 +15,8 @@ export default function App() {
       <Route path='/project' element={<DetailPage />} />
       <Route path='/project/icondb' element={<Icondb />} />
       <Route path='/project/drinkable' element={<Drinkable />} />
-      <Route path='/project/block-smith' element={<Blocksmith />} />
+      <Route path='/project/block-smith-test' element={<Blocksmith />} />
+      <Route path='/project/tounou-test' element={<Tounou />} />
     </Routes>
   );
 }
