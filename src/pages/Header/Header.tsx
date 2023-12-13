@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import Logo from '../../components/Logo';
+
 import Basic from '../../literal-sauce-drip/ContactPortal/BasicContact';
 import Social from '../../literal-sauce-drip/ContactPortal/SocilaContact'
 import CrossSiteNav from '../../literal-sauce-drip/CrossSiteNav/CrossSiteNav';
@@ -45,9 +47,8 @@ export default function Header() {
         >
             <S.NavItem
                 id='logo'
-                color='#FFF'
                 onClick={handleHome}>
-                HOME
+                    <Logo />
             </S.NavItem>
             <S.MenuToggle
                 type="button"

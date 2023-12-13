@@ -1,8 +1,8 @@
 <svg width="230" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.68 13.43">
-<defs>
-<style>
-.cls-1{font-size:12px;fill:#8e6c62;font-weight:800;}
-</style>
-</defs>
-<text class="cls-1" transform="translate(0 10.2) scale(1.39 1)">DRINKABLE</text>
+    <defs>
+        <style>
+            .cls-1{font-size:12px;fill:#8e6c62;font-weight:800;}
+        </style>
+    </defs>
+    <text class="cls-1" transform="translate(0 10.2) scale(1.39 1)">DRINKABLE</text>
 </svg>  

@@ -9,8 +9,9 @@ import projectsData from '../../data';
 import { hyphenateName } from '../../helpers';
 import { ReactComponent as IconDBLogo } from '../../logos/icondb-logo.svg';
 import { ReactComponent as DrinkableLogo } from '../../logos/drinkable-logo.svg';
+import { ReactComponent as PersonalLogo } from '../../logos/personal-logo.svg';
 import { ReactComponent as BlocksmithLogo } from '../../logos/smith-logo.svg';
-import { ReactComponent as TounouLogo } from '../../logos/icondb-logo copy.svg';
+import { ReactComponent as TounouLogo } from '../../logos/tounou-logo.svg';
 
 
 export default function Detail() {
@@ -48,6 +49,7 @@ export default function Detail() {
                                 <ProjectLogoFigure>
                                     {project.name === 'Icondb' && <IconDBLogo />}
                                     {project.name === 'Drinkable' && <DrinkableLogo />}
+                                    {project.name === 'Personal Website' && <PersonalLogo />}
                                     {project.name === 'Block Smith Test' && <BlocksmithLogo />}
                                     {project.name === 'Tounou Test' && <TounouLogo />}
                                     <figcaption className='visuallyhidden'>{project.name} logo.</figcaption>
