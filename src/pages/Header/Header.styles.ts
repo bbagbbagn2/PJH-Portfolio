@@ -175,6 +175,10 @@ export const MenuToggle = styled.button`
         }
     }
 
+    &.footer-page {
+        color: ${theme.colors.lemon};
+    }
+
     &::before, &::after {
         content: '';
         position: absolute;

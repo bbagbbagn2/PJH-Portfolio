@@ -9,9 +9,10 @@ import CrossSiteNav from '../../literal-sauce-drip/CrossSiteNav/CrossSiteNav';
 
 import * as S from './Header.styles';
 
-export default function Header() {
+export default function HeaderSection() {
     const [isMenuFocused, setIsMenuFocused] = useState(false);
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 700);
+    const [isFooterPage, setIsFooterPage] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -22,7 +23,27 @@ export default function Header() {
 
         return() => {
             window.removeEventListener('resize',handleResize);
-        }
+        };
+    }, []);
+
+    useEffect(() => {
+        const footerElement = document.getElementById('site-footer');
+        const headerElement = document.getElementById('site-header');
+
+        const handleScroll = () => {
+            if(footerElement && headerElement){
+                const footerRect = footerElement?.getBoundingClientRect();
+                const headerRect = headerElement?.getBoundingClientRect();
+
+                setIsFooterPage(footerRect.top < headerRect.top);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     const handelMenuClick = () => {
@@ -53,7 +74,7 @@ export default function Header() {
             <S.MenuToggle
                 type="button"
                 onClick={handelMenuClick}
-                className={`menu-toggle ${isMenuFocused ? 'x' : ''}`}
+                className={`menu-toggle ${isMenuFocused ? 'x' : ''} ${isFooterPage ? 'footer-page' : ''}`}
             />
             <S.ContactMenu id='contact-menu' className={isMenuFocused ? 'open shadow' : ''}>
                 <CrossSiteNav />
@@ -62,4 +83,4 @@ export default function Header() {
             </S.ContactMenu>
         </S.Header>
     );
-}
+};

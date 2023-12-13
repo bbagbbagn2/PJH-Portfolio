@@ -7,7 +7,7 @@ import CrossSiteNav from '../../literal-sauce-drip/CrossSiteNav/CrossSiteNav';
 
 import * as S from './Footer.styles';
 
-export default function Footer() {
+export default function FooterSection() {
     const location = useLocation();
     const isHome = location.pathname === '/';
 
