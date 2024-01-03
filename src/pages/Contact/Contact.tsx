@@ -3,7 +3,7 @@ import React from 'react';
 import { BsPhoneVibrate } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 
-import * as S from './ContactCss.ts';
+import * as S from './ContactCss';
 
 export default function Contact() {
     return (
