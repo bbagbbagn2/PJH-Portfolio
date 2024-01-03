@@ -14,10 +14,10 @@ function ProjectRouter() {
   return (
     <Routes>
       <Route index element={<DetailPage />} />
-      <Route path='icondb' element={<Icondb />} />
-      <Route path='drinkable' element={<Drinkable />} />
-      <Route path='block-smith-test' element={<Blocksmith />} />
-      <Route path='tounou-test' element={<Tounou />} />
+      <Route path='/icondb' element={<Icondb />} />
+      <Route path='/drinkable' element={<Drinkable />} />
+      <Route path='/block-smith-test' element={<Blocksmith />} />
+      <Route path='/tounou-test' element={<Tounou />} />
     </Routes>
   );
 };
