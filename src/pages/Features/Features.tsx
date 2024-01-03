@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-export default function Features(): JSX.Element {
+export default function Features() {
     return (
-        <Section tabIndex={-1} aria-hidden="false">
+        <Section tabIndex={-1}>
             <InnerContentBox>
                 <CavalierArticle>
                     <CavalierBox>
@@ -32,6 +32,15 @@ const Section = styled.section`
     align-items: center;
     justify-content: center;
     user-select: auto;
+    z-index: 3;
+
+    @media (max-width: 580px) {
+        margin-bottom: 10rem;
+    }
+
+    @media (min-width: 581px) and (max-width: 700px) {
+        padding: 15vh 0;
+    }
 
     @media (min-width: 701px) {
         @media (max-height: 1199px) {
@@ -51,9 +60,17 @@ const Section = styled.section`
 `;
 
 const InnerContentBox = styled.div`
-    padding-top: 8rem;
-    padding-bottom: 5rem;
+    width: 100%;
+    display: flex;
     flex-direction: column;
+
+    @media (max-width: 580px) {
+        padding: 0 15vw;
+    }
+
+    @media (min-width: 581px) and (max-width: 700px) {
+        padding: 0 7rem;
+    }
 
     @media (min-width: 701px) {
         padding: 0 10rem;
@@ -72,6 +89,18 @@ const InnerContentBox = styled.div`
 const CavalierArticle = styled.article`
     position: relative;
     display: flex;
+
+    @media (max-width: 700px) {
+        :not(:last-of-type) {
+            margin-bottom: 6vh;
+        }
+    }
+
+    h1, p {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        transition: opacity 0.2s, transform 0.5s;
+    }
 `;
 
 const CavalierReverseArticle = styled(CavalierArticle)`
@@ -83,16 +112,33 @@ const CavalierBox = styled.div`
 `;
 
 const CardHeading = styled.h1`
-    max-width: 30vw;
     font-size: 4em;
     font-weight: 900;
+    line-height: 1.1;
     color: #3C8FDD;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 0.2s, transform 0.5s;
+
+    @media (min-width: 701px) {
+        max-width: 30vw;
+        transition-delay: 200ms;
+    }
 `;
 
 const Paragraph = styled.p`
-    width: 32vw;
-    max-width: 701px;
     font-size: 1rem;
     line-height: 1.6;
     color: #0B2B40;
+    
+    @media (max-width: 580px) {
+        font-size: 1.3em;
+    }
+
+    @media (min-width: 701px) {
+        width: 32vw;
+        max-width: 701px;
+        font-size: 1.07em;
+        transition-delay: 310ms;
+    }
 `

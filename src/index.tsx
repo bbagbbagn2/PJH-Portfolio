@@ -1,77 +1,79 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
 import { BrowserRouter } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+import App from './App.tsx';
 
-  #app {
-    position: relative;
-  }
+const GlobalStyle = createGlobalStyle`
 
   *, *::before, *::after {
     box-sizing: border-box;
   }
 
-  html[lang] {
-    line-height: 1.7;
-  }
-  
   html {
-    position: relative;
-    width: 100%;
-    font-family: "Noto Sans KR", "Open Sans", sans-serif;
-    line-height: 1.15;
-    text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-
-    @media (min-width: 701px) {
-      touch-action: none;
-    }
-  }
-
-  html {
-    font-size: 0.9rem;
-
-    @media (max-width: 700px) {
-      font-size: 0.562rem;
-    }
-    
     @media (min-width: 1601px) {
       font-size: 1.013rem;
     }
-
-    @media (min-width: 701px) and (max-width: 1600px) {
-      font-size: 1vw;
-    }
-  }
-
-  html {
-    line-height: 1.15;
   }
 
   body {
+    /* Positioning */
     margin: 0;
     padding: 0;
+
+    /*Demensions */
     width: 100%;
     height: 100%;
+
+    /* Styling */
+    color: #0B2B40;
+    background-color: #fff;
     font: inherit;
     font-weight: normal;
     line-height: inherit;
     -webkit-font-smoothing: inherit;
   }
 
-  body {
-    color: #0B2B40;
-    background-color: #FFF;
+  #homepage {
+    /* Positioning */
+    position: relative;
+
+    /* Dimensions */
+    width: 100%;
+
+    /* Styling */
+    font-family: "Noto Sans KR", "Open Sans", sans-serif;
+    line-height: 1.15;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+
+    @media (max-width: 700px) {
+        font-size: 0.562rem;
+    }
+  }
+
+  #project {
+    font-size: 20px;
+    font-family: "Noto Sans KR", "Open Sans", sans-serif;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+
+    @media (max-width: 650px) {
+        font-size: 17px;
+      }
+    }
+  
+  #app {
+    position: relative;
   }
 
   main {
     outline: none;
     display: block;
 
-    @media screen and (min-width: 701px) {
+    @media (min-width: 701px) {
       touch-action: none;
       scroll-snap-type: y mandatory;
     }
@@ -89,9 +91,33 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.15;
   }
 
-  button {
+  button, [type='button'], [type='reset'], [type='submit'] {
+    -webkit-appearance: button;
+  }
+
+  input, button, textarea {
+    border-radius: 0;
+  }
+
+  button, [role='button'] input[type='submit'] {
+    margin: 0;
+    padding: 0;
     border: none;
-    background: #FFFFFF;
+    cursor: pointer;
+  }
+
+  button, select {
+    text-transform: none;
+  }
+
+  button, input {
+    overflow: visible;
+  }
+
+  button, input, optgroup, select, textarea {
+    margin: 0;
+    font-size: 100%;
+    line-height: 1.15;
   }
 
   ul, ol, li {
@@ -99,6 +125,32 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     list-style-type: none;
   }
+
+  @media (max-width: 700px) {
+    html, html body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overscroll-behavior: none;
+    }
+  }
+
+  @media (min-width: 701px) {
+    html, body {
+      touch-action: none;
+    }
+  }
+
+  @media (min-width: 701px) and (max-width: 1600px) {
+    html {
+      font-size: 1vw;
+    }
+  }
+
+  ::selection {
+    background-color: rgba(111, 132, 230, .3);
+  }
+
 `;
 
 ReactDOM.createRoot(document.getElementById('app')!).render(

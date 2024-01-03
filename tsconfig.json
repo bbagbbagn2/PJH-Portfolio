@@ -1,14 +1,23 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "lib": ["ES2015", "DOM", "DOM.Iterable"],
-    "allowJs": true,
-    "esModuleInterop": true,
+    "target": "ESNext",
+    "module": "ESNext",
     "strict": true,
-    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "jsx": "react" 
+    "jsx": "react",
+    "paths": {
+      "@/*": ["src/*"],
+      "@saucedrip/core/*": ["../literal-sauce-drip/*"]
+    },
+    "baseUrl": "./",
+    "allowJs": true,
+    "allowImportingTsExtensions": true,
+    
+    
   },
-  "include": ["src", "custom.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/literal-sauce-drip/media-helpers.js"],
   "exclude": ["node_modules"],
 }

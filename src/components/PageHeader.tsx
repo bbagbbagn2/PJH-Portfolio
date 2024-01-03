@@ -1,7 +1,7 @@
-import React, { FC } from "react";
-import styled from "styled-components";
+import React, { FC } from 'react';
+import styled from 'styled-components';
 
-interface PageHeaderProps {
+type PageHeaderProps = {
     title?: string;
     desc?: string;
     noDot?: string;
@@ -9,26 +9,30 @@ interface PageHeaderProps {
     preTitleSymbol?: string;
 }
 
-const PageHeader: FC<PageHeaderProps> = ({ title, desc, noDot, hideDecor, preTitleSymbol = '/'}) => (
-    <Header>
+const PageHeader: FC<PageHeaderProps> = ({ 
+    title,
+    desc,
+    noDot,
+    hideDecor,
+    preTitleSymbol = '/'
+}) => (
+    <StyledHeader>
         {title && (
             <Heading aria-label={`${title}.`}>
-                <span aria-hidden="true">
+                <span>
                     {!hideDecor && <span>{preTitleSymbol}</span>}
                     {title}
                     {!noDot && !hideDecor && <span>.</span>}
                 </span>
             </Heading>
         )}
-        {desc && (
-            <p>{desc}</p>
-        )}
-    </Header>
+        {desc && <p>{desc}</p>}
+    </StyledHeader>
 )
 
 export default PageHeader;
 
-const Header = styled.header`
+const StyledHeader = styled.header`
     position: relative;
     text-align: center;
     margin-top: 1.1em;
@@ -49,8 +53,10 @@ const Heading = styled.h1`
     user-select: none;
     font-size: 1.802em;
 
+    @media (max-width: 650px) {
+        display: none;
+    }
     > span > span {
         opacity: .7;
     }
-
-`
+`;

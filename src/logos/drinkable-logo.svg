@@ -1,12 +1,8 @@
-<svg width="250" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104.68 13.43">
-<defs>
-<style>
-.cls-1{font-size:12px;fill:#8e6c62;font-family:MontserratAlt1-ExtraBold, Montserrat-Alt1;font-weight:800;}.cls-2{letter-spacing:-0.03em;}
-</style>
-</defs>
-<g id="레이어_2" data-name="레이어 2">
-<g id="레이어_1-2" data-name="레이어 1">
-<text class="cls-1" transform="translate(0 10.2) scale(1.39 1)">DRIN<tspan class="cls-2" x="32.52" y="0">K</tspan><tspan x="41.14" y="0">ABLE
-</tspan>
-</text>
-</g></g></svg>
+<svg width="230" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.68 13.43">
+    <defs>
+        <style>
+            .cls-1{font-size:12px;fill:#8e6c62;font-weight:800;}
+        </style>
+    </defs>
+    <text class="cls-1" transform="translate(0 10.2) scale(1.39 1)">DRINKABLE</text>
+</svg>  

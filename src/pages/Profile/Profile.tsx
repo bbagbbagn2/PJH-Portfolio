@@ -2,21 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 export default function Profile() {
-
     return (
-        <ProfilePageSection tabIndex={-1} aria-hidden={false}>
+        <ProfilePageSection>
             <ProfileBox>
                 <CavalierArticle>
                     <CavalierBox>
                         <ProfilePageHeading>
-                            Frontend
-                            <br />
-                            Developer.
+                            Frontend<br />Developer.
                         </ProfilePageHeading>
                         <ProfilePageParagraph>
-                            기본기를 중요하게 생각하고 리팩토링을 생활화하는 개발자,
-                            <br />
-                            박지훈입니다.
+                            기본기를 중요하게 생각하고 리팩토링을 생활화하는 개발자, 박지훈입니다.
                         </ProfilePageParagraph>
                     </CavalierBox>
                 </CavalierArticle>
@@ -30,41 +25,44 @@ export default function Profile() {
                     <ContentItem>의사소통의 중요성을 인지하고 있으며 성공적인 개발을 위해 노력합니다.</ContentItem>
                 </ContentList>
             </ContentBox>
+            <MobileAvatarBox>
+
+            </MobileAvatarBox>
         </ProfilePageSection >
     );
 }
 
 const ProfilePageSection = styled.section`
+    /* Positioning */
     position: relative;
     padding-bottom: 4.17rem;
+
+    /* Layout */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #3C8FDD;
+
+    /* Styling */
+    background: #3c8fdd;
+
+    /* User handling */
     user-select: auto;
 
-    user-select: ${(props) => (props['aria-hidden'] ? 'auto' : 'none')};
+    /* Z-index */
+    z-index: 3;
 
     @media (max-width: 580px) {
         margin-bottom: 10rem;
         padding-bottom: 0;
     }
 
-    @media (max-width: 700px) {
-        font-size: 0.95em;
-    }
-
     @media (min-width: 581px) {
         background: linear-gradient(90deg, #3C8FDD 67%, #DBF227 33%);
     }
 
-    @media (min-width: 701px) {
-        overflow: ${(props) => (props['aria-hidden'] ? '' : 'unset')};
-    }
-
-    @media (max-width: 580px) {
-        padding-bottom: 0;
+    @media (max-width: 700px) {
+        font-size: 0.95em;
     }
 `;
 
@@ -75,12 +73,16 @@ const ProfileBox = styled.div`
     justify-content: space-between;
 
     @media (max-width: 580px) {
-        margin-top: calc(11.12rem + 6em);
+        margin-top: calc(11.12em + 6em);
         padding: 0 15vw;
     }
 
     @media (min-width: 581px) {
-        margin-top: calc(11.12rem + 2em);
+        margin-top: calc(11.12em + 2em);
+    }
+
+    @media (min-width: 581px) and (max-width: 700px){
+        padding: 0 7rem;
     }
 
     @media (min-width: 701px) {
@@ -99,12 +101,16 @@ const ProfileBox = styled.div`
 const ContentBox = styled(ProfileBox)`
     margin-top: auto;
 
-    
     @media (max-width: 580px) {
         margin-top: 7em;
         margin-bottom: 4em;
         padding: 0 15vw;
     }
+
+    @media (min-width: 581px) and (max-width: 700px) {
+        margin-top: 3.7em;
+    }
+    
 `;
 
 const CavalierArticle = styled.article`
@@ -123,15 +129,13 @@ const CavalierBox = styled.div`
 const ProfilePageHeading = styled.h1`
     color: #DBF227;
     font-size: 4em;
+    line-height: 1.1;
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s, opacity 0.2s;
 
     @media (max-width: 580px) {
         font-size: 5em;
-    }
-    @media (max-width: 780px) {
-        font-size: 36px;
     }
 
     @media (min-width: 581px) {
@@ -156,14 +160,15 @@ const ProfilePageParagraph = styled.p`
         font-size: 2em;
     }
 
-    @media (max-width: 780px) {
-        max-width: 20em;
-    }
-    @media screen and (min-width: 581px) {
+    @media (min-width: 581px) {
         font-size: 1.3em;
     }
 
-    @media screen and (min-width: 701px) {
+    @media (max-width: 700px) {
+        max-width: 20em;
+    }
+
+    @media (min-width: 701px) {
         width: 32vw;
         max-width: 701px;
         font-size: 1.07em;
@@ -178,8 +183,16 @@ const CavalierFigure = styled.figure`
     height: 24.67em;
     border: 0.115rem solid #FFF;
     z-index: 1;
+    
+    @media (max-width: 580px) {
+        display: none;
+    }
 
-    @media screen and (min-width: 701px) {
+    @media (max-width: 700px) {
+        margin-right: 0;
+    }
+
+    @media (min-width: 701px) {
         margin-right: calc(6em + 4em);
     }
 `;
@@ -190,6 +203,9 @@ const ContentList = styled.ul`
     color: #DBF227;
     line-height: 1.5;
 
+    @media (min-width: 581px) and (max-width: 700px){
+        width: 65%;
+    }
     
     @media (max-width: 700px) {
         font-size: 1.2em;
@@ -204,3 +220,18 @@ const ContentList = styled.ul`
 const ContentItem = styled.li`
     width: calc(50% - 1.731em);
 `;
+
+const MobileAvatarBox = styled.div`
+    /* Mobile View Styles */
+    padding: 7rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dbf227;
+
+    /* Hide on Largier Screens */
+    @media (min-width: 581px) {
+        display: none;
+    }
+`

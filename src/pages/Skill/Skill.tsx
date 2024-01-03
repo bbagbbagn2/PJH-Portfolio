@@ -35,7 +35,7 @@ const getColorByToolIndex = (index: number) => {
     return colors[index % colors.length];
 }
 
-export default function App(): JSX.Element {
+export default function Skill() {
     const LanguageSkills: LanguageSkills[] = [
         { title: 'HTML' },
         { title: 'CSS' },
@@ -58,52 +58,42 @@ export default function App(): JSX.Element {
     ];
 
     return (
-        <PageSection>
-            <SkillList>
-                <SkillItem>
-                    <SkillBox>
-                        <CardHeading>LANGUAGE</CardHeading>
-                        {LanguageSkills.map((skill, index) => (
-                            <SkillsRow key={index}>
-                                <LanguageParagraph index={index}>{skill.title}</LanguageParagraph>
-                            </SkillsRow>
-                        ))}
-                    </SkillBox>
-                </SkillItem>
-                <SkillItem>
-                    <SkillBox>
-                        <CardHeading>FRAMEWORK</CardHeading>
-                        {FramworkSkills.map((skill, index) => (
-                            <SkillsRow key={index}>
-                                <FrameworkParagraph index={index}>{skill.title}</FrameworkParagraph>
-                            </SkillsRow>
-                        ))}
-                    </SkillBox>
-                </SkillItem>
-                <SkillItem>
-                    <SkillBox>
-                        <CardHeading>TOOLS</CardHeading>
-                        {ToolskSkills.map((skill, index) => (
-                            <SkillsRow key={index}>
-                                <ToolParagraph index={index}>{skill.title}</ToolParagraph>
-                            </SkillsRow>
-                        ))}
-                    </SkillBox>
-                </SkillItem>
-            </SkillList>
-        </PageSection>
+        <SkillPageSection>
+            <InnerContentBox>
+
+            </InnerContentBox>
+        </SkillPageSection>
     );
 }
 
-
-const PageSection = styled.section`
-    padding: 0 8%;
-    height: 100vh;  
-    min-height: 100vh;
+const SkillPageSection = styled.section`
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    background-color: #3c8fdd;
+
+    @media (max-width: 580px) {
+        margin-bottom: 10rem;
+    }
 `;
 
+const InnerContentBox = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    @media (max-width: 580px) {
+        margin-top: 7.12em;
+        padding: 0 15vw;
+    }
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
+
+`;
 const SkillsRow = styled.div`
 `;
 
