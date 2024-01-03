@@ -1,30 +1,9 @@
 import React from 'react';
 
-import Layout from './Layout.tsx';
-import CustomSlider from './Slider.tsx';
-import PostContainer from './Paragraph.tsx';
-
-import screen1 from "./work-images/drinkable/screen1.png";
-import screen2 from "./work-images/drinkable/screen2.png";
-import screen3 from "./work-images/drinkable/screen3.png";
+import Layout from './Layout';
+import PostContainer from './Paragraph';
 
 export default function Drinkable() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoPlay: true,
-        autoplaySpeed: 2000,
-    };
-
-    const images = [
-        { src: screen1, alt: "Block Smith: Screen 1." },
-        { src: screen2, alt: "Block Smith: Screen 2." },
-        { src: screen3, alt: "Block Smith: Screen 3." },
-    ];
-
     const paragraphs = [
         "Block Smith는 Block Smith의 프론트엔드 개발자로, 과제 전형 시에 개발하였던 웹사이트입니다.",
 
@@ -35,7 +14,6 @@ export default function Drinkable() {
 
     return (
         <Layout>
-            <CustomSlider settings={settings} images={images} />
             <PostContainer paragraph={paragraphs} />
         </Layout>
     );
