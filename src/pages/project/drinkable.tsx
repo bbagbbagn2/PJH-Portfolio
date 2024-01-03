@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Layout from './Layout.tsx';
-import CustomSlider from './Slider.tsx';
-import PostContainer from './Paragraph.tsx';
+import Layout from './layout';
+import CustomSlider from './Slider';
+import PostContainer from './Paragraph';
 
 import screen1 from "./work-images/drinkable/screen1.png";
 import screen2 from "./work-images/drinkable/screen2.png";

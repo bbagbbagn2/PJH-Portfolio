@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Layout from './Layout.tsx';
+import Layout from './layout.tsx';
 import CustomSlider from './Slider.tsx';
 import PostContainer from './Paragraph.tsx';
 
