@@ -166,12 +166,14 @@ export const MenuToggle = styled.button`
 
         &::before {
             transform: rotate(45deg);
+            color: ${theme.colors.blue};
         }
 
         &::after {
             top: 0;
             width: 100%;
             transform: rotate(-45deg);
+            color: ${theme.colors.blue};
         }
     }
 

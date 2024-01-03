@@ -10,7 +10,7 @@ export default function Logo() {
     const [isProjectPage, setIsProjectPage] = useState(false);
     
     useEffect(() => {
-        setIsProjectPage(location.pathname === '/project')
+        setIsProjectPage(location.pathname.startsWith('/project'))
     }, [location.pathname]);
 
     const logoFill = isProjectPage ? theme.colors.blue : theme.colors.lemon; 
