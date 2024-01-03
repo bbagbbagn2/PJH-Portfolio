@@ -3,7 +3,7 @@ import { Routes, Route, useParams } from 'react-router-dom';
 
 import MainPage from './pages/Main/Main';
 import DetailPage from './pages/Detail/Detail';
-import Icondb from './pages/project/icondb';
+import Icondb from './pages/project/icon';
 import Drinkable from './pages/project/drinkable';
 import Blocksmith from './pages/project/blocksmith';
 import Tounou from './pages/project/tounou';
