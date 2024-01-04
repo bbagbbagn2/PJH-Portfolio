@@ -112,16 +112,15 @@ const StyledProject = styled.main`
 const WorkContainer = styled.section``;
 
 const ProjectList = styled.ul`
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.2rem;
     justify-content: space-between;
 `;
 
 const ProjectItem = styled.li`
     /* Positioning */
     position: relative;
-    flex-grow: 0;
-    flex-shrink: 1;
     margin-bottom: 1.2rem;
 
     /* Styling */
@@ -135,18 +134,6 @@ const ProjectItem = styled.li`
     /* Transition effect */
     transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     transition-property: transform, box-shadow;
-
-    @media (max-width: 659px) {
-        width: 100%;
-    }
-
-    @media (min-width: 660px) and (max-width: 939px) {
-        flex-basis: calc((100% - 1em) / 2);
-    }
-
-    @media (min-width: 940px) {
-        flex-basis: calc((100% - 2em) / 3); 
-    }
 
     &:hover {
         transform: translateY(-8px);
