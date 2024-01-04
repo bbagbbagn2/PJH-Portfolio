@@ -38,4 +38,6 @@ npm run start
 ### 디렉토리 구조
 <br/><br/>
 
-### Copyright (c) 2023-present Jihun Park. All rights reserved.
+<p>
+  Copyright (c) 2023-present Jihun Park. All rights reserved.
+</p>
