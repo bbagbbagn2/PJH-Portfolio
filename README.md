@@ -59,5 +59,5 @@ npm run start
 <br/><br/>
 
 <p>
-  Copyright (c) 2023-present Jihun Park. All rights reserved.
+  Copyright (c) 2024 Jihun Park. All rights reserved.
 </p>
