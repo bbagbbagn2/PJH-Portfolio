@@ -13,7 +13,7 @@ ver2.0 : https://pjh-portfolio.netlify.app/
 
 ### 프로젝트 소개
 <p>
-  React를 활용해 개발한 웹 포트폴리오입니다.<br/><br/>
+  React를 활용해 개발한 저의 웹 포트폴리오입니다.<br/><br/>
 </p>
 
 ## 시작 가이드
