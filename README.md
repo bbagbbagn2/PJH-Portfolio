@@ -56,6 +56,71 @@ npm run start
 ## 아키텍처
 
 ### 디렉토리 구조
+```bash
+├── README.md
+├── package-lock.json
+├── package.json
+├── tsconfig.paths.json : tsconfig.json 파일 중 절대경로를 위해 baseUrl, paths를 분리한 파일 
+├── tsconfig.json
+├── craco.config.js
+├── .prettierre.js
+└── src
+    ├── assets
+    │   └── brand
+    │       └── logos
+    ├── components
+    │   ├── ContactPortal
+    │       ├── BasicContact.tsx
+    │       └── SocialContact.tsx
+    │   ├── CrossSiteNav
+    │        └── SocialContact.tsx
+    │   ├── NavItem
+    │        └── index.tsx
+    │   ├── Footer
+    │       ├── Footer.tsx
+    │       └── Footer.styles.tsx
+    │   ├── Header
+    │       ├── Header.tsx
+    │       └── Header.styles.tsx
+    │   ├── PageHeader.tsx : 프로젝트 페이지에 해당하는 제목 및 설명을 나타내주는 component.
+    │   └── theme.ts
+    ├── data
+    │   └── data.ts
+    ├── utils
+    │   └── helpers.ts
+    ├── pages
+    │   ├── Carriageway
+    │       └── Carriageway.tsx
+    │   ├── Detail
+    │       └── Detail.tsx
+    │   ├── Features
+    │       └── Features.tsx
+    │   ├── Main
+    │       └── Main.tsx
+    │   ├── Profile
+    │       └── Profile.tsx
+    │   ├── Project
+    │       ├── components
+    │           ├── Layout.tsx
+    │           ├── Paragraph.tsx
+    │           └── Slider.tsx
+    │       ├── pages
+    │           ├── drinkalbe.tsx
+    │           └── icon.tsx
+    │       └── work-images
+    │           ├── drinkable
+    │           └── icondb
+    │   ├── App.tsx
+    │   ├── index.tsx
+    │   ├── react-app-env.d.ts
+    │   └── custom.d.ts
+    └── public
+        ├── favicon.ico
+        ├── index.html
+        ├── manifest.json
+        └── robots.txt
+```
+
 <br/><br/>
 
 <p>
