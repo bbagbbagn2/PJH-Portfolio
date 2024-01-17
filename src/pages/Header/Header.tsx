@@ -69,7 +69,6 @@ export default function HeaderSection() {
             <S.NavItem
                 id='logo'
                 onClick={handleHome}>
-                    <Logo />
             </S.NavItem>
             <S.MenuToggle
                 type="button"

@@ -32,7 +32,7 @@ export default function Carriageway() {
                                 </CavalierParagraph>
                             </CavalierBox>
                         </CavalierArticle>
-                        <ProjectLink href="">
+                        <ProjectLink target="_blank" href="https://www.notion.so/parkresume/c4ce189e86cf43e8858349a33ebb482d">
                             <LinkBox>이력서 보러가기</LinkBox>
                         </ProjectLink>
                     </RightLane>

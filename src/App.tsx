@@ -5,8 +5,6 @@ import MainPage from './pages/Main/Main';
 import DetailPage from './pages/Detail/Detail';
 import Icondb from './pages/project/icon';
 import Drinkable from './pages/project/drinkable';
-import Blocksmith from './pages/project/blocksmith';
-import Tounou from './pages/project/tounou';
 
 function ProjectRouter() {
   const { subpath } = useParams();
@@ -16,8 +14,6 @@ function ProjectRouter() {
       <Route index element={<DetailPage />} />
       <Route path='/icondb' element={<Icondb />} />
       <Route path='/drinkable' element={<Drinkable />} />
-      <Route path='/block-smith-test' element={<Blocksmith />} />
-      <Route path='/tounou-test' element={<Tounou />} />
     </Routes>
   );
 };

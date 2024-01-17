@@ -16,7 +16,7 @@ const BasicContact: React.FC<CrossSiteNavProps> = ({ classNameProject }) => {
         <CrossSiteNav className={`${classNameProject} cross-site-nav`}>
             {renderHomeNavItem()}
             <NavItem href="/project">내 프로젝트</NavItem>
-            <NavItem href="#">내 이력서</NavItem>
+            <NavItem href="https://www.notion.so/parkresume/c4ce189e86cf43e8858349a33ebb482d">내 이력서</NavItem>
         </CrossSiteNav>
     );
 }
