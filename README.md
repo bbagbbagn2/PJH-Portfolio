@@ -20,18 +20,38 @@ ver2.0 : https://pjh-portfolio.netlify.app/
 
 ### Installation
 ```bash
-$ git clone
+$ git clone https://github.com/bbagbbagn2/JH-Portfolio.git
 ```
 
 ### Frontend
 ```
+npm install
 npm run start
 ```
 <br/><br/>
 
 ## Stacks
 
-<br/><br/>
+### Environment
+<p>
+  <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=GitHub&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=Netlify&logoColor=white"/>
+</p>
+
+### Config
+<p>
+  <img src="https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white"/>
+</p>
+
+### Development
+<p>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/TypeScript-1976D2?style=flat-square&logo=TypeScript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/>
+  <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=flat-square&logo=styledcomponents&logoColor=white"/><br/><br/>
+</p>
 
 ## 아키텍처
 
@@ -39,5 +59,5 @@ npm run start
 <br/><br/>
 
 <p>
-  Copyright (c) 2023-present Jihun Park. All rights reserved.
+  Copyright (c) 2024 Jihun Park. All rights reserved.
 </p>
