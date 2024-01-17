@@ -2,8 +2,8 @@ import React, { ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import Header from '@_components/Header/Header';
+import Footer from '@_components/Footer/Footer';
 
 type LayoutProps = {
     children: ReactNode

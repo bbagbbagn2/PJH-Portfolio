@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Layout from './layout';
-import CustomSlider from './Slider';
-import PostContainer from './Paragraph';
+import Layout from '../components/Layout';
+import CustomSlider from '../components/Slider';
+import PostContainer from '../components/Paragraph';
 
-import screen1 from "./work-images/icondb/screen1.png";
-import screen2 from "./work-images/icondb/screen2.png";
-import screen3 from "./work-images/icondb/screen3.png";
-import screen4 from "./work-images/icondb/screen4.png";
+import screen1 from "../work-images/icondb/screen1.png";
+import screen2 from "../work-images/icondb/screen2.png";
+import screen3 from "../work-images/icondb/screen3.png";
+import screen4 from "../work-images/icondb/screen4.png";
 
 
 export default function Icondb() {

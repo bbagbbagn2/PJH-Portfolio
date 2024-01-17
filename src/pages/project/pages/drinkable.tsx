@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Layout from './layout';
-import CustomSlider from './Slider';
-import PostContainer from './Paragraph';
+import Layout from '../components/Layout';
+import CustomSlider from '../components/Slider';
+import PostContainer from '../components/Paragraph';
 
-import screen1 from "./work-images/drinkable/screen1.png";
-import screen2 from "./work-images/drinkable/screen2.png";
-import screen3 from "./work-images/drinkable/screen3.png";
+import screen1 from "../work-images/drinkable/screen1.png";
+import screen2 from "../work-images/drinkable/screen2.png";
+import screen3 from "../work-images/drinkable/screen3.png";
 
 export default function Drinkable() {
     const settings = {

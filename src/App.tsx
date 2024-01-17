@@ -3,8 +3,8 @@ import { Routes, Route, useParams } from 'react-router-dom';
 
 import MainPage from './pages/Main/Main';
 import DetailPage from './pages/Detail/Detail';
-import Icondb from './pages/project/icon';
-import Drinkable from './pages/project/drinkable';
+import Icondb from './pages/project/pages/icon';
+import Drinkable from './pages/project/pages/drinkable';
 
 function ProjectRouter() {
   const { subpath } = useParams();

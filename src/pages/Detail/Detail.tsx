@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import PageHeader from '../../components/PageHeader';
-import projectsData from '../../data';
+import Header from '@_components/Header/Header';
+import Footer from '@_components/Footer/Footer';
+import PageHeader from '@_components/PageHeader';
+import projectsData from '@_data/data';
 
-import { hyphenateName } from '../../helpers';
-import { ReactComponent as IconDBLogo } from '../../logos/icondb-logo.svg';
-import { ReactComponent as DrinkableLogo } from '../../logos/drinkable-logo.svg';
-import { ReactComponent as PersonalLogo } from '../../logos/personal-logo.svg';
+import { hyphenateName } from '../../utils/helpers';
+import { ReactComponent as IconDBLogo } from '@_logos/icondb-logo.svg';
+import { ReactComponent as DrinkableLogo } from '@_logos/drinkable-logo.svg';
+import { ReactComponent as PersonalLogo } from '@_logos/personal-logo.svg';
 
 
 export default function Detail() {

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import theme from '../../literal-sauce-drip/theme';
+import theme from '../theme';
 
 export const Footer = styled.footer`
     /* positioning */

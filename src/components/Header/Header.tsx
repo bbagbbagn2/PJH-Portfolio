@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import Logo from '../../components/Logo';
-
-import Basic from '../../literal-sauce-drip/ContactPortal/BasicContact';
-import Social from '../../literal-sauce-drip/ContactPortal/SocilaContact'
-import CrossSiteNav from '../../literal-sauce-drip/CrossSiteNav/CrossSiteNav';
+import Basic from '../ContactPortal/BasicContact';
+import Social from '../ContactPortal/SocilaContact'
+import CrossSiteNav from '../CrossSiteNav/CrossSiteNav';
 
 import * as S from './Header.styles';
 
