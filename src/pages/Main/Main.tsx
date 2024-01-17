@@ -10,13 +10,13 @@ import Carriageway from '../Carriageway/Carriageway';
 import FooterSection from '@_components/Footer/Footer';
 
 export default function Main() {
-    return (
-        <ThemeProvider theme={theme}>
-            <HeaderSection />
-            <Profile />
-            <Features />
-            <Carriageway />
-            <FooterSection />
-        </ThemeProvider>
-    );
+  return (
+    <ThemeProvider theme={theme}>
+      <HeaderSection />
+      <Profile />
+      <Features />
+      <Carriageway />
+      <FooterSection />
+    </ThemeProvider>
+  );
 }

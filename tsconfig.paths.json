@@ -1,11 +1,11 @@
 {
-    "compilerOptions": {
-      "baseUrl": "./src",
-      "paths": {
-        "@_logos/*": ["assets/brand/logos/*"],
-        "@_components/*": ["components/*"],
-        "@_data/*": ["data/*"],
-        "@/*": ["*"]
-      }
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@_logos/*": ["assets/brand/logos/*"],
+      "@_components/*": ["components/*"],
+      "@_data/*": ["data/*"],
+      "@/*": ["*"]
+    }
   }
 }

@@ -1,1 +1,1 @@
-declare module "react-fullpage";
+declare module 'react-fullpage';

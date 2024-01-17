@@ -4,25 +4,27 @@ import styled from 'styled-components';
 import NavItem from '../NavItem/index';
 
 export default function SocialContact() {
-    return (
-        <StyledSocialContact className='social-contact'>
-                <NavItem href="https://github.com/bbagbbagn2" external>GitHub</NavItem>
-        </StyledSocialContact>
-    );
-};
+  return (
+    <StyledSocialContact className="social-contact">
+      <NavItem href="https://github.com/bbagbbagn2" external>
+        GitHub
+      </NavItem>
+    </StyledSocialContact>
+  );
+}
 
 const StyledSocialContact = styled.ul`
-    position: relative;
-    
-    li {
-        display: inline-block;
+  position: relative;
 
-        &:not(:last-of-type) {
-            margin-right: 2.5em;
-        }
-    }
+  li {
+    display: inline-block;
 
-    a {
-        color: currentColor;
+    &:not(:last-of-type) {
+      margin-right: 2.5em;
     }
+  }
+
+  a {
+    color: currentColor;
+  }
 `;

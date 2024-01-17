@@ -12,18 +12,17 @@ function ProjectRouter() {
   return (
     <Routes>
       <Route index element={<DetailPage />} />
-      <Route path='/icondb' element={<Icondb />} />
-      <Route path='/drinkable' element={<Drinkable />} />
+      <Route path="/icondb" element={<Icondb />} />
+      <Route path="/drinkable" element={<Drinkable />} />
     </Routes>
   );
-};
-
+}
 
 export default function App() {
   return (
     <Routes>
-      <Route path='/' element={<MainPage />} />
-      <Route path='/project/*' element={<ProjectRouter />} />
+      <Route path="/" element={<MainPage />} />
+      <Route path="/project/*" element={<ProjectRouter />} />
     </Routes>
   );
-};
+}
