@@ -68,7 +68,6 @@ export default function HeaderSection() {
     >
       <S.NavItem id="logo" onClick={handleHome}></S.NavItem>
       <S.MenuToggle
-        type="button"
         onClick={handelMenuClick}
         className={`menu-toggle ${isMenuFocused ? 'x' : ''} ${
           isFooterPage ? 'footer-page' : ''
