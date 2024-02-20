@@ -3,36 +3,61 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
+import { colors } from '@_components/theme';
+
 import App from './App';
 
 const GlobalStyle = createGlobalStyle`
 
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
+  ::selection {
+    background-color: rgba(111, 132, 230, 0.3);
+  }
+
+  ::placeholder {
+    opacity: 1;
+    color: rgba(61, 21, 95, 0.75);
+  }
+
   html {
+    position: relative;
+    width: 100%;
+    font-family: "Noto Sans KR", "Open Sans", sans-serif;
+    text-size-adjust: 100%;
+
     @media (min-width: 1601px) {
       font-size: 1.013rem;
     }
   }
 
   body {
-    /* Positioning */
     margin: 0;
     padding: 0;
-
-    /*Demensions */
     width: 100%;
     height: 100%;
-
-    /* Styling */
     color: #0B2B40;
     background-color: #fff;
     font: inherit;
     font-weight: normal;
     line-height: inherit;
     -webkit-font-smoothing: inherit;
+  }
+
+  ul, ol, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    transition-duration: 0.3s;
+    transition-property: opacity, color, background-color, transform, border;
   }
 
   #homepage {
@@ -79,11 +104,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  a {
-    background-color: transparent;
-    text-decoration: none;
-    transition-property: opacity, color, background-color, transform, border;
-  }
+
 
   h1, h2, h3, h4, h5 {
     margin: 0;
@@ -95,15 +116,32 @@ const GlobalStyle = createGlobalStyle`
     -webkit-appearance: button;
   }
 
+  button,
+  [role='button']
+  input[type='submit'] {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  
   input, button, textarea {
     border-radius: 0;
   }
 
-  button, [role='button'] input[type='submit'] {
-    margin: 0;
-    padding: 0;
-    border: none;
-    cursor: pointer;
+  textarea {
+    resize: none;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    user-select: none;
   }
 
   button, select {
@@ -120,11 +158,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.15;
   }
 
-  ul, ol, li {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
+
 
   @media (max-width: 700px) {
     html, html body {
@@ -146,11 +180,6 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1vw;
     }
   }
-
-  ::selection {
-    background-color: rgba(111, 132, 230, .3);
-  }
-
 `;
 
 ReactDOM.createRoot(document.getElementById('app')!).render(
@@ -159,7 +188,7 @@ ReactDOM.createRoot(document.getElementById('app')!).render(
       <App />
     </BrowserRouter>
     <GlobalStyle />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -5,8 +5,8 @@ import NavItem from '../NavItem/index';
 
 export default function BasicContact() {
   return (
-    <StyledBasicContact>
-      <StyledSayHello>say hello</StyledSayHello>
+    <StyledBasicContact className='basic-contact'>
+      <StyledSayHello className='say-hello'>say hello</StyledSayHello>
       <ul>
         <NavItem href="#">pyoungh137@gmail.com</NavItem>
         <NavItem href="#">010.9207.8758</NavItem>
@@ -34,10 +34,6 @@ const StyledBasicContact = styled.div`
 
   @media (max-width: 590px) {
     margin-right: 12vw;
-  }
-
-  @media (min-width: 591px) {
-    margin-right: 18vw;
   }
 `;
 

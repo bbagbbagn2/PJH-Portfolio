@@ -24,6 +24,13 @@ export const Footer = styled.footer`
 
   &.homeEnv {
     @media (min-width: 701px) {
+      &[aria-hidden='true'] {
+        .footer-main,
+        .fotoer-bottom {
+          opacity: 0;
+          transform: translate3d(0, 40px, 0);
+        }
+      }
       @media (max-height: 1199px) {
         height: 100vh;
       }
@@ -65,14 +72,30 @@ export const Footer = styled.footer`
       `}
   }
 
-  li a {
-    color: currentColor;
+  .basic-contact {
+    @media (min-width: 591px) {
+      margin-right: 18vw;
+    }
+
+    @media (max-width: 590px) {
+      margin-right: 12vw;
+    }
   }
 
-  @media (max-width: 460px) {
-    .social-contact {
+  .social-contact {
+    @media (max-width: 580px) {
+      li:not(:last-of-type) {
+        margin-right: 1em;
+      }
+    }
+
+    @media (max-width: 460px) {
       display: none;
     }
+  }
+
+  li a {
+    color: currentColor;
   }
 
   @media (max-width: 580px) {
@@ -86,6 +109,12 @@ export const InnerContentBox = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  .footer-main,
+  .footer-bottom {
+    width: 100%;
+    display: flex;
+  }
 
   @media (max-width: 580px) {
     padding-left: 15vw;
