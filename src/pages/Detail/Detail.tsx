@@ -9,7 +9,7 @@ import projectsData from '@_data/data';
 import { hyphenateName } from '../../utils/helpers';
 import { ReactComponent as IconDBLogo } from '@_logos/icondb-logo.svg';
 import { ReactComponent as DrinkableLogo } from '@_logos/drinkable-logo.svg';
-import { ReactComponent as PersonalLogo } from '@_logos/personal-logo.svg';
+import { ReactComponent as PersonalLogo } from '@_logos/Pjh-Portfolio logo.svg';
 
 export default function Detail() {
   const projects = projectsData.map(project => ({
