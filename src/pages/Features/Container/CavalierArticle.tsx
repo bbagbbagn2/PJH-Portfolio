@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ArticleContainer, ArticleWrapper } from '@_components/Article';
 
 type CavalierArticleProps = {
   justifyContent?: string;
@@ -7,27 +8,26 @@ type CavalierArticleProps = {
   description: string;
 };
 
-export default function CavalierArticle({
+export default function FeaturesArticle({
   justifyContent,
   title,
   description,
 }: CavalierArticleProps) {
   return (
-    <Article
+    <FeaturesArticleContainer
       justifyContent={justifyContent}
       title={title}
       description={description}
     >
-      <CavalierBox>
+      <ArticleWrapper>
         <CardHeading>{title}</CardHeading>
         <Paragraph>{description}</Paragraph>
-      </CavalierBox>
-    </Article>
+      </ArticleWrapper>
+    </FeaturesArticleContainer>
   );
 }
 
-const Article = styled.article<CavalierArticleProps>`
-  position: relative;
+const FeaturesArticleContainer = styled(ArticleContainer)<CavalierArticleProps>`
   display: flex;
 
   justify-content: ${props => props.justifyContent};
@@ -44,10 +44,6 @@ const Article = styled.article<CavalierArticleProps>`
     transform: translate3d(0, 0, 0);
     transition: opacity 0.2s, transform 0.5s;
   }
-`;
-
-const CavalierBox = styled.div`
-  position: relative;
 `;
 
 const CardHeading = styled.h1`

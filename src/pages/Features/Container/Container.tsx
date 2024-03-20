@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { FeaturesInnerContainer } from '@_components/InnerContainer';
-import CavalierArticle from './CavalierArticle';
+import FeaturesArticle from './CavalierArticle';
 
 const articlesData = [
   {
@@ -22,7 +22,7 @@ export default function Container() {
   return (
     <FeaturesInnerContainer>
       {articlesData.map((article, index) => (
-        <CavalierArticle
+        <FeaturesArticle
           key={index}
           title={article.title}
           description={article.description}

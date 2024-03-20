@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { ProfileInnerContainer } from '@_components/InnerContainer';
+import { ArticleContainer, ArticleWrapper } from '@_components/Article';
+
 export default function Profile() {
   return (
     <ProfilePageSection>
       <ProfileInnerContainer>
-        <CavalierArticle>
-          <CavalierBox>
+        <ProfileArticle>
+          <ArticleWrapper>
             <ProfilePageHeading>
               Frontend
               <br />
@@ -17,11 +19,11 @@ export default function Profile() {
               기본기를 중요하게 생각하고 리팩토링을 생활화하는 개발자,
               박지훈입니다.
             </ProfilePageParagraph>
-          </CavalierBox>
-        </CavalierArticle>
+          </ArticleWrapper>
+        </ProfileArticle>
         <CavalierFigure></CavalierFigure>
       </ProfileInnerContainer>
-      <ContentBox>
+      <ContentInnerContainer>
         <ContentList>
           <ContentItem>
             React 및 Typescript를 사용하여 프로젝트를 개발한 경험이 있습니다.
@@ -30,7 +32,7 @@ export default function Profile() {
             의사소통의 중요성을 인지하고 있으며 성공적인 개발을 위해 노력합니다.
           </ContentItem>
         </ContentList>
-      </ContentBox>
+      </ContentInnerContainer>
       <MobileAvatarBox></MobileAvatarBox>
     </ProfilePageSection>
   );
@@ -70,39 +72,7 @@ const ProfilePageSection = styled.section`
   }
 `;
 
-const ProfileBox = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @media (max-width: 580px) {
-    margin-top: calc(11.12em + 6em);
-    padding: 0 15vw;
-  }
-
-  @media (min-width: 581px) {
-    margin-top: calc(11.12em + 2em);
-  }
-
-  @media (min-width: 581px) and (max-width: 700px) {
-    padding: 0 7rem;
-  }
-
-  @media (min-width: 701px) {
-    padding: 0 10rem;
-  }
-
-  @media (min-width: 701px) and (max-width: 1500px) {
-    max-width: 1500px;
-  }
-
-  @media (min-width: 1501px) {
-    max-width: 1760px;
-  }
-`;
-
-const ContentBox = styled(ProfileBox)`
+const ContentInnerContainer = styled(ProfileInnerContainer)`
   margin-top: auto;
 
   @media (max-width: 580px) {
@@ -116,17 +86,10 @@ const ContentBox = styled(ProfileBox)`
   }
 `;
 
-const CavalierArticle = styled.article`
-  position: relative;
-  text-align: left;
-
+const ProfileArticle = styled(ArticleContainer)`
   @media (min-width: 701px) {
     margin-top: -3.5em;
   }
-`;
-
-const CavalierBox = styled.div`
-  position: relative;
 `;
 
 const ProfilePageHeading = styled.h1`
