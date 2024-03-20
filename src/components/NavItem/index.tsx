@@ -11,7 +11,7 @@ type NavItemProps = {
   children?: ReactNode;
 };
 
-const NavItem: React.FC<NavItemProps> = ({
+export default function NavItem({
   href,
   clickFn,
   isShelfEnv,
@@ -19,16 +19,19 @@ const NavItem: React.FC<NavItemProps> = ({
   resumeURL,
   external,
   children,
-}) => {
+}: NavItemProps) {
   const handleClick = (event: MouseEvent) => {
+    // 내부 링크인 경우 기본 동작 취소
     if (href && href.charAt(0) === '#') {
       event.preventDefault();
     }
 
+    // 사용자 정의 클릭 이벤트 호출
     if (clickFn) {
       clickFn(event);
     }
 
+    // Shelf 환경에서 다른 경로로 이동해야 하는 경우
     if (
       isShelfEnv &&
       window.location.pathname !== href &&
@@ -51,8 +54,6 @@ const NavItem: React.FC<NavItemProps> = ({
     </li>
   );
 };
-
-export default NavItem;
 
 const NavItemLink = styled.a`
   @media (hover: hover) and (any-pointer: fine) {

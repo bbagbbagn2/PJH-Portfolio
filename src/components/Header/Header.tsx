@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import Basic from '../ContactPortal/BasicContact';
+import Basic from '../ContactPortal/BasicContact/BasicContact';
 import Social from '../ContactPortal/SocilaContact';
 import CrossSiteNav from '../CrossSiteNav/CrossSiteNav';
 

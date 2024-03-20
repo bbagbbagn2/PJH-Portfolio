@@ -1,19 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import NavItem from '../NavItem/index';
 
 export default function SocialContact() {
   return (
-    <StyledSocialContact className="social-contact">
+    <SocialContactList>
       <NavItem href="https://github.com/bbagbbagn2" external>
         GitHub
       </NavItem>
-    </StyledSocialContact>
+    </SocialContactList>
   );
 }
 
-const StyledSocialContact = styled.ul`
+const SocialContactList = styled.ul`
   position: relative;
 
   li {

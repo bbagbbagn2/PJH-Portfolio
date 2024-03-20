@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-import Basic from '../ContactPortal/BasicContact';
+import BasicContact from '../ContactPortal/BasicContact/BasicContact';
 import Social from '../ContactPortal/SocilaContact';
 import CrossSiteNav from '../CrossSiteNav/CrossSiteNav';
 
@@ -16,7 +16,7 @@ export default function FooterSection() {
     <S.Footer id="site-footer" className={isHome ? 'homeEnv' : 'projectEnv'}>
       <S.InnerContentBox className="inner-content">
         <S.FooterMainBox className="footer-main">
-          <Basic />
+          <BasicContact />
           <CrossSiteNav classNameProject={isHome ? '' : 'project'} />
         </S.FooterMainBox>
         <S.FooterBottomBox className="footer-bottom">

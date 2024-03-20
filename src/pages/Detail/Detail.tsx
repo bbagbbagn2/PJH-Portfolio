@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Header from '@_components/Header/Header';
 import Footer from '@_components/Footer/Footer';
-import PageHeader from '@_components/PageHeader';
+import PageHeader from '@_components/PageHeader/PageHeader';
 import projectsData from '@_data/data';
 
 import { hyphenateName } from '../../utils/helpers';

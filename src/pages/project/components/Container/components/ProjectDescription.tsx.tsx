@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
 type ParagraphProps = {
   paragraph: string[];
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
+
 export default function PostContainer({ paragraph }: ParagraphProps) {
   return (
     <Container>
       {paragraph.map((text, index) => (
-        <PostParagraph key={index}>{text}</PostParagraph>
+        <Paragraph key={index}>{text}</Paragraph>
       ))}
     </Container>
   );
@@ -22,7 +23,7 @@ const Container = styled.div`
   max-width: 940px;
 `;
 
-const PostParagraph = styled.p`
+const Paragraph = styled.p`
   margin-bottom: 1.25em;
   color: #474747;
   line-height: normal;

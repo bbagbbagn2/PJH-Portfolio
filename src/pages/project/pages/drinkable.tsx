@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
-import CustomSlider from '../components/Slider';
-import PostContainer from '../components/Paragraph';
+import Container from '../components/Container/Container';
+import ProjectSlider from '../components/Container/components/ProjectSlider';
+import ProjectDescription from '../components/Container/components/ProjectDescription.tsx';
 
 import screen1 from '../work-images/drinkable/screen1.png';
 import screen2 from '../work-images/drinkable/screen2.png';
@@ -39,9 +39,9 @@ export default function Drinkable() {
   ];
 
   return (
-    <Layout>
-      <CustomSlider settings={settings} images={images} />
-      <PostContainer paragraph={paragraphs} />
-    </Layout>
+    <Container>
+      <ProjectSlider settings={settings} images={images} />
+      <ProjectDescription paragraph={paragraphs} />
+    </Container>
   );
 }
