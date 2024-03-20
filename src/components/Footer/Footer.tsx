@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
+import { FooterInnerContainer } from '@_components/InnerContainer';
 import BasicContact from '../ContactPortal/BasicContact/BasicContact';
 import Social from '../ContactPortal/SocilaContact';
 import CrossSiteNav from '../CrossSiteNav/CrossSiteNav';
@@ -14,7 +15,7 @@ export default function FooterSection() {
 
   return (
     <S.Footer id="site-footer" className={isHome ? 'homeEnv' : 'projectEnv'}>
-      <S.InnerContentBox className="inner-content">
+      <FooterInnerContainer>
         <S.FooterMainBox className="footer-main">
           <BasicContact />
           <CrossSiteNav classNameProject={isHome ? '' : 'project'} />
@@ -23,7 +24,7 @@ export default function FooterSection() {
           <span>&copy; JH Portfolio {new Date().getFullYear()}</span>
           <Social />
         </S.FooterBottomBox>
-      </S.InnerContentBox>
+      </FooterInnerContainer>
     </S.Footer>
   );
 }

@@ -103,43 +103,6 @@ export const Footer = styled.footer`
   }
 `;
 
-export const InnerContentBox = styled.div`
-  padding-top: 8rem;
-  padding-bottom: 5rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-
-  .footer-main,
-  .footer-bottom {
-    width: 100%;
-    display: flex;
-  }
-
-  @media (max-width: 580px) {
-    padding-left: 15vw;
-    padding-right: 15vw;
-  }
-
-  @media (min-width: 581px) and (max-width: 700px) {
-    padding-left: 7rem;
-    padding-right: 7rem;
-  }
-
-  @media (min-width: 701px) {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  @media (min-width: 701px) and (max-width: 1500px) {
-    max-width: 1500px;
-  }
-
-  @media (min-width: 1501px) {
-    max-width: 1760px;
-  }
-`;
-
 export const FooterMainBox = styled.div`
   margin-bottom: 7.4em;
 

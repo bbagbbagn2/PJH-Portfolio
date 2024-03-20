@@ -51,4 +51,16 @@ const ProfileInnerContainer = styled(Container)`
   }
 `;
 
-export { ProfileInnerContainer, FeaturesInnerContainer };
+const FooterInnerContainer = styled(Container)`
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+  flex-direction: column;
+
+  .footer-main,
+  .footer-bottom {
+    width: 100%;
+    display: flex;
+  }
+`;
+
+export { ProfileInnerContainer, FeaturesInnerContainer, FooterInnerContainer };
