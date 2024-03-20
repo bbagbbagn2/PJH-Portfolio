@@ -1,6 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
-
 import { FeaturesInnerContainer } from '@_components/InnerContainer';
 import FeaturesArticle from './CavalierArticle';
 
