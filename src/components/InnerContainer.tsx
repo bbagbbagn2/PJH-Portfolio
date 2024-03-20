@@ -35,7 +35,7 @@ const Container = styled.div`
 `;
 
 const FeaturesInnerContainer = styled(Container)`
-    flex-direction: column;
+  flex-direction: column;
 `;
 
 const ProfileInnerContainer = styled(Container)`

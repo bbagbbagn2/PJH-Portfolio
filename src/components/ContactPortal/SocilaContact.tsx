@@ -2,9 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import NavItem from '../NavItem/index';
 
-export default function SocialContact() {
+type SocialContactProps = { 
+  className?: string;
+}
+
+export default function SocialContact({ className }: SocialContactProps) {
   return (
-    <SocialContactList>
+    <SocialContactList className={className}>
       <NavItem href="https://github.com/bbagbbagn2" external>
         GitHub
       </NavItem>
