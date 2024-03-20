@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { FeaturesInnerContainer } from '@_components/InnerContainer';
 import CavalierArticle from './CavalierArticle';
 
 const articlesData = [
@@ -17,9 +18,9 @@ const articlesData = [
   },
 ];
 
-export default function InnerContainer() {
+export default function Container() {
   return (
-    <Container>
+    <FeaturesInnerContainer>
       {articlesData.map((article, index) => (
         <CavalierArticle
           key={index}
@@ -28,32 +29,6 @@ export default function InnerContainer() {
           justifyContent={article.justifyContent}
         />
       ))}
-    </Container>
+    </FeaturesInnerContainer>
   );
 }
-
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: 580px) {
-    padding: 0 15vw;
-  }
-
-  @media (min-width: 581px) and (max-width: 700px) {
-    padding: 0 7rem;
-  }
-
-  @media (min-width: 701px) {
-    padding: 0 10rem;
-  }
-
-  @media (min-width: 701px) and (max-width: 1500px) {
-    max-width: 1500px;
-  }
-
-  @media (min-width: 1501px) {
-    max-width: 1760px;
-  }
-`;

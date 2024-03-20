@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import InnerContainer from './Container/InnerContainer';
+import Container from './Container/Container';
+
 export default function Features() {
   return (
     <Section>
-      <InnerContainer />
+      <Container />
     </Section>
   );
 }

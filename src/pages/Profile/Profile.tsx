@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { ProfileInnerContainer } from '@_components/InnerContainer';
 export default function Profile() {
   return (
     <ProfilePageSection>
-      <ProfileBox>
+      <ProfileInnerContainer>
         <CavalierArticle>
           <CavalierBox>
             <ProfilePageHeading>
@@ -19,7 +20,7 @@ export default function Profile() {
           </CavalierBox>
         </CavalierArticle>
         <CavalierFigure></CavalierFigure>
-      </ProfileBox>
+      </ProfileInnerContainer>
       <ContentBox>
         <ContentList>
           <ContentItem>
