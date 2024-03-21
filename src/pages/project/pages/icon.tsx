@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Container from '../components/Container/Container';
-import ProjectSlider from '../components/Container/components/ProjectSlider';
-import ProjectParagraph from '../components/Container/components/ProjectDescription.tsx';
+import Container from '../components/Container';
+import ProjectSlider from '../components/components/ProjectSlider';
+import ProjectParagraph from '../components/components/ProjectDescription.tsx';
 
 import screen1 from '../work-images/icondb/screen1.png';
 import screen2 from '../work-images/icondb/screen2.png';

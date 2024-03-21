@@ -1,39 +1,42 @@
 import React from 'react';
 import styled from 'styled-components';
+import InnerSection from '@_components/InnerSection';
 import { CarriagewayContainer } from '@_components/InnerContainer';
+import { CarriagewayArticle, ArticleWrapper } from '@_components/Article';
+import { CarriagewayTitle } from '@_components/Title';
 export default function Carriageway() {
   return (
-    <StyledCarriageway>
+    <InnerSection>
       <CarriagewayContainer>
         <Lanes>
           <Lane>
-            <CavalierArticle>
-              <CavalierBox>
-                <Heading>
+            <CarriagewayArticle>
+              <ArticleWrapper>
+                <CarriagewayTitle>
                   개발,
                   <br />
                   디자인
-                </Heading>
+                </CarriagewayTitle>
                 <CavalierParagraph>
                   오픈 소스,
                   <br />
                   개인 &<br />팀 프로젝트.
                   <br />
                 </CavalierParagraph>
-              </CavalierBox>
-            </CavalierArticle>
+              </ArticleWrapper>
+            </CarriagewayArticle>
             <ProjectLink href="/project">
               <LinkBox>프로젝트 보러가기</LinkBox>
             </ProjectLink>
           </Lane>
           <RightLane>
-            <CavalierArticle>
-              <CavalierBox>
-                <Heading>
+            <CarriagewayArticle>
+              <ArticleWrapper>
+                <CarriagewayTitle>
                   나의
                   <br />
                   이력서
-                </Heading>
+                </CarriagewayTitle>
                 <CavalierParagraph>
                   자기소개,
                   <br />
@@ -41,8 +44,8 @@ export default function Carriageway() {
                   프로젝트 소개.
                   <br />
                 </CavalierParagraph>
-              </CavalierBox>
-            </CavalierArticle>
+              </ArticleWrapper>
+            </CarriagewayArticle>
             <ProjectLink
               target="_blank"
               href="https://www.notion.so/parkresume/c4ce189e86cf43e8858349a33ebb482d"
@@ -52,37 +55,9 @@ export default function Carriageway() {
           </RightLane>
         </Lanes>
       </CarriagewayContainer>
-    </StyledCarriageway>
+    </InnerSection>
   );
 }
-
-const StyledCarriageway = styled.section`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: auto;
-
-  @media (max-width: 580px) {
-    margin-bottom: 10rem;
-  }
-
-  @media (min-width: 581px) and (max-width: 700px) {
-    padding-bottom: 15vh;
-  }
-
-  @media (max-height: 1199px) {
-    @media (min-width: 701px) {
-      min-height: 100vh;
-    }
-  }
-
-  @media (min-width: 701px) {
-    @media (max-height: 1199px) {
-      height: 100vh;
-    }
-  }
-`;
 
 const Lanes = styled.div`
   width: 100%;
@@ -121,31 +96,6 @@ const Lane = styled.div`
 
 const RightLane = styled(Lane)`
   border: none;
-`;
-
-const CavalierArticle = styled.article`
-  position: relative;
-  margin-bottom: 4.5em;
-  text-align: left;
-`;
-
-const CavalierBox = styled.div`
-  position: relative;
-`;
-
-const Heading = styled.h1`
-  margin: 0;
-  font-size: 3.2em;
-  font-weight: 900;
-  color: #3c8fdd;
-  transform: translate3d(0, 0, 0);
-  opacity: 1;
-  transition: trnsform 0.5s, opacity 0.2s;
-
-  @media screen and (min-width: 701px) {
-    max-width: 30vw;
-    transition-delay: 200ms;
-  }
 `;
 
 const CavalierParagraph = styled.p`

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ArticleContainer, ArticleWrapper } from '@_components/Article';
+import { FeaturesTitle } from '@_components/Title';
 
 type CavalierArticleProps = {
   justifyContent?: string;
@@ -20,7 +21,7 @@ export default function FeaturesArticle({
       description={description}
     >
       <ArticleWrapper>
-        <CardHeading>{title}</CardHeading>
+        <FeaturesTitle>{title}</FeaturesTitle>
         <Paragraph>{description}</Paragraph>
       </ArticleWrapper>
     </FeaturesArticleContainer>
@@ -43,21 +44,6 @@ const FeaturesArticleContainer = styled(ArticleContainer)<CavalierArticleProps>`
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: opacity 0.2s, transform 0.5s;
-  }
-`;
-
-const CardHeading = styled.h1`
-  font-size: 4em;
-  font-weight: 900;
-  line-height: 1.1;
-  color: #3c8fdd;
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  transition: opacity 0.2s, transform 0.5s;
-
-  @media (min-width: 701px) {
-    max-width: 30vw;
-    transition-delay: 200ms;
   }
 `;
 

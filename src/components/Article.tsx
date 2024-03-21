@@ -21,4 +21,8 @@ const ArticleWrapper = styled.div`
   position: relative;
 `;
 
-export { ArticleContainer, ArticleWrapper };
+const CarriagewayArticle = styled(ArticleContainer)`
+  margin-bottom: 4.5em;
+`;
+
+export { ArticleContainer, ArticleWrapper, CarriagewayArticle };
