@@ -1,18 +1,20 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import NavItem from '../NavItem/index';
 
-type CrossSiteNavProps = {
-  classNameProject?: string;
-};
+const homeLink = <NavItem href="/">Home</NavItem>;
 
-export default function BasicContact({ classNameProject }: CrossSiteNavProps) {
-  const renderHomeNavItem = () => {
-    return classNameProject === 'project' && <NavItem href="/">Home</NavItem>;
-  };
+export default function BasicContact() {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  function renderHomeNavItem() {
+    return !isHome && homeLink;
+  }
 
   return (
-    <CrossSiteNavList className={`${classNameProject} cross-site-nav`}>
+    <CrossSiteNavList>
       {renderHomeNavItem()}
       <NavItem href="/project">내 프로젝트</NavItem>
       <NavItem
@@ -23,7 +25,7 @@ export default function BasicContact({ classNameProject }: CrossSiteNavProps) {
       </NavItem>
     </CrossSiteNavList>
   );
-};
+}
 
 const CrossSiteNavList = styled.ul`
   a {

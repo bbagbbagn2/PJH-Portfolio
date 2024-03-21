@@ -11,7 +11,7 @@ export default function FooterMainWrapper({ isHome }: MainWrapperProps) {
   return (
     <MainWrapper>
       <BasicContact />
-      <CrossSiteNav classNameProject={isHome ? '' : 'project'} />
+      <CrossSiteNav />
     </MainWrapper>
   );
 }
