@@ -5,15 +5,15 @@ import ContentContainer from './components/ContentContainer/ContentContainer';
 
 export default function Profile() {
   return (
-    <ProfilePageSection>
+    <Section>
       <ProfileContainer />
       <ContentContainer />
       <MobileAvatarBox />
-    </ProfilePageSection>
+    </Section>
   );
 }
 
-const ProfilePageSection = styled.section`
+const Section = styled.section`
   /* Positioning */
   position: relative;
   padding-bottom: 4.17rem;

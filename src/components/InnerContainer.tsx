@@ -51,6 +51,34 @@ const ProfileInnerContainer = styled(Container)`
   }
 `;
 
+const CarriagewayContainer = styled(Container)`
+  position: relative;
+  justify-content: center;
+
+  @media (min-aspect-ratio: 1440 / 900) {
+    margin-top: 4.2rem;
+  }
+
+  @media (max-width: 580px) {
+    padding: 0 6vw;
+  }
+
+  @media (min-width: 1024px) and (min-height: 665px) and (max-height: 1500px) {
+    > div {
+      min-height: 40em;
+    }
+  }
+
+  @media (max-width: 1500px) {
+    max-width: unset;
+    padding: 0 calc(6em - 2em);
+  }
+
+  @media (min-width: 1501px) {
+    padding: 0 5em;
+  }
+`;
+
 const FooterInnerContainer = styled(Container)`
   padding-top: 8rem;
   padding-bottom: 5rem;
@@ -63,4 +91,4 @@ const FooterInnerContainer = styled(Container)`
   }
 `;
 
-export { ProfileInnerContainer, FeaturesInnerContainer, FooterInnerContainer };
+export { CarriagewayContainer, ProfileInnerContainer, FeaturesInnerContainer, FooterInnerContainer };

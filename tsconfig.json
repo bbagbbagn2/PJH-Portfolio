@@ -11,6 +11,6 @@
     "jsx": "react",
     "allowJs": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/pages/Detail/ProjectContainer/ProjectBox"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules"]
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { CarriagewayContainer } from '@_components/InnerContainer';
 export default function Carriageway() {
   return (
     <StyledCarriageway>
-      <InnerContentBox>
+      <CarriagewayContainer>
         <Lanes>
           <Lane>
             <CavalierArticle>
@@ -51,7 +51,7 @@ export default function Carriageway() {
             </ProjectLink>
           </RightLane>
         </Lanes>
-      </InnerContentBox>
+      </CarriagewayContainer>
     </StyledCarriageway>
   );
 }
@@ -81,37 +81,6 @@ const StyledCarriageway = styled.section`
     @media (max-height: 1199px) {
       height: 100vh;
     }
-  }
-`;
-
-const InnerContentBox = styled.div`
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-  @media (min-aspect-ratio: 1440 / 900) {
-    margin-top: 4.2rem;
-  }
-
-  @media (max-width: 580px) {
-    padding: 0 6vw;
-  }
-
-  @media (min-width: 1024px) and (min-height: 665px) and (max-height: 1500px) {
-    > div {
-      min-height: 40em;
-    }
-  }
-
-  @media (max-width: 1500px) {
-    max-width: unset;
-    padding: 0 calc(6em - 2em);
-  }
-
-  @media (min-width: 1501px) {
-    padding: 0 5em;
-    max-width: 1760px;
   }
 `;
 

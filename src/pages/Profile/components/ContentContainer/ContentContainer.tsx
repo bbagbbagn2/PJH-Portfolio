@@ -16,13 +16,13 @@ const contentData = [
 
 export default function ContentContainer() {
   return (
-    <ContentInnerContainer>
+    <Container>
       <ContentList contents={contentData} />
-    </ContentInnerContainer>
+    </Container>
   );
 }
 
-const ContentInnerContainer = styled(ProfileInnerContainer)`
+const Container = styled(ProfileInnerContainer)`
   margin-top: auto;
 
   @media (max-width: 580px) {

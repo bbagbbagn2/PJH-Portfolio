@@ -7,31 +7,31 @@ import { ArticleContainer, ArticleWrapper } from '@_components/Article';
 export default function ProfileContainer() {
   return (
     <ProfileInnerContainer>
-      <ProfileArticle>
+      <Article>
         <ArticleWrapper>
-          <ProfilePageHeading>
+          <Title>
             Frontend
             <br />
             Developer.
-          </ProfilePageHeading>
-          <ProfilePageParagraph>
+          </Title>
+          <Description>
             기본기를 중요하게 생각하고 리팩토링을 생활화하는 개발자,
             박지훈입니다.
-          </ProfilePageParagraph>
+          </Description>
         </ArticleWrapper>
-      </ProfileArticle>
-      <CavalierFigure />
+      </Article>
+      <Figure />
     </ProfileInnerContainer>
   );
 }
 
-const ProfileArticle = styled(ArticleContainer)`
+const Article = styled(ArticleContainer)`
   @media (min-width: 701px) {
     margin-top: -3.5em;
   }
 `;
 
-const ProfilePageHeading = styled.h1`
+const Title = styled.h1`
   color: #dbf227;
   font-size: 4em;
   line-height: 1.1;
@@ -53,7 +53,7 @@ const ProfilePageHeading = styled.h1`
   }
 `;
 
-const ProfilePageParagraph = styled.p`
+const Description = styled.p`
   color: #fff;
   line-height: 1.6;
   opacity: 1;
@@ -80,7 +80,7 @@ const ProfilePageParagraph = styled.p`
   }
 `;
 
-const CavalierFigure = styled.figure`
+const Figure = styled.figure`
   margin: 0;
   position: relative;
   width: 23.2334em;
