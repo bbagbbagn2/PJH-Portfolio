@@ -1,3 +1,5 @@
+import projectsData from '@_data/data';
+
 interface SEOProperty {
   name: string;
   content: string;
@@ -33,4 +35,15 @@ export function hyphenateName(name: string): string {
     .toLowerCase()
     .replace(/\s/g, '-')
     .replace(/[!$%^&*()_+|~=`{}[\]:";'<>?,./]/gi, '');
+}
+
+export function formatprojectData() {
+  return projectsData.map(project => ({
+    ...project,
+    summaryLinkLabel: project.internalPage
+      ? null
+      : project.name + ' live demo.',
+    siteURL: project.siteName ? 'https://' + project.siteName : '#',
+    path: '/project/' + hyphenateName(project.name),
+  }));
 }

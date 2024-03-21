@@ -2,16 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
-
-import { colors } from '@_components/theme';
-
 import App from './App';
 
 const GlobalStyle = createGlobalStyle`
-
-  *,
-  *::before,
-  *::after {
+  * {
     box-sizing: border-box;
   }
 

@@ -1,78 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import Header from '@_components/Header/Header';
 import Footer from '@_components/Footer/Footer';
 import PageHeader from '@_components/PageHeader/PageHeader';
-import projectsData from '@_data/data';
-
-import { hyphenateName } from '../../utils/helpers';
-import { ReactComponent as IconDBLogo } from '@_logos/icondb-logo.svg';
-import { ReactComponent as DrinkableLogo } from '@_logos/drinkable-logo.svg';
-import { ReactComponent as PersonalLogo } from '@_logos/Pjh-Portfolio logo.svg';
+import ProjectList from './ProjectContainer/ProjectList';
 
 export default function Detail() {
-  const projects = projectsData.map(project => ({
-    ...project,
-    summaryLinkLabel: project.internalPage
-      ? null
-      : project.name + ' live demo.',
-    siteURL: project.siteName ? 'https://' + project.siteName : '#',
-    path: '/project/' + hyphenateName(project.name),
-  }));
-
   return (
     <>
       <Header />
-      <StyledProject id="work" title="">
+      <MainContainer>
         <PageHeader title="project" desc="팀 & 개인 프로젝트 리스트." />
-        <WorkContainer>
-          <ProjectList aria-label="Projects.">
-            {projects.map((project, key) => (
-              <ProjectItem key={key}>
-                <ProjectLogoBox
-                  aria-label={project.summaryLinkLabel || undefined}
-                  target={!project.internalPage ? '_blank' : undefined}
-                  rel={
-                    !project.internalPage ? 'noopener noreferrer' : undefined
-                  }
-                  href={project.internalPage ? project.path : project.siteURL}
-                >
-                  {project.name} project summary.
-                </ProjectLogoBox>
-
-                <ProjectLogoFigure>
-                  {project.name === 'Icondb' && <IconDBLogo />}
-                  {project.name === 'Drinkable' && <DrinkableLogo />}
-                  {project.name === 'Personal Website' && <PersonalLogo />}
-                  <figcaption className="visuallyhidden">
-                    {project.name} logo.
-                  </figcaption>
-                </ProjectLogoFigure>
-
-                <ProjectInfoBox>
-                  <ProjectInfoHeading>{project.name}</ProjectInfoHeading>
-                  {project.siteName && project.siteURL && (
-                    <ProjectInfoLink
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={project.name + ' live demo.'}
-                      href={project.siteURL}
-                    >
-                      {project.siteName}
-                    </ProjectInfoLink>
-                  )}
-                </ProjectInfoBox>
-              </ProjectItem>
-            ))}
-          </ProjectList>
-        </WorkContainer>
-      </StyledProject>
+        <ProjectList />
+      </MainContainer>
       <Footer />
     </>
   );
 }
-const StyledProject = styled.main`
+const MainContainer = styled.main`
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 3.5rem;
@@ -102,84 +47,4 @@ const StyledProject = styled.main`
     overflow: hidden;
     white-space: nowrap;
   }
-`;
-
-const WorkContainer = styled.section``;
-
-const ProjectList = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.2rem;
-  justify-content: space-between;
-`;
-
-const ProjectItem = styled.li`
-  /* Positioning */
-  position: relative;
-  margin-bottom: 1.2rem;
-
-  /* Styling */
-  border-radius: 0.2rem;
-  box-shadow: 0 8px 6px -6px rgba(235, 234, 242, 0.5);
-  background-color: #fff;
-
-  /* Overflow handling */
-  overflow: hidden;
-
-  /* Transition effect */
-  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  transition-property: transform, box-shadow;
-
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 15px 8px 6px -6px rgba(235, 234, 242, 0.58);
-  }
-`;
-
-const ProjectLogoBox = styled.a`
-  /* Positioning */
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  /* Dimensions */
-  width: 100%;
-  height: 80%;
-
-  /* Styling */
-  background-color: transparent;
-  text-indent: -9999px;
-
-  /* Overflow handling */
-  overflow: hidden;
-
-  /* Transition effect */
-  transition: none;
-
-  /* Z-index */
-  z-index: 0;
-`;
-
-const ProjectLogoFigure = styled.figure`
-  margin: 0;
-  height: 10em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(245, 244, 252, 0.62);
-  transition: filter 0.3s;
-`;
-
-const ProjectInfoBox = styled.div`
-  padding: 2em;
-`;
-
-const ProjectInfoHeading = styled.h5`
-  margin: 0;
-  font-size: 1.125em;
-`;
-
-const ProjectInfoLink = styled.a`
-  white-space: pre;
-  color: #3c8fdd;
 `;
