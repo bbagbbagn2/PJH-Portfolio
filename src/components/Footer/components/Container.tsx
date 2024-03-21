@@ -59,4 +59,4 @@ const BottomWrapper = styled(Wrapper)`
   }
 `;
 
-export { MainWrapper,BottomWrapper };
+export { MainWrapper, BottomWrapper };

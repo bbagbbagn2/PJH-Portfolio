@@ -14,7 +14,7 @@ export default function FooterSection() {
   return (
       <FooterContainer id="site-footer">
         <FooterInnerContainer>
-          <MainWrapper isHome={isHome} />
+          <MainWrapper />
           <BottomWrapper />
         </FooterInnerContainer>
       </FooterContainer>
