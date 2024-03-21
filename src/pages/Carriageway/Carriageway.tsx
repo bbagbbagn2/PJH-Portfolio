@@ -3,13 +3,16 @@ import styled from 'styled-components';
 import InnerSection from '@_components/InnerSection';
 import { CarriagewayContainer } from '@_components/InnerContainer';
 import { CarriagewayArticle, ArticleWrapper } from '@_components/Article';
+import LaneContainer from './components/LaneContainer';
+import LaneBox from './components/LaneBox';
 import { CarriagewayTitle } from '@_components/Title';
+
 export default function Carriageway() {
   return (
     <InnerSection>
       <CarriagewayContainer>
-        <Lanes>
-          <Lane>
+        <LaneContainer>
+          <LaneBox>
             <CarriagewayArticle>
               <ArticleWrapper>
                 <CarriagewayTitle>
@@ -28,8 +31,8 @@ export default function Carriageway() {
             <ProjectLink href="/project">
               <LinkBox>프로젝트 보러가기</LinkBox>
             </ProjectLink>
-          </Lane>
-          <RightLane>
+          </LaneBox>
+          <LaneBox>
             <CarriagewayArticle>
               <ArticleWrapper>
                 <CarriagewayTitle>
@@ -52,51 +55,12 @@ export default function Carriageway() {
             >
               <LinkBox>이력서 보러가기</LinkBox>
             </ProjectLink>
-          </RightLane>
-        </Lanes>
+          </LaneBox>
+        </LaneContainer>
       </CarriagewayContainer>
     </InnerSection>
   );
 }
-
-const Lanes = styled.div`
-  width: 100%;
-  display: flex;
-  background-color: #f9f9f9;
-
-  @media (max-width: 580px) {
-    flex-direction: column;
-  }
-`;
-
-const Lane = styled.div`
-  padding: 6.95em;
-  padding-left: 6em;
-
-  :not(:last-of-type) {
-    border-style: solid;
-    border-width: 0 0 0.15rem 0;
-    border-color: rgba(60, 143, 221, 0.3);
-  }
-
-  @media (min-width: 581px) {
-    width: 50%;
-
-    :not(:last-of-type) {
-      border-bottom-width: 0;
-      border-right-width: 0.15rem;
-    }
-  }
-
-  @media (min-width: 581px) and (max-width: 700px) {
-    padding-left: 4.5em;
-    padding-right: 4.5em;
-  }
-`;
-
-const RightLane = styled(Lane)`
-  border: none;
-`;
 
 const CavalierParagraph = styled.p`
   width: unset;
