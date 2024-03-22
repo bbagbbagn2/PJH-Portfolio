@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Container from '../components/Container';
+import Container from '../components/Project';
 import ProjectSlider from '../components/components/ProjectSlider';
 import ProjectDescription from '../components/components/ProjectDescription.tsx';
 

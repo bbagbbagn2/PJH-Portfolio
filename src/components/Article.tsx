@@ -2,8 +2,8 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
 type ArticleProps = {
-    children: ReactNode;
-} 
+  children: ReactNode;
+};
 
 export default function Article({ children }: ArticleProps) {
   return (

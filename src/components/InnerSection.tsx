@@ -21,7 +21,7 @@ const Section = styled.section`
   }
 
   @media (min-width: 581px) and (max-width: 700px) {
-    padding: 15vh;
+    padding: 15vh 0;
   }
 
   @media (min-width: 701px) {
@@ -42,6 +42,10 @@ const FeaturesSection = styled(Section)`
 
   li a {
     color: currentColor;
+  }
+
+  @media (min-width: 581px) and (max-width: 700px) {
+    padding-bottom: 0;
   }
 `;
 
