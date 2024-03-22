@@ -2,8 +2,8 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { FooterInnerContainer } from '@_components/InnerContainer';
-import MainWrapper from './components/MainWrapper';
-import BottomWrapper from './components/BottomWrapper';
+import MainWrapper from './components/Wrapper/MainWrapper';
+import BottomWrapper from './components/Wrapper/BottomWrapper';
 import theme from '@_components/theme';
 
 export default function FooterSection() {

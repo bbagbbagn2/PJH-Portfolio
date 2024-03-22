@@ -25,4 +25,20 @@ const CarriagewayArticle = styled(ArticleContainer)`
   margin-bottom: 4.5em;
 `;
 
-export { ArticleContainer, ArticleWrapper, CarriagewayArticle };
+const FeaturesArticle = styled(ArticleContainer)`
+  display: flex;
+
+  @media (max-width: 700px) {
+    :not(:last-of-type) {
+      margin-bottom: 6vh;
+    }
+  }
+`;
+
+const ProfileArticle = styled(ArticleContainer)`
+  @media (min-width: 701px) {
+    margin-top: -3.5em;
+  }
+`;
+
+export { ArticleContainer, ArticleWrapper, CarriagewayArticle, FeaturesArticle, ProfileArticle };

@@ -1,6 +1,6 @@
 import React from 'react';
 import SocialContact from '@_components/ContactPortal/SocilaContact';
-import { BottomWrapper } from './Container';
+import { BottomWrapper } from '../InnerWrapper';
 
 export default function FooterBottomWrapper() {
   return (

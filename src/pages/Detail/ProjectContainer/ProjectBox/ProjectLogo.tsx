@@ -10,16 +10,16 @@ type ProjectLogoProps = {
   };
 };
 
-const IcondbLogo = <IconDB />;
-const DrinkableLogo = <Drinkable />;
-const PersonalLogo = <Personal />;
+const ICONDB_LOGO = <IconDB />;
+const DRINKABLE_LOGO = <Drinkable />;
+const PERSONAL_LOGO = <Personal />;
 
 export default function ProjectLogo({ project }: ProjectLogoProps) {
   return (
     <Figure>
-      {project.name === 'Icondb' && IcondbLogo}
-      {project.name === 'Drinkable' && DrinkableLogo}
-      {project.name === 'Personal Website' && PersonalLogo}
+      {project.name === 'Icondb' && ICONDB_LOGO}
+      {project.name === 'Drinkable' && DRINKABLE_LOGO}
+      {project.name === 'Personal Website' && PERSONAL_LOGO}
       <figcaption className="visuallyhidden">{project.name} logo.</figcaption>
     </Figure>
   );

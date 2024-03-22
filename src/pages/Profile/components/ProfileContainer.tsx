@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { ProfileInnerContainer } from '@_components/InnerContainer';
-import { ArticleContainer, ArticleWrapper } from '@_components/Article';
+import { ProfileArticle, ArticleWrapper } from '@_components/Article';
 
 export default function ProfileContainer() {
   return (
     <ProfileInnerContainer>
-      <Article>
+      <ProfileArticle>
         <ArticleWrapper>
           <Title>
             Frontend
@@ -15,21 +15,14 @@ export default function ProfileContainer() {
             Developer.
           </Title>
           <Description>
-            기본기를 중요하게 생각하고 리팩토링을 생활화하는 개발자,
-            박지훈입니다.
+            안녕하세요, 어제보다 나은 개발자 박지훈입니다.
           </Description>
         </ArticleWrapper>
-      </Article>
+      </ProfileArticle>
       <Figure />
     </ProfileInnerContainer>
   );
 }
-
-const Article = styled(ArticleContainer)`
-  @media (min-width: 701px) {
-    margin-top: -3.5em;
-  }
-`;
 
 const Title = styled.h1`
   color: #dbf227;
