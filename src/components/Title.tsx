@@ -25,11 +25,24 @@ const Heading = styled.h1`
 `;
 
 const CarriagewayTitle = styled(Heading)`
-    font-size: 3.2em;
+  font-size: 3.2em;
 `;
 
 const FeaturesTitle = styled(Heading)`
-    font-size: 4em;    
+  font-size: 4em;
 `;
 
-export { CarriagewayTitle, FeaturesTitle };
+const ProfileTitle = styled(Heading)`
+  color: #dbf227;
+  font-size: 4em;
+  line-height: 1.1;
+  
+  @media (max-width: 580px) {
+    font-size: 5em;
+  }
+
+  @media (min-width: 581px) {
+    font-size: 4.4em;
+  }
+`;
+export { CarriagewayTitle, FeaturesTitle, ProfileTitle };

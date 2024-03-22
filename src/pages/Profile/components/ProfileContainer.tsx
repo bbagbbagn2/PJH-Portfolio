@@ -3,75 +3,28 @@ import styled from 'styled-components';
 
 import { ProfileInnerContainer } from '@_components/InnerContainer';
 import { ProfileArticle, ArticleWrapper } from '@_components/Article';
+import { ProfileTitle } from '@_components/Title';
+import { ProfileText } from '@_components/Text';
 
 export default function ProfileContainer() {
   return (
     <ProfileInnerContainer>
       <ProfileArticle>
         <ArticleWrapper>
-          <Title>
+          <ProfileTitle>
             Frontend
             <br />
             Developer.
-          </Title>
-          <Description>
-            안녕하세요, 어제보다 나은 개발자 박지훈입니다.
-          </Description>
+          </ProfileTitle>
+          <ProfileText>
+            안녕하세요! 어제보다 나아지는 개발자 박지훈입니다.
+          </ProfileText>
         </ArticleWrapper>
       </ProfileArticle>
       <Figure />
     </ProfileInnerContainer>
   );
 }
-
-const Title = styled.h1`
-  color: #dbf227;
-  font-size: 4em;
-  line-height: 1.1;
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.5s, opacity 0.2s;
-
-  @media (max-width: 580px) {
-    font-size: 5em;
-  }
-
-  @media (min-width: 581px) {
-    font-size: 4.4em;
-  }
-
-  @media (min-width: 701px) {
-    max-width: 30vw;
-    transition-delay: 0.2s;
-  }
-`;
-
-const Description = styled.p`
-  color: #fff;
-  line-height: 1.6;
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.5s, opacity 0.2s;
-
-  @media (max-width: 580px) {
-    font-size: 2em;
-  }
-
-  @media (min-width: 581px) {
-    font-size: 1.3em;
-  }
-
-  @media (max-width: 700px) {
-    max-width: 20em;
-  }
-
-  @media (min-width: 701px) {
-    width: 32vw;
-    max-width: 701px;
-    font-size: 1.07em;
-    transition-delay: 310ms;
-  }
-`;
 
 const Figure = styled.figure`
   margin: 0;
