@@ -9,51 +9,9 @@ import * as S from './Header.styles';
 
 export default function HeaderSection() {
   const [isMenuFocused, setIsMenuFocused] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isFooterPage, setIsFooterPage] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileMenuOpen(window.innerWidth <= 700);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    const footerElement = document.getElementById('site-footer');
-    const headerElement = document.getElementById('site-header');
-
-    const handleScroll = () => {
-      if (footerElement && headerElement) {
-        const footerRect = footerElement?.getBoundingClientRect();
-        const headerRect = headerElement?.getBoundingClientRect();
-
-        setIsFooterPage(footerRect.top < headerRect.top);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const handelMenuClick = () => {
     setIsMenuFocused(prev => !prev);
-  };
-
-  const handleHome = () => {
-    setIsMenuFocused(false);
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
   };
 
   const location = useLocation();
@@ -66,12 +24,10 @@ export default function HeaderSection() {
         isMenuFocused ? 'open' : 'close'
       }`}
     >
-      <S.NavItem id="logo" onClick={handleHome}></S.NavItem>
+      <S.NavItem id="logo"></S.NavItem>
       <S.MenuToggle
         onClick={handelMenuClick}
-        className={`menu-toggle ${isMenuFocused ? 'x' : ''} ${
-          isFooterPage ? 'footer-page' : ''
-        }`}
+        className={`menu-toggle ${isMenuFocused ? 'x' : ''}`}
       />
       <S.ContactMenu
         id="contact-menu"

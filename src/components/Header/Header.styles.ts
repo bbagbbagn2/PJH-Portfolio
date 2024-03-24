@@ -3,28 +3,19 @@ import styled, { css } from 'styled-components';
 import theme from '../theme';
 
 export const Header = styled.header`
-  /* Dimensions */
   width: 100%;
   max-height: 12rem;
-
-  /* Styling */
   background: transparent;
-
-  /* Layout */
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  /* Z-index*/
   z-index: 1000;
 
-  /* Font size and height based on props */
   font-size: ${props =>
     props.className?.includes('project') ? '0.72rem' : '1rem'};
   height: ${props =>
     props.className?.includes('home') ? theme.header.height : 'unset'};
 
-  /* Additional styling for project class */
   ${props =>
     props.className?.includes('project') &&
     css`
@@ -60,14 +51,8 @@ export const Header = styled.header`
     position: fixed;
     padding-left: ${theme.header.padding};
     padding-right: ${theme.header.padding};
-
-    .crosss-site-nav {
-      line-height: 2.5;
-      font-size: 1.15em;
-    }
   }
 
-  /* Home Header Styles */
   &.home {
     @media (max-width: 580px) {
       font-size: 1.2rem;
@@ -92,7 +77,6 @@ export const Header = styled.header`
     }
   }
 
-  /* Project Header Styles */
   &.project {
     position: unset;
 
@@ -142,25 +126,14 @@ export const Header = styled.header`
 `;
 
 export const MenuToggle = styled.button`
-  /* Positioning */
   position: relative;
   margin-top: 0.699em;
-
-  /* Dimensions */
   width: 2.78em;
   height: 2.09em;
-
-  /* Styling */
   background: none;
   color: ${theme.colors.blue};
-
-  /* Layout */
   display: inline-flex;
-
-  /* interaction */
   cursor: pointer;
-
-  /* Z-index */
   z-index: 999;
 
   &.x {

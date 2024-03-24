@@ -12,7 +12,7 @@ export default function FooterSection() {
   const FooterContainer = isHome ? HomeFooter : ProjectFooter;
 
   return (
-      <FooterContainer id="site-footer">
+      <FooterContainer>
         <FooterInnerContainer>
           <MainWrapper />
           <BottomWrapper />
