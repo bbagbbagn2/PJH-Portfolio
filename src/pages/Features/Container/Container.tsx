@@ -1,6 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
 import { FeaturesInnerContainer } from '@_components/InnerContainer';
 import FeaturesArticle from './CavalierArticle';
+
 
 const articlesData = [
   {
@@ -18,14 +21,21 @@ const articlesData = [
 
 export default function Container() {
   return (
+
     <FeaturesInnerContainer>
       {articlesData.map((article, index) => (
-        <FeaturesArticle
+        <motion.div
           key={index}
-          title={article.title}
-          description={article.description}
-          justifyContent={article.justifyContent}
-        />
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+          transition={{ duration: 0.5 }}>
+          <FeaturesArticle
+            key={index}
+            title={article.title}
+            description={article.description}
+            justifyContent={article.justifyContent}
+          />
+        </motion.div>
       ))}
     </FeaturesInnerContainer>
   );

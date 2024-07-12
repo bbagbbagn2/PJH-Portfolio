@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from "framer-motion";
+
 import { ProfileInnerContainer } from '@_components/InnerContainer';
 import ContentList from './ContentList/ContentList';
 
@@ -14,10 +16,24 @@ const contentData = [
   },
 ];
 
+const container = (delay: number) => ({
+  hidden: { x: -100, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.5, delay: delay }
+  }
+});
+
 export default function ContentContainer() {
   return (
     <Container>
-      <ContentList contents={contentData} />
+      <motion.div
+        variants={container(1)}
+        initial="hidden"
+        animate="visible">
+        <ContentList contents={contentData} />
+      </motion.div>
     </Container>
   );
 }

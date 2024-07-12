@@ -1,24 +1,44 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from "framer-motion";
 
 import { ProfileInnerContainer } from '@_components/InnerContainer';
 import { ProfileArticle, ArticleWrapper } from '@_components/Article';
 import { ProfileTitle } from '@_components/Title';
 import { ProfileText } from '@_components/Text';
 
+const container = (delay: number) => ({
+  hidden: { x: -100, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.5, delay: delay }
+  }
+});
+
 export default function ProfileContainer() {
   return (
     <ProfileInnerContainer>
       <ProfileArticle>
         <ArticleWrapper>
-          <ProfileTitle>
-            Frontend
-            <br />
-            Developer.
-          </ProfileTitle>
-          <ProfileText>
-            안녕하세요! 어제보다 나아지는 개발자 박지훈입니다.
-          </ProfileText>
+          <motion.div
+            variants={container(0)}
+            initial="hidden"
+            animate="visible">
+            <ProfileTitle>
+              Frontend
+              <br />
+              Developer.
+            </ProfileTitle>
+          </motion.div>
+          <motion.div
+            variants={container(0.5)}
+            initial="hidden"
+            animate="visible">
+            <ProfileText>
+              안녕하세요. 프론트엔드 개발자 박지훈입니다.
+            </ProfileText>
+          </motion.div>
         </ArticleWrapper>
       </ProfileArticle>
       <Figure />
