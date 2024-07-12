@@ -79,7 +79,7 @@ export default function Skills() {
 }
 
 const SkillsWrapper = styled.div`
-  padding-top: 4rem;
+  padding-top: 6rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
