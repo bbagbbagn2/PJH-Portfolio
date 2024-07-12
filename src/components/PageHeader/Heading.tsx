@@ -28,6 +28,7 @@ export default function Heading({
     </>
   );
 }
+
 const Title = styled.h1`
   user-select: none;
   font-size: 1.802em;

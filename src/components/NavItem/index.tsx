@@ -53,7 +53,7 @@ export default function NavItem({
       </NavItemLink>
     </li>
   );
-};
+}
 
 const NavItemLink = styled.a`
   @media (hover: hover) and (any-pointer: fine) {

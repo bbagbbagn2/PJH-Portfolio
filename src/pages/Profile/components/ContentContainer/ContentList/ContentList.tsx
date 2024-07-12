@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 type Content = {
   id: number;
@@ -10,11 +11,29 @@ type ContentListProps = {
   contents: Content[];
 };
 
+const container = (delay: number) => ({
+  hidden: { x: -100, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.5, delay: delay },
+  },
+});
+
 export default function ContentList({ contents }: ContentListProps) {
   return (
     <List>
       {contents.map(content => (
-        <li key={content.id}>{content.text}</li>
+        <li key={content.id}>
+          <motion.div
+            key={content.id}
+            variants={container(content.id * 0.5)}
+            initial="hidden"
+            animate="visible"
+          >
+            {content.text}
+          </motion.div>
+        </li>
       ))}
     </List>
   );
