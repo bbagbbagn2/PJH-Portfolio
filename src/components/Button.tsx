@@ -44,7 +44,7 @@ const ProjectLink = styled.a`
   /* White Space Handling */
   white-space: nowrap;
 
-  :hover {
+  &:hover {
     div {
       color: ${colors.white};
     }
