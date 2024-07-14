@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
+import { colors } from '@_components/theme';
+
 type ParagraphProps = {
   paragraph: string[];
   children?: ReactNode;
@@ -25,6 +27,6 @@ const Container = styled.div`
 
 const Paragraph = styled.p`
   margin-bottom: 1.25em;
-  color: #474747;
+  color: ${colors.text};
   line-height: normal;
 `;

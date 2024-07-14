@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import theme from '../theme';
+import theme, { colors } from '../theme';
 
 export const Header = styled.header`
   width: 100%;
@@ -42,7 +42,7 @@ export const Header = styled.header`
 
         #logo,
         .menu-toggle {
-          color: ${theme.colors.blue} !important;
+          color: ${theme.colors.toggle} !important;
         }
       `}
   }
@@ -131,7 +131,7 @@ export const MenuToggle = styled.button`
   width: 2.78em;
   height: 2.09em;
   background: none;
-  color: ${theme.colors.blue};
+  color: ${theme.colors.toggle};
   display: inline-flex;
   cursor: pointer;
   z-index: 999;
@@ -141,19 +141,19 @@ export const MenuToggle = styled.button`
 
     &::before {
       transform: rotate(45deg);
-      color: ${theme.colors.blue};
+      color: ${theme.colors.toggle};
     }
 
     &::after {
       top: 0;
       width: 100%;
       transform: rotate(-45deg);
-      color: ${theme.colors.blue};
+      color: ${theme.colors.toggle};
     }
   }
 
   &.footer-page {
-    color: ${theme.colors.lemon};
+    color: ${theme.colors.toggle};
   }
 
   &::before,
@@ -164,7 +164,7 @@ export const MenuToggle = styled.button`
     height: 2px;
     transition: 0.2s ease;
     transform: rotate(0deg);
-    background-color: currentColor;
+    background-color: ${theme.colors.toggle};
   }
 
   &::before {
@@ -187,7 +187,7 @@ export const ContactMenu = styled.nav`
   z-index: 998;
 
   a {
-    color: ${theme.colors.blue};
+    color: ${theme.colors.toggle};
   }
 
   @media (max-width: 350px) {
@@ -248,7 +248,7 @@ export const ContactMenu = styled.nav`
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #f9f9f9;
+      background-color: ${colors.bg300};
       transition: 0.3s;
       transform-origin: top right;
     }
@@ -283,7 +283,7 @@ export const ContactMenu = styled.nav`
     }
 
     &.open.shadow {
-      box-shadow: 0 10px 53px 0 rgba(72, 49, 212, 0.05);
+      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
     }
 
     .cross-site-nav {
@@ -308,7 +308,7 @@ export const ContactMenu = styled.nav`
     }
 
     a {
-      color: #3c8fdd;
+      color: ${colors.text};
     }
 
     div {
@@ -336,7 +336,7 @@ export const NavItem = styled.p<{ color?: string }>`
   font-size: 14px;
   cursor: pointer;
   transition: all 0.3s;
-  color: ${props => props.color || '#939DAB'};
+  color: ${props => props.color || `${colors.text}`};
 
   &:hover {
     color: #ffffff;

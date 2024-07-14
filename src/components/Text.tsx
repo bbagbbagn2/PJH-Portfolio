@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
+import { colors } from './theme';
+
 type TextProps = {
   children: ReactNode;
 };
@@ -10,7 +12,7 @@ export default function Text({ children }: TextProps) {
 }
 
 const Paragraph = styled.p`
-  color: #0b2b40;
+  color: ${colors.text};
   line-height: 1.6;
   transform: translate3d(0, 0, 0);
   opacity: 1;
@@ -29,6 +31,7 @@ const CarriagewayText = styled(Paragraph)`
 
 const FeaturesText = styled(Paragraph)`
   font-size: 1em;
+  color: ${colors.background};
 
   @media (max-width: 580px) {
     font-size: 1.3em;
@@ -41,7 +44,7 @@ const FeaturesText = styled(Paragraph)`
 `;
 
 const ProfileText = styled(Paragraph)`
-  color: #fff;
+  color: ${colors.white};
 
   @media (max-width: 580px) {
     font-size: 2em;

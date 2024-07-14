@@ -1,12 +1,15 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
+import { colors } from './theme';
+
 type InnerSectionProps = {
   children: ReactNode;
+  id?: string;
 }
 
-export default function InnerSection({ children }: InnerSectionProps) {
-  return <Section>{children}</Section>;
+export default function InnerSection({ children, id }: InnerSectionProps) {
+  return <Section id={id}>{children}</Section>;
 }
 
 const Section = styled.section`
@@ -15,7 +18,7 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
   user-select: auto;
-
+  
   @media (max-width: 580px) {
     margin-bottom: 10rem;
   }
@@ -39,9 +42,17 @@ const Section = styled.section`
 
 const FeaturesSection = styled(Section)`
   z-index: 3;
-
+  background-color: ${colors.white};
+  
+  
   li a {
     color: currentColor;
+  }
+
+  @media (max-width: 580px) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    margin-bottom: 0;
   }
 
   @media (min-width: 581px) and (max-width: 700px) {
@@ -49,4 +60,15 @@ const FeaturesSection = styled(Section)`
   }
 `;
 
-export { FeaturesSection };
+const SkillsSection = styled(Section)`
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  margin-bottom: 0;
+`;
+
+const CarriagewaySection = styled(SkillsSection)`
+  padding-top: 0;
+`;
+
+export { FeaturesSection, SkillsSection, CarriagewaySection };
+

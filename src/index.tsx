@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
+
 import App from './App';
+import { colors } from '@_components/theme';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -15,7 +17,6 @@ const GlobalStyle = createGlobalStyle`
 
   ::placeholder {
     opacity: 1;
-    color: rgba(61, 21, 95, 0.75);
   }
 
   html {
@@ -34,8 +35,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     width: 100%;
     height: 100%;
-    color: #0B2B40;
-    background-color: #fff;
+    color: ${colors.text};
+    background-color: ${colors.background};
     font: inherit;
     font-weight: normal;
     line-height: inherit;
@@ -69,7 +70,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
 
     @media (max-width: 700px) {
-        font-size: 0.562rem;
+      font-size: 0.562rem;
     }
   }
 

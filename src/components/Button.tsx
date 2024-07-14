@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { colors } from './theme';
+
 type ButtonProps = {
   href: string;
   target?: string;
@@ -30,6 +32,8 @@ const ProjectLink = styled.a`
   font-size: 0.9em;
   font-weight: bold;
   text-transform: uppercase;
+  
+  border-radius: 1rem;
 
   /* Overflow handling */
   overflow: hidden;
@@ -42,13 +46,13 @@ const ProjectLink = styled.a`
 
   :hover {
     div {
-      color: #fff;
-      border-color: rgb(60, 143, 221);
+      color: ${colors.white};
     }
 
     div::before {
       transform: translateX(0);
-      background: #3c8fdd;
+      background: ${colors.primary};
+      border-radius: 1rem;
     }
   }
   div::before {
@@ -67,7 +71,7 @@ const ProjectLink = styled.a`
     height: 108%;
 
     /* Styling */
-    background: currentColor;
+    background: ${colors.primary};
     pointer-events: none;
 
     /* Initial transformation */
@@ -95,8 +99,9 @@ const LinkBox = styled.div`
   justify-content: center;
 
   /* Styling */
-  border: 1px solid currentColor;
-  color: #3c8fdd;
+  background-color: ${colors.background};
+  border-radius: 1rem;
+  color: ${colors.white};
 
   /* Z-index */
   z-index: 1;

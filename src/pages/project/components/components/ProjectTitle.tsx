@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
+import { colors } from '@_components/theme';
 /** 주소창에 "-"이 있을 시 띄어쓰기 및 다음 글자를 대문자로 나타내주는 함수 */
 function formatPathSegment(segment: string): string {
   return segment
@@ -16,9 +17,9 @@ export default function ProjectTitle() {
   const formattedSegment = formatPathSegment(lastPathSegment);
 
   return (
-        <Container>
-          <Heading>{formattedSegment}</Heading>
-        </Container>
+    <Container>
+      <Heading>{formattedSegment}</Heading>
+    </Container>
   );
 }
 
@@ -32,7 +33,7 @@ const Container = styled.header`
 const Heading = styled.h1`
   margin: 0.67em 0;
   font-size: 1.802em;
-  color: #474747;
+  color: ${colors.white};
   user-select: none;
   transition: color 0.6s;
 `;

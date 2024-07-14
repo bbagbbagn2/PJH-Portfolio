@@ -5,7 +5,7 @@ import { BottomWrapper } from '../InnerWrapper';
 export default function FooterBottomWrapper() {
   return (
     <BottomWrapper>
-      <span>&copy; JH Portfolio {new Date().getFullYear()}</span>
+      <span>&copy; PJH Portfolio {new Date().getFullYear()}</span>
       <SocialContact className='social-contact' />
     </BottomWrapper>
   );

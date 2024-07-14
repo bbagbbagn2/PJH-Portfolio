@@ -4,19 +4,18 @@ import { useLocation } from 'react-router-dom';
 import Basic from '../ContactPortal/BasicContact/BasicContact';
 import Social from '../ContactPortal/SocilaContact';
 import CrossSiteNav from '../CrossSiteNav/CrossSiteNav';
-
 import * as S from './Header.styles';
 
 export default function HeaderSection() {
   const [isMenuFocused, setIsMenuFocused] = useState(false);
 
-  const handelMenuClick = () => {
-    setIsMenuFocused(prev => !prev);
-  };
-
   const location = useLocation();
   const isHome = location.pathname === '/';
 
+  const handelMenuClick = () => {
+    setIsMenuFocused(prev => !prev);
+  };
+  
   return (
     <S.Header
       id="site-header"

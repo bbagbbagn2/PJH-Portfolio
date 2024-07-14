@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import SayHello from './SayHello';
 import BasicContactList from './BasicContanctList';
-
+import { colors } from '@_components/theme';
 
 export default function BasicContact() {
   return (
@@ -23,7 +24,7 @@ const Container = styled.div`
   }
 
   a {
-    color: currentColor;
+    color: ${colors.text};
   }
 
   @media only screen and (min-width: 591px) {

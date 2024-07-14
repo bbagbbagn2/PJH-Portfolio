@@ -38,8 +38,8 @@ const Footer = styled.footer`
   z-index: 3;
 
   /* Styling */
-  background: ${theme.colors.default};
-  color: ${theme.colors.lemon};
+  background: ${theme.colors.bg200};
+  color: ${theme.colors.text};
 
   li a {
     color: currentColor;

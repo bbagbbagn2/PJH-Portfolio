@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colors } from '@_components/theme';
 
 type ProjectInfoProps = {
   project: {
@@ -34,9 +35,9 @@ const Container = styled.div`
 const Title = styled.h5`
   margin: 0;
   font-size: 1.125em;
+  color: ${colors.white};
 `;
 
 const Link = styled.a`
   white-space: pre;
-  color: #3c8fdd;
 `;

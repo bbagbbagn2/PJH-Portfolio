@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import NavItem from '../NavItem/index';
+import { colors } from '@_components/theme';
 
 type SocialContactProps = { 
   className?: string;
@@ -28,6 +30,6 @@ const SocialContactList = styled.ul`
   }
 
   a {
-    color: currentColor;
+    color: ${colors.text};
   }
 `;

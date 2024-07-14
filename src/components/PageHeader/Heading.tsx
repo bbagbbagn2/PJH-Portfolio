@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { colors } from '@_components/theme';
+
 type HeadingProps = {
   title?: string;
   noDot?: string;
@@ -32,10 +34,8 @@ export default function Heading({
 const Title = styled.h1`
   user-select: none;
   font-size: 1.802em;
+  color: ${colors.white};
 
-  @media (max-width: 650px) {
-    display: none;
-  }
   > span > span {
     opacity: 0.7;
   }

@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+import { colors } from '@_components/theme';
+
 type Content = {
   id: number;
   text: string;
@@ -42,7 +44,7 @@ export default function ContentList({ contents }: ContentListProps) {
 const List = styled.ul`
   display: flex;
   justify-content: space-between;
-  color: #dbf227;
+  color: ${colors.text};
   line-height: 1.5;
 
   li {

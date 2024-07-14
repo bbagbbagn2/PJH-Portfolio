@@ -28,7 +28,7 @@ export default function ProfileContainer() {
             <ProfileTitle>
               Frontend
               <br />
-              Developer.
+              Developer
             </ProfileTitle>
           </motion.div>
           <motion.div

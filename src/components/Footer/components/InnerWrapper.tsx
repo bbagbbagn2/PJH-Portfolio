@@ -47,7 +47,7 @@ const MainWrapper = styled(Wrapper)`
 const BottomWrapper = styled(Wrapper)`
   padding-top: 3em;
   justify-content: space-between;
-  border-top: 1px solid rgba(186, 221, 118, 0.7);
+  border-top: 1px solid rgba(253, 235, 237, 0.7);
   font-size: 1.15em;
 
   @media (max-width: 460px) {

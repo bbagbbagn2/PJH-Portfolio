@@ -28,5 +28,5 @@ const SliderImage = styled.img`
   height: 100%;
   object-fit: cover;
   list-style: none;
-  aspect-ratio: auto 1440/810;
+  aspect-ratio: auto 1440/810;;
 `;

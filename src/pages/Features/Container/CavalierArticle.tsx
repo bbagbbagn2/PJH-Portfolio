@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { FeaturesArticle, ArticleWrapper } from '@_components/Article';
 import { FeaturesTitle } from '@_components/Title';
 import { FeaturesText } from '@_components/Text';
+import { colors } from '@_components/theme';
 
 type CavalierArticleProps = {
   justifyContent?: string;
@@ -31,4 +33,5 @@ export default function Article({
 
 const Container = styled(FeaturesArticle)<CavalierArticleProps>`
   justify-content: ${props => props.justifyContent};
+  color: ${colors.primary};
 `;

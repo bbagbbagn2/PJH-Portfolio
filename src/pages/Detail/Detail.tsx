@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
 import Header from '@_components/Header/Header';
 import Footer from '@_components/Footer/Footer';
 import { DetailContainer } from '@_components/MainContainer';
@@ -10,9 +12,23 @@ export default function Detail() {
     <>
       <Header />
       <DetailContainer>
-        <PageHeader title="project" desc="팀 & 개인 프로젝트 리스트." />
-        <ProjectList />
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 0.5 }}
+        >
+          <PageHeader title="project" desc="Team & Personal Preojects" />
+        </motion.div>
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+        >
+          <ProjectList />
+        </motion.div>
+
       </DetailContainer>
+
       <Footer />
     </>
   );

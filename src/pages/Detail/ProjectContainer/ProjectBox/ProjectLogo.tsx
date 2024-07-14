@@ -31,6 +31,6 @@ const Figure = styled.figure`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(245, 244, 252, 0.62);
+  background: #fff4ff;
   transition: filter 0.3s;
 `;

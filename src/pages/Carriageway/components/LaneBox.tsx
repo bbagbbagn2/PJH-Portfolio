@@ -17,7 +17,7 @@ const Box = styled.div`
   :not(:last-of-type) {
     border-style: solid;
     border-width: 0 0 0.15rem 0;
-    border-color: rgba(60, 143, 221, 0.3);
+    border-color: rgba(188, 111, 241, 0.3);
   }
 
   @media (min-width: 581px) {

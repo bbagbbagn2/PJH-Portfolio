@@ -1,19 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import InnerSection from '@_components/InnerSection';
+import { SkillsSection } from '@_components/InnerSection';
 import PageHeader from '@_components/PageHeader/PageHeader';
-import { RiReactjsLine, RiJavascriptLine, RiNextjsLine } from 'react-icons/ri';
+import { TbBrandNextjs } from "react-icons/tb";
+import { RiReactjsLine } from 'react-icons/ri';
 import { BiLogoTypescript, BiLogoNodejs } from 'react-icons/bi';
-import {
-  SiMysql,
-  SiStyledcomponents,
-  SiAxios,
-  SiPrisma,
-  SiGithub,
-  SiNotion,
-} from 'react-icons/si';
+import { SiMysql, SiPrisma } from 'react-icons/si';
 
 const iconVariants = (duration: number) => ({
   initial: { y: -10 },
@@ -29,22 +23,18 @@ const iconVariants = (duration: number) => ({
 });
 
 const skillsData = [
-  { component: RiJavascriptLine, color: '#F7DF1E', duration: 2.5 },
   { component: BiLogoTypescript, color: '#3178C6', duration: 3 },
   { component: RiReactjsLine, color: '#61DAFB', duration: 5 },
-  { component: RiNextjsLine, color: '#000000', duration: 2 },
-  { component: SiStyledcomponents, color: '#DB7093', duration: 6 },
-  { component: SiAxios, color: '#5A29E4', duration: 4 },
+  { component: TbBrandNextjs, color: '#000000', duration: 2 },
   { component: BiLogoNodejs, color: '#5FA04E', duration: 5.5 },
-  { component: SiPrisma, color: '#2D3748', duration: 3.5 },
+  { component: SiPrisma, color: '#2D3748', duration: 6 },
   { component: SiMysql, color: '#4479A1', duration: 4.5 },
-  { component: SiGithub, color: '#181717', duration: 2.5 },
-  { component: SiNotion, color: '#000000', duration: 5 },
 ];
 
 export default function Skills() {
+
   return (
-    <InnerSection>
+    <SkillsSection>
       <div>
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,8 +44,8 @@ export default function Skills() {
           <PageHeader title="Skills" />
         </motion.div>
         <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
+          whileInView={{opacity: 1, x: 0 }}
+          initial={{opacity: 0, x: -100}}
           transition={{ duration: 1.5 }}
         >
           <SkillsWrapper>
@@ -74,12 +64,13 @@ export default function Skills() {
           </SkillsWrapper>
         </motion.div>
       </div>
-    </InnerSection>
+    </SkillsSection>
   );
 }
 
 const SkillsWrapper = styled.div`
   padding-top: 6rem;
+  padding: 0 15vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -90,5 +81,11 @@ const SkillsWrapper = styled.div`
 const SkillBox = styled.div`
   padding: 1rem;
   border-radius: 1rem;
-  border: 4px solid rgb(38 38 38);
+  background-color: #393e46;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+  @media (max-width: 580px) {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0;
+  }
 `;

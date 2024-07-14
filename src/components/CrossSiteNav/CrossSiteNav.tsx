@@ -1,7 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+
 import NavItem from '../NavItem/index';
+import { colors } from '@_components/theme';
 
 const homeLink = <NavItem href="/">Home</NavItem>;
 
@@ -16,12 +18,12 @@ export default function BasicContact() {
   return (
     <CrossSiteNavList>
       {renderHomeNavItem()}
-      <NavItem href="/project">내 프로젝트</NavItem>
+      <NavItem href="/project">My Projects</NavItem>
       <NavItem
         href="https://www.notion.so/parkresume/c4ce189e86cf43e8858349a33ebb482d"
         external
       >
-        내 이력서
+        My Resume
       </NavItem>
     </CrossSiteNavList>
   );
@@ -29,6 +31,6 @@ export default function BasicContact() {
 
 const CrossSiteNavList = styled.ul`
   a {
-    color: currentColor;
+    color: ${colors.text};
   }
 `;

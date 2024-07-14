@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import ProjectLink from './ProjectBox/ProjectLink';
 import ProjectLogo from './ProjectBox/ProjectLogo';
 import ProjectInfo from './ProjectBox/ProjectInfo';
+import { colors } from '@_components/theme';
 import { formatprojectData } from '../../../utils/helpers';
 
 const projects = formatprojectData();
@@ -34,9 +36,9 @@ const Item = styled.li`
   margin-bottom: 1.2rem;
 
   /* Styling */
-  border-radius: 0.2rem;
-  box-shadow: 0 8px 6px -6px rgba(235, 234, 242, 0.5);
-  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: ${colors.bg300};
 
   /* Overflow handling */
   overflow: hidden;
@@ -47,6 +49,6 @@ const Item = styled.li`
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 15px 8px 6px -6px rgba(235, 234, 242, 0.58);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
 `;

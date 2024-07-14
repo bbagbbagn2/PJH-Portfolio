@@ -1,5 +1,5 @@
 import React from 'react';
-import InnerSection from '@_components/InnerSection';
+import { CarriagewaySection } from '@_components/InnerSection';
 import { CarriagewayContainer } from '@_components/InnerContainer';
 import { CarriagewayArticle, ArticleWrapper } from '@_components/Article';
 import LaneContainer from './components/LaneContainer';
@@ -10,21 +10,23 @@ import Button from '@_components/Button';
 
 export default function Carriageway() {
   return (
-    <InnerSection>
+    <CarriagewaySection>
       <CarriagewayContainer>
         <LaneContainer>
           <LaneBox>
             <CarriagewayArticle>
               <ArticleWrapper>
                 <CarriagewayTitle>
-                  개발,
+                  My
                   <br />
-                  디자인
+                  Projects
                 </CarriagewayTitle>
                 <CarriagewayText>
                   오픈 소스,
                   <br />
-                  개인 &<br />팀 프로젝트.
+                  팀 프로젝트 & 
+                  <br />
+                  개인 프로젝트
                   <br />
                 </CarriagewayText>
               </ArticleWrapper>
@@ -35,15 +37,16 @@ export default function Carriageway() {
             <CarriagewayArticle>
               <ArticleWrapper>
                 <CarriagewayTitle>
-                  나의
+                  My
                   <br />
-                  이력서
+                  Resume
                 </CarriagewayTitle>
                 <CarriagewayText>
                   자기소개,
                   <br />
-                  스킬 &<br />
-                  프로젝트 소개.
+                  스킬 &
+                  <br />
+                  프로젝트 소개
                   <br />
                 </CarriagewayText>
               </ArticleWrapper>
@@ -56,6 +59,6 @@ export default function Carriageway() {
           </LaneBox>
         </LaneContainer>
       </CarriagewayContainer>
-    </InnerSection>
+    </CarriagewaySection>
   );
 }
