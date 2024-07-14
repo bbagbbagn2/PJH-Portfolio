@@ -18,7 +18,7 @@ export default function Article({
   description,
 }: CavalierArticleProps) {
   return (
-    <Container
+    <StyledContainer
       justifyContent={justifyContent}
       title={title}
       description={description}
@@ -27,11 +27,11 @@ export default function Article({
         <FeaturesTitle>{title}</FeaturesTitle>
         <FeaturesText>{description}</FeaturesText>
       </ArticleWrapper>
-    </Container>
+    </StyledContainer>
   );
 }
 
-const Container = styled(FeaturesArticle)<CavalierArticleProps>`
+const StyledContainer = styled(FeaturesArticle) <CavalierArticleProps>`
   justify-content: ${props => props.justifyContent};
   color: ${colors.primary};
 `;
