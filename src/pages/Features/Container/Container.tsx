@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import { FeaturesInnerContainer } from '@_components/InnerContainer';
@@ -19,6 +19,16 @@ const articlesData = [
 ];
 
 export default function Container() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
 
@@ -26,8 +36,12 @@ export default function Container() {
       {articlesData.map((article, index) => (
         <motion.div
           key={index}
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          initial={{ 
+            opacity: 0,
+            x: windowWidth > 580 ?  (index % 2 === 0 ? -100 : 100) : 0,
+            y: windowWidth <= 580 ? -100 : 0,
+          }}
           transition={{ duration: 0.5 }}>
           <FeaturesArticle
             key={index}
