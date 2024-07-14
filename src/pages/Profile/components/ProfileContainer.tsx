@@ -36,7 +36,7 @@ export default function ProfileContainer() {
             initial="hidden"
             animate="visible">
             <ProfileText>
-              안녕하세요. 프론트엔드 개발자 박지훈입니다.
+              프론트엔드 주니어 개발자 박지훈입니다.
             </ProfileText>
           </motion.div>
         </ArticleWrapper>
