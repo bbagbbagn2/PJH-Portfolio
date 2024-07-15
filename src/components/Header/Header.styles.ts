@@ -238,6 +238,7 @@ export const ContactMenu = styled.nav`
     width: 22.223em;
     font-size: 1.1em;
     transition: opacity 0.4s, box-shadow 0.4s;
+    border-radius: 1rem;
 
     &::before {
       content: '';
@@ -251,6 +252,7 @@ export const ContactMenu = styled.nav`
       background-color: ${colors.bg300};
       transition: 0.3s;
       transform-origin: top right;
+      border-radius: 1rem;
     }
 
     &:not(.open) {
