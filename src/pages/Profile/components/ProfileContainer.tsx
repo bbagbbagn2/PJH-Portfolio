@@ -6,6 +6,7 @@ import { ProfileInnerContainer } from '@_components/InnerContainer';
 import { ProfileArticle, ArticleWrapper } from '@_components/Article';
 import { ProfileTitle } from '@_components/Title';
 import { ProfileText } from '@_components/Text';
+import Container from './MotionContainer';
 
 const container = (delay: number) => ({
   hidden: { x: -100, opacity: 0 },
@@ -21,24 +22,19 @@ export default function ProfileContainer() {
     <ProfileInnerContainer>
       <ProfileArticle>
         <ArticleWrapper>
-          <motion.div
-            variants={container(0)}
-            initial="hidden"
-            animate="visible">
+          <Container
+            delay={0}>
             <ProfileTitle>
               Frontend
               <br />
               Developer
             </ProfileTitle>
-          </motion.div>
-          <motion.div
-            variants={container(0.5)}
-            initial="hidden"
-            animate="visible">
+          </Container>
+          <Container delay={0.5}>
             <ProfileText>
               프론트엔드 주니어 개발자 박지훈입니다.
             </ProfileText>
-          </motion.div>
+          </Container>
         </ArticleWrapper>
       </ProfileArticle>
       <Figure />
