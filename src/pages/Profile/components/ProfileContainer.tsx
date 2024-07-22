@@ -1,21 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { motion } from "framer-motion";
 
 import { ProfileInnerContainer } from '@_components/InnerContainer';
 import { ProfileArticle, ArticleWrapper } from '@_components/Article';
 import { ProfileTitle } from '@_components/Title';
 import { ProfileText } from '@_components/Text';
 import Container from './MotionContainer';
-
-const container = (delay: number) => ({
-  hidden: { x: -100, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 0.5, delay: delay }
-  }
-});
 
 export default function ProfileContainer() {
   return (
@@ -30,14 +20,19 @@ export default function ProfileContainer() {
               Developer
             </ProfileTitle>
           </Container>
-          <Container delay={0.5}>
+          <Container
+            delay={0.5}>
             <ProfileText>
               프론트엔드 주니어 개발자 박지훈입니다.
             </ProfileText>
           </Container>
         </ArticleWrapper>
       </ProfileArticle>
-      <Figure />
+      <Container
+        x={100}
+        delay={1.2}>
+        <Figure />
+      </Container>
     </ProfileInnerContainer>
   );
 }
