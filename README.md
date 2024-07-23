@@ -110,19 +110,8 @@ npm run start
     │   ├── Profile
     │       └── Profile.tsx
     │   ├── Project
-    │       ├── assets
-    │       ├── components
-    │           ├── ProjectTitle.tsx
-    │           ├── ProjectDescription.tsx
-    │           └── ProjectSlider.tsx
     │       └── Project.tsx
     │   ├── Skills
-    │       ├── components
-    │           ├── MotionWrapper.tsx
-    │           ├── SkillsContainer.tsx
-    │           └── SkillsList.tsx
-    │       ├── data
-    │           └── skillsData.ts
     │       └── Skills.tsx
     │   ├── App.tsx
     │   ├── index.tsx
