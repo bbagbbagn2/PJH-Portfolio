@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ProjectLink from './ProjectBox/ProjectLink';
 import ProjectLogo from './ProjectBox/ProjectLogo';
 import ProjectInfo from './ProjectBox/ProjectInfo';
+import ProjectSkill from './ProjectBox/ProjectSkill';
 import { colors } from '@_components/theme';
 import { formatprojectData } from '../../../utils/helpers';
 
@@ -17,6 +18,7 @@ export default function ProjectList() {
           <ProjectLink project={project} />
           <ProjectLogo project={project} />
           <ProjectInfo project={project} />
+          <ProjectSkill project={project} />
         </Item>
       ))}
     </List>
@@ -33,6 +35,7 @@ const List = styled.ul`
 const Item = styled.li`
   /* Positioning */
   position: relative;
+  padding-bottom: 1em;
   margin-bottom: 1.2rem;
 
   /* Styling */

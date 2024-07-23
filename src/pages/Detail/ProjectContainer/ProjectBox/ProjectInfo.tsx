@@ -12,7 +12,7 @@ type ProjectInfoProps = {
 
 export default function ProjectInfo({ project }: ProjectInfoProps) {
   return (
-    <Container>
+    <Container className="project-item">
       <Title>{project.name}</Title>
       {project.siteName && project.siteURL && (
         <Link
@@ -20,9 +20,7 @@ export default function ProjectInfo({ project }: ProjectInfoProps) {
           rel="noopener noreferrer"
           aria-label={project.name + ' live demo.'}
           href={project.siteURL}
-        >
-          {project.siteName}
-        </Link>
+        />
       )}
     </Container>
   );
