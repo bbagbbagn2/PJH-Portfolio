@@ -6,7 +6,7 @@ import { colors } from './theme';
 type InnerSectionProps = {
   children: ReactNode;
   id?: string;
-}
+};
 
 export default function InnerSection({ children, id }: InnerSectionProps) {
   return <Section id={id}>{children}</Section>;
@@ -18,7 +18,7 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
   user-select: auto;
-  
+
   @media (max-width: 580px) {
     margin-bottom: 10rem;
   }
@@ -43,8 +43,7 @@ const Section = styled.section`
 const FeaturesSection = styled(Section)`
   z-index: 3;
   background-color: ${colors.white};
-  
-  
+
   li a {
     color: currentColor;
   }
@@ -71,4 +70,3 @@ const CarriagewaySection = styled(SkillsSection)`
 `;
 
 export { FeaturesSection, SkillsSection, CarriagewaySection };
-

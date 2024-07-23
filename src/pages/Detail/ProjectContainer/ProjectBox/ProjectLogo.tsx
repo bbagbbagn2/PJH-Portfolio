@@ -1,20 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ICONDB_LOGO, DRINKABLE_LOGO, PORTFOLIO_LOGO, NOTIFICATION_LOGO } from '@/assets/svgs';
+import {
+  ICONDB_LOGO,
+  DRINKABLE_LOGO,
+  PORTFOLIO_LOGO,
+  NOTIFICATION_LOGO,
+} from '@_assets/svgs/index';
 
-type ProjectLogoProps = {
-  project: {
-    name: string;
-  };
+type LogoComponent = React.FC<React.SVGProps<SVGSVGElement>>;
+
+interface LogoMap {
+  [key: string]: LogoComponent;
+}
+
+const logoMap: LogoMap = {
+  Icondb: ICONDB_LOGO,
+  Drinkable: DRINKABLE_LOGO,
+  Notification: NOTIFICATION_LOGO,
+  'Personal Website': PORTFOLIO_LOGO,
 };
 
+interface ProjectLogoProps {
+  project: {
+    name: keyof LogoMap;
+  };
+}
+
 export default function ProjectLogo({ project }: ProjectLogoProps) {
+  const { name } = project;
+  const Logo = logoMap[name];
+
   return (
     <StyledFigure>
-      {project.name === 'Icondb' && ICONDB_LOGO}
-      {project.name === 'Drinkable' && DRINKABLE_LOGO}
-      {project.name === 'Notification' && NOTIFICATION_LOGO}
-      {project.name === 'Personal Website' && PORTFOLIO_LOGO}
+      {Logo && <Logo />}
       <figcaption className="visuallyhidden">{project.name} logo.</figcaption>
     </StyledFigure>
   );

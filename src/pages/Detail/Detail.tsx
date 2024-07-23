@@ -15,7 +15,7 @@ export default function Detail() {
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1.5 }}
         >
           <PageHeader title="project" desc="Team & Personal Projects" />
         </motion.div>
@@ -26,9 +26,7 @@ export default function Detail() {
         >
           <ProjectList />
         </motion.div>
-
       </DetailContainer>
-
       <Footer />
     </>
   );

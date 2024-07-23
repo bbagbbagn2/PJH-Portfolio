@@ -5,32 +5,26 @@ import { ProfileInnerContainer } from '@_components/InnerContainer';
 import { ProfileArticle, ArticleWrapper } from '@_components/Article';
 import { ProfileTitle } from '@_components/Title';
 import { ProfileText } from '@_components/Text';
-import MotionWrapper from './MotionWrapper';
+import MotionWrapper from './components/MotionWrapper';
 
 export default function ProfileContainer() {
   return (
     <ProfileInnerContainer>
       <ProfileArticle>
         <ArticleWrapper>
-          <MotionWrapper
-            delay={0}>
+          <MotionWrapper delay={0}>
             <ProfileTitle>
               Frontend
               <br />
               Developer
             </ProfileTitle>
           </MotionWrapper>
-          <MotionWrapper
-            delay={0.5}>
-            <ProfileText>
-              프론트엔드 주니어 개발자 박지훈입니다.
-            </ProfileText>
+          <MotionWrapper delay={0.5}>
+            <ProfileText>프론트엔드 주니어 개발자 박지훈입니다.</ProfileText>
           </MotionWrapper>
         </ArticleWrapper>
       </ProfileArticle>
-      <MotionWrapper
-        x={100}
-        delay={1.2}>
+      <MotionWrapper x={100} delay={1.2}>
         <StyledFigure />
       </MotionWrapper>
     </ProfileInnerContainer>

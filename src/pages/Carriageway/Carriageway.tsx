@@ -9,7 +9,6 @@ import { CarriagewayText } from '@_components/Text';
 import Button from '@_components/Button';
 import { RESUME_URL } from '@_config/settings';
 
-
 export default function Carriageway() {
   return (
     <CarriagewaySection>
@@ -53,11 +52,7 @@ export default function Carriageway() {
                 </CarriagewayText>
               </ArticleWrapper>
             </CarriagewayArticle>
-            <Button
-              href={RESUME_URL}
-              target="_blank"
-              text="이력서 보러가기"
-            />
+            <Button href={RESUME_URL} target="_blank" text="이력서 보러가기" />
           </LaneBox>
         </LaneContainer>
       </CarriagewayContainer>

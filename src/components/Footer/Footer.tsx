@@ -12,12 +12,12 @@ export default function FooterSection() {
   const FooterContainer = isHome ? HomeFooter : ProjectFooter;
 
   return (
-      <FooterContainer>
-        <FooterInnerContainer>
-          <MainWrapper />
-          <BottomWrapper />
-        </FooterInnerContainer>
-      </FooterContainer>
+    <FooterContainer>
+      <FooterInnerContainer>
+        <MainWrapper />
+        <BottomWrapper />
+      </FooterInnerContainer>
+    </FooterContainer>
   );
 }
 

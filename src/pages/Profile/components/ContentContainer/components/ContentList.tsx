@@ -1,23 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import MotionWrapper from '../MotionWrapper';
+import MotionWrapper from '../../components/MotionWrapper';
 import { colors } from '@_components/theme';
-import { Content } from './types';
+import { Content } from '../types/types';
 
 interface ContentListProps {
   contents: Content[];
-};
+}
 
 export default function ContentList({ contents }: ContentListProps) {
   return (
     <StyledList>
       {contents.map(content => (
         <li key={content.id}>
-          <MotionWrapper
-            key={content.id}
-            delay={(content.id * 0.5)}
-          >
+          <MotionWrapper key={content.id} delay={content.id * 0.5}>
             {content.text}
           </MotionWrapper>
         </li>

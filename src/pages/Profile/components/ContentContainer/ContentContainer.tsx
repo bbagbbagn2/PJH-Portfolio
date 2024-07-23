@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { ProfileInnerContainer } from '@_components/InnerContainer';
-import ContentList from './ContentList';
-import { contentData } from './contentData';
-import MotionWrapper from '../MotionWrapper';
+import ContentList from './components/ContentList';
+import { contentData } from './data/contentData';
+import MotionWrapper from '../components/MotionWrapper';
 
 export default function ContentContainer() {
   return (

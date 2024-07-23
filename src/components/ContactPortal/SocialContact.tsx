@@ -7,7 +7,7 @@ import { GITHUB_URL } from '@_config/settings';
 
 type SocialContactProps = {
   className?: string;
-}
+};
 
 export default function SocialContact({ className }: SocialContactProps) {
   return (

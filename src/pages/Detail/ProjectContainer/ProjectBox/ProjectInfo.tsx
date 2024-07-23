@@ -7,8 +7,8 @@ type ProjectInfoProps = {
     name: string;
     siteName?: string | null;
     siteURL?: string;
-  }
-}
+  };
+};
 
 export default function ProjectInfo({ project }: ProjectInfoProps) {
   return (

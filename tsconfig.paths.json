@@ -2,14 +2,15 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
+      "@_assets/*": ["assets/*"],
       "@_logos/*": ["assets/brand/logos/*"],
       "@_components/*": ["components/*"],
       "@_data/*": ["data/*"],
       "@_config/*": ["config/*"],
+      "@_utils/*": ["utils/*"],
       "@_lib/*": ["lib/*"],
       "@_hooks/*": ["hooks/*"],
       "@/*": ["*"]
-      
     }
   }
 }

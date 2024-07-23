@@ -15,7 +15,7 @@ export default function HeaderSection() {
   const handelMenuClick = () => {
     setIsMenuFocused(prev => !prev);
   };
-  
+
   return (
     <S.Header
       id="site-header"

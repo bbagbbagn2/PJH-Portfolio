@@ -6,7 +6,7 @@ export default function FooterBottomWrapper() {
   return (
     <BottomWrapper>
       <span>&copy; PJH Portfolio {new Date().getFullYear()}</span>
-      <SocialContact className='social-contact' />
+      <SocialContact className="social-contact" />
     </BottomWrapper>
   );
 }

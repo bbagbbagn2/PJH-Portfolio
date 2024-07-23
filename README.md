@@ -3,15 +3,18 @@
 ## 프로젝트 정보
 
 ### 개발기간
+
 <p>
   ver1.0 : 2023.03 ~ 2023.04 약 1개월 소요<br/>
   ver2.0 : 2023.10 ~ 2023.12 약 2개월 소요
 </p>
 
 ### 배포 주소
+
 ver2.0 : https://pjh-portfolio.netlify.app/
 
 ### 프로젝트 소개
+
 <p>
   React를 활용해 개발한 저의 웹 포트폴리오입니다.<br/><br/>
 </p>
@@ -19,20 +22,24 @@ ver2.0 : https://pjh-portfolio.netlify.app/
 ## 시작 가이드
 
 ### Installation
+
 ```bash
 $ git clone https://github.com/bbagbbagn2/JH-Portfolio.git
 ```
 
 ### Frontend
+
 ```
 npm install
 npm run start
 ```
+
 <br/><br/>
 
 ## Stacks
 
 ### Environment
+
 <p>
   <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white"/>
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white"/>
@@ -41,11 +48,13 @@ npm run start
 </p>
 
 ### Config
+
 <p>
   <img src="https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white"/>
 </p>
 
 ### Development
+
 <p>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"/>
   <img src="https://img.shields.io/badge/TypeScript-1976D2?style=flat-square&logo=TypeScript&logoColor=white"/>
@@ -56,11 +65,12 @@ npm run start
 ## 아키텍처
 
 ### 디렉토리 구조
+
 ```bash
 ├── README.md
 ├── package-lock.json
 ├── package.json
-├── tsconfig.paths.json : tsconfig.json 파일 중 절대경로를 위해 baseUrl, paths를 분리한 파일 
+├── tsconfig.paths.json : tsconfig.json 파일 중 절대경로를 위해 baseUrl, paths를 분리한 파일
 ├── tsconfig.json
 ├── craco.config.js
 ├── .prettierre.js

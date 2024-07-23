@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import FeaturesArticle from './CavalierArticle';
-import { Article } from './types';
+import FeaturesArticle from '../CavalierArticle';
+import { Article } from '../types/types';
 
 interface MotionArticleProps {
   article: Article;
@@ -9,7 +9,11 @@ interface MotionArticleProps {
   index: number;
 }
 
-export default function MotionArticle({ article, windowWidth, index }: MotionArticleProps) {
+export default function MotionArticle({
+  article,
+  windowWidth,
+  index,
+}: MotionArticleProps) {
   return (
     <motion.div
       whileInView={{ opacity: 1, x: 0, y: 0 }}

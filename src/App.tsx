@@ -3,8 +3,7 @@ import { Routes, Route, useParams } from 'react-router-dom';
 
 import MainPage from './pages/Main/Main';
 import DetailPage from './pages/Detail/Detail';
-import Icondb from './pages/project/pages/icon';
-import Drinkable from './pages/project/pages/drinkable';
+import ProjectPage from './pages/project/Project';
 
 function ProjectRouter() {
   const { subpath } = useParams();
@@ -12,8 +11,7 @@ function ProjectRouter() {
   return (
     <Routes>
       <Route index element={<DetailPage />} />
-      <Route path="/icondb" element={<Icondb />} />
-      <Route path="/drinkable" element={<Drinkable />} />
+      <Route path=":id" element={<ProjectPage />} />
     </Routes>
   );
 }

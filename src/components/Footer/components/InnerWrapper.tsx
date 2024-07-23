@@ -21,7 +21,9 @@ const Wrapper = styled.div`
     !props.className?.includes('projectEnv') &&
     css`
       @media (min-width: 701px) {
-        transition: transform 0.5s, opacity 0.2s;
+        transition:
+          transform 0.5s,
+          opacity 0.2s;
       }
     `}
 `;

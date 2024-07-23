@@ -5,7 +5,7 @@ import { FeaturesArticle, ArticleWrapper } from '@_components/Article';
 import { FeaturesTitle } from '@_components/Title';
 import { FeaturesText } from '@_components/Text';
 import { colors } from '@_components/theme';
-import { Article } from './types';
+import { Article } from './types/types';
 
 export default function CavalierArticle({
   justifyContent,
@@ -26,7 +26,7 @@ export default function CavalierArticle({
   );
 }
 
-const StyledContainer = styled(FeaturesArticle) <Article>`
+const StyledContainer = styled(FeaturesArticle)<Article>`
   justify-content: ${props => props.justifyContent};
   color: ${colors.primary};
 `;

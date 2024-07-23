@@ -18,7 +18,9 @@ const Heading = styled.h1`
   color: ${colors.primary};
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition: opacity 0.2s, transform 0.5s;
+  transition:
+    opacity 0.2s,
+    transform 0.5s;
 
   @media (min-width: 701px) {
     max-width: 30vw;
@@ -39,7 +41,7 @@ const ProfileTitle = styled(Heading)`
   color: ${colors.primary};
   font-size: 4em;
   line-height: 1.1;
-  
+
   @media (max-width: 580px) {
     font-size: 5em;
   }

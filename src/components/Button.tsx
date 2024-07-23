@@ -32,7 +32,7 @@ const ProjectLink = styled.a`
   font-size: 0.9em;
   font-weight: bold;
   text-transform: uppercase;
-  
+
   border-radius: 1rem;
 
   /* Overflow handling */

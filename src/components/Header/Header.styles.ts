@@ -208,7 +208,9 @@ export const ContactMenu = styled.nav`
     font-size: 2.2rem;
 
     /* Transitions */
-    transition: opacity 0.3s, visibility 0.3s;
+    transition:
+      opacity 0.3s,
+      visibility 0.3s;
 
     /* Layout */
     justify-content: space-around;
@@ -237,7 +239,9 @@ export const ContactMenu = styled.nav`
     right: 3.41em;
     width: 22.223em;
     font-size: 1.1em;
-    transition: opacity 0.4s, box-shadow 0.4s;
+    transition:
+      opacity 0.4s,
+      box-shadow 0.4s;
     border-radius: 1rem;
 
     &::before {
@@ -285,11 +289,18 @@ export const ContactMenu = styled.nav`
     }
 
     &.open.shadow {
-      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+      box-shadow:
+        rgba(0, 0, 0, 0.07) 0px 1px 1px,
+        rgba(0, 0, 0, 0.07) 0px 2px 2px,
+        rgba(0, 0, 0, 0.07) 0px 4px 4px,
+        rgba(0, 0, 0, 0.07) 0px 8px 8px,
+        rgba(0, 0, 0, 0.07) 0px 16px 16px;
     }
 
     .cross-site-nav {
-      transition: opacity, transition 0.3s;
+      transition:
+        opacity,
+        transition 0.3s;
     }
 
     .cross-site-nav {
@@ -327,7 +338,9 @@ export const ContactMenu = styled.nav`
         margin: 0 0 2.78em;
         opacity: 1;
         transform: translateY(0);
-        transition: opacity, transform 0.3s;
+        transition:
+          opacity,
+          transform 0.3s;
         transition-delay: 400ms;
       }
     }

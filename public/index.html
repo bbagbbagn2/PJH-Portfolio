@@ -1,106 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>Park Jihun: Frontend developer</title>
+    <meta name="msapplication-TitleColor" content="#3c8fdd" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <title>Park Jihun: Frontend developer</title>
-  <meta name="msapplication-TitleColor" content="#3c8fdd" />
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&family=Open+Sans&display=swap"
-    rel="stylesheet">
+    <script type="text/javascript">
+      function updateRootId() {
+        var currentUrl = window.location.pathname;
+        var htmlElement = document.querySelector('html');
 
-  <script type="text/javascript">
-    function updateRootId() {
-      var currentUrl = window.location.pathname;
-      var htmlElement = document.querySelector('html');
-
-      // Check if the current URL contains '/project' or '/icondb'
-      if (currentUrl.includes('/project')) {
-        htmlElement.id = 'project';
-      } else {
-        htmlElement.id = 'homepage'; // Reset the ID if the condition is not met
+        // Check if the current URL contains '/project' or '/icondb'
+        if (currentUrl.includes('/project')) {
+          htmlElement.id = 'project';
+        } else {
+          htmlElement.id = 'homepage'; // Reset the ID if the condition is not met
+        }
       }
-    }
 
-    document.addEventListener('DOMContentLoaded', updateRootId);
+      document.addEventListener('DOMContentLoaded', updateRootId);
 
-    // Listen for the popstate event to handle back/forward navigation
-    window.addEventListener('popstate', updateRootId);
-  </script>
+      // Listen for the popstate event to handle back/forward navigation
+      window.addEventListener('popstate', updateRootId);
+    </script>
 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "name": "park Jihun",
-      "alternateName": "Jihun",
-      "url": "",
-      "@type": "WebSite",
-      "@id": "#website",
-      "sameAs": [
-        "http://localhost:3000/"
-      ]
-    }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "name": "Park Jihun",
-      "alternateName": "Park",
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "SiteNavigationElement",
-          "position": 1,
-          "url": "https://pjh-portfolio.netlify.app/project",
-          "name": "My Project",
-          "description": "팀 & 개인 프로젝트 리스트."
-        },
-        {
-          "@type": "SiteNavigationElement",
-          "position": 2,
-          "url": "https://pjh-portfolio.netlify.app/resume",
-          "name": "My Resume",
-          "description": "이력서 및 자기소개서."
-        },
-      ]
-    }
-  </script>
-
-</head>
-
-<body>
-  <noscript>
-    <striong>You need to enable JavaScript to run this app.</striong>
-  </noscript>
-
-  <div id="app"></div>
-  <script type="text/javascript">
-    if (!Element.prototype.matches) {
-      Element.prototype.matches =
-        Element.prototype.msMatchesSelector ||
-        Element.prototype.webkitMatchesSelector
-    }
-
-    if (!Element.prototype.closest) {
-      Element.prototype.closest = function (s) {
-        var el = this
-
-        do {
-          if (el.matches(s)) return el
-          el = el.parentElement || el.parentNode
-        } while (el !== null && el.nodeType === 1)
-        return null
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "name": "park Jihun",
+        "alternateName": "Jihun",
+        "url": "",
+        "@type": "WebSite",
+        "@id": "#website",
+        "sameAs": ["http://localhost:3000/"]
       }
-    }
-  </script>
-</body>
+    </script>
 
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "name": "Park Jihun",
+        "alternateName": "Park",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "SiteNavigationElement",
+            "position": 1,
+            "url": "https://pjh-portfolio.netlify.app/project",
+            "name": "My Project",
+            "description": "팀 & 개인 프로젝트 리스트."
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 2,
+            "url": "https://pjh-portfolio.netlify.app/resume",
+            "name": "My Resume",
+            "description": "이력서 및 자기소개서."
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <noscript>
+      <striong>You need to enable JavaScript to run this app.</striong>
+    </noscript>
+
+    <div id="app"></div>
+    <script type="text/javascript">
+      if (!Element.prototype.matches) {
+        Element.prototype.matches =
+          Element.prototype.msMatchesSelector ||
+          Element.prototype.webkitMatchesSelector;
+      }
+
+      if (!Element.prototype.closest) {
+        Element.prototype.closest = function (s) {
+          var el = this;
+
+          do {
+            if (el.matches(s)) return el;
+            el = el.parentElement || el.parentNode;
+          } while (el !== null && el.nodeType === 1);
+          return null;
+        };
+      }
+    </script>
+  </body>
 </html>

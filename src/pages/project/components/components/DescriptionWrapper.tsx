@@ -3,16 +3,18 @@ import styled from 'styled-components';
 
 import { colors } from '@_components/theme';
 
-type ParagraphProps = {
-  paragraph: string[];
+interface DescriptionWrapperProps {
+  description: string[];
   children?: ReactNode;
-};
+}
 
-export default function PostContainer({ paragraph }: ParagraphProps) {
+export default function DescriptionWrapper({
+  description,
+}: DescriptionWrapperProps) {
   return (
     <Container>
-      {paragraph.map((text, index) => (
-        <Paragraph key={index}>{text}</Paragraph>
+      {description.map((desc, index) => (
+        <Paragraph key={index}>{desc}</Paragraph>
       ))}
     </Container>
   );

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 import { FeaturesInnerContainer } from '@_components/InnerContainer';
-import MotionArticle from './MotionArticle';
-import { articlesData } from './articlesData';
-import { Article } from './types';
-
+import MotionArticle from './components/MotionArticle';
+import { articlesData } from './data/articlesData';
+import { Article } from './types/types';
 
 export default function Container() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -19,7 +18,7 @@ export default function Container() {
   }, []);
 
   return (
-    <FeaturesInnerContainer id='features'>
+    <FeaturesInnerContainer id="features">
       {articlesData.map((article: Article, index) => (
         <MotionArticle
           key={index}

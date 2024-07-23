@@ -91,4 +91,9 @@ const FooterInnerContainer = styled(Container)`
   }
 `;
 
-export { CarriagewayContainer, ProfileInnerContainer, FeaturesInnerContainer, FooterInnerContainer };
+export {
+  CarriagewayContainer,
+  ProfileInnerContainer,
+  FeaturesInnerContainer,
+  FooterInnerContainer,
+};

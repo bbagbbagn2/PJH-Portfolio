@@ -41,4 +41,10 @@ const ProfileArticle = styled(ArticleContainer)`
   }
 `;
 
-export { ArticleContainer, ArticleWrapper, CarriagewayArticle, FeaturesArticle, ProfileArticle };
+export {
+  ArticleContainer,
+  ArticleWrapper,
+  CarriagewayArticle,
+  FeaturesArticle,
+  ProfileArticle,
+};

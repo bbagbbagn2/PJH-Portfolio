@@ -40,7 +40,11 @@ const StyledSection = styled.section`
   }
 
   @media (min-width: 581px) {
-    background: linear-gradient(90deg, ${colors.background} 67%, ${colors.primary} 33%);
+    background: linear-gradient(
+      90deg,
+      ${colors.background} 67%,
+      ${colors.primary} 33%
+    );
   }
 
   @media (max-width: 700px) {

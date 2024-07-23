@@ -16,7 +16,9 @@ const Paragraph = styled.p`
   line-height: 1.6;
   transform: translate3d(0, 0, 0);
   opacity: 1;
-  transition: opacity 0.2s, trnsform 0.5s;
+  transition:
+    opacity 0.2s,
+    trnsform 0.5s;
 
   @media (min-width: 701px) {
     max-width: 701px;
