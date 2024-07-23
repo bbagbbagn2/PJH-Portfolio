@@ -20,10 +20,7 @@ export default function BasicContact() {
     <CrossSiteNavList>
       {renderHomeNavItem()}
       <NavItem href="/project">My Projects</NavItem>
-      <NavItem
-        href={RESUME_URL}
-        external
-      >
+      <NavItem href={RESUME_URL} external>
         My Resume
       </NavItem>
     </CrossSiteNavList>

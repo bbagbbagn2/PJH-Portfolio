@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ReactComponent as IconDB } from '@_logos/icondb-logo.svg';
-import { ReactComponent as Drinkable } from '@_logos/drinkable-logo.svg';
-import { ReactComponent as Personal } from '@_logos/Pjh-Portfolio logo.svg';
-import { ReactComponent as Notification } from '@_logos/notification-logo.svg';
+import { ICONDB_LOGO, DRINKABLE_LOGO, PORTFOLIO_LOGO, NOTIFICATION_LOGO } from '@/assets/svgs';
 
 type ProjectLogoProps = {
   project: {
@@ -11,24 +8,19 @@ type ProjectLogoProps = {
   };
 };
 
-const ICONDB_LOGO = <IconDB />;
-const DRINKABLE_LOGO = <Drinkable />;
-const PERSONAL_LOGO = <Personal />;
-const NOTIFICATION_LOGO = <Notification />;
-
 export default function ProjectLogo({ project }: ProjectLogoProps) {
   return (
-    <Figure>
+    <StyledFigure>
       {project.name === 'Icondb' && ICONDB_LOGO}
       {project.name === 'Drinkable' && DRINKABLE_LOGO}
       {project.name === 'Notification' && NOTIFICATION_LOGO}
-      {project.name === 'Personal Website' && PERSONAL_LOGO}
+      {project.name === 'Personal Website' && PORTFOLIO_LOGO}
       <figcaption className="visuallyhidden">{project.name} logo.</figcaption>
-    </Figure>
+    </StyledFigure>
   );
 }
 
-const Figure = styled.figure`
+const StyledFigure = styled.figure`
   margin: 0;
   height: 10em;
   display: flex;
