@@ -73,7 +73,7 @@ npm run start
 ├── tsconfig.paths.json : tsconfig.json 파일 중 절대경로를 위해 baseUrl, paths를 분리한 파일
 ├── tsconfig.json
 ├── craco.config.js
-├── .prettierre.js
+├── .prettierrc
 └── src
     ├── assets
     │   └── brand
@@ -92,7 +92,7 @@ npm run start
     │   ├── Header
     │       ├── Header.tsx
     │       └── Header.styles.tsx
-    │   ├── PageHeader.tsx : 프로젝트 페이지에 해당하는 제목 및 설명을 나타내주는 component.
+    │   ├── PageHeader.tsx
     │   └── theme.ts
     ├── data
     │   └── data.ts
@@ -110,16 +110,20 @@ npm run start
     │   ├── Profile
     │       └── Profile.tsx
     │   ├── Project
+    │       ├── assets
     │       ├── components
-    │           ├── Layout.tsx
-    │           ├── Paragraph.tsx
-    │           └── Slider.tsx
-    │       ├── pages
-    │           ├── drinkalbe.tsx
-    │           └── icon.tsx
-    │       └── work-images
-    │           ├── drinkable
-    │           └── icondb
+    │           ├── ProjectTitle.tsx
+    │           ├── ProjectDescription.tsx
+    │           └── ProjectSlider.tsx
+    │       └── Project.tsx
+    │   ├── Skills
+    │       ├── components
+    │           ├── MotionWrapper.tsx
+    │           ├── SkillsContainer.tsx
+    │           └── SkillsList.tsx
+    │       ├── data
+    │           └── skillsData.ts
+    │       └── Skills.tsx
     │   ├── App.tsx
     │   ├── index.tsx
     │   ├── react-app-env.d.ts
