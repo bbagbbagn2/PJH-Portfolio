@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import NavItem from '../NavItem/index';
 import { colors } from '@_components/theme';
+import { RESUME_URL } from '@_config/settings';
 
 const homeLink = <NavItem href="/">Home</NavItem>;
 
@@ -20,7 +21,7 @@ export default function BasicContact() {
       {renderHomeNavItem()}
       <NavItem href="/project">My Projects</NavItem>
       <NavItem
-        href="https://www.notion.so/parkresume/c4ce189e86cf43e8858349a33ebb482d"
+        href={RESUME_URL}
         external
       >
         My Resume

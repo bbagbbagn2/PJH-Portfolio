@@ -5,39 +5,39 @@ import { ProfileInnerContainer } from '@_components/InnerContainer';
 import { ProfileArticle, ArticleWrapper } from '@_components/Article';
 import { ProfileTitle } from '@_components/Title';
 import { ProfileText } from '@_components/Text';
-import Container from './MotionContainer';
+import MotionWrapper from './MotionWrapper';
 
 export default function ProfileContainer() {
   return (
     <ProfileInnerContainer>
       <ProfileArticle>
         <ArticleWrapper>
-          <Container
+          <MotionWrapper
             delay={0}>
             <ProfileTitle>
               Frontend
               <br />
               Developer
             </ProfileTitle>
-          </Container>
-          <Container
+          </MotionWrapper>
+          <MotionWrapper
             delay={0.5}>
             <ProfileText>
               프론트엔드 주니어 개발자 박지훈입니다.
             </ProfileText>
-          </Container>
+          </MotionWrapper>
         </ArticleWrapper>
       </ProfileArticle>
-      <Container
+      <MotionWrapper
         x={100}
         delay={1.2}>
-        <Figure />
-      </Container>
+        <StyledFigure />
+      </MotionWrapper>
     </ProfileInnerContainer>
   );
 }
 
-const Figure = styled.figure`
+const StyledFigure = styled.figure`
   margin: 0;
   position: relative;
   width: 23.2334em;

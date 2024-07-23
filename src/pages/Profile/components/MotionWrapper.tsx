@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
-interface ContainerProps {
+interface MotionWrapperProps {
     x?: number;
     delay: number;
     children: ReactNode;
@@ -16,7 +16,7 @@ const getContainerVariants = (x: number, delay: number) => ({
     },
 });
 
-export default function Container({ x = -100, delay, children }: ContainerProps) {
+export default function MotionWrapper({ x = -100, delay, children }: MotionWrapperProps) {
     const containerVariants = getContainerVariants(x, delay);
 
     return (

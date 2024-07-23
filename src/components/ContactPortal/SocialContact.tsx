@@ -3,15 +3,16 @@ import styled from 'styled-components';
 
 import NavItem from '../NavItem/index';
 import { colors } from '@_components/theme';
+import { GITHUB_URL } from '@_config/settings';
 
-type SocialContactProps = { 
+type SocialContactProps = {
   className?: string;
 }
 
 export default function SocialContact({ className }: SocialContactProps) {
   return (
     <SocialContactList className={className}>
-      <NavItem href="https://github.com/bbagbbagn2" external>
+      <NavItem href={GITHUB_URL} external>
         GitHub
       </NavItem>
     </SocialContactList>

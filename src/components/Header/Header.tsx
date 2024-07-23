@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Basic from '../ContactPortal/BasicContact/BasicContact';
-import Social from '../ContactPortal/SocilaContact';
+import Social from '../ContactPortal/SocialContact';
 import CrossSiteNav from '../CrossSiteNav/CrossSiteNav';
 import * as S from './Header.styles';
 

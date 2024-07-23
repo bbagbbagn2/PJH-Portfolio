@@ -1,20 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import ProfileContainer from './components/ProfileContainer';
 import ContentContainer from './components/ContentContainer/ContentContainer';
 import { colors } from '@_components/theme';
 
 export default function Profile() {
   return (
-    <Section>
+    <StyledSection>
       <ProfileContainer />
       <ContentContainer />
       <MobileAvatarBox />
-    </Section>
+    </StyledSection>
   );
 }
 
-const Section = styled.section`
+const StyledSection = styled.section`
   /* Positioning */
   position: relative;
   padding-bottom: 4.17rem;

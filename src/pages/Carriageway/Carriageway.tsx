@@ -7,6 +7,8 @@ import LaneBox from './components/LaneBox';
 import { CarriagewayTitle } from '@_components/Title';
 import { CarriagewayText } from '@_components/Text';
 import Button from '@_components/Button';
+import { RESUME_URL } from '@_config/settings';
+
 
 export default function Carriageway() {
   return (
@@ -24,7 +26,7 @@ export default function Carriageway() {
                 <CarriagewayText>
                   오픈 소스,
                   <br />
-                  팀 프로젝트 & 
+                  팀 프로젝트 &
                   <br />
                   개인 프로젝트
                   <br />
@@ -52,7 +54,7 @@ export default function Carriageway() {
               </ArticleWrapper>
             </CarriagewayArticle>
             <Button
-              href="https://www.notion.so/parkresume/c4ce189e86cf43e8858349a33ebb482d"
+              href={RESUME_URL}
               target="_blank"
               text="이력서 보러가기"
             />

@@ -5,6 +5,7 @@
       "@_logos/*": ["assets/brand/logos/*"],
       "@_components/*": ["components/*"],
       "@_data/*": ["data/*"],
+      "@_config/*": ["config/*"],
       "@_lib/*": ["lib/*"],
       "@_hooks/*": ["hooks/*"],
       "@/*": ["*"]

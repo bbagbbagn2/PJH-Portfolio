@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+
 import { FeaturesInnerContainer } from '@_components/InnerContainer';
 import MotionArticle from './MotionArticle';
-import { articlesData } from './data';
+import { articlesData } from './articlesData';
 import { Article } from './types';
 
 

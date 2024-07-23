@@ -5,23 +5,18 @@ import { FeaturesArticle, ArticleWrapper } from '@_components/Article';
 import { FeaturesTitle } from '@_components/Title';
 import { FeaturesText } from '@_components/Text';
 import { colors } from '@_components/theme';
+import { Article } from './types';
 
-type CavalierArticleProps = {
-  justifyContent?: string;
-  title: string;
-  description: string;
-};
-
-export default function Article({
+export default function CavalierArticle({
   justifyContent,
   title,
   description,
-}: CavalierArticleProps) {
+}: Article) {
   return (
     <StyledContainer
-      justifyContent={justifyContent}
       title={title}
       description={description}
+      justifyContent={justifyContent}
     >
       <ArticleWrapper>
         <FeaturesTitle>{title}</FeaturesTitle>
@@ -31,7 +26,7 @@ export default function Article({
   );
 }
 
-const StyledContainer = styled(FeaturesArticle) <CavalierArticleProps>`
+const StyledContainer = styled(FeaturesArticle) <Article>`
   justify-content: ${props => props.justifyContent};
   color: ${colors.primary};
 `;

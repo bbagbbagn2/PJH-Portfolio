@@ -1,47 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
+import MotionWrapper from '../MotionWrapper';
 import { colors } from '@_components/theme';
+import { Content } from './types';
 
-type Content = {
-  id: number;
-  text: string;
-};
-
-type ContentListProps = {
+interface ContentListProps {
   contents: Content[];
 };
 
-const container = (delay: number) => ({
-  hidden: { x: -100, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 0.5, delay: delay },
-  },
-});
-
 export default function ContentList({ contents }: ContentListProps) {
   return (
-    <List>
+    <StyledList>
       {contents.map(content => (
         <li key={content.id}>
-          <motion.div
+          <MotionWrapper
             key={content.id}
-            variants={container(content.id * 0.5)}
-            initial="hidden"
-            animate="visible"
+            delay={(content.id * 0.5)}
           >
             {content.text}
-          </motion.div>
+          </MotionWrapper>
         </li>
       ))}
-    </List>
+    </StyledList>
   );
 }
 
-const List = styled.ul`
+const StyledList = styled.ul`
   display: flex;
   justify-content: space-between;
   color: ${colors.text};
