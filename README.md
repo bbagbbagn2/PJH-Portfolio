@@ -1,62 +1,45 @@
 # Personal Website
 
-## Project Outline
-
-### 개발기간
-<p>
-  2023.04 - 2023.05 / 2023.11 - 2024.01
-</p>
-
-### Project Deployment URL
+## Project Deployment URL
 [https://pjh-portfolio.com/](https://pjh-portfolio.netlify.app/)
 
-### 프로젝트 소개
-<p>
-  React.js를 활용해 개발한 웹 포트폴리오입니다.<br/><br/>
-</p>
+<br/>
 
-## 시작 가이드
+## Description
+React.js를 활용해 개발한 웹 포트폴리오입니다.
 
-### Installation
-```bash
-$ git clone https://github.com/bbagbbagn2/JH-Portfolio.git
-```
+<br/>
 
-### Front-End
-```
-npm install
+## Installation
+1. **Clone repository**
+  ```sh
+  $ git clone https://github.com/bbagbbagn2/JH-Portfolio.git
+  ```
+2. **Install dependencies**
+  ```sh 
+  npm install
+  ```
+<br/>
+
+## Usage
+1. **Start**
+```sh
 npm run start
 ```
 
-<br/><br/>
+<br/>
 
-## Stacks
-
-### Environment
-<p>
-  <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white"/>
-  <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=GitHub&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=Netlify&logoColor=white"/>
-</p>
-
-### Config
-<p>
-  <img src="https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white"/>
-</p>
-
-### Development
+## Skills
 <p>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"/>
   <img src="https://img.shields.io/badge/TypeScript-1976D2?style=flat-square&logo=TypeScript&logoColor=white"/>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/>
-  <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=flat-square&logo=styledcomponents&logoColor=white"/><br/><br/>
+  <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=flat-square&logo=styledcomponents&logoColor=white"/>
 </p>
+<br/>
 
-## 아키텍처
-
-### 디렉토리 구조
-```bash
+## Architecture
+```sh
 ├── README.md
 ├── package-lock.json
 ├── package.json
@@ -113,8 +96,3 @@ npm run start
         ├── manifest.json
         └── robots.txt
 ```
-<br/><br/>
-
-<p>
-  Copyright (c) 2024 Jihun Park. All rights reserved.
-</p>
