@@ -11,18 +11,18 @@ React.js를 활용해 개발한 웹 포트폴리오입니다.
 <br/>
 
 ## Installation
-1. **Clone repository**
+**1. Clone repository**
   ```sh
   $ git clone https://github.com/bbagbbagn2/JH-Portfolio.git
   ```
-2. **Install dependencies**
+**2. Install dependencies**
   ```sh 
   npm install
   ```
 <br/>
 
 ## Usage
-1. **Start**
+**1. Start**
 ```sh
 npm run start
 ```
