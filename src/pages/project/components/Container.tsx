@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
@@ -10,20 +10,36 @@ import { formatPathSegment } from '@_utils/helpers';
 import { projectsData } from '../data/projectData';
 
 export default function Container() {
-  const [currentProject, setCurrentProject] = useState(projectsData[0]);
+  const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+  const initialProject =
+    projectsData.find(p => p.title === id) || projectsData[0];
+  const [currentProject, setCurrentProject] = useState(initialProject);
+
+  useEffect(() => {
+    if (id) {
+      const matchingProject = projectsData.find(p => p.title === id);
+      if (matchingProject) {
+        setCurrentProject(matchingProject);
+      }
+    }
+  }, [id]);
 
   const handleSlideChange = (swiper: any) => {
     const currentIndex = swiper.activeIndex;
+    const newProject = projectsData[currentIndex];
 
-    setCurrentProject(projectsData[currentIndex]);
+    setCurrentProject(newProject);
+
+    const formattedSegment = formatPathSegment(newProject.title);
+    navigate(`/project/${formattedSegment}`, { replace: true });
   };
 
-  const { id } = useParams<{ id: string }>();
-  const project = projectsData.find(p => p.title === id);
+  const initialSlideIndex = projectsData.findIndex(
+    project => project.title === currentProject.title,
+  );
 
-  const formattedSegment = project
-    ? formatPathSegment(currentProject.title)
-    : '';
+  const formattedSegment = formatPathSegment(currentProject.title);
 
   return (
     <ProjectContainer>
@@ -37,6 +53,7 @@ export default function Container() {
           spaceBetween={30}
           slidesPerView={1}
           onSlideChange={handleSlideChange}
+          initialSlide={initialSlideIndex}
         >
           {projectsData.map((project, index) => {
             return (
