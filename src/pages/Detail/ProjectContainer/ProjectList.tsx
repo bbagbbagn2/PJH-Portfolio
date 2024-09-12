@@ -6,9 +6,9 @@ import ProjectLogo from './ProjectBox/ProjectLogo';
 import ProjectInfo from './ProjectBox/ProjectInfo';
 import ProjectSkill from './ProjectBox/ProjectSkill';
 import { colors } from '@_components/theme';
-import { formatprojectData } from '../../../utils/helpers';
+import { formatProjectData } from '../../../utils/helpers';
 
-const projects = formatprojectData();
+const projects = formatProjectData();
 
 export default function ProjectList() {
   return (
@@ -52,8 +52,7 @@ const Item = styled.li`
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow:
-      rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
 `;

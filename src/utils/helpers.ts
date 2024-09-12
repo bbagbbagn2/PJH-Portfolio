@@ -30,6 +30,7 @@ export const createMeta = {
     createSEOProps('description', content, exclude),
 };
 
+/** 주어진 이름을 하이픈으로 변환하는 함수 */
 export function hyphenateName(name: string): string {
   return name
     .toLowerCase()
@@ -37,13 +38,21 @@ export function hyphenateName(name: string): string {
     .replace(/[!$%^&*()_+|~=`{}[\]:";'<>?,./]/gi, '');
 }
 
-export function formatprojectData() {
+/** 프로젝트 데이터를 포맷팅하는 함수 */
+export function formatProjectData() {
   return projectsData.map(project => ({
     ...project,
     summaryLinkLabel: project.internalPage
       ? null
-      : project.name + ' live demo.',
-    siteURL: project.siteName ? 'https://' + project.siteName : '#',
-    path: '/project/' + hyphenateName(project.name),
+      : `${project.name} live demo.`,
+    siteURL: project.siteName ? `https://${project.siteName}` : '#',
+    path: `/project/${hyphenateName(project.name)}`,
   }));
+}
+
+/** 주소창에 "-"이 있을 시 띄어쓰기 및 다음 글자를 대문자로 나타내주는 함수 */
+export function formatPathSegment(segment: string): string {
+  return segment
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, char => char.toUpperCase());
 }

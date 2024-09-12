@@ -23,7 +23,7 @@ interface Project {
 export const projectsData: Project[] = [
   {
     number: '01',
-    category: 'frontend',
+    category: 'Frontend',
     title: 'icondb',
     images: ICONDB_IMAGES,
     description: [
@@ -50,17 +50,13 @@ export const projectsData: Project[] = [
   },
   {
     number: '02',
-    category: 'fullstack',
+    category: 'Fullstack',
     title: 'drinkable',
     images: DRINKABLE_IMAGES,
     description: [
-      'DRINKABLE은 칵테일의 종류에 대한 정보를 제공하는 웹사이트입니다.',
-
-      '이 프로젝트는 TypeScript 및 백엔드 공부를 목적으로 개발한 개인 프로젝트입니다. 백엔드에 대한 지식이 부족했기 때문에 DB 설계 및 Node.js 학습에 긴 시간이 소요되었지만, 구글링 및 여러 자료들을 자세히 살펴보며 백엔드 코드를 완성할 수 있었습니다.',
-
-      '해당 프로젝트는 HTML, CSS, TypeScript, React, style-components, Node.js, Express, MySQL과 같은 기술을 사용하였습니다. TypeScript 및 Node.js공부를 통해 프론트엔드 지식을 향상시키는 동시에 백엔드와의 협업 시 원할한 의사소통 능력을 키울 수 있는 경험을 얻었습니다.',
-
-      'TypeScript 및 데이터베이스를 활용한 개인 프로젝트로, 해당 기술에 대한 깊은 학습을 할 수 있었습니다.',
+      'DRINKABLE은 칵테일의 종류에 대한 정보를 제공하는 웹 서비스입니다.',
+      '위 프로젝트는 TypeScript를 적용해보고, MySQL 데이터베이스 설계, Node.js와 같은 백엔드를 학습하기 위해 개발한 개인 프로젝트입니다.',
+      'TypeScript, Node.js, MySQL을 이용해 프로젝트를 개발하면서 프론트엔드 지식을 향상시키는 동시에 백엔드에 대한 지식을 습득할 수 있었습니다.',
     ],
     stack: [
       { name: 'React' },
@@ -72,7 +68,7 @@ export const projectsData: Project[] = [
   },
   {
     number: '03',
-    category: 'frontend',
+    category: 'Frontend',
     title: 'personal website',
     images: DRINKABLE_IMAGES,
     description: [],
@@ -86,7 +82,7 @@ export const projectsData: Project[] = [
   },
   {
     number: '04',
-    category: 'fullstack',
+    category: 'Fullstack',
     title: 'notification',
     images: DRINKABLE_IMAGES,
     description: [],

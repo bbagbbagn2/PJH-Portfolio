@@ -1,25 +1,21 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { colors } from '@_components/theme';
-
-/** 주소창에 "-"이 있을 시 띄어쓰기 및 다음 글자를 대문자로 나타내주는 함수 */
-function formatPathSegment(segment: string): string {
-  return segment
-    .replace(/-/g, ' ')
-    .replace(/\b\w/g, char => char.toUpperCase());
-}
+import { projectsData } from '../../data/projectData';
+import { formatPathSegment } from '@_utils/helpers';
 
 export default function TitleWrapper() {
-  const location = useLocation();
-  const pathSegments = location.pathname.split('/');
-  const lastPathSegment = pathSegments[pathSegments.length - 1];
-  const formattedSegment = formatPathSegment(lastPathSegment);
+  const { id } = useParams<{ id: string }>();
+  const project = projectsData.find(p => p.title === id);
+
+  const formattedSegment = project ? formatPathSegment(project.title) : '';
 
   return (
     <StyledHeader>
       <Title>{formattedSegment}</Title>
+      <p>{project?.category} Project</p>
     </StyledHeader>
   );
 }
