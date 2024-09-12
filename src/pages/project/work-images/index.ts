@@ -4,6 +4,7 @@ import icondbScreen2 from './icondb/screen2.png';
 import icondbScreen3 from './icondb/screen3.png';
 import icondbScreen4 from './icondb/screen4.png';
 import icondbScreen5 from './icondb/screen5.png';
+import icondbScreen6 from './icondb/screen6.png';
 
 // Drinkable
 import drinkableScreen1 from './drinkable/screen1.png';
@@ -16,6 +17,7 @@ export const ICONDB_IMAGES = [
   { src: icondbScreen3, alt: 'Icondb: Screen 3.' },
   { src: icondbScreen4, alt: 'Icondb: Screen 4.' },
   { src: icondbScreen5, alt: 'Icondb: Screen 5.' },
+  { src: icondbScreen6, alt: 'Icondb: Screen 6.' },
 ];
 
 export const DRINKABLE_IMAGES = [
