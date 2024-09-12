@@ -4,7 +4,7 @@ import { ProjectContainer } from '@_components/MainContainer';
 import TitleWrapper from './components/TitleWrapper';
 import ProjectSlider from './components/SliderWrapper';
 import DescriptionWrapper from './components/DescriptionWrapper';
-import { settings } from '../data/projectData';
+import { settings } from '../config/carouselSettings';
 
 interface ContainerProps {
   images: { src: string; alt: string }[];
