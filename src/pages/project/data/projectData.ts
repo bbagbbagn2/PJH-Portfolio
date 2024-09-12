@@ -1,9 +1,23 @@
 import { ICONDB_IMAGES, DRINKABLE_IMAGES } from '../work-images';
 
+interface Image {
+  src: string;
+  alt: string;
+}
+
+interface Stack {
+  name: string;
+}
+
 interface Project {
-  id: string;
-  images: { src: string; alt: string }[];
+  number: string;
+  category: string;
+  title: string;
+  images: Image[];
   description: string[];
+  stack: Stack[];
+  live?: string;
+  github?: string;
 }
 
 export const settings = {
@@ -19,11 +33,12 @@ export const settings = {
 
 export const projectsData: Project[] = [
   {
-    id: 'icondb',
+    number: '01',
+    category: 'frontend',
+    title: 'icondb',
     images: ICONDB_IMAGES,
     description: [
       'ICONDB는 아이콘을 사용하려는 사용자들을 위한 무료 웹 서비스입니다.',
-
       'ICONDB는 여러가지 기능을 제공합니다.' +
         '다양한 아이콘을 무료로 다운로드 할 수 있습니다.' +
         '제목, 사용자, 해시태그 등 다양한 필터를 사용해 아이콘을 검색할 수 있습니다.',
@@ -34,7 +49,7 @@ export const projectsData: Project[] = [
         '저는 프론트엔드 개발자로 프로젝트를 진행하면서 프로젝트 기획부터 디자인 및 구현까지 작업할 수 있는 경험을 쌓을 수 있었습니다.',
 
       '개발 초창기에 HTML/CSS, JavaScript를 사용해 개발했지만, 개발 진행 중 랜더링 및 속도에 대한 이슈가 걱정되어 팀원들과 상의 후 React를 사용해 프로젝트를 개발했습니다. ' +
-        'CSS의 전역 스코프를 가지는 특징 때문에 개발 중 스타일 충돌이 발생하였고, 프로젝트를 개발할수록 CSS가 복잡해져 팀원과의 의사소통 시 문제가 발생하였습니다. ' +
+        'CSS의 전역 스코프를 가지는 특징 때문에   개발 중 스타일 충돌이 발생하였고, 프로젝트를 개발할수록 CSS가 복잡해져 팀원과의 의사소통 시 문제가 발생하였습니다. ' +
         '이런 문제점을 해결하기 위해 CSS-in-JS인 styled-components를 사용하여 스타일 충돌 방지 및 팀원 간의 의사소통을 원할히 할 수 있었고 ' +
         'JS를 활용하여 조건부 스타일링과 동적인 스타일링을 할 수 있었습니다.',
 
@@ -45,9 +60,21 @@ export const projectsData: Project[] = [
         '다양한 Hook을 사용하여 프로젝트를 개발 할 수 있고, 중복된 코드는 컴포넌트화를 통해 코드를 간결하게 유지할 수 있습니다. ' +
         '개발적인 면 뿐만 아니라, 프로젝트 진행 중에 Notion을 사용하여 일정 관리 및 회의록을 작성하여 프로젝트의 완성도와 개발 기간 모두 만족할 수 있었습니다.',
     ],
+    stack: [
+      { name: 'HTML5' },
+      { name: 'CSS3' },
+      { name: 'JavaScript' },
+      { name: 'React' },
+      { name: 'styled-components' },
+      { name: 'Axios' },
+      { name: 'Node.js' },
+    ],
+    github: '',
   },
   {
-    id: 'drinkable',
+    number: '02',
+    category: 'fullstack',
+    title: 'drinkable',
     images: DRINKABLE_IMAGES,
     description: [
       'DRINKABLE은 칵테일의 종류에 대한 정보를 제공하는 웹사이트입니다.',
@@ -58,5 +85,41 @@ export const projectsData: Project[] = [
 
       'TypeScript 및 데이터베이스를 활용한 개인 프로젝트로, 해당 기술에 대한 깊은 학습을 할 수 있었습니다.',
     ],
+    stack: [
+      { name: 'React' },
+      { name: 'TypeScript' },
+      { name: 'styled-components' },
+      { name: 'Node.js' },
+      { name: 'MySQL' },
+    ],
+  },
+  {
+    number: '03',
+    category: 'frontend',
+    title: 'personal website',
+    images: DRINKABLE_IMAGES,
+    description: [],
+    stack: [
+      { name: 'React' },
+      { name: 'TypeScript' },
+      { name: 'styled-components' },
+    ],
+    live: '',
+    github: '',
+  },
+  {
+    number: '04',
+    category: 'fullstack',
+    title: 'notification',
+    images: DRINKABLE_IMAGES,
+    description: [],
+    stack: [
+      { name: 'Next.js' },
+      { name: 'TypeScript' },
+      { name: 'styled-components' },
+      { name: 'Node.js' },
+      { name: 'Prisma' },
+    ],
+    github: '',
   },
 ];
