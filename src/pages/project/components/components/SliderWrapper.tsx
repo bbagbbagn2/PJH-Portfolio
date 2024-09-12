@@ -1,33 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-type Image = {
-  src: string;
-  alt: string;
-};
 
 type SliderWrapperProps = {
-  settings: any;
-  images: Image[];
+  images: string;
 };
 
-export default function SliderWrapper({
-  settings,
-  images,
-}: SliderWrapperProps) {
-  return (
-    <Slider {...settings}>
-      {images.map((image, index) => (
-        <SliderImage key={index} src={image.src} alt={image.alt} />
-      ))}
-    </Slider>
-  );
+export default function SliderWrapper({ images }: SliderWrapperProps) {
+  return <Image src={images} />;
 }
 
-const SliderImage = styled.img`
+const Image = styled.img`
   height: 100%;
   object-fit: cover;
   list-style: none;

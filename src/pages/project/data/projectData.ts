@@ -1,9 +1,9 @@
-import { ICONDB_IMAGES, DRINKABLE_IMAGES } from '../work-images';
-
-interface Image {
-  src: string;
-  alt: string;
-}
+import {
+  ICONDB_IMAGES,
+  DRINKABLE_IMAGES,
+  PERSONAL_IMAGES,
+  NOTIFICATION_IMAGES,
+} from '../work-images';
 
 interface Stack {
   name: string;
@@ -13,7 +13,7 @@ interface Project {
   number?: string;
   category: string;
   title: string;
-  images: Image[];
+  images: string;
   description: string[];
   stack: Stack[];
   live?: string;
@@ -27,9 +27,7 @@ export const projectsData: Project[] = [
     title: 'icondb',
     images: ICONDB_IMAGES,
     description: [
-      'ICONDB는 아이콘을 사용하려는 사용자들을 위한 무료 웹 서비스입니다.',
-
-      '저는 프론트엔드 개발 뿐만 아니라 프로젝트 기획, 배포까지의 전 과정을 진행했습니다.',
+      'ICONDB는 아이콘을 사용하려는 사용자들을 위한 무료 웹 서비스입니다. 저는 프론트엔드 개발 뿐만 아니라 프로젝트 기획, 배포까지의 전 과정을 진행했습니다.',
 
       'HTML5, CSS3, JavaScript를 사용한 개발 환경을 구축했지만, 개발 진행 중 리랜더링 이슈로 인해 팀원들과 상의 후 React와 styled-components로 개발 환경을 변경했습니다.',
 
@@ -70,7 +68,7 @@ export const projectsData: Project[] = [
     number: '03',
     category: 'Frontend',
     title: 'personal website',
-    images: DRINKABLE_IMAGES,
+    images: PERSONAL_IMAGES,
     description: [],
     stack: [
       { name: 'React' },
@@ -84,7 +82,7 @@ export const projectsData: Project[] = [
     number: '04',
     category: 'Fullstack',
     title: 'notification',
-    images: DRINKABLE_IMAGES,
+    images: NOTIFICATION_IMAGES,
     description: [],
     stack: [
       { name: 'Next.js' },
