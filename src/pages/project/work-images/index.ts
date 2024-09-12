@@ -11,6 +11,9 @@ import drinkableScreen1 from './drinkable/screen1.png';
 import drinkableScreen2 from './drinkable/screen2.png';
 import drinkableScreen3 from './drinkable/screen3.png';
 
+// Personal Website
+import personalScreen1 from './personal/screen1.png';
+
 export const ICONDB_IMAGES = [
   { src: icondbScreen1, alt: 'Icondb: Screen 1.' },
   { src: icondbScreen2, alt: 'Icondb: Screen 2.' },
@@ -24,4 +27,8 @@ export const DRINKABLE_IMAGES = [
   { src: drinkableScreen1, alt: 'Drinkable: Screen 1.' },
   { src: drinkableScreen2, alt: 'Drinkable: Screen 2.' },
   { src: drinkableScreen3, alt: 'Drinkable: Screen 3.' },
+];
+
+export const PERSONAL_IMAGES = [
+  { src: personalScreen1, alt: 'Personal Website: Screen 1.' },
 ];
