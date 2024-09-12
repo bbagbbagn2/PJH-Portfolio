@@ -6,8 +6,13 @@ import ProjectSlider from './components/SliderWrapper';
 import DescriptionWrapper from './components/DescriptionWrapper';
 import { settings } from '../config/carouselSettings';
 
+interface Image {
+  src: string;
+  alt: string;
+}
+
 interface ContainerProps {
-  images: { src: string; alt: string }[];
+  images: Image[];
   description: string[];
 }
 
