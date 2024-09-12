@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-import { colors } from '@_components/theme';
 import { projectsData } from '../../data/projectData';
 import { formatPathSegment } from '@_utils/helpers';
+import PageHeader from '@_components/PageHeader/PageHeader';
 
 export default function TitleWrapper() {
   const { id } = useParams<{ id: string }>();
@@ -13,24 +13,15 @@ export default function TitleWrapper() {
   const formattedSegment = project ? formatPathSegment(project.title) : '';
 
   return (
-    <StyledHeader>
-      <Title>{formattedSegment}</Title>
-      <p>{project?.category} Project</p>
-    </StyledHeader>
+    <motion.div
+      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: -100 }}
+      transition={{ duration: 1.5 }}
+    >
+      <PageHeader
+        title={formattedSegment}
+        desc={project?.category + ' Project'}
+      />
+    </motion.div>
   );
 }
-
-const StyledHeader = styled.header`
-  position: relative;
-  margin-top: 1.1em;
-  margin-bottom: 3.5rem;
-  text-align: center;
-`;
-
-const Title = styled.h1`
-  margin: 0.67em 0;
-  font-size: 1.802em;
-  color: ${colors.white};
-  user-select: none;
-  transition: color 0.6s;
-`;
