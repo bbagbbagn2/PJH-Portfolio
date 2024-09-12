@@ -69,7 +69,7 @@ export const projectsData: Project[] = [
       { name: 'Axios' },
       { name: 'Node.js' },
     ],
-    github: '',
+    github: 'https://github.com/stack0801/Icon_DB',
   },
   {
     number: '02',
@@ -104,8 +104,8 @@ export const projectsData: Project[] = [
       { name: 'TypeScript' },
       { name: 'styled-components' },
     ],
-    live: '',
-    github: '',
+    live: 'https://pjh-portfolio.com/',
+    github: 'https://github.com/bbagbbagn2/PJH-Portfolio',
   },
   {
     number: '04',
@@ -120,6 +120,6 @@ export const projectsData: Project[] = [
       { name: 'Node.js' },
       { name: 'Prisma' },
     ],
-    github: '',
+    github: 'https://github.com/bbagbbagn2/Notification',
   },
 ];
