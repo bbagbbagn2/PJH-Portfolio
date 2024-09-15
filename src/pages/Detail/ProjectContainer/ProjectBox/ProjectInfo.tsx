@@ -30,7 +30,7 @@ const Container = styled.div`
   padding: 2em;
 `;
 
-const Title = styled.h5`
+const Title = styled.h1`
   margin: 0;
   font-size: 1.125em;
   color: ${colors.white};
