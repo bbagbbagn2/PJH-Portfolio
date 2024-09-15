@@ -3,10 +3,11 @@ import styled from 'styled-components';
 
 type SliderWrapperProps = {
   images: string;
+  alt: string;
 };
 
-export default function SliderWrapper({ images }: SliderWrapperProps) {
-  return <Image src={images} />;
+export default function SliderWrapper({ images, alt }: SliderWrapperProps) {
+  return <Image src={images} alt={alt} />;
 }
 
 const Image = styled.img`

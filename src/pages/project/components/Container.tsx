@@ -59,7 +59,7 @@ export default function Container() {
             return (
               <SwiperSlide key={index}>
                 {/* Image */}
-                <img src={project.images} />
+                <img src={project.images} alt="img" />
               </SwiperSlide>
             );
           })}
