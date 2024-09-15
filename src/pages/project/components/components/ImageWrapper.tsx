@@ -7,7 +7,7 @@ type ImageWrapperProps = {
 };
 
 export default function ImageWrapper({ src, alt }: ImageWrapperProps) {
-  return <Image src={src} alt={alt} />;
+  return <Image src={src} alt={alt} loading="lazy" />;
 }
 
 const Image = styled.img`
