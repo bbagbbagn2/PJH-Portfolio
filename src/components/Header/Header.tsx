@@ -25,6 +25,8 @@ export default function HeaderSection() {
     >
       <S.NavItem id="logo"></S.NavItem>
       <S.MenuToggle
+        role="button"
+        aria-label="Toggle button"
         onClick={handelMenuClick}
         className={`menu-toggle ${isMenuFocused ? 'x' : ''}`}
       />
