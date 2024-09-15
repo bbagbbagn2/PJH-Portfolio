@@ -17,7 +17,7 @@ const getContainerVariants = (x: number, delay: number) => ({
 });
 
 export default function MotionWrapper({
-  x = -100,
+  x = -50,
   delay,
   children,
 }: MotionWrapperProps) {

@@ -14,7 +14,7 @@ export default function ContentList({ contents }: ContentListProps) {
     <StyledList>
       {contents.map(content => (
         <li key={content.id}>
-          <MotionWrapper key={content.id} delay={content.id * 0.5}>
+          <MotionWrapper key={content.id} delay={content.id * 0.3}>
             {content.text}
           </MotionWrapper>
         </li>
