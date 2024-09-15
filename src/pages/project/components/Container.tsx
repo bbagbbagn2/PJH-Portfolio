@@ -5,6 +5,7 @@ import 'swiper/css';
 
 import { ProjectContainer } from '@_components/MainContainer';
 import TitleWrapper from './components/TitleWrapper';
+import ImageWrapper from './components/ImageWrapper';
 import DescriptionWrapper from './components/DescriptionWrapper';
 import { formatPathSegment } from '@_utils/helpers';
 import { projectsData } from '../data/projectData';
@@ -59,7 +60,7 @@ export default function Container() {
             return (
               <SwiperSlide key={index}>
                 {/* Image */}
-                <img src={project.images} alt="img" />
+                <ImageWrapper src={project.images} alt="" />
               </SwiperSlide>
             );
           })}

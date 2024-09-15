@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type SliderWrapperProps = {
-  images: string;
+type ImageWrapperProps = {
+  src: string;
   alt: string;
 };
 
-export default function SliderWrapper({ images, alt }: SliderWrapperProps) {
-  return <Image src={images} alt={alt} />;
+export default function ImageWrapper({ src, alt }: ImageWrapperProps) {
+  return <Image src={src} alt={alt} />;
 }
 
 const Image = styled.img`
