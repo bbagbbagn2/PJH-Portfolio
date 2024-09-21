@@ -49,7 +49,7 @@ export const projectsData: Project[] = [
   {
     number: '02',
     category: 'Frontend',
-    title: 'personal website',
+    title: 'personal-website',
     images: PERSONAL_IMAGES,
     description: [],
     stack: [

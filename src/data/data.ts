@@ -8,7 +8,7 @@ export default [
   {
     name: 'Personal Website',
     siteName: 'pjh-portfolio.netlify.app',
-    internalPage: false,
+    internalPage: true,
     skill: ['React', 'TypeScript'],
   },
   {
