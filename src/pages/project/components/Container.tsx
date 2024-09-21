@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -22,30 +22,28 @@ export default function Container() {
 
   return (
     <ProjectContainer>
-      <div>
-        {/* project title */}
-        <TitleWrapper
-          title={formatPathSegment(currentProject.title)}
-          desc={`${currentProject.category} Project`}
-        />
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={1}
-          onSlideChange={handleSlideChange}
-          initialSlide={initialSlideIndex}
-        >
-          {projectsData.map((project, index) => {
-            return (
-              <SwiperSlide key={index}>
-                {/* Image */}
-                <ImageWrapper src={project.images} alt="" />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-        {/* project description */}
-        <DescriptionWrapper description={currentProject.description} />
-      </div>
+      {/* project title */}
+      <TitleWrapper
+        title={formatPathSegment(currentProject.title)}
+        desc={`${currentProject.category} Project`}
+      />
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={1}
+        onSlideChange={handleSlideChange}
+        initialSlide={initialSlideIndex}
+      >
+        {projectsData.map((project, index) => {
+          return (
+            <SwiperSlide key={index}>
+              {/* project image */}
+              <ImageWrapper src={project.images} alt={project.title} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+      {/* project description */}
+      <DescriptionWrapper description={currentProject.description} />
     </ProjectContainer>
   );
 }
