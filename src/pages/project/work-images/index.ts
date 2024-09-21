@@ -5,10 +5,10 @@ import icondbScreen1 from './icondb/screen6.webp';
 import drinkableScreen1 from './drinkable/screen1.png';
 
 // Personal Website
-import personalScreen1 from './personal/screen1.png';
+import personalScreen1 from './personal/screen1.webp';
 
 // Notifiacation
-import notificationScreen1 from './notification/screen1.png';
+import notificationScreen1 from './notification/screen1.webp';
 
 export const ICONDB_IMAGES = icondbScreen1;
 export const DRINKABLE_IMAGES = drinkableScreen1;
