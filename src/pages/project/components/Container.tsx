@@ -9,46 +9,24 @@ import ImageWrapper from './components/ImageWrapper';
 import DescriptionWrapper from './components/DescriptionWrapper';
 import { formatPathSegment } from '@_utils/helpers';
 import { projectsData } from '../data/projectData';
+import useProject from '../hooks/useProject';
 
 export default function Container() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const initialProject =
-    projectsData.find(p => p.title === id) || projectsData[0];
-  const [currentProject, setCurrentProject] = useState(initialProject);
-
-  useEffect(() => {
-    if (id) {
-      const matchingProject = projectsData.find(p => p.title === id);
-      if (matchingProject) {
-        setCurrentProject(matchingProject);
-      }
-    }
-  }, [id]);
-
-  const handleSlideChange = (swiper: any) => {
-    const currentIndex = swiper.activeIndex;
-    const newProject = projectsData[currentIndex];
-
-    setCurrentProject(newProject);
-
-    const formattedSegment = formatPathSegment(newProject.title);
-    navigate(`/project/${formattedSegment}`, { replace: true });
-  };
-
-  const initialSlideIndex = projectsData.findIndex(
-    project => project.title === currentProject.title,
+  const { currentProject, handleSlideChange, initialSlideIndex } = useProject(
+    id,
+    projectsData,
+    navigate,
   );
-
-  const formattedSegment = formatPathSegment(currentProject.title);
 
   return (
     <ProjectContainer>
       <div>
         {/* project title */}
         <TitleWrapper
-          title={formattedSegment}
-          desc={currentProject.category + ' Project'}
+          title={formatPathSegment(currentProject.title)}
+          desc={`${currentProject.category} Project`}
         />
         <Swiper
           spaceBetween={30}

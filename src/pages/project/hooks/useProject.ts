@@ -1,19 +1,27 @@
 import { useState, useEffect } from 'react';
 import { NavigateFunction } from 'react-router-dom';
-import { formatPathSegment } from '@_utils/helpers';
+import { hyphenateName } from '@_utils/helpers';
+
+interface Stack {
+  name: string;
+}
 
 type Project = {
+  number?: string;
+  category: string;
   title: string;
-  image: string;
+  images: string;
+  description: string[];
+  stack: Stack[];
+  live?: string;
+  github?: string;
 };
 
 const fintProjectByTitle = (
   title: string | undefined,
   projectsData: Project[],
 ) => {
-  return projectsData.find(
-    project => formatPathSegment(project.title) === title,
-  );
+  return projectsData.find(project => hyphenateName(project.title) === title);
 };
 
 const findProjectIndex = (currentProject: Project, projectsData: Project[]) => {
@@ -26,7 +34,7 @@ const handleProjectnavigation = (
   newProject: Project,
   navigate: NavigateFunction,
 ) => {
-  const formattedSegment = formatPathSegment(newProject.title);
+  const formattedSegment = hyphenateName(newProject.title);
   navigate(`/project/${formattedSegment}`, { replace: true });
 };
 
