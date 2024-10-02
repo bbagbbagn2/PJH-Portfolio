@@ -1,33 +1,33 @@
 # Personal Website
 
-## Project Deployment URL
-[https://pjh-portfolio.com/](https://pjh-portfolio.netlify.app/)
+## React.js를 활용해 개발한 웹 포트폴리오입니다.
+<br />
 
-<br/>
+## 
 
-## Description
-React.js를 활용해 개발한 웹 포트폴리오입니다.
+## Features
+⚡️ styled-components를 이용한 스타일 적용<br/>
+⚡️ media-query를 이용한 반응형 제작<br/>
+⚡️ React, TypeScript를 이용한 프론트엔드 개발
 
-<br/>
+To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 
 ## Installation
-**1. Clone repository**
+1. Clone repository
   ```sh
+  # Clone the repository
   $ git clone https://github.com/bbagbbagn2/JH-Portfolio.git
   ```
-**2. Install dependencies**
-  ```sh 
+2. Install dependencies
+  ```sh
+  # Install dependencies
   npm install
   ```
-<br/>
-
-## Usage
-**1. Start**
-```sh
-npm run start
-```
-
-<br/>
+3. Start the development server
+  ```sh
+  # Start the development server
+  npm start
+  ```
 
 ## Skills
 <p>
