@@ -14,7 +14,7 @@
 
 To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 
-## Installation
+## Installation 🔧
 1. Clone repository
   ```sh
   # Clone the repository
@@ -33,14 +33,15 @@ To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 
 ![screen1](https://github.com/user-attachments/assets/1fa3af27-8fc7-4fdc-9e16-11d50b3ef7ed)
 
-## Skills
+## Skills used 🛠️
 <p>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/TypeScript-1976D2?style=flat-square&logo=TypeScript&logoColor=white"/>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/>
-  <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=flat-square&logo=styledcomponents&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TypeScript-1976D2?style=flat-square&logo=TypeScript&logoColor=white"/>
 </p>
-<br/>
+
+- [styled-components](https://styled-components.com/) - CSS-in-JS 라이브러리
+- [Framer Motion](https://www.framer.com/motion/) - 애니메이션 라이브러리
+- [CRACO](https://craco.js.org/) - CRA 설정 오버라이드 도구
 
 ## Architecture
 ```sh
