@@ -31,6 +31,8 @@ To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
   npm start
   ```
 
+![screen1](https://github.com/user-attachments/assets/1fa3af27-8fc7-4fdc-9e16-11d50b3ef7ed)
+
 ## Skills
 <p>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"/>
