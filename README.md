@@ -23,7 +23,7 @@ To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 - media-query를 이용한 반응형 제작
 - React, TypeScript를 이용한 프론트엔드 개발
 
-## How To Use 🔧
+## How To Use 🚀
   ```sh
   # Clone the repository
   $ git clone https://github.com/bbagbbagn2/JH-Portfolio.git
@@ -37,14 +37,14 @@ To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 
 ![screen1](https://github.com/user-attachments/assets/1fa3af27-8fc7-4fdc-9e16-11d50b3ef7ed)
 
-## Skills used 🛠️
+## Skills used 🔧
 - [React](https://ko.react.dev/) - 컴포넌트 기반의 SPA 구축을 위한 라이브러리
 - [TypeScript](https://www.typescriptlang.org/) - JavaScript에 정적 타입을 추가한 프로그래밍 언어
 - [styled-components](https://styled-components.com/) - CSS-in-JS 라이브러리
 - [Framer Motion](https://www.framer.com/motion/) - 애니메이션 라이브러리
 - [CRACO](https://craco.js.org/) - CRA 설정 오버라이드 도구
 
-## Project Architecture
+## Project Architecture 📂
 ```sh
 ├── README.md
 ├── package-lock.json
