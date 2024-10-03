@@ -2,9 +2,10 @@
 
 ## React를 활용해 개발한 웹 포트폴리오입니다.
 
-![pjh-Portfolio logo](https://github.com/user-attachments/assets/7b0983f2-ea3a-4ec6-aa7e-31b799091b68)
-
-## 
+<h2 align="center">
+  <img src="https://github.com/user-attachments/assets/7b0983f2-ea3a-4ec6-aa7e-31b799091b68" alt="PJH-Portfolio" width="600px">
+  <br>
+</h2>
 
 ## Sections
 
@@ -39,9 +40,9 @@ To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
   $ npm start
   ```
 <h2 align="center">
-  <img src="https://github.com/user-attachments/assets/1fa3af27-8fc7-4fdc-9e16-11d50b3ef7ed.png" alt="PJH-Portfolio" width="600px">
-  <br>
+  <img src="https://github.com/user-attachments/assets/1fa3af27-8fc7-4fdc-9e16-11d50b3ef7ed" alt="PJH-Portfolio" width="100%">
 </h2>
+
 ---
 
 ## Skills used 🔧
