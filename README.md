@@ -34,11 +34,8 @@ To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 ![screen1](https://github.com/user-attachments/assets/1fa3af27-8fc7-4fdc-9e16-11d50b3ef7ed)
 
 ## Skills used 🛠️
-<p>
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/>
-  <img src="https://img.shields.io/badge/TypeScript-1976D2?style=flat-square&logo=TypeScript&logoColor=white"/>
-</p>
-
+- [React](https://ko.react.dev/) - 컴포넌트 기반의 SPA 구축을 위한 라이브러리
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript에 정적 타입을 추가한 프로그래밍 언어
 - [styled-components](https://styled-components.com/) - CSS-in-JS 라이브러리
 - [Framer Motion](https://www.framer.com/motion/) - 애니메이션 라이브러리
 - [CRACO](https://craco.js.org/) - CRA 설정 오버라이드 도구
