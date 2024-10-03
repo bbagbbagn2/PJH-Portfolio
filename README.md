@@ -29,7 +29,7 @@ To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 
 ## How To Use 🚀
 
-  ```sh
+```sh
   # Clone the repository
   $ git clone https://github.com/bbagbbagn2/JH-Portfolio.git
 
@@ -38,7 +38,8 @@ To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 
   # Start a local dev server
   $ npm start
-  ```
+```
+
 <h2 align="center">
   <img src="https://github.com/user-attachments/assets/1fa3af27-8fc7-4fdc-9e16-11d50b3ef7ed" alt="PJH-Portfolio" width="100%">
 </h2>
