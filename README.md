@@ -43,7 +43,7 @@ To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 - [Framer Motion](https://www.framer.com/motion/) - 애니메이션 라이브러리
 - [CRACO](https://craco.js.org/) - CRA 설정 오버라이드 도구
 
-## Architecture
+## Project Architecture
 ```sh
 ├── README.md
 ├── package-lock.json
