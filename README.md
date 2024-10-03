@@ -21,7 +21,7 @@ To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 
 ---
 
-## Features 👩‍💻
+## Implementation 👩‍💻
 
 - styled-components를 이용한 스타일 적용
 - media-query를 이용한 반응형 제작
