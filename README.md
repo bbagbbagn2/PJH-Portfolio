@@ -30,14 +30,14 @@ To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 ## How To Use 🚀
 
 ```sh
-  # Clone the repository
-  $ git clone https://github.com/bbagbbagn2/JH-Portfolio.git
+# Clone the repository
+$ git clone https://github.com/bbagbbagn2/JH-Portfolio.git
 
-  # Install dependencies
-  $ npm install
+# Install dependencies
+$ npm install
 
-  # Start a local dev server
-  $ npm start
+# Start a local dev server
+$ npm start
 ```
 
 <h2 align="center">
