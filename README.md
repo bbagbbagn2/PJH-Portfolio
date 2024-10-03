@@ -1,4 +1,4 @@
-# Personal Website
+# Personal Website 🌐
 
 ## React를 활용해 개발한 웹 포트폴리오입니다.
 <br />
@@ -7,7 +7,7 @@
 
 ## 
 
-## Sections
+## Sections 💼
 🌟 Introduce<br/>
 🌟 About Me<br/>
 🌟 Skills<br/>
