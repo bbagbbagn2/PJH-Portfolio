@@ -8,13 +8,13 @@
 ## 
 
 ## Sections
-🟣 Introduce<br/>
-🟣 About Me<br/>
-🟣 Skills<br/>
-🟣 Projects<br/>
-🟣 Resume<br/>
-🟣 E-mail<br/>
-🟣 GitHub Profile
+🌟 Introduce<br/>
+🌟 About Me<br/>
+🌟 Skills<br/>
+🌟 Projects<br/>
+🌟 Resume<br/>
+🌟 E-mail<br/>
+🌟 GitHub Profile
 
 To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 
