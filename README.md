@@ -1,6 +1,6 @@
 # Personal Website
 
-## React.js를 활용해 개발한 웹 포트폴리오입니다.
+## React를 활용해 개발한 웹 포트폴리오입니다.
 <br />
 
 ![pjh-Portfolio logo](https://github.com/user-attachments/assets/7b0983f2-ea3a-4ec6-aa7e-31b799091b68)
