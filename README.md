@@ -46,7 +46,7 @@ $ npm start
 
 ---
 
-## Skills used 🔧
+## Technologies used 🔧
 
 - [React](https://ko.react.dev/) - 컴포넌트 기반의 SPA 구축을 위한 라이브러리
 - [TypeScript](https://www.typescriptlang.org/) - JavaScript에 정적 타입을 추가한 프로그래밍 언어
