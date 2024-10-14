@@ -1,44 +1,61 @@
-# Personal Website
+# Personal Website 🌐
 
-## Project Deployment URL
-[https://pjh-portfolio.com/](https://pjh-portfolio.netlify.app/)
+## React를 활용해 개발한 웹 포트폴리오입니다.
 
-<br/>
+<h2 align="center">
+  <img src="https://github.com/user-attachments/assets/7b0983f2-ea3a-4ec6-aa7e-31b799091b68" alt="PJH-Portfolio" width="600px">
+  <br>
+</h2>
 
-## Description
-React.js를 활용해 개발한 웹 포트폴리오입니다.
+## Sections
 
-<br/>
+🌟 Introduce<br/>
+🌟 About Me<br/>
+🌟 Skills<br/>
+🌟 Projects<br/>
+🌟 Resume<br/>
+🌟 E-mail<br/>
+🌟 GitHub Profile
 
-## Installation
-**1. Clone repository**
-  ```sh
-  $ git clone https://github.com/bbagbbagn2/JH-Portfolio.git
-  ```
-**2. Install dependencies**
-  ```sh 
-  npm install
-  ```
-<br/>
+To view my portfolio: **[click here](https://pjh-portfolio.netlify.app/)**
 
-## Usage
-**1. Start**
+---
+
+## Implementation 👩‍💻
+
+- styled-components를 이용한 스타일 적용
+- media-query를 이용한 반응형 제작
+- React, TypeScript를 이용한 프론트엔드 개발
+
+## How To Use 🚀
+
 ```sh
-npm run start
+# Clone the repository
+$ git clone https://github.com/bbagbbagn2/JH-Portfolio.git
+
+# Install dependencies
+$ npm install
+
+# Start a local dev server
+$ npm start
 ```
 
-<br/>
+<h2 align="center">
+  <img src="https://github.com/user-attachments/assets/1fa3af27-8fc7-4fdc-9e16-11d50b3ef7ed" alt="PJH-Portfolio" width="100%">
+</h2>
 
-## Skills
-<p>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/TypeScript-1976D2?style=flat-square&logo=TypeScript&logoColor=white"/>
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/>
-  <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=flat-square&logo=styledcomponents&logoColor=white"/>
-</p>
-<br/>
+---
 
-## Architecture
+## Technologies used 🔧
+
+- [React](https://ko.react.dev/) - 컴포넌트 기반의 SPA 구축을 위한 라이브러리
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript에 정적 타입을 추가한 프로그래밍 언어
+- [styled-components](https://styled-components.com/) - CSS-in-JS 라이브러리
+- [Framer Motion](https://www.framer.com/motion/) - 애니메이션 라이브러리
+- [CRACO](https://craco.js.org/) - CRA 설정 오버라이드 도구
+
+## Project Architecture 📂
+
 ```sh
 ├── README.md
 ├── package-lock.json
