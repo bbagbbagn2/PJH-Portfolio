@@ -12,6 +12,12 @@ export default [
     skill: ['React', 'TypeScript'],
   },
   {
+    name: 'Notification',
+    siteName: null,
+    internalPage: true,
+    skill: ['Next.js', 'TypeScript', 'Node.js'],
+  },
+  {
     name: 'Drinkable',
     siteName: null,
     internalPage: true,

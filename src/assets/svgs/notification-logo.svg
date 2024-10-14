@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="a" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 161.04 21.5">
+<svg id="a" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 161.04 21.5" width="180">
   <defs>
     <style>
       .b {
-        fill: #fff;
+        fill: #001e4c;
       }
 
       .c {

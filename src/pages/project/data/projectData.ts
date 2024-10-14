@@ -51,7 +51,11 @@ export const projectsData: Project[] = [
     category: 'Frontend',
     title: 'personal-website',
     images: PERSONAL_IMAGES,
-    description: [],
+    description: [
+      `다양한 템플릿을 이용해 포트폴리오를 만들 수 있지만, 저의 실력을 통해 오로지 '나만 가지고 있는 포트폴리오'를 제작하고 싶었습니다. `,
+
+      'React, TypeScript를 사용해 개발을 진행했고, 다양한 custom Hook을 만들고 사용한 경험을 얻었습니다. ',
+    ],
     stack: [
       { name: 'React' },
       { name: 'TypeScript' },
