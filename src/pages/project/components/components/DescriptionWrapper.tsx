@@ -30,5 +30,4 @@ const Container = styled.div`
 const Paragraph = styled.p`
   margin-bottom: 1.25em;
   color: ${colors.text};
-  line-height: normal;
 `;
