@@ -27,21 +27,24 @@ export default function Container() {
         title={formatPathSegment(currentProject.title)}
         desc={`${currentProject.category} Project`}
       />
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        onSlideChange={handleSlideChange}
-        initialSlide={initialSlideIndex}
-      >
-        {projectsData.map((project, index) => {
-          return (
-            <SwiperSlide key={index}>
-              {/* project image */}
-              <ImageWrapper src={project.images} alt={project.title} />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      {projectsData.some(project => project.images) && (
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          onSlideChange={handleSlideChange}
+          initialSlide={initialSlideIndex}
+        >
+          {projectsData.map((project, index) => {
+            return (
+              <SwiperSlide key={index}>
+                {project.images && (
+                  <ImageWrapper src={project.images} alt={project.title} />
+                )}
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      )}
       {/* project description */}
       <DescriptionWrapper description={currentProject.description} />
     </ProjectContainer>

@@ -10,7 +10,7 @@ type Project = {
   number?: string;
   category: string;
   title: string;
-  images: string;
+  images: string | null;
   description: string[];
   stack: Stack[];
   live?: string;
