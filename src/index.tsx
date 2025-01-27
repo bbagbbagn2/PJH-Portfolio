@@ -22,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
   html {
     position: relative;
     width: 100%;
-    font-family: "Noto Sans KR", "Open Sans", sans-serif;
     text-size-adjust: 100%;
 
     @media (min-width: 1601px) {
