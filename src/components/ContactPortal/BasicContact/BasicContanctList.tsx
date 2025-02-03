@@ -1,5 +1,5 @@
 import React from 'react';
-import NavItem from '../../NavItem/index';
+import NavItem from '../../NavItem/NavItem';
 
 export default function BasicContactList() {
   return (

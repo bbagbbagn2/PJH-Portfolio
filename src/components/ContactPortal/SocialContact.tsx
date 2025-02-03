@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import NavItem from '../NavItem/index';
+import NavItem from '../NavItem/NavItem';
 import { colors } from '@_components/theme';
 import { GITHUB_URL } from '@_config/settings';
 

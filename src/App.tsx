@@ -1,13 +1,11 @@
 import React from 'react';
-import { Routes, Route, useParams } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import MainPage from './pages/Main/Main';
 import DetailPage from './pages/Detail/Detail';
 import ProjectPage from './pages/project/Project';
 
 function ProjectRouter() {
-  const { subpath } = useParams();
-
   return (
     <Routes>
       <Route index element={<DetailPage />} />

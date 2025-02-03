@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
-import NavItem from '../NavItem/index';
+import NavItem from '../NavItem/NavItem';
 import { colors } from '@_components/theme';
 import { RESUME_URL } from '@_config/settings';
 
