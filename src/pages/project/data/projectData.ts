@@ -80,7 +80,6 @@ export const projectsData: Project[] = [
       { name: 'Next.js' },
       { name: 'TypeScript' },
       { name: 'styled-components' },
-      { name: 'Node.js' },
       { name: 'Prisma' },
     ],
     github: process.env.REACT_APP_GITHUB_NOTIFICATION,
@@ -91,7 +90,7 @@ export const projectsData: Project[] = [
     title: 'drinkable',
     images: null,
     description: [
-      'Coming soon.'
+      'Coming soon.',
       // 'DRINKABLE은 칵테일의 종류에 대한 정보를 제공하는 웹 서비스입니다.',
       // '위 프로젝트는 TypeScript를 적용해보고, MySQL 데이터베이스 설계, Node.js와 같은 백엔드를 학습하기 위해 개발한 개인 프로젝트입니다.',
       // 'TypeScript, Node.js, MySQL을 이용해 프로젝트를 개발하면서 프론트엔드 지식을 향상시키는 동시에 백엔드에 대한 지식을 습득할 수 있었습니다.',

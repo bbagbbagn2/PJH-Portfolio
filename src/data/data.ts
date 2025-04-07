@@ -3,7 +3,7 @@ export default [
     name: 'Icondb',
     siteName: null,
     internalPage: true,
-    skill: ['HTML5', 'CSS3', 'React', 'Node.js'],
+    skill: ['React', 'styled-components', 'Node.js'],
   },
   {
     name: 'Personal Website',
@@ -15,7 +15,7 @@ export default [
     name: 'Notification',
     siteName: null,
     internalPage: true,
-    skill: ['Next.js', 'TypeScript', 'Node.js'],
+    skill: ['Next.js', 'TypeScript', 'Prisma'],
   },
   {
     name: 'Drinkable',
