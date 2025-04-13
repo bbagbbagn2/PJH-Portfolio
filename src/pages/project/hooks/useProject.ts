@@ -9,9 +9,11 @@ interface Stack {
 type Project = {
   number?: string;
   category: string;
+  features?: { name: string }[];
   title: string;
   images: string | null;
   description: string[];
+  date?: string;
   stack: Stack[];
   live?: string;
   github?: string;
@@ -21,12 +23,12 @@ const fintProjectByTitle = (
   title: string | undefined,
   projectsData: Project[],
 ) => {
-  return projectsData.find(project => hyphenateName(project.title) === title);
+  return projectsData.find((project) => hyphenateName(project.title) === title);
 };
 
 const findProjectIndex = (currentProject: Project, projectsData: Project[]) => {
   return projectsData.findIndex(
-    project => project.title === currentProject.title,
+    (project) => project.title === currentProject.title,
   );
 };
 

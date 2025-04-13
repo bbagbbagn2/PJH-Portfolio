@@ -9,10 +9,15 @@ interface Stack {
   name: string;
 }
 
+interface Features {
+  name: string;
+}
 interface Project {
   number?: string;
+  date?: string;
   category: string;
   title: string;
+  features?: Features[];
   images: string | null;
   description: string[];
   stack: Stack[];
@@ -24,8 +29,15 @@ export const projectsData: Project[] = [
   {
     number: '01',
     category: 'Frontend',
+    date: '2022.03 - 2022.07',
     title: 'icondb',
     images: ICONDB_IMAGES,
+    features: [
+      { name: '사용자 관련 시스템(소셜 로그인, 팔로우, 프로필 변경) 구축' },
+      { name: '아이콘 관련 기능(다운로드, 업로드, 좋아요)' },
+      { name: '검색 엔진(제목, 사용자, 해시태그 검색)' },
+      { name: '그리고 SVG 아이콘 편집 기능' },
+    ],
     description: [
       'ICONDB는 사용자가 아이콘을 무료로 공유할 수 있는 웹 플랫폼입니다. ',
 
@@ -53,6 +65,7 @@ export const projectsData: Project[] = [
   {
     number: '02',
     category: 'Frontend',
+    date: '2023.11 - 2024.01',
     title: 'personal-website',
     images: PERSONAL_IMAGES,
     description: [
@@ -73,6 +86,7 @@ export const projectsData: Project[] = [
   {
     number: '03',
     category: 'Fullstack',
+    date: '2023.06 - 2023.07',
     title: 'notification',
     images: NOTIFICATION_IMAGES,
     description: [],
@@ -87,6 +101,7 @@ export const projectsData: Project[] = [
   {
     number: '04',
     category: 'Fullstack',
+    date: '2023.03 - 2023.04',
     title: 'drinkable',
     images: null,
     description: [

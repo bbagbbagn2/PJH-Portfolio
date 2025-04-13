@@ -10,8 +10,8 @@ type PageHeaderProps = {
 export default function PageHeader({ desc, title }: PageHeaderProps) {
   return (
     <Container>
-      <Heading title={title} />
       {desc && <p>{desc}</p>}
+      <Heading title={title} />
     </Container>
   );
 }
@@ -29,6 +29,11 @@ const Container = styled.header`
   }
 
   > p {
+    margin: 8px auto 0;
     position: relative;
+    font-size: 28px;
+    line-height: 1.25;
+    letter-spacing: 0.007em;
+    font-weight: 400;
   }
 `;

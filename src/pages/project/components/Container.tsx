@@ -25,9 +25,9 @@ export default function Container() {
       {/* project title */}
       <TitleWrapper
         title={formatPathSegment(currentProject.title)}
-        desc={`${currentProject.category} Project`}
+        desc={`${currentProject.date}`}
       />
-      {projectsData.some(project => project.images) && (
+      {projectsData.some((project) => project.images) && (
         <Swiper
           spaceBetween={30}
           slidesPerView={1}
@@ -46,7 +46,10 @@ export default function Container() {
         </Swiper>
       )}
       {/* project description */}
-      <DescriptionWrapper description={currentProject.description} />
+      <DescriptionWrapper
+        features={currentProject.features}
+        description={currentProject.description}
+      />
     </ProjectContainer>
   );
 }
