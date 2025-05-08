@@ -48,6 +48,7 @@ const ProfileTitle = styled(Heading)`
 
   @media (min-width: 581px) {
     font-size: 4.4em;
+    line-height: 120%;
   }
 `;
 

@@ -47,6 +47,7 @@ const FeaturesText = styled(Paragraph)`
 
 const ProfileText = styled(Paragraph)`
   color: ${colors.white};
+  margin: 20px 0;
 
   @media (max-width: 580px) {
     font-size: 2em;
@@ -60,9 +61,9 @@ const ProfileText = styled(Paragraph)`
     max-width: 20em;
   }
 
-  @media (min-width: 701px) {
+  @media (min-width: 1024px) {
     width: 32vw;
-    font-size: 1.07em;
+    font-size: 1.11056em;
   }
 `;
 

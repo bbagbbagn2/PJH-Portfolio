@@ -12,7 +12,7 @@ interface ContentListProps {
 export default function ContentList({ contents }: ContentListProps) {
   return (
     <StyledList>
-      {contents.map(content => (
+      {contents.map((content) => (
         <li key={content.id}>
           <MotionWrapper key={content.id} delay={content.id * 0.3}>
             {content.text}
@@ -27,7 +27,7 @@ const StyledList = styled.ul`
   display: flex;
   justify-content: space-between;
   color: ${colors.text};
-  line-height: 1.5;
+  line-height: 140%;
 
   li {
     width: calc(50% - 1.731em);
@@ -43,6 +43,6 @@ const StyledList = styled.ul`
 
   @media (min-width: 701px) {
     width: 41%;
-    font-size: 0.965em;
+    font-size: 1.11056em;
   }
 `;
