@@ -14,8 +14,9 @@ type Project = {
   number?: string;
   category: string;
   date?: string;
-  summaries?: Summary[];
   title: string;
+  summaries?: Summary[];
+  features?: string[];
   images: string | null;
   background: string[];
   stack: Stack[];

@@ -48,6 +48,7 @@ export default function Container() {
       {/* project description */}
       <DescriptionWrapper
         summaries={currentProject.summaries}
+        features={currentProject.features}
         background={currentProject.background}
         stack={currentProject.stack}
       />

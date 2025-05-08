@@ -18,8 +18,9 @@ interface Project {
   category: string;
   date?: string;
   title: string;
-  summaries?: Summary[];
   images: string | null;
+  summaries?: Summary[];
+  features?: string[];
   background: string[];
   stack: Stack[];
   live?: string;
@@ -41,6 +42,9 @@ export const projectsData: Project[] = [
       { name: '최초 협업 경험(Git, Notion)' },
       { name: '프론트엔드 분야에 본격적으로 도전하게 된 계기' },
     ],
+    features: [
+      '주요 기능 : 구글 로그인, 아이콘 다운로드/업로드/수정/삭제/좋아요, 프로필 변경, 사용자 팔로우',
+    ],
     background: [
       '2022년 1학기 재학 중, 3인 팀으로 졸업작품 프로젝트를 진행했습니다. 다양한 아이디어를 제안하고 논의한 끝에, 아이콘 다운로드 시의 불편함을 개선할 수 있는 웹사이트를 개발하기로 결정했습니다. 특히 SVG 확장자의 벡터 기반 특성을 활용하면 색상이나 크기 등을 쉽게 수정할 수 있다는 점에 주목해, 해당 기능을 추가하면 더 좋을 것이라 판단했습니다.',
     ],
@@ -61,6 +65,13 @@ export const projectsData: Project[] = [
     date: '2023.11 - 2024.01',
     title: 'personal-website',
     images: PERSONAL_IMAGES,
+    summaries: [
+      { name: '구직 활동에 활용하기 위한 나만의 웹 포트폴리오 개발' },
+      { name: '최초 TypeScript 도입 프로젝트' },
+    ],
+    features: [
+      '주요 기능 : 자기소개, 기술 스택, GitHub 링크, 이력서, 프로젝트 경험',
+    ],
     background: [
       `PJH-Portfolio는 웹 포트폴리오입니다. 다양한 템플릿을 이용해 포트폴리오를 만들 수 있지만, 저의 개발 실력을 통해 오로지 '나만 가지고 있는 포트폴리오'를 제작하고 싶었습니다. `,
 
@@ -72,6 +83,7 @@ export const projectsData: Project[] = [
       { name: 'React' },
       { name: 'TypeScript' },
       { name: 'styled-components' },
+      { name: 'Netlify' },
     ],
     live: process.env.REACT_APP_LIVE_PERSONAL_WEBSITE,
     github: process.env.REACT_APP_GITHUB_PERSONAL_WEBSITE,
