@@ -45,6 +45,7 @@ const DetailContainer = styled(Container)`
 
 const ProjectContainer = styled(Container)`
   max-width: 1400px;
+  padding: 0 24px;
 
   @media (min-width: 651px) {
     font-size: 18px;

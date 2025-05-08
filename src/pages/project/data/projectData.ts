@@ -9,15 +9,16 @@ interface Stack {
   name: string;
 }
 
-interface Features {
+interface Summary {
   name: string;
 }
+
 interface Project {
   number?: string;
   date?: string;
   category: string;
   title: string;
-  features?: Features[];
+  summaries?: Summary[];
   images: string | null;
   description: string[];
   stack: Stack[];
@@ -32,11 +33,13 @@ export const projectsData: Project[] = [
     date: '2022.03 - 2022.07',
     title: 'icondb',
     images: ICONDB_IMAGES,
-    features: [
-      { name: '사용자 관련 시스템(소셜 로그인, 팔로우, 프로필 변경) 구축' },
-      { name: '아이콘 관련 기능(다운로드, 업로드, 좋아요)' },
-      { name: '검색 엔진(제목, 사용자, 해시태그 검색)' },
-      { name: '그리고 SVG 아이콘 편집 기능' },
+    summaries: [
+      {
+        name: '웹 서비스 개발 전 과정을 경험해보고 싶고, 기존 아이콘 플랫폼의 불편한 UX를 개선하기 위해 개발',
+      },
+      { name: '최초 웹 개발 경험(HTML, CSS, JS, React)' },
+      { name: '최초 협업 경험(Git, Notion)' },
+      { name: '프론트엔드 분야에 본격적으로 도전하게 된 계기' },
     ],
     description: [
       'ICONDB는 사용자가 아이콘을 무료로 공유할 수 있는 웹 플랫폼입니다. ',
