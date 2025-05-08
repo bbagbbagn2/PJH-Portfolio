@@ -15,11 +15,16 @@ export default function DescriptionWrapper({
 }: DescriptionWrapperProps) {
   return (
     <Container>
+      <Paragraph>
+        구직 활동에 활용하기 위한 개인 웹 포트폴리오를 구축하였습니다. 정적
+        콘텐츠 중심이므로 Next.js보다 React + Netlify 조합이 적합하다고
+        판단했고, 경량화와 배포 효율성에 초점을 맞췄습니다.
+      </Paragraph>
       <SubTitle>핵심 기능</SubTitle>
       {features && features.length > 0 && (
         <ul>
           {features.map((features, index) => (
-            <li key={index}>{features.name}</li>
+            <Paragraph>{features.name}</Paragraph>
           ))}
         </ul>
       )}
@@ -42,14 +47,16 @@ const Container = styled.div`
 `;
 
 const SubTitle = styled.h2`
-  padding-bottom: 40px;
-  font-size: 56px;
-  line-height: 1.1786514286;
-  letter-spacing: 0;
+  padding-top: 32px;
+  padding-bottom: 12px;
+  font-size: 28px;
+  letter-spacing: 140%;
   font-weight: 500;
 `;
 
 const Paragraph = styled.p`
-  margin-bottom: 1.25em;
-  color: ${colors.text};
+  margin: 0;
+  color: ${colors.white};
+  font-size: 16px;
+  line-height: 140%;
 `;

@@ -13,7 +13,7 @@ export default function Text({ children }: TextProps) {
 
 const Paragraph = styled.p`
   color: ${colors.text};
-  line-height: 1.6;
+  line-height: 140%;
   transform: translate3d(0, 0, 0);
   opacity: 1;
   transition:
@@ -36,8 +36,8 @@ const FeaturesText = styled(Paragraph)`
   color: ${colors.background};
   line-height: 140%;
 
-  @media (max-width: 580px) {
-    font-size: 16px;
+  @media (max-width: 700px) {
+    font-size: 14px;
   }
 
   @media (min-width: 701px) {
@@ -51,7 +51,7 @@ const ProfileText = styled(Paragraph)`
   margin: 20px 0;
 
   @media (max-width: 580px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   @media (min-width: 581px) {
@@ -60,6 +60,8 @@ const ProfileText = styled(Paragraph)`
 
   @media (max-width: 700px) {
     max-width: 20em;
+    margin-top: 12px;
+    margin-bottom: 0;
   }
 
   @media (min-width: 1024px) {

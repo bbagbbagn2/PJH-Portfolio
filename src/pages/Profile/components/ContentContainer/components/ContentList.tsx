@@ -38,7 +38,7 @@ const StyledList = styled.ul`
   }
 
   @media (max-width: 700px) {
-    font-size: 1.2em;
+    font-size: 14px;
   }
 
   @media (min-width: 701px) {

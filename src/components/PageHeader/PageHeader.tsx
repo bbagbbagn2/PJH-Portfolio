@@ -29,11 +29,9 @@ const Container = styled.header`
   }
 
   > p {
-    margin: 8px auto 0;
+    margin: auto 0;
     position: relative;
     font-size: 18px;
-    line-height: 1.25;
-    letter-spacing: 0.007em;
-    font-weight: 400;
+    line-height: 140%;
   }
 `;

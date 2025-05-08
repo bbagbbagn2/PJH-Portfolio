@@ -32,9 +32,10 @@ export default function Heading({
 }
 
 const Title = styled.h1`
-  margin: 10px auto 0;
+  margin: 12px auto 0;
   color: ${colors.white};
   font-size: 32px;
+  letter-spacing: 140%;
   user-select: none;
 
   > span > span {

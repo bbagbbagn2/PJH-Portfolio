@@ -20,7 +20,7 @@ export default function ProfileContainer() {
             </ProfileTitle>
           </MotionWrapper>
           <MotionWrapper delay={0.5}>
-            <ProfileText>프론트엔드 주니어 개발자 박지훈입니다.</ProfileText>
+            <ProfileText>프론트엔드 개발자 박지훈입니다.</ProfileText>
           </MotionWrapper>
         </ArticleWrapper>
       </ProfileArticle>
