@@ -34,14 +34,15 @@ const CarriagewayText = styled(Paragraph)`
 const FeaturesText = styled(Paragraph)`
   font-size: 1em;
   color: ${colors.background};
+  line-height: 140%;
 
   @media (max-width: 580px) {
-    font-size: 1.3em;
+    font-size: 16px;
   }
 
   @media (min-width: 701px) {
     width: 32vw;
-    font-size: 1.07em;
+    font-size: 1.11056em;
   }
 `;
 
@@ -50,7 +51,7 @@ const ProfileText = styled(Paragraph)`
   margin: 20px 0;
 
   @media (max-width: 580px) {
-    font-size: 2em;
+    font-size: 16px;
   }
 
   @media (min-width: 581px) {

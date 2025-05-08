@@ -34,21 +34,25 @@ const CarriagewayTitle = styled(Heading)`
 `;
 
 const FeaturesTitle = styled(Heading)`
-  font-size: 4em;
-`;
-
-const ProfileTitle = styled(Heading)`
-  color: ${colors.primary};
-  font-size: 4em;
-  line-height: 1.1;
-
   @media (max-width: 580px) {
-    font-size: 5em;
+    font-size: 46px;
   }
 
   @media (min-width: 581px) {
     font-size: 4.4em;
-    line-height: 120%;
+  }
+`;
+
+const ProfileTitle = styled(Heading)`
+  color: ${colors.primary};
+  line-height: 120%;
+
+  @media (max-width: 580px) {
+    font-size: 46px;
+  }
+
+  @media (min-width: 581px) {
+    font-size: 4.4em;
   }
 `;
 
