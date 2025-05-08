@@ -36,6 +36,10 @@ const Container = styled.div`
 
 const FeaturesInnerContainer = styled(Container)`
   flex-direction: column;
+
+  @media (max-width: 580px) {
+    gap: 32px;
+  }
 `;
 
 const ProfileInnerContainer = styled(Container)`

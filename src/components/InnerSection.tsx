@@ -28,12 +28,12 @@ const Section = styled.section`
   }
 
   @media (min-width: 701px) {
-    @media (max-height: 1199px) {
+    @media (max-height: 1400px) {
       height: 100vh;
     }
   }
 
-  @media (max-height: 1199px) {
+  @media (max-height: 1400px) {
     @media (min-width: 701px) {
       min-height: 100vh;
     }
