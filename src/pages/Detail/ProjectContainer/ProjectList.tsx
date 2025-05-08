@@ -35,7 +35,6 @@ const List = styled.ul`
 const Item = styled.li`
   /* Positioning */
   position: relative;
-  padding-bottom: 1em;
   margin-bottom: 1.2rem;
 
   /* Styling */
@@ -52,7 +51,8 @@ const Item = styled.li`
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    box-shadow:
+      rgba(0, 0, 0, 0.3) 0px 19px 38px,
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
 `;

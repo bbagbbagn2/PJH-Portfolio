@@ -27,7 +27,7 @@ export default function ProjectInfo({ project }: ProjectInfoProps) {
 }
 
 const Container = styled.div`
-  padding: 2em;
+  padding: 20px 24px;
 `;
 
 const Title = styled.h1`

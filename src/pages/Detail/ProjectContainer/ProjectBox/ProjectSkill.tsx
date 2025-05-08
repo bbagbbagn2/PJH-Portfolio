@@ -19,7 +19,7 @@ export default function ProjectSkill({ project }: ProjectskillProps) {
 }
 
 const StyledList = styled.ul`
-  padding: 2em;
+  padding: 0 24px 24px;
   padding-top: 0;
   display: flex;
   flex-wrap: wrap;
