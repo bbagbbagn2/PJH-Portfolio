@@ -34,8 +34,7 @@ export default function Heading({
 const Title = styled.h1`
   margin: 10px auto 0;
   color: ${colors.white};
-  font-size: 64px;
-  line-height: 1.171875;
+  font-size: 32px;
   user-select: none;
 
   > span > span {
