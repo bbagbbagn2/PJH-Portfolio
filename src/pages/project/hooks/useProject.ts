@@ -6,14 +6,18 @@ interface Stack {
   name: string;
 }
 
+interface Summary {
+  name: string;
+}
+
 type Project = {
   number?: string;
   category: string;
-  features?: { name: string }[];
+  date?: string;
+  summaries?: Summary[];
   title: string;
   images: string | null;
-  description: string[];
-  date?: string;
+  background: string[];
   stack: Stack[];
   live?: string;
   github?: string;
