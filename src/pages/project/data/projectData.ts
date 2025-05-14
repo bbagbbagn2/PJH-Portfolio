@@ -40,6 +40,9 @@ export const projectsData: Project[] = [
       },
       { name: '최초 웹 개발 경험(HTML, CSS, JS, React)' },
       { name: '최초 협업 경험(Git, Notion)' },
+      {
+        name: 'styled-components를 활용하여 별도의 파일 없이 JS 파일 내에서 직접 스타일링',
+      },
       { name: '프론트엔드 분야에 본격적으로 도전하게 된 계기' },
     ],
     features: [
@@ -67,17 +70,12 @@ export const projectsData: Project[] = [
     images: PERSONAL_IMAGES,
     summaries: [
       { name: '구직 활동에 활용하기 위한 나만의 웹 포트폴리오 개발' },
-      { name: '최초 TypeScript 도입 프로젝트' },
     ],
     features: [
       '주요 기능 : 자기소개, 기술 스택, GitHub 링크, 이력서, 프로젝트 경험',
     ],
     background: [
-      `PJH-Portfolio는 웹 포트폴리오입니다. 다양한 템플릿을 이용해 포트폴리오를 만들 수 있지만, 저의 개발 실력을 통해 오로지 '나만 가지고 있는 포트폴리오'를 제작하고 싶었습니다. `,
-
-      'UI 설계와 프론트엔드 개발을 진행했습니다.',
-
-      'React, TypeScript를 사용해 개발을 진행했고, 다양한 custom Hook을 만들고 사용한 경험을 얻었습니다. ',
+      'React를 공부하기 시작하면서 개인 프로젝트 주제를 고민하다가, 웹 포트폴리오 제작이 가장 적합하다고 판단했습니다. React를 배우기 시작한 지 얼마 되지 않아 Git 컨벤션과 프로젝트 아키텍처 구조를 이해하는 데에도 많은 노력을 기울였습니다.',
     ],
     stack: [
       { name: 'React' },
@@ -94,6 +92,8 @@ export const projectsData: Project[] = [
     date: '2023.06 - 2023.07',
     title: 'notification',
     images: NOTIFICATION_IMAGES,
+    summaries: [{ name: '기존과 다른 새로운 기술 도입(Next.js, Prisma)' }],
+    features: ['주요 기능 : 검색, 글 작성/수정/삭제'],
     background: [],
     stack: [
       { name: 'Next.js' },
@@ -109,8 +109,14 @@ export const projectsData: Project[] = [
     date: '2023.03 - 2023.04',
     title: 'drinkable',
     images: null,
+    summaries: [
+      { name: '최초 백엔드를 이용한 풀스택 웹개발' },
+      { name: 'TypeScript 도입' },
+    ],
+    features: ['주요 기능 : 칵테일 검색, 카테고리 별 칵테일 분류'],
+
     background: [
-      'Coming soon.',
+      '저는 술을 마시지 못해 지인들과 칵테일바를 갈 때마다 무알콜 칵테일을 물어보는 것이 힘들었습니다. 이를 계기로 칵테일의 종류에 대한 정보를 제공하는 웹페이지를 개발하게 되었습니다.',
       // 'DRINKABLE은 칵테일의 종류에 대한 정보를 제공하는 웹 서비스입니다.',
       // '위 프로젝트는 TypeScript를 적용해보고, MySQL 데이터베이스 설계, Node.js와 같은 백엔드를 학습하기 위해 개발한 개인 프로젝트입니다.',
       // 'TypeScript, Node.js, MySQL을 이용해 프로젝트를 개발하면서 프론트엔드 지식을 향상시키는 동시에 백엔드에 대한 지식을 습득할 수 있었습니다.',
