@@ -7,11 +7,21 @@ type ImageWrapperProps = {
 };
 
 export default function ImageWrapper({ src, alt }: ImageWrapperProps) {
-  return <Image src={src} alt={alt} />;
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fetchPriority="high"
+      loading="eager"
+      width={1440}
+      height={810}
+    />
+  );
 }
 
 const Image = styled.img`
-  height: 100%;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   list-style: none;
   aspect-ratio: auto 1440/810;

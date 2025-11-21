@@ -1,5 +1,5 @@
 // Icondb
-import icondbScreen1 from './icondb/screen6.webp';
+import icondbScreen1 from './icondb/icondb_mock.webp';
 
 // Drinkable
 import drinkableScreen1 from './drinkable/screen1.png';

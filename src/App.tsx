@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-
 import MainPage from './pages/Main/Main';
 import DetailPage from './pages/Detail/Detail';
 import ProjectPage from './pages/project/Project';
