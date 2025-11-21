@@ -1,7 +1,7 @@
 import {
   ICONDB_IMAGES,
   DRINKABLE_IMAGES,
-  PERSONAL_IMAGES,
+  PERSONAL_DESKTOP_IMAGES,
   NOTIFICATION_IMAGES,
 } from '../work-images';
 
@@ -13,12 +13,17 @@ interface Summary {
   name: string;
 }
 
+export interface ResponsiveImage {
+  src: string;
+  alt?: string;
+}
+
 interface Project {
   number?: string;
   category: string;
   date?: string;
   title: string;
-  images: string | null;
+  images: ResponsiveImage[] | null;
   summaries?: Summary[];
   features?: string[];
   background: string[];
@@ -33,7 +38,12 @@ export const projectsData: Project[] = [
     category: 'Frontend',
     date: '2022.03 - 2022.07',
     title: 'icondb',
-    images: ICONDB_IMAGES,
+    images: [
+      {
+        src: ICONDB_IMAGES,
+        alt: 'Icondb 프로젝트 화면',
+      },
+    ],
     summaries: [
       {
         name: '웹 서비스 개발 전 과정을 경험해보고 싶고, 기존 아이콘 플랫폼의 불편한 UX를 개선하기 위해 개발',
@@ -67,7 +77,12 @@ export const projectsData: Project[] = [
     category: 'Frontend',
     date: '2023.11 - 2024.01',
     title: 'personal-website',
-    images: PERSONAL_IMAGES,
+    images: [
+      {
+        src: PERSONAL_DESKTOP_IMAGES,
+        alt: 'Personal Website 프로젝트 화면',
+      },
+    ],
     summaries: [
       { name: '구직 활동에 활용하기 위한 나만의 웹 포트폴리오 개발' },
     ],
@@ -91,7 +106,12 @@ export const projectsData: Project[] = [
     category: 'Fullstack',
     date: '2023.06 - 2023.07',
     title: 'notification',
-    images: NOTIFICATION_IMAGES,
+    images: [
+      {
+        src: NOTIFICATION_IMAGES,
+        alt: 'Notification 프로젝트 화면',
+      },
+    ],
     summaries: [{ name: '기존과 다른 새로운 기술 도입(Next.js, Prisma)' }],
     features: ['주요 기능 : 검색, 글 작성/수정/삭제'],
     background: [],

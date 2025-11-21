@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavigateFunction } from 'react-router-dom';
 import { hyphenateName } from '@_utils/helpers';
+import { ResponsiveImage } from '../data/projectData';
 
 interface Stack {
   name: string;
@@ -17,31 +18,22 @@ type Project = {
   title: string;
   summaries?: Summary[];
   features?: string[];
-  images: string | null;
+  images: ResponsiveImage[] | null;
   background: string[];
   stack: Stack[];
   live?: string;
   github?: string;
 };
 
-const fintProjectByTitle = (
+const findProjectByTitle = (
   title: string | undefined,
   projectsData: Project[],
-) => {
+): Project | undefined => {
   return projectsData.find((project) => hyphenateName(project.title) === title);
 };
 
-const findProjectIndex = (currentProject: Project, projectsData: Project[]) => {
-  return projectsData.findIndex(
-    (project) => project.title === currentProject.title,
-  );
-};
-
-const handleProjectnavigation = (
-  newProject: Project,
-  navigate: NavigateFunction,
-) => {
-  const formattedSegment = hyphenateName(newProject.title);
+const navigateToProject = (project: Project, navigate: NavigateFunction) => {
+  const formattedSegment = hyphenateName(project.title);
   navigate(`/project/${formattedSegment}`, { replace: true });
 };
 
@@ -51,23 +43,20 @@ export default function useProject(
   navigate: NavigateFunction,
 ) {
   const initialProject =
-    fintProjectByTitle(id, projectsData) || projectsData[0];
+    findProjectByTitle(id, projectsData) || projectsData[0];
   const [currentProject, setCurrentProject] = useState(initialProject);
 
   useEffect(() => {
-    const matchingProject = fintProjectByTitle(id, projectsData);
+    const matchingProject = findProjectByTitle(id, projectsData);
     if (matchingProject) {
       setCurrentProject(matchingProject);
     }
   }, [id, projectsData]);
 
-  const handleSlideChange = (swiper: any) => {
-    const selectedProject = projectsData[swiper.activeIndex];
-    setCurrentProject(selectedProject);
-    handleProjectnavigation(selectedProject, navigate);
+  const selectProject = (project: Project) => {
+    setCurrentProject(project);
+    navigateToProject(project, navigate);
   };
 
-  const initialSlideIndex = findProjectIndex(currentProject, projectsData);
-
-  return { currentProject, handleSlideChange, initialSlideIndex };
+  return { currentProject, selectProject };
 }
